@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "id": "shorterbetter-diagnostic-v1",
+  "status": "prepared_not_locked",
+  "paid_launch_ready": false,
+  "question": "Does the original SOL reward improve the accuracy/total-token tradeoff of Qwen3-0.6B versus matched correctness-only GRPO at full paper-scale exposure?",
+  "scope": "One-seed early learning-curve diagnostic, not proof of efficacy or a negative replication.",
+  "model": {
+    "repo": "Qwen/Qwen3-0.6B",
+    "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "tuning": "full_weights",
+    "thinking_enabled": true
+  },
+  "paper": {
+    "url": "https://arxiv.org/abs/2504.21370v4",
+    "source_commit": "b9f807af8cefeb77aa3a54e96316f6709a2b8cf5",
+    "paper_vs_script_discrepancy": "Paper: N=64 and 300 rollout steps; public 1.5B script: N=128 and three epochs. This study follows the paper for exposure, source script for 16-prompt PPO minibatches."
+  },
+  "reward": {
+    "formula": "alpha * correct - length_beta * abs(generated_tokens - SOL)",
+    "alpha": 2.0,
+    "length_beta": 0.001,
+    "target_if_success": "shortest correct generated response in the current group",
+    "target_if_all_wrong": "mean generated response length in that group",
+    "clip_length_penalty": false,
+    "gate_penalty_on_correctness": false,
+    "discard_wrong_or_truncated_rollouts": false,
+    "correctness": "Pinned author's boxed-answer normalized-string verifier, not the competition evaluation grader.",
+    "format_checks": "Log incomplete thinking and truncation independently; do not add an undocumented reward mask."
+  },
+  "training": {
+    "backend": "TRL 0.24.0 GRPO, port of the original objective; backend parity requires GPU validation",
+    "rollout_batches": 20,
+    "prompts_per_rollout_batch": 64,
+    "generations_per_prompt": 8,
+    "prompts_per_optimizer_minibatch": 16,
+    "optimizer_updates_per_rollout_batch": 4,
+    "optimizer_updates_total": 80,
+    "training_completions_per_arm": 10240,
+    "max_completion_tokens": 6000,
+    "learning_rate": 1e-06,
+    "kl_coefficient": 0.001,
+    "group_std_scaling": true,
+    "loss_normalization": "per-response length then mean across responses",
+    "reference_policy": "frozen initial model",
+    "replay": false,
+    "lora": false,
+    "world_size_initial": 1
+  },
+  "data": {
+    "repo": "agentica-org/DeepScaleR-Preview-Dataset",
+    "revision": "b6ae8c60f5c1f2b594e2140b91c49c9ad0949e29",
+    "declared_license": "mit",
+    "solutions_used": false,
+    "directory": "lab/experiments/shorterbetter-preparation-20261026/data",
+    "development_questions": 1000,
+    "monitor_subset_questions": 128,
+    "confirmation_questions": 1000,
+    "split_seed": 20261026,
+    "screening": "Exact and lexical near-duplicates against frozen competition prompts and all retained source rows before split; quarantine matches; heuristic, not a guarantee of zero semantic overlap.",
+    "no_difficulty_resampling": true,
+    "low_success_density": "Report; any later easier-data curriculum is a separate version, not silent replacement."
+  },
+  "arms": {
+    "shorterbetter": {
+      "alpha": 2.0,
+      "length_beta": 0.001
+    }
+  },
+  "seeds": [
+    17
+  ],
+  "phases": [
+    "Verify GPU operation and throughput within the same bounded spend.",
+    "Run up to 20 rollout batches; monitor at 0,5,10,15,20 on the same 128 internal questions.",
+    "Save and report all checkpoints and costs; do not auto-start extra seeds, control arms or full benchmark evaluation."
+  ],
+  "monitoring": {
+    "every_rollout_batches": 5,
+    "baseline_at_step_zero": true,
+    "validation_samples_per_question": 8,
+    "decoding": "Fixed 0.9 temperature, top_p=1, no top_k, cap6000 for internal monitoring only; official evaluation unchanged.",
+    "metrics": [
+      "answer_accuracy",
+      "completed_answer_accuracy",
+      "mean_total_tokens",
+      "correct_tokens",
+      "incorrect_tokens",
+      "all_wrong_groups",
+      "zero_reward_variance_groups",
+      "truncation_rate",
+      "invalid_thinking_rate",
+      "kl",
+      "gradient_norm",
+      "elapsed_seconds",
+      "cost_projection"
+    ],
+    "training_rng_isolation_required": true,
+    "automatic_parameter_changes": false,
+    "divergence": "Stop on nonfinite loss/gradients; investigate repeated invalid/empty-output collapse; cost guard remains active.",
+    "resume": "Save optimizer, scheduler, RNG, sampler/data position, source/config hashes; verify split-run equivalence including vLLM generation state before claiming exact continuation.",
+    "validation_questions": 128
+  },
+  "selection": {
+    "checkpoint_rule": "No winner selection: plot all checkpoints, paired question CIs and failure rates.",
+    "decision": "Use this diagnostic to decide whether a later matched control and longer run are worth their separately authorized cost.",
+    "no_signal_interpretation": "Inconclusive: a short trajectory cannot establish the full method is ineffective.",
+    "positive_signal_interpretation": "Suggestive within-run evidence only; no causal benefit over correctness-only training established."
+  },
+  "evaluation": {
+    "official_questions": 2759,
+    "official_samples_per_question": 8,
+    "unchanged_official_prompts_sampling_caps": true,
+    "fresh_baseline_same_physical_worker": true,
+    "requested_final_gpu": "NVIDIA GeForce RTX 4090",
+    "official_suite_is_previously_inspected": true,
+    "submission_model": "Standard Transformers/vLLM-compatible safetensors, no custom model code",
+    "run_official_suites_in_this_diagnostic": false
+  },
+  "authorization": {
+    "preparation": true,
+    "new_budget_total_usd": null,
+    "existing_project_ceiling_usd": 200,
+    "training_allowed_gpus": [
+      "NVIDIA GeForce RTX 4090"
+    ],
+    "stronger_gpu_question_is_not_yet_explicit_override": true,
+    "new_paid_jobs_started": false
+  },
+  "parent_protocol_sha256": "c72ad0ad9ebebb3671ea7a09251f0b712a074c0d6a5e2e1b1bc38536902a7c3b",
+  "budget": {
+    "proposed_total_pilot_cap_usd": 20,
+    "cap_authorized": false,
+    "includes": [
+      "setup",
+      "training",
+      "monitoring",
+      "checkpointing",
+      "storage",
+      "backup",
+      "release"
+    ],
+    "target_completion_within_cap_guaranteed": false,
+    "hard_stop_before_cap": true,
+    "completion_label_if_cap_exhausted": "budget_limited_partial",
+    "automatic_extension": false,
+    "shared_project_ceiling_usd": 200
+  }
+}

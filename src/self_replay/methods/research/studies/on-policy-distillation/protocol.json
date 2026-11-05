@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "study": "on-policy-distillation",
+  "version": 1,
+  "prepared_at": "2026-10-25T15:53:54.576617+00:00",
+  "session": "01a173bb-a813-75f2-923d-7cfda753b684",
+  "status": "prepared_pending_replay_selection_integration_and_launch_lock",
+  "paid_launch_ready": false,
+  "student": {
+    "name": "Qwen/Qwen3-0.6B",
+    "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "fresh_lora_per_arm_and_seed": true
+  },
+  "teacher": {
+    "name": "Qwen/Qwen3-4B",
+    "revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+    "dtype": "bfloat16",
+    "frozen": true,
+    "quantization": null
+  },
+  "training_common": {
+    "data": "lab/experiments/on-policy-distillation/pilot-train-32.jsonl",
+    "variant": "replay",
+    "optimizer": "dr_grpo",
+    "scale_rewards": "no",
+    "max_steps": 32,
+    "group_size": 4,
+    "max_new_tokens": 2048,
+    "final_cap": 1024,
+    "max_prompt_tokens": 2048,
+    "replay_reward": "fixed",
+    "length_coefficient": 0.1,
+    "references": "lab/experiments/data/shared/references.json",
+    "learning_rate": 1e-05,
+    "kl_beta": 0,
+    "replay_weight": 0.1,
+    "replay_capacity": 128,
+    "replay_admission": "all_correct",
+    "rank": 16,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "save_every": 32,
+    "device": "cuda",
+    "same_prompt_order_within_seed": true
+  },
+  "arms": [
+    {
+      "name": "offline-hard",
+      "teacher_prefixes": "frozen verified teacher trajectories",
+      "aux_loss": "token mean hard target cross entropy"
+    },
+    {
+      "name": "offline-soft",
+      "teacher_prefixes": "same frozen verified teacher trajectories",
+      "aux_loss": "token mean full vocabulary forward KL teacher||student"
+    },
+    {
+      "name": "on-policy-soft",
+      "teacher_prefixes": "current student rollout sample 0 of current group, before any optimizer update",
+      "aux_loss": "token mean full vocabulary forward KL teacher||student"
+    }
+  ],
+  "auxiliary": {
+    "weight": 0.1,
+    "temperature": 1.0,
+    "prefix_gradient": "stop_gradient",
+    "max_completion_tokens": 1024,
+    "trajectories_per_group": 1,
+    "normalize": "mean over active tokens within the selected trajectory",
+    "include_eos": true,
+    "include_prompt_or_padding": false,
+    "zero_rl_advantage": "auxiliary still backpropagates",
+    "updates_per_group": 1,
+    "head_chunk_size": 32,
+    "vocabulary": "all 151936 output indices; no top-k renormalization"
+  },
+  "offline_cache": {
+    "prompts": "same 32 train IDs",
+    "sampling": {
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20,
+      "enable_thinking": true,
+      "max_new_tokens": 2048
+    },
+    "seed": 41017,
+    "max_attempts_per_prompt": 4,
+    "selection": "first independently verified correct, nontruncated, complete reasoning response; no shortest selection",
+    "verification": "existing math/choice verifier from pinned source snapshot",
+    "no_valid_teacher": "omit auxiliary for this prompt in ALL arms; retain ordinary RL group; record coverage",
+    "on_policy_incorrect_or_truncated": "score emitted prefix tokens including wrong/truncated output; never append synthetic EOS",
+    "identity": "cache token IDs and full prompt IDs before any student training; no retokenization"
+  },
+  "seeds": {
+    "initial_pilot": [
+      17
+    ],
+    "replication_after_feasibility_gate": [
+      29,
+      43
+    ],
+    "replication_is_new_allocation": true,
+    "no_lucky_seed_selection": true
+  },
+  "contrasts": {
+    "primary_mechanism": "on-policy-soft minus offline-soft (same conditional KL, different prefix source)",
+    "required_practical": "on-policy-soft minus offline-hard (joint target/prefix difference, not pure mechanism evidence)",
+    "bridge": "offline-soft minus offline-hard"
+  },
+  "evaluation": {
+    "split": "existing tuning only; exploratory, already used",
+    "splits_path": "lab/experiments/data/study/splits.json",
+    "questions": 512,
+    "samples_per_question": 2,
+    "seed": 9001,
+    "per_response_seed": "9001 + preserved seed_index*1000 + sample_index",
+    "sampling": {
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20
+    },
+    "caps": "unchanged official per-dataset max_tokens, hashed in launch evaluation manifest",
+    "baseline": "fresh base and candidate on the same physical worker for EACH arm; pinned model/software/questions/decoding/seeds",
+    "domains": [
+      "svamp",
+      "mbpp",
+      "ifeval",
+      "bfcl"
+    ],
+    "primary_metric": "geometric mean across four domains of mean total generated token ratio; also pooled totals",
+    "accuracy": "macro mean across four domains; BFCL pooled by response count",
+    "report": "every arm/seed/domain, total/thinking tokens, generated/scored/trained tokens, teacher verification coverage, all costs, truncations, peak VRAM, wall time",
+    "confirmation": "none; historical confirmation is not untouched"
+  },
+  "decision": {
+    "accuracy_margin_percentage_points": 1.0,
+    "minimum_total_token_saving_fraction": 0.05,
+    "screening": "continue only if token ratio <= .95 and macro accuracy delta >= -1pp versus offline-hard AND offline-soft; report all outcomes",
+    "claim_noninferiority": "paired 95% question-cluster bootstrap lower accuracy bound >= -1pp; bootstrap 10000 resamples seed 20261025; preserve all samples/arms per question",
+    "token_uncertainty": "paired question-cluster bootstrap 95% CI for total-token ratio; savings claim requires upper bound <1",
+    "single_seed_is_exploratory": true,
+    "replication": "all three seeds reported; seed-level variability separate from question CI; no confirmatory claim without fresh locked cohort"
+  },
+  "budget": {
+    "campaign_cap_usd": 200,
+    "campaign_usable_usd": 180,
+    "initial_seed_proposed_envelope_usd": 15.6,
+    "conservative_rate_usd_per_gpu_hour": 1.3,
+    "per_arm_equal_ceiling_gpu_hours": 3,
+    "shared_generation_and_smoke_ceiling_gpu_hours": 3,
+    "equal_dollar_ceiling_not_asserted_equal_actual_spend": true,
+    "replication_not_in_this_envelope": true,
+    "reserve_with": "existing cloud ledger lock, never a second scheduler",
+    "launch_checks": [
+      "verify session authorization for concrete pilot",
+      "reconcile current ledger including API liabilities",
+      "inspect controllers and provider jobs",
+      "confirm aggregate planned reservation within usable cap and pilot envelope",
+      "archive source and protocol hashes",
+      "verify GPU allocation and actual student worker RTX 4090",
+      "keep backup/checksum verification/release enabled"
+    ],
+    "time_or_memory_failure": "mark affected pair incomplete; no silent shortening, GPU substitution, or extra rental"
+  },
+  "hardware": {
+    "student_training": "NVIDIA GeForce RTX 4090",
+    "teacher_inference": "other hardware allowed; initial proposal co-resident on the same 4090",
+    "startup": "use existing experiments.gpu_policy and trainer.verify_training_device; no model training on CPU",
+    "memory_smoke": "measure 4B+student at 4096 sequence length batch 1, head chunks 32, student activation checkpointing, teacher use_cache false"
+  },
+  "provenance_required": {
+    "rollout": [
+      "prompt_id",
+      "prompt_ids",
+      "completion_ids",
+      "student_revision",
+      "adapter_hash",
+      "policy_update",
+      "seed",
+      "sampling",
+      "finish_reason",
+      "tokenizer_fingerprint",
+      "source_snapshot_hash"
+    ],
+    "teacher_scoring": [
+      "teacher_revision",
+      "dtype",
+      "quantization",
+      "frozen",
+      "input_ids_hash",
+      "attention_mask_hash",
+      "prompt_length",
+      "target_mask_hash",
+      "teacher_tokenizer_fingerprint",
+      "scoring_step",
+      "software",
+      "hardware",
+      "scored_token_count",
+      "cost"
+    ],
+    "link_rule": "input IDs and masks identical, scoring_step == rollout policy_update for on-policy, no optimizer update before consumption"
+  },
+  "integration_owner": "replay-selection session 01a173bb-3140-7e32-b592-c68da5d288d3",
+  "unresolved_launch_gates": [
+    "shared trainer integration and integration tests",
+    "GPU memory/timing smoke",
+    "production package lock and evaluation cap hash",
+    "authorization/budget recheck and durable launch registration"
+  ],
+  "input_sha256": {
+    "lab/experiments/on-policy-distillation/pilot-train-32.jsonl": "3c797f71351d68124ef0591ea492e4aa5ec5a0271e8248c85aa550740ec41c50",
+    "lab/experiments/data/teacher-pilot-20261024/teacher-comparison-128.jsonl": "ece4b3becde7e3b63ef297079fb4048e326f482437284aad74e6c054a19896ce",
+    "lab/experiments/data/shared/references.json": "734f75037bf0d20ddb04342ac7fd13e32de6438c35eb6c71b14d089ed03f354b",
+    "lab/experiments/data/study/splits.json": "808a96e28a86b5555eb956fef2765caad27831431fe180d0b72dba64e4150021",
+    "lab/experiments/data/manifest.json": "ec0dd95ccb3a22e300e63d0d7b1911f9611807d67875f956e10efc2adc1972a6"
+  },
+  "prompt_ids": [
+    "arc_easy-4e69e145ccd7938ad7048452",
+    "arc_easy-1080658b09b9cf26709856eb",
+    "arc_easy-85e930bf8c767324971336a8",
+    "arc_easy-c66466086e93b6f57d3c6b21",
+    "arc_easy-dde75740848bac37a76ba050",
+    "arc_easy-e3bd93a3f8fd6e063b1536dd",
+    "arc_easy-93f914fc05938b5ad6cf3f1e",
+    "arc_easy-50e75eb5c575d79f7b0e0c3e",
+    "commonsense_qa-4b8e268ec1e1455f0dfb6c78",
+    "commonsense_qa-d9c7e6c7f40ca22876d003ab",
+    "commonsense_qa-2efc483bca60fa70c9552ce0",
+    "commonsense_qa-471949dd835caf0667b4ff8d",
+    "commonsense_qa-4a8aab90e6be159cb96d33f3",
+    "commonsense_qa-13172ee2a0001615b4242185",
+    "commonsense_qa-2c45afa8fac4ab1951a0b69c",
+    "commonsense_qa-7bf4f10bf65f6af50b555bea",
+    "gsm8k-128de8ef2ffbd61eb6c9938b",
+    "gsm8k-f98ffe6fd60bb8a491d4d7ea",
+    "gsm8k-5e937be77dcb39f3661ee0ac",
+    "gsm8k-98d7b03c1cb0a685104c2929",
+    "gsm8k-05a414461a94e9411140b2ab",
+    "gsm8k-8ef75dfb69ba8edbf4567291",
+    "gsm8k-1d27cc8b26b1337ae4240cbc",
+    "gsm8k-c24e364cfc374c0611382eb5",
+    "skywork-3521f1c4aa3e22a9c81a4a30",
+    "skywork-f20a76dc976226889ec77484",
+    "skywork-4029cff1a8c562d1cf698dcd",
+    "skywork-526311d82dac3a85169c085d",
+    "skywork-507e00a568f1d021dec8e618",
+    "skywork-7cffd3915ad0ed17a26aa047",
+    "skywork-5aa5e97f83db1b57f6bf8067",
+    "skywork-971e8d2978efd65394426244"
+  ]
+}

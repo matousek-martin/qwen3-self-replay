@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "study": "adaptive-replay",
+  "version": 1,
+  "status": "prepared_pending_integration_and_launch_lock",
+  "session": "adaptive-replay-20261025T154409Z",
+  "paid_launch_ready": false,
+  "question": "Does existing group-adaptive RL reward improve total tokens at preserved accuracy versus fixed RL reward with unchanged replay?",
+  "control_origin": "Fresh round2 control recipe; no historical checkpoint substitution",
+  "model": {
+    "name": "Qwen/Qwen3-0.6B",
+    "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "tokenizer_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "fresh_adapter_per_trial": true
+  },
+  "training_common": {
+    "data": "data/pilot.jsonl",
+    "variant": "replay",
+    "optimizer": "dr_grpo",
+    "scale_rewards": "no",
+    "max_steps": 128,
+    "max_seconds": 0,
+    "runtime_control": null,
+    "group_size": 4,
+    "max_new_tokens": 2048,
+    "final_cap": 1024,
+    "max_prompt_tokens": 2048,
+    "length_coefficient": 0.1,
+    "length_reference": 1024,
+    "references": "data/shared/references.json",
+    "learning_rate": 1e-05,
+    "kl_beta": 0.0,
+    "replay_weight": 0.1,
+    "replay_capacity": 128,
+    "replay_admission": "all_correct",
+    "rank": 16,
+    "save_every": 32,
+    "chunk_size": 64,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "device": "cuda"
+  },
+  "training_seeds": [
+    17,
+    29,
+    43
+  ],
+  "arms": [
+    {
+      "name": "fixed-replay",
+      "replay_reward": "fixed"
+    },
+    {
+      "name": "adaptive-replay",
+      "replay_reward": "adaptive"
+    }
+  ],
+  "only_treatment_difference": "replay_reward; trial name/output path are bookkeeping",
+  "replay": {
+    "admission": "all verified successes in current group; no mixed-group admission",
+    "verifier": "existing training correctness + complete reasoning + nontruncation",
+    "selection": "first shortest total-token completion in group; replace same prompt only if strictly shorter",
+    "eviction": "oldest inserted distinct prompt; replacement does not refresh insertion order",
+    "sampling": "uniform one prompt from insertion-ordered buffer after current admission, including zero-variance groups",
+    "rng": "random.Random(training_seed + 104729), separate from prompt RNG",
+    "loss": "-0.1 * mean(saved completion log probabilities), temperature 1.0",
+    "capacity": 128,
+    "weight": 0.1,
+    "note": "Rules identical; actual rollouts, admissions, buffers and update counts may differ as a consequence of reward."
+  },
+  "reward": {
+    "coefficient": 0.1,
+    "fixed": "ok * (1 - coefficient * min(total_tokens / source_reference, 1))",
+    "adaptive": "ok * (1 - coefficient * min(max(total_tokens / shortest_correct_in_current_group - 1, 0), 1))",
+    "all_wrong": "all zeros, no adaptive target",
+    "validation_feedback": false,
+    "evaluation_feedback": false
+  },
+  "compute": {
+    "completed_groups_per_arm_seed": 128,
+    "samples_per_group": 4,
+    "max_generated_tokens_per_trial": 1048576,
+    "policy": "Same groups and generation caps, not a claim of equal realized tokens, optimizer updates or GPU-seconds. Report all actual costs/tokens/times. Incomplete trials are incomplete; no outcome-driven extensions."
+  },
+  "evaluation": {
+    "scope": "exploratory development on previously used tuning set, not untouched confirmation",
+    "subset": "tuning",
+    "questions": 512,
+    "domains": [
+      "svamp",
+      "mbpp",
+      "bfcl",
+      "ifeval"
+    ],
+    "questions_per_domain": 128,
+    "samples_per_question": 2,
+    "seed_rule": "9001 + original seed_index * 1000 + sample_index",
+    "sampling": {
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "top_k": 20
+    },
+    "max_tokens": {
+      "mbpp": 8192,
+      "other_datasets": 4096
+    },
+    "max_model_len": 12288,
+    "paired_worker_blocks": "Per training seed: evaluate fresh base + fresh fixed adapter + fresh adaptive adapter on same physical worker, pinned packages/model/questions/decoding/seeds. Record physical GPU identity.",
+    "checkpoint": "final adapter after 128 completed groups; no best-validation checkpoint selection",
+    "training_validation": "val-pilot diagnostic only; no reward, early stopping or checkpoint tuning from its accuracy",
+    "primary": "adaptive versus fixed total-token ratio; fresh base contextual and baseline preservation guard",
+    "aggregation": "Per question average over two samples; per domain arithmetic means; macro accuracy arithmetic across four domains and seeds; total-token ratio geometric across four domain ratios of seed-averaged means; thinking tokens separate",
+    "accuracy_margin_pp": 1.0,
+    "bootstrap": {
+      "replicates": 10000,
+      "rng_seed": 20261025,
+      "interval": "two-sided percentile 95%",
+      "unit": "resample three training-seed blocks with replacement, then question IDs within each domain with replacement; same question draws for all sampled blocks and all three arms; retain both samples together"
+    },
+    "decision": "Advance adaptive recipe only if lower accuracy CI >= -1pp for adaptive-fixed and adaptive-base at macro and each domain, upper macro total-token ratio CI adaptive/fixed < 1, and each training seed has point macro token ratio < 1. Otherwise report negative/inconclusive; never choose a lucky seed.",
+    "missing_data": "fail coverage/grading/pairing checks; do not silently drop records or replace seeds",
+    "confirmation": "No confirmation in this protocol; any finalist needs a separately locked fresh disjoint cohort."
+  },
+  "input_sha256": {
+    "lab/experiments/data/pilot.jsonl": "da551644dbb71c6f09ba87f92d03ff07d131707009ad17a09bb96091005bd3b6",
+    "lab/experiments/data/val-pilot.jsonl": "20fca2946aac355bf478aaec0542c1fcfe208129d1243f07e63fd33d96db5ed6",
+    "lab/experiments/data/shared/references.json": "734f75037bf0d20ddb04342ac7fd13e32de6438c35eb6c71b14d089ed03f354b",
+    "lab/experiments/data/study/splits.json": "808a96e28a86b5555eb956fef2765caad27831431fe180d0b72dba64e4150021",
+    "lab/experiments/data/manifest.json": "ec0dd95ccb3a22e300e63d0d7b1911f9611807d67875f956e10efc2adc1972a6",
+    "lab/experiments/replay-round2-4090/registration.json": "4061d53dd7279edd1caa105539afee52710288757f83f59e62dc311e26d6dbee"
+  },
+  "budget": {
+    "shared_ledger": "lab/experiments/cloud/ledger.json",
+    "ceiling_usd": 200,
+    "usable_usd": 180,
+    "new_reservation_usd": 0,
+    "batch_budget_authorization": "Not inferred from remaining headroom; reconcile existing user scope and live reservations before launch.",
+    "api_generation_required": false
+  },
+  "launch_gates": [
+    "Integrator implements adaptive CLI dispatch and fixed regression checks; preserve original replay selector explicitly.",
+    "Freeze protocol, all resolved CLI arguments, source snapshot, requirements/software and data hashes in immutable registration before any paid call.",
+    "Read fresh campaign/controller/ledger/provider states; reconcile concurrent API+GPU liabilities and existing authorization; reserve atomically under shared cap, no duplicate rental.",
+    "Allocation RTX 4090 only; worker experiments.gpu_policy verifies actual GPU before model training; no fallback.",
+    "Keep completion marker, checksum backup verification, independent guard and confirmed GPU release; archive provenance."
+  ],
+  "next_phase": "Any validation-accuracy controller is a separate registered experiment with disjoint fixed validation, cadence, smoothing, bounds and training-only interfaces. Never evaluation benchmark feedback."
+}

@@ -1,0 +1,537 @@
+{
+  "self-replay": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "-m",
+      "torch.distributed.run",
+      "--standalone",
+      "--nproc_per_node=2",
+      "-m",
+      "experiments.replay_scaled.worker",
+      "--data",
+      "{data}",
+      "--out",
+      "{output}",
+      "--stop-after",
+      "256"
+    ],
+    "data": "data/replay-scaled",
+    "overlay": "self-replay",
+    "required_inputs": [
+      "data/replay-scaled/plan.json",
+      "worker-lease.json"
+    ]
+  },
+  "sft-short": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "experiments/offline_training/train.py",
+      "--method",
+      "sft",
+      "--data",
+      "{data}",
+      "--output",
+      "{output}",
+      "--steps",
+      "64",
+      "--grad-accum",
+      "8",
+      "--seed",
+      "17",
+      "--max-seconds",
+      "0"
+    ],
+    "data": "data/selected/sft-short.jsonl",
+    "overlay": null,
+    "required_inputs": []
+  },
+  "sft-random": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "experiments/offline_training/train.py",
+      "--method",
+      "sft",
+      "--data",
+      "{data}",
+      "--output",
+      "{output}",
+      "--steps",
+      "64",
+      "--grad-accum",
+      "8",
+      "--seed",
+      "17",
+      "--max-seconds",
+      "0"
+    ],
+    "data": "data/selected/sft-random.jsonl",
+    "overlay": null,
+    "required_inputs": []
+  },
+  "sft-compatible": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "experiments/offline_training/train.py",
+      "--method",
+      "sft",
+      "--data",
+      "{data}",
+      "--output",
+      "{output}",
+      "--steps",
+      "64",
+      "--grad-accum",
+      "8",
+      "--seed",
+      "17",
+      "--max-seconds",
+      "0"
+    ],
+    "data": "data/selected/sft-compatible.jsonl",
+    "overlay": null,
+    "required_inputs": []
+  },
+  "sft-dpo-matched": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "experiments/offline_training/train.py",
+      "--method",
+      "sft",
+      "--data",
+      "{data}",
+      "--output",
+      "{output}",
+      "--steps",
+      "64",
+      "--grad-accum",
+      "8",
+      "--seed",
+      "17",
+      "--max-seconds",
+      "0"
+    ],
+    "data": "data/selected/sft-dpo-matched.jsonl",
+    "overlay": null,
+    "required_inputs": []
+  },
+  "dpo": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "experiments/offline_training/train.py",
+      "--method",
+      "dpo",
+      "--data",
+      "{data}",
+      "--output",
+      "{output}",
+      "--steps",
+      "64",
+      "--grad-accum",
+      "8",
+      "--seed",
+      "17",
+      "--max-seconds",
+      "0"
+    ],
+    "data": "data/selected/dpo.jsonl",
+    "overlay": null,
+    "required_inputs": []
+  },
+  "grpo": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "-m",
+      "experiments.rl_training.train",
+      "--data",
+      "{data}",
+      "--out",
+      "{output}",
+      "--variant",
+      "correctness",
+      "--optimizer",
+      "grpo",
+      "--max-steps",
+      "128",
+      "--max-seconds",
+      "0",
+      "--seed",
+      "17",
+      "--save-every",
+      "32"
+    ],
+    "data": "data/pilot.jsonl",
+    "overlay": null,
+    "required_inputs": []
+  },
+  "dr-grpo": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "-m",
+      "experiments.rl_training.train",
+      "--data",
+      "{data}",
+      "--out",
+      "{output}",
+      "--variant",
+      "correctness",
+      "--optimizer",
+      "dr_grpo",
+      "--max-steps",
+      "128",
+      "--max-seconds",
+      "0",
+      "--seed",
+      "17",
+      "--save-every",
+      "32"
+    ],
+    "data": "data/pilot.jsonl",
+    "overlay": null,
+    "required_inputs": []
+  },
+  "rl-fixed": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "-m",
+      "experiments.rl_training.train",
+      "--data",
+      "{data}",
+      "--out",
+      "{output}",
+      "--variant",
+      "fixed",
+      "--optimizer",
+      "dr_grpo",
+      "--max-steps",
+      "128",
+      "--max-seconds",
+      "0",
+      "--seed",
+      "17",
+      "--save-every",
+      "32"
+    ],
+    "data": "data/pilot.jsonl",
+    "overlay": null,
+    "required_inputs": []
+  },
+  "rl-adaptive": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "-m",
+      "experiments.rl_training.train",
+      "--data",
+      "{data}",
+      "--out",
+      "{output}",
+      "--variant",
+      "adaptive",
+      "--optimizer",
+      "dr_grpo",
+      "--max-steps",
+      "128",
+      "--max-seconds",
+      "0",
+      "--seed",
+      "17",
+      "--save-every",
+      "32"
+    ],
+    "data": "data/pilot.jsonl",
+    "overlay": null,
+    "required_inputs": []
+  },
+  "rl-difficulty": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "-m",
+      "experiments.rl_training.train",
+      "--data",
+      "{data}",
+      "--out",
+      "{output}",
+      "--variant",
+      "difficulty",
+      "--optimizer",
+      "dr_grpo",
+      "--max-steps",
+      "128",
+      "--max-seconds",
+      "0",
+      "--seed",
+      "17",
+      "--save-every",
+      "32"
+    ],
+    "data": "data/pilot.jsonl",
+    "overlay": null,
+    "required_inputs": []
+  },
+  "rl-progressive": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "-m",
+      "experiments.rl_training.train",
+      "--data",
+      "{data}",
+      "--out",
+      "{output}",
+      "--variant",
+      "progressive",
+      "--optimizer",
+      "dr_grpo",
+      "--max-steps",
+      "128",
+      "--max-seconds",
+      "0",
+      "--seed",
+      "17",
+      "--save-every",
+      "32"
+    ],
+    "data": "data/pilot.jsonl",
+    "overlay": null,
+    "required_inputs": []
+  },
+  "rl-replay": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "-m",
+      "experiments.rl_training.train",
+      "--data",
+      "{data}",
+      "--out",
+      "{output}",
+      "--variant",
+      "replay",
+      "--optimizer",
+      "dr_grpo",
+      "--max-steps",
+      "128",
+      "--max-seconds",
+      "0",
+      "--seed",
+      "17",
+      "--save-every",
+      "32",
+      "--replay-reward",
+      "fixed"
+    ],
+    "data": "data/pilot.jsonl",
+    "overlay": null,
+    "required_inputs": []
+  },
+  "replay-selection": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "-m",
+      "experiments.rl_training.train",
+      "--data",
+      "{data}",
+      "--out",
+      "{output}",
+      "--variant",
+      "replay",
+      "--optimizer",
+      "dr_grpo",
+      "--max-steps",
+      "128",
+      "--max-seconds",
+      "0",
+      "--seed",
+      "17",
+      "--save-every",
+      "32",
+      "--replay-reward",
+      "fixed",
+      "--replay-admission",
+      "verified_correct"
+    ],
+    "data": "data/pilot.jsonl",
+    "overlay": null,
+    "required_inputs": []
+  },
+  "on-policy-distillation": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "-m",
+      "experiments.isolated_worker",
+      "--seed",
+      "17"
+    ],
+    "data": "data",
+    "overlay": "on-policy-distillation",
+    "required_inputs": [
+      "data/isolated/config.json",
+      "data/isolated/inputs.json",
+      "data/isolated/sources.json"
+    ]
+  },
+  "adaptive-replay": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "-m",
+      "experiments.isolated_worker",
+      "--seed",
+      "17"
+    ],
+    "data": "data",
+    "overlay": "adaptive-replay",
+    "required_inputs": [
+      "data/isolated/config.json",
+      "data/isolated/inputs.json",
+      "data/isolated/sources.json"
+    ]
+  },
+  "teacher-replay": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "-m",
+      "experiments.teacher_generation.paired_worker",
+      "--seed",
+      "17"
+    ],
+    "data": "data",
+    "overlay": "teacher-replay",
+    "required_inputs": [
+      "data/isolated/config.json",
+      "data/isolated/inputs.json",
+      "data/isolated/sources.json",
+      "data/static/manifest.json"
+    ]
+  },
+  "teacher-generation": {
+    "kind": "generation",
+    "command": [
+      "{python}",
+      "-m",
+      "experiments.teacher_generation.runner"
+    ],
+    "data": "data",
+    "overlay": null,
+    "required_inputs": []
+  },
+  "shorterbetter": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "-m",
+      "experiments.shorterbetter.train",
+      "--protocol",
+      "{data}",
+      "--arm",
+      "shorterbetter",
+      "--out",
+      "{output}",
+      "--seed",
+      "17",
+      "--execute"
+    ],
+    "data": "studies/shorterbetter/protocol.json",
+    "overlay": null,
+    "required_inputs": []
+  },
+  "opencoder-sft": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "-m",
+      "experiments.opencoder_sft.train",
+      "--until",
+      "84",
+      "--out",
+      "{output}"
+    ],
+    "data": "data",
+    "overlay": null,
+    "required_inputs": [
+      "data/opencoder-sft/plan.json",
+      "data/opencoder-sft/adapter",
+      "worker-lease.json"
+    ]
+  },
+  "coding-a": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "-m",
+      "experiments.coding_abc.worker"
+    ],
+    "data": "data",
+    "overlay": null,
+    "required_inputs": [
+      "data/coding-abc/plan.json",
+      "data/coding-abc/adapter",
+      "worker-lease.json"
+    ]
+  },
+  "coding-b": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "-m",
+      "experiments.coding_abc.worker"
+    ],
+    "data": "data",
+    "overlay": null,
+    "required_inputs": [
+      "data/coding-abc/plan.json",
+      "data/coding-abc/adapter",
+      "worker-lease.json"
+    ]
+  },
+  "coding-c": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "-m",
+      "experiments.coding_abc.worker"
+    ],
+    "data": "data",
+    "overlay": null,
+    "required_inputs": [
+      "data/coding-abc/plan.json",
+      "data/coding-abc/adapter",
+      "worker-lease.json"
+    ]
+  },
+  "coding-curriculum": {
+    "kind": "training",
+    "command": [
+      "{python}",
+      "-m",
+      "torch.distributed.run",
+      "--standalone",
+      "--nproc_per_node=2",
+      "-m",
+      "experiments.replay_scaled.worker",
+      "--data",
+      "{data}",
+      "--out",
+      "{output}"
+    ],
+    "data": "data/coding-curriculum",
+    "overlay": null,
+    "required_inputs": [
+      "data/coding-curriculum/plan.json",
+      "worker-lease.json"
+    ]
+  }
+}

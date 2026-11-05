@@ -1,0 +1,37 @@
+{
+  "shorterbetter_reward.py": {
+    "url": "https://raw.githubusercontent.com/JingyangYi/ShorterBetter/b9f807af8cefeb77aa3a54e96316f6709a2b8cf5/verl/verl/workers/reward_manager/naive.py",
+    "sha256": "71c9da8aa035afd6c6eed20bf96ab02adae19babb53eb6abce093bbfac1d83e0",
+    "bytes": 20384
+  },
+  "shorterbetter_train.sh": {
+    "url": "https://raw.githubusercontent.com/JingyangYi/ShorterBetter/b9f807af8cefeb77aa3a54e96316f6709a2b8cf5/scripts/train/sb_1.5B.sh",
+    "sha256": "765c27de840d3ec4915c809664868b0583158ba298e4c12eb978d42e35f5f809",
+    "bytes": 4294
+  },
+  "competition_README.md": {
+    "url": "https://raw.githubusercontent.com/BottleCapAI/ThinkingCap-Test/bd52d8d54b6464478516dfa40458e73612926f2f/README.md",
+    "sha256": "252e74fd8eb57c4c24b0e99e3a62c75fc948be048d856011a4b4e7829eed1b6c",
+    "bytes": 18802
+  },
+  "deepscaler_card.md": {
+    "url": "https://huggingface.co/datasets/agentica-org/DeepScaleR-Preview-Dataset/raw/b6ae8c60f5c1f2b594e2140b91c49c9ad0949e29/README.md",
+    "sha256": "164470e328cbc11467ee031547161ab1c0340460bcb1512cf7b87bf2913e8e91",
+    "bytes": 1782
+  },
+  "deepscaler.json": {
+    "url": "https://huggingface.co/datasets/agentica-org/DeepScaleR-Preview-Dataset/resolve/b6ae8c60f5c1f2b594e2140b91c49c9ad0949e29/deepscaler.json",
+    "sha256": "4e9e7b18248d982b4498a54a6bdb37b1bb653cf5f77bc309fa67a6c2533c8ba4",
+    "bytes": 21479374
+  },
+  "grpo_config.py": {
+    "url": "https://raw.githubusercontent.com/huggingface/trl/v0.24.0/trl/trainer/grpo_config.py",
+    "sha256": "e71900f3a0590cceb1ad67f07e9845fc3b517eae85f3d16300a32a4b652a00bb",
+    "bytes": 39340
+  },
+  "grpo_trainer.py": {
+    "url": "https://raw.githubusercontent.com/huggingface/trl/v0.24.0/trl/trainer/grpo_trainer.py",
+    "sha256": "bb6905182acf2ec426f1dc9ffc37e5210d58ee47d2764f7cf12dbb90a4a28954",
+    "bytes": 100875
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "removed_from_public_runtime": [
+    "experiments/run-replay-round2-control-seed29.sh",
+    "experiments/run-replay-round2-weaker-length-seed43.sh",
+    "experiments/run-replay-round2-control-seed43.sh",
+    "experiments/run-replay-round2-stronger-replay-seed43.sh",
+    "experiments/run-replay-round2-control-seed17.sh",
+    "experiments/run-replay-round2-stronger-replay-seed17.sh",
+    "experiments/run-replay-selection-seed17.sh",
+    "experiments/run-replay-round2-weaker-length-seed29.sh",
+    "experiments/run-replay-selection-seed43.sh",
+    "experiments/run-replay-selection-seed29.sh",
+    "experiments/run-replay-round2-weaker-length-seed17.sh",
+    "experiments/run-replay-round2-stronger-replay-seed29.sh",
+    "ops/recover_mbpp.py",
+    "ops/reload_teacher_budget.py",
+    "ops/shorterbetter_stage_existing.py",
+    "ops/teacher_dependency_recovery.py",
+    "ops/archive_experiment_artifacts.py",
+    "ops/context.py",
+    "ops/replay_notification_image.py"
+  ],
+  "originals": "Retained in the source import commit and original lab; no historical artifacts deleted."
+}

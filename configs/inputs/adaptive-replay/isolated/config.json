@@ -1,0 +1,81 @@
+{
+  "id": "adaptive-isolated-v2",
+  "study": "adaptive-replay",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "hours": 8,
+  "training": {
+    "data": "pilot.jsonl",
+    "variant": "replay",
+    "optimizer": "dr_grpo",
+    "scale_rewards": "no",
+    "max_steps": 128,
+    "max_seconds": 0,
+    "group_size": 4,
+    "max_new_tokens": 2048,
+    "final_cap": 1024,
+    "max_prompt_tokens": 2048,
+    "length_coefficient": 0.1,
+    "length_reference": 1024,
+    "references": "shared/references.json",
+    "learning_rate": 1e-05,
+    "kl_beta": 0.0,
+    "replay_weight": 0.1,
+    "replay_capacity": 128,
+    "replay_admission": "all_correct",
+    "rank": 16,
+    "save_every": 32,
+    "chunk_size": 64,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "device": "cuda"
+  },
+  "arms": [
+    {
+      "name": "fixed-replay",
+      "overrides": {
+        "replay_reward": "fixed"
+      }
+    },
+    {
+      "name": "adaptive-replay",
+      "overrides": {
+        "replay_reward": "adaptive"
+      }
+    }
+  ],
+  "evaluation": {
+    "schema_version": 1,
+    "split_manifest": "splits.json",
+    "subset": "tuning",
+    "samples": 2,
+    "workers": 4,
+    "candidate_timeout_seconds": 0
+  },
+  "worker_tests": [
+    "experiments.rl_training.test_torch",
+    "experiments.rl_training.test_adaptive_replay",
+    "experiments.rl_training.test_replay_integration"
+  ],
+  "protocol_sha256": "4f0daf45d32182d7a01d4a3d966b00930d6c5684f94fe485c66e166955c23fb3",
+  "authorization": {
+    "at": "2026-10-25T20:08:18.479041+00:00",
+    "session": "01a17445-7928-7552-aacb-27f3b55d7c8c",
+    "user_message": "chci vsechno spustit tak aby vysledky nebo kod nebo data nezasahovali jeden do druheho muzes se o to postarat",
+    "scope": [
+      "replay-selection",
+      "adaptive-replay",
+      "teacher-pilot",
+      "on-policy-distillation"
+    ],
+    "ceiling_usd": 200,
+    "usable_usd": 180,
+    "training_gpu": "NVIDIA GeForce RTX 4090",
+    "note": "Launch all four with isolation under existing aggregate cap, no cap increase. Existing replay job is adopted by identity, never relaunched."
+  },
+  "recovery": "v1 setup failed before training: CLI regression test used control-server data path. v2 test resolves deployed data path; experiment unchanged."
+}

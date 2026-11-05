@@ -1,0 +1,7 @@
+# Install the CPU build of torch from https://download.pytorch.org/whl/cpu first.
+torch==2.8.0
+transformers==4.57.1
+peft==0.17.1
+accelerate==1.10.1
+numpy==2.2.6
+tokenizers==0.22.2

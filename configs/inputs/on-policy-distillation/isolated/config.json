@@ -1,0 +1,88 @@
+{
+  "id": "opd-isolated-v1",
+  "study": "on-policy-distillation",
+  "seeds": [
+    17
+  ],
+  "hours": 12,
+  "training": {
+    "data": "opd/pilot-train-32.jsonl",
+    "variant": "replay",
+    "optimizer": "dr_grpo",
+    "scale_rewards": "no",
+    "max_steps": 32,
+    "group_size": 4,
+    "max_new_tokens": 2048,
+    "final_cap": 1024,
+    "max_prompt_tokens": 2048,
+    "replay_reward": "fixed",
+    "length_coefficient": 0.1,
+    "references": "shared/references.json",
+    "learning_rate": 1e-05,
+    "kl_beta": 0,
+    "replay_weight": 0.1,
+    "replay_capacity": 128,
+    "replay_admission": "all_correct",
+    "rank": 16,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "save_every": 32,
+    "device": "cuda",
+    "max_seconds": 0,
+    "distill_cache": "@output/preparation/teacher-cache.json"
+  },
+  "arms": [
+    {
+      "name": "offline-hard",
+      "overrides": {
+        "distill_arm": "offline-hard"
+      }
+    },
+    {
+      "name": "offline-soft",
+      "overrides": {
+        "distill_arm": "offline-soft"
+      }
+    },
+    {
+      "name": "on-policy-soft",
+      "overrides": {
+        "distill_arm": "on-policy-soft"
+      }
+    }
+  ],
+  "evaluation": {
+    "schema_version": 1,
+    "split_manifest": "splits.json",
+    "subset": "tuning",
+    "samples": 2,
+    "workers": 4,
+    "candidate_timeout_seconds": 0
+  },
+  "worker_tests": [
+    "experiments.on_policy_distillation.test_loss",
+    "experiments.on_policy_distillation.test_integration",
+    "experiments.rl_training.test_replay_integration"
+  ],
+  "prepare_module": "experiments.on_policy_distillation.prepare_cache",
+  "validation": false,
+  "protocol_sha256": "52ff12030601b6d6fd6682d1ca168b6249b25a263c0eb213a0c7c74544568036",
+  "authorization": {
+    "at": "2026-10-25T20:08:18.479041+00:00",
+    "session": "01a17445-7928-7552-aacb-27f3b55d7c8c",
+    "user_message": "chci vsechno spustit tak aby vysledky nebo kod nebo data nezasahovali jeden do druheho muzes se o to postarat",
+    "scope": [
+      "replay-selection",
+      "adaptive-replay",
+      "teacher-pilot",
+      "on-policy-distillation"
+    ],
+    "ceiling_usd": 200,
+    "usable_usd": 180,
+    "training_gpu": "NVIDIA GeForce RTX 4090",
+    "note": "Launch all four with isolation under existing aggregate cap, no cap increase. Existing replay job is adopted by identity, never relaunched."
+  },
+  "replication": "Initial seed17 pilot only; seeds29/43 require feasibility/screening as registered.",
+  "smoke": "4096 tokens, teacher+student backward without optimizer before each arm."
+}

@@ -1,0 +1,59 @@
+{
+  "id": "teacher-completion-v2",
+  "seeds": [
+    17,
+    29,
+    43
+  ],
+  "hours": 6,
+  "training": {
+    "variant": "replay",
+    "optimizer": "dr_grpo",
+    "scale_rewards": "no",
+    "max_steps": 128,
+    "max_seconds": 0,
+    "group_size": 4,
+    "max_new_tokens": 2048,
+    "final_cap": 1024,
+    "max_prompt_tokens": 2048,
+    "length_coefficient": 0.1,
+    "length_reference": 1024,
+    "learning_rate": 1e-05,
+    "kl_beta": 0.0,
+    "replay_weight": 0.1,
+    "replay_reward": "fixed",
+    "replay_capacity": 128,
+    "rank": 16,
+    "save_every": 32,
+    "chunk_size": 64,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "device": "cuda",
+    "replay_admission": "all_correct"
+  },
+  "protocol_sha256": "beceec945672a56010dc5da51c5014ca03d0994499586a6d3471f28c7bead966",
+  "authorization": {
+    "at": 1793003740.7364697,
+    "user_messages": [
+      "tohle neni za me dokon\u010deny experiment nase chyba dodelej pary tak aby run probehl az dokonce s evaluaci potrebuju vysledky",
+      "zaroven dodelej zbytek, zbyle 3 evaluace"
+    ],
+    "ceiling_usd": 200,
+    "training_gpu": "NVIDIA GeForce RTX 4090",
+    "notifications": "server log only"
+  },
+  "pool_manifest_sha256": "d2ad44c8b1cb0974158bf8df3375d6d6e4882c0aa1fcc48c6a50c3f2c321780d",
+  "primary_evaluation": {
+    "questions": 800,
+    "data": "val.jsonl",
+    "greedy": true,
+    "backend": "vllm",
+    "max_new_tokens": 4096,
+    "final_answer_cap": 1024,
+    "seed": 17
+  },
+  "sampling_extension_sha256": "b94beaf2d627afe1861f97bd80e2edfc6456c1cc2e0a654c4dfb414f5bc3e03c",
+  "protocol_version": "2.1",
+  "cohort_extension_sha256": "a4f1c262f63845e6abe6d4812b3b256c8e65cf2ea01dd3167233067a161328e6"
+}
