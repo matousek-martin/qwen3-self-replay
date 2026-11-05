@@ -1,0 +1,15 @@
+{
+  "name": "replay-scaled-example",
+  "provider": "vast",
+  "entry": "experiments/run_public_replay.sh",
+  "max_cost_usd": 10,
+  "max_runtime_hours": 2,
+  "max_gpu_rate": 1.8,
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "gpu_count": 2,
+  "hardware_scope": "replay-scaled-a100-v1",
+  "workload": "training",
+  "disk_gb": 80,
+  "offer_id": 1,
+  "guard_unit": "self-replay-guard.timer"
+}

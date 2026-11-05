@@ -1,0 +1,10 @@
+[Unit]
+Description=Check self-replay jobs every minute
+
+[Timer]
+OnBootSec=30s
+OnUnitActiveSec=60s
+Unit=self-replay-guard.service
+
+[Install]
+WantedBy=timers.target

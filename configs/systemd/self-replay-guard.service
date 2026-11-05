@@ -1,0 +1,9 @@
+[Unit]
+Description=Self-replay independent finite-budget guard
+
+[Service]
+Type=oneshot
+UMask=0077
+WorkingDirectory=/absolute/path/to/qwen3-self-replay
+EnvironmentFile=/absolute/path/to/private-controller.env
+ExecStart=/absolute/path/to/qwen3-self-replay/.venv/bin/self-replay cloud guard --workspace /absolute/path/to/workspace
