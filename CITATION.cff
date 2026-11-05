@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite this repository and credit the original base model and benchmarks."
+title: "Qwen3 Self-Replay: Verified Solutions for Shorter Reasoning"
+authors:
+  - family-names: "Matousek"
+    given-names: "Martin"
+version: 0.1.0
+date-released: 2026-11-05
+license: Apache-2.0
