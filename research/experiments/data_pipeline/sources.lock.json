@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "resolved_at": "2026-10-23T12:25:21.625949+00:00",
+  "sources": {
+    "gsm8k": {
+      "repo": "openai/gsm8k",
+      "config": "main",
+      "split": "train",
+      "revision": "740312add88f781978c0658806c59bc2815b9866",
+      "license": [
+        "mit"
+      ],
+      "source_url": "https://huggingface.co/datasets/openai/gsm8k"
+    },
+    "skywork": {
+      "repo": "Skywork/Skywork-OR1-RL-Data",
+      "config": null,
+      "split": "math",
+      "revision": "1cdedc52e0e2db85fdf252f9be682e63a5a38c33",
+      "license": null,
+      "source_url": "https://huggingface.co/datasets/Skywork/Skywork-OR1-RL-Data"
+    },
+    "commonsense_qa": {
+      "repo": "tau/commonsense_qa",
+      "config": null,
+      "split": "train",
+      "revision": "94630fe30dad47192a8546eb75f094926d47e155",
+      "license": [
+        "mit"
+      ],
+      "source_url": "https://huggingface.co/datasets/tau/commonsense_qa"
+    },
+    "arc_easy": {
+      "repo": "allenai/ai2_arc",
+      "config": "ARC-Easy",
+      "split": "train",
+      "revision": "210d026faf9955653af8916fad021475a3f00453",
+      "license": [
+        "cc-by-sa-4.0"
+      ],
+      "source_url": "https://huggingface.co/datasets/allenai/ai2_arc"
+    }
+  }
+}
