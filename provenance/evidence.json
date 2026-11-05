@@ -1,0 +1,321 @@
+{
+  "studies/self-replay/results/checkpoint-128/comparison.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-128-20261101t175736z/output/full-evaluation/comparison.json",
+    "sha256": "db32aa6158ab4faeddfe7747c19fc30fd721ebeb44dbccbd13745124e6a0c467"
+  },
+  "studies/self-replay/results/checkpoint-128/results.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-128-20261101t175736z/output/full-evaluation/runs/replay-128/results.json",
+    "sha256": "061f1cc350a32afc68333750730bc2977b08a38da744e59a0fc6bc309aaa08fa"
+  },
+  "studies/self-replay/results/checkpoint-128/completion.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-128-20261101t175736z/output/full-evaluation/completion.json",
+    "sha256": "03ac3bfc31211af780dc6077344945e7cacffbe985ae9c0593b132df0795426d"
+  },
+  "studies/self-replay/results/checkpoint-128/questions-manifest.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-128-20261101t175736z/output/full-evaluation/questions-manifest.json",
+    "sha256": "d0027b743ebf04db943f67aed437bc7fb0b97ebd49d2167c6b1c59c81da584b1"
+  },
+  "studies/self-replay/results/base/results.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-1280-20261105t130521z/output/full-evaluation/runs/base/results.json",
+    "sha256": "e8f97c86488eb62163131d8a5dbf5f04bc1f6dd018a3512585138995318c8219"
+  },
+  "studies/self-replay/results/checkpoint-256/comparison.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-256-20261101t214844z/output/full-evaluation/comparison.json",
+    "sha256": "bdf4b9016f37581881b0675bd2037db38b0def45f3b7e8fdf5a86f4e93090b05"
+  },
+  "studies/self-replay/results/checkpoint-256/results.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-256-20261101t214844z/output/full-evaluation/runs/replay-256/results.json",
+    "sha256": "6d5395530c65676f87b6f27d9185fb243348f03990082a68725244abad2c2839"
+  },
+  "studies/self-replay/results/checkpoint-256/completion.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-256-20261101t214844z/output/full-evaluation/completion.json",
+    "sha256": "48672a3dc331e1a8a24489afd71a13238170d76f6358d63d9190601973c07f39"
+  },
+  "studies/self-replay/results/checkpoint-256/questions-manifest.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-256-20261101t214844z/output/full-evaluation/questions-manifest.json",
+    "sha256": "d0027b743ebf04db943f67aed437bc7fb0b97ebd49d2167c6b1c59c81da584b1"
+  },
+  "artifacts/records/checkpoint-256/records.jsonl.gz": {
+    "source": "lab/experiments/cloud/replay-evaluation-256-20261101t214844z/output/full-evaluation/runs/replay-256/records.jsonl",
+    "sha256": "84b7889e86f85e091d3ff26e7bd6d3630b743780301a007f76cf4a9bd684994e",
+    "uncompressed_sha256": "5586c5d09d7e6be736182bb577eb82ed20b74c48e1eb347da006211cb36b7db8"
+  },
+  "artifacts/records/base/records.jsonl.gz": {
+    "source": "lab/experiments/cloud/replay-evaluation-850-20261102t133228z/output/full-evaluation/runs/base/records.jsonl",
+    "sha256": "8083f02d30558c9e4ba83d57e4f2d26206a8b733db43db64230dc583ffd0ca8d",
+    "uncompressed_sha256": "272bf7cfd492e592b0f4cc650b648e2b3db4ee5640e1ea45960508326ff2e7f9"
+  },
+  "studies/self-replay/results/checkpoint-576/comparison.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-576-20261102t102548z/output/full-evaluation/comparison.json",
+    "sha256": "737b29eeb288f4426657533a64ae184ee7c1a55826d9a1ace2373df3eac73dad"
+  },
+  "studies/self-replay/results/checkpoint-576/results.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-576-20261102t102548z/output/full-evaluation/runs/replay-576/results.json",
+    "sha256": "0ecbc5b9c54075d931a6c3b2b707d3e97057889fdf885cf8bc41bc427fa60b32"
+  },
+  "studies/self-replay/results/checkpoint-576/completion.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-576-20261102t102548z/output/full-evaluation/completion.json",
+    "sha256": "bf01288b408d8cdc89b4f92a025987258aa7fd42057e3ed6059f315fdb3b3b03"
+  },
+  "studies/self-replay/results/checkpoint-576/questions-manifest.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-576-20261102t102548z/output/full-evaluation/questions-manifest.json",
+    "sha256": "d0027b743ebf04db943f67aed437bc7fb0b97ebd49d2167c6b1c59c81da584b1"
+  },
+  "studies/self-replay/results/checkpoint-768/comparison.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-768-20261102t121206z/output/full-evaluation/comparison.json",
+    "sha256": "b982388d177abcab0e5cf747c020f11efecb649dceab885672c69d9b61441fe8"
+  },
+  "studies/self-replay/results/checkpoint-768/results.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-768-20261102t121206z/output/full-evaluation/runs/replay-768/results.json",
+    "sha256": "f0ae5f8b64015520addb90b1bcac343a46bc20c0f0ecb64e064b5ed763966ed1"
+  },
+  "studies/self-replay/results/checkpoint-768/completion.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-768-20261102t121206z/output/full-evaluation/completion.json",
+    "sha256": "54f1308b5892bb3ca27ef9d693af9de6cffab1d591118bb713eeaa8a7d6afb6d"
+  },
+  "studies/self-replay/results/checkpoint-768/questions-manifest.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-768-20261102t121206z/output/full-evaluation/questions-manifest.json",
+    "sha256": "d0027b743ebf04db943f67aed437bc7fb0b97ebd49d2167c6b1c59c81da584b1"
+  },
+  "studies/self-replay/results/checkpoint-850/comparison.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-850-20261102t133228z/output/full-evaluation/comparison.json",
+    "sha256": "5f88b44f72aeec18d4309a1f8428c088e78b32f892cd499c6b5d9271750abbde"
+  },
+  "studies/self-replay/results/checkpoint-850/results.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-850-20261102t133228z/output/full-evaluation/runs/replay-850/results.json",
+    "sha256": "183821b109697ffeb23f14eb861568d9be0831e9ce2808be4688df82c8de5c0a"
+  },
+  "studies/self-replay/results/checkpoint-850/completion.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-850-20261102t133228z/output/full-evaluation/completion.json",
+    "sha256": "6d4f0da0363323860e6ba4ae0e1c8a8932c5f975387421dcbfc4f3dd4b3e5092"
+  },
+  "studies/self-replay/results/checkpoint-850/questions-manifest.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-850-20261102t133228z/output/full-evaluation/questions-manifest.json",
+    "sha256": "d0027b743ebf04db943f67aed437bc7fb0b97ebd49d2167c6b1c59c81da584b1"
+  },
+  "artifacts/records/checkpoint-850/records.jsonl.gz": {
+    "source": "lab/experiments/cloud/replay-evaluation-850-20261102t133228z/output/full-evaluation/runs/replay-850/records.jsonl",
+    "sha256": "5b695c54e290b60d6c27ae04bcf48cb83c5a671bf4052e12327a2e9de6d87773",
+    "uncompressed_sha256": "27e2655b8aa309da47fb103dc4660f46ef78438d97453137db467beb50721184"
+  },
+  "studies/self-replay/results/checkpoint-1024/comparison.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-1024-20261103t070748z/output/full-evaluation/comparison.json",
+    "sha256": "36bfea9bd701365930d7ac3be4666f5263e58ba43d94aa8d3a7642de518aa57f"
+  },
+  "studies/self-replay/results/checkpoint-1024/results.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-1024-20261103t070748z/output/full-evaluation/runs/replay-1024/results.json",
+    "sha256": "7753be6dac354950acd098f065b3e2de83d83b0211de2165ac595f7116c957d3"
+  },
+  "studies/self-replay/results/checkpoint-1024/completion.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-1024-20261103t070748z/output/full-evaluation/completion.json",
+    "sha256": "237b1f31abc30c832219e5db57899e089604d04802467ffbf60cbf74f6c0dc50"
+  },
+  "studies/self-replay/results/checkpoint-1024/questions-manifest.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-1024-20261103t070748z/output/full-evaluation/questions-manifest.json",
+    "sha256": "d0027b743ebf04db943f67aed437bc7fb0b97ebd49d2167c6b1c59c81da584b1"
+  },
+  "studies/self-replay/results/checkpoint-1280/comparison.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-1280-20261105t130521z/output/full-evaluation/comparison.json",
+    "sha256": "30e91726bbf945b235fd1396316969de9bc5602f231a7e15a5c707c6acbe0b4b"
+  },
+  "studies/self-replay/results/checkpoint-1280/results.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-1280-20261105t130521z/output/full-evaluation/runs/replay-1280/results.json",
+    "sha256": "71204cd48434ea5a40d85762d70a4a682617edbe943aec36766076ca5bdd9d76"
+  },
+  "studies/self-replay/results/checkpoint-1280/completion.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-1280-20261105t130521z/output/full-evaluation/completion.json",
+    "sha256": "8053ddc8db6b571322d577aaa59cc6fb90d99063d7cf25bd3c7e7037d52d6235"
+  },
+  "studies/self-replay/results/checkpoint-1280/questions-manifest.json": {
+    "source": "lab/experiments/cloud/replay-evaluation-1280-20261105t130521z/output/full-evaluation/questions-manifest.json",
+    "sha256": "d0027b743ebf04db943f67aed437bc7fb0b97ebd49d2167c6b1c59c81da584b1"
+  },
+  "studies/self-replay/training/validation-curve.json": {
+    "source": "lab/experiments/cloud/replay-scaled-vast-resume1024-20261105t075310z/output/training/validation-curve.json",
+    "sha256": "c7765b92bfd4c91752ed683e47745bbc2be7c5804657907a632dee5e1d860952"
+  },
+  "studies/self-replay/training/training-series.json": {
+    "source": "lab/experiments/cloud/replay-scaled-vast-resume1024-20261105t075310z/output/training/training-series.json",
+    "sha256": "ea6a24fa987e029058e75d9a32caace4d7181608787ba52f0ff0cafc0f09c235"
+  },
+  "studies/self-replay/training/references.json": {
+    "source": "lab/experiments/cloud/replay-scaled-vast-resume1024-20261105t075310z/output/training/references.json",
+    "sha256": "c1da05413258dd07b49ca3803cf2fb32b5f8955d83a2212222a1ab8989926315"
+  },
+  "artifacts/models/checkpoint-256/README.md": {
+    "source": "lab/experiments/cloud/replay-scaled-training-20261101t122440z/output/training/checkpoints/group-000256/adapter/README.md",
+    "sha256": "3d9fe4bc34a80367975b2a4917ebc3bab93b75fac1190438e46dd0eb66baac30"
+  },
+  "artifacts/models/checkpoint-256/adapter_config.json": {
+    "source": "lab/experiments/cloud/replay-scaled-training-20261101t122440z/output/training/checkpoints/group-000256/adapter/adapter_config.json",
+    "sha256": "8f6ee0213f00c7f61ac3d1f6d358d69cd7051361239959a5962c29097d4fa68f"
+  },
+  "artifacts/models/checkpoint-256/adapter_model.safetensors": {
+    "source": "lab/experiments/cloud/replay-scaled-training-20261101t122440z/output/training/checkpoints/group-000256/adapter/adapter_model.safetensors",
+    "sha256": "5efd1546532301c69ce7ee86a05dbd413dfd135768e359ec14bbda60639bcb31"
+  },
+  "artifacts/models/checkpoint-256/added_tokens.json": {
+    "source": "lab/experiments/cloud/replay-scaled-training-20261101t122440z/output/training/checkpoints/group-000256/adapter/added_tokens.json",
+    "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+  },
+  "artifacts/models/checkpoint-256/chat_template.jinja": {
+    "source": "lab/experiments/cloud/replay-scaled-training-20261101t122440z/output/training/checkpoints/group-000256/adapter/chat_template.jinja",
+    "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+  },
+  "artifacts/models/checkpoint-256/merges.txt": {
+    "source": "lab/experiments/cloud/replay-scaled-training-20261101t122440z/output/training/checkpoints/group-000256/adapter/merges.txt",
+    "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+  },
+  "artifacts/models/checkpoint-256/special_tokens_map.json": {
+    "source": "lab/experiments/cloud/replay-scaled-training-20261101t122440z/output/training/checkpoints/group-000256/adapter/special_tokens_map.json",
+    "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd"
+  },
+  "artifacts/models/checkpoint-256/tokenizer.json": {
+    "source": "lab/experiments/cloud/replay-scaled-training-20261101t122440z/output/training/checkpoints/group-000256/adapter/tokenizer.json",
+    "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  },
+  "artifacts/models/checkpoint-256/tokenizer_config.json": {
+    "source": "lab/experiments/cloud/replay-scaled-training-20261101t122440z/output/training/checkpoints/group-000256/adapter/tokenizer_config.json",
+    "sha256": "443bfa629eb16387a12edbf92a76f6a6f10b2af3b53d87ba1550adfcf45f7fa0"
+  },
+  "artifacts/models/checkpoint-256/vocab.json": {
+    "source": "lab/experiments/cloud/replay-scaled-training-20261101t122440z/output/training/checkpoints/group-000256/adapter/vocab.json",
+    "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "provenance/checkpoint-256-complete.json": {
+    "source": "lab/experiments/cloud/replay-scaled-training-20261101t122440z/output/training/checkpoints/group-000256/complete.json",
+    "sha256": "3110c503e3928a7310ce1db1b8664cebb18ea1a4520eff18815ecdf8db830af7"
+  },
+  "artifacts/models/checkpoint-850/README.md": {
+    "source": "lab/experiments/cloud/replay-scaled-training-20261101t122440z/output/training/checkpoints/group-000850/adapter/README.md",
+    "sha256": "3d9fe4bc34a80367975b2a4917ebc3bab93b75fac1190438e46dd0eb66baac30"
+  },
+  "artifacts/models/checkpoint-850/adapter_config.json": {
+    "source": "lab/experiments/cloud/replay-scaled-training-20261101t122440z/output/training/checkpoints/group-000850/adapter/adapter_config.json",
+    "sha256": "8f6ee0213f00c7f61ac3d1f6d358d69cd7051361239959a5962c29097d4fa68f"
+  },
+  "artifacts/models/checkpoint-850/adapter_model.safetensors": {
+    "source": "lab/experiments/cloud/replay-scaled-training-20261101t122440z/output/training/checkpoints/group-000850/adapter/adapter_model.safetensors",
+    "sha256": "54369b1ac3fcefa4a285abf5b3c6c38336ec7350331a749a4199ece10817d9f9"
+  },
+  "artifacts/models/checkpoint-850/added_tokens.json": {
+    "source": "lab/experiments/cloud/replay-scaled-training-20261101t122440z/output/training/checkpoints/group-000850/adapter/added_tokens.json",
+    "sha256": "c0284b582e14987fbd3d5a2cb2bd139084371ed9acbae488829a1c900833c680"
+  },
+  "artifacts/models/checkpoint-850/chat_template.jinja": {
+    "source": "lab/experiments/cloud/replay-scaled-training-20261101t122440z/output/training/checkpoints/group-000850/adapter/chat_template.jinja",
+    "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+  },
+  "artifacts/models/checkpoint-850/merges.txt": {
+    "source": "lab/experiments/cloud/replay-scaled-training-20261101t122440z/output/training/checkpoints/group-000850/adapter/merges.txt",
+    "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
+  },
+  "artifacts/models/checkpoint-850/special_tokens_map.json": {
+    "source": "lab/experiments/cloud/replay-scaled-training-20261101t122440z/output/training/checkpoints/group-000850/adapter/special_tokens_map.json",
+    "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd"
+  },
+  "artifacts/models/checkpoint-850/tokenizer.json": {
+    "source": "lab/experiments/cloud/replay-scaled-training-20261101t122440z/output/training/checkpoints/group-000850/adapter/tokenizer.json",
+    "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  },
+  "artifacts/models/checkpoint-850/tokenizer_config.json": {
+    "source": "lab/experiments/cloud/replay-scaled-training-20261101t122440z/output/training/checkpoints/group-000850/adapter/tokenizer_config.json",
+    "sha256": "443bfa629eb16387a12edbf92a76f6a6f10b2af3b53d87ba1550adfcf45f7fa0"
+  },
+  "artifacts/models/checkpoint-850/vocab.json": {
+    "source": "lab/experiments/cloud/replay-scaled-training-20261101t122440z/output/training/checkpoints/group-000850/adapter/vocab.json",
+    "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "provenance/checkpoint-850-complete.json": {
+    "source": "lab/experiments/cloud/replay-scaled-training-20261101t122440z/output/training/checkpoints/group-000850/complete.json",
+    "sha256": "2a8904579af400fbcf27169fdfab754b9df0e197751229d15bfc61e69a7c53bb"
+  },
+  "studies/experiments/replay-selection.json": {
+    "source": "lab/experiments/completion-20261026/replay-selection-results.json",
+    "sha256": "2be81f92c74586f89c7aa08661df6f0b2667e61830c757ed2f90d5bd58179b3a"
+  },
+  "studies/experiments/adaptive-replay.json": {
+    "source": "lab/experiments/completion-20261026/adaptive-replay-results.json",
+    "sha256": "da361775f90cdccf58969c825fb38584978c49f05479a72af6bfb30e195cfa41"
+  },
+  "studies/experiments/on-policy-distillation.json": {
+    "source": "lab/experiments/completion-20261026/on-policy-distillation-results.json",
+    "sha256": "deacedf9c36f4f88dff419dd982eaf2af6c3ee03b89d045e663d757a086198c0"
+  },
+  "studies/experiments/teacher-pilot.json": {
+    "source": "lab/experiments/completion-20261026/teacher-pilot-results.json",
+    "sha256": "1b26240d0f2fcd66ab0c9527ee583f47fb7b6ea99c0ed8275a24aa05e927f986"
+  },
+  "studies/experiments/coding-abc.json": {
+    "source": "lab/experiments/coding-abc/20261104t192501z/official-vs-parent768-summary.json",
+    "sha256": "fae7a259baf8861acdc6e301f34a054cd67fd49937bb439a45e18c65281d3e00"
+  },
+  "studies/experiments/coding-curriculum.json": {
+    "source": "lab/experiments/coding-curriculum/20261104t231104z/results-analysis.json",
+    "sha256": "42adf7ed4f38333ac8d43afc2fb91a7dcb3b0df722724f734306cf87f23250df"
+  },
+  "studies/experiments/opencoder-diagnostic.json": {
+    "source": "lab/experiments/opencoder-mode-probe/20261103t231900z/analysis.json",
+    "sha256": "2fa044a4e43ff9b6392b991ce357d8ddc78ca0d598c558d7bad05c24ea45d357"
+  },
+  "studies/experiments/early-study.json": {
+    "source": "lab/experiments/study/development-report.json",
+    "sha256": "61cb9bb7f59dff8f551eaf0c27b18b38be2f454ee9b6706f4f83a2beb4a7161f"
+  },
+  "studies/experiments/1280-vs-850.json": {
+    "source": "lab/analysis/replay-1280-review-20261105/1280-vs-850.json",
+    "sha256": "f72e8ea76c19b900afc1695220c241c9897c17e764d816f356102f5f409d1eb8"
+  },
+  "studies/experiments/shorterbetter/control-005.json": {
+    "source": "lab/experiments/cloud/shorterbetter-scaled-parallel-control-early-20261031t065504z-r1/output/paired-evaluation/comparisons/control-005.json",
+    "sha256": "4eeacec086ac470fee06cf59ed07ca0dca426109f7ae15af4c2a655a65b4d1c3"
+  },
+  "studies/experiments/shorterbetter/control-010.json": {
+    "source": "lab/experiments/cloud/shorterbetter-scaled-parallel-control-early-20261031t065504z-r1/output/paired-evaluation/comparisons/control-010.json",
+    "sha256": "726bf074c5aa6b60acb7b615491a2ab7765146aabe29a19971146aaa89403b68"
+  },
+  "studies/experiments/shorterbetter/control-015.json": {
+    "source": "lab/experiments/cloud/shorterbetter-scaled-parallel-control-early-20261031t065504z-r1/output/paired-evaluation/comparisons/control-015.json",
+    "sha256": "fefce657b8afd2c2ced6592373de4d5bc45009a41f8528129352c38e9be36ee6"
+  },
+  "studies/experiments/shorterbetter/control-020.json": {
+    "source": "lab/experiments/cloud/shorterbetter-scaled-parallel-control-late-20261031t065504z/output/paired-evaluation/comparisons/control-020.json",
+    "sha256": "555ae486e2969ee5abae1eb783aa95fba2063266d3a0f0bfb7ee576feb19cc97"
+  },
+  "studies/experiments/shorterbetter/control-025.json": {
+    "source": "lab/experiments/cloud/shorterbetter-scaled-parallel-control-late-20261031t065504z/output/paired-evaluation/comparisons/control-025.json",
+    "sha256": "2f40a01a4d5c609c5c1f74dc1370ae7a3ab073a9cd2cebbc24748ce3cb74215e"
+  },
+  "studies/experiments/shorterbetter/control-030.json": {
+    "source": "lab/experiments/cloud/shorterbetter-scaled-parallel-control-late-20261031t065504z/output/paired-evaluation/comparisons/control-030.json",
+    "sha256": "e745428ca0e1aeaface829d63c1c8639345772a7d8b74a19aa41d00645d64ec4"
+  },
+  "studies/experiments/shorterbetter/accuracy-005.json": {
+    "source": "lab/experiments/cloud/shorterbetter-scaled-parallel-accuracy-early-20261031t065504z-r2/output/paired-evaluation/comparisons/accuracy-005.json",
+    "sha256": "00903de6674b50844cd0bb5ace7ab37e72a570a314f157f0cf5251cdd6187c22"
+  },
+  "studies/experiments/shorterbetter/accuracy-010.json": {
+    "source": "lab/experiments/cloud/shorterbetter-scaled-parallel-accuracy-early-20261031t065504z-r2/output/paired-evaluation/comparisons/accuracy-010.json",
+    "sha256": "eb26865d75af2993f56bcca19896ef120a59229a74805b2a3ccb70f871390f17"
+  },
+  "studies/experiments/shorterbetter/accuracy-015.json": {
+    "source": "lab/experiments/cloud/shorterbetter-scaled-parallel-accuracy-early-20261031t065504z-r2/output/paired-evaluation/comparisons/accuracy-015.json",
+    "sha256": "2fb9615c27af0536edc5738b4c11a5ca356e9036d9be30e8df11b4a2352d3b37"
+  },
+  "studies/experiments/shorterbetter/accuracy-020.json": {
+    "source": "lab/experiments/cloud/shorterbetter-scaled-parallel-accuracy-late-20261031t065504z/output/paired-evaluation/comparisons/accuracy-020.json",
+    "sha256": "07b8ae3e8011b8a69ecfa637602a6efbb547bb7515eb18b1043e8e9104fab9da"
+  },
+  "studies/experiments/shorterbetter/accuracy-025.json": {
+    "source": "lab/experiments/cloud/shorterbetter-scaled-parallel-accuracy-late-20261031t065504z/output/paired-evaluation/comparisons/accuracy-025.json",
+    "sha256": "fecf150d76a8b7ec21eaa562b854259277a477bdc5689fc453c58eedb5d2dbd4"
+  },
+  "studies/experiments/shorterbetter/accuracy-030.json": {
+    "source": "lab/experiments/cloud/shorterbetter-scaled-parallel-accuracy-late-20261031t065504z/output/paired-evaluation/comparisons/accuracy-030.json",
+    "sha256": "056352068fb84c2a68b4434bee6ea4d0e4408b4d581e7f30de7f06a15662efdf"
+  },
+  "artifacts/data/self-replay-frozen-data.zip": {
+    "source": "lab/experiments/replay-scaled/20261101-checkpoints-v5",
+    "sha256": "744092c2f34e0fd243e1cc80ebf1a5944575995de9e64de46e2c42f78e88f93f"
+  }
+}

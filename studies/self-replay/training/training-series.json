@@ -1,0 +1,3614 @@
+{
+  "series": {
+    "overall": [
+      {
+        "iteration": 16,
+        "accuracy": 0.5,
+        "mean_tokens": 1046.890625,
+        "median_tokens": 876.5,
+        "truncation": 0.25,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 32,
+        "accuracy": 0.625,
+        "mean_tokens": 976.59375,
+        "median_tokens": 694.5,
+        "truncation": 0.25,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 48,
+        "accuracy": 0.484375,
+        "mean_tokens": 942.453125,
+        "median_tokens": 618.0,
+        "truncation": 0.25,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 64,
+        "accuracy": 0.578125,
+        "mean_tokens": 827.15625,
+        "median_tokens": 521.5,
+        "truncation": 0.203125,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 80,
+        "accuracy": 0.53125,
+        "mean_tokens": 903.375,
+        "median_tokens": 625.5,
+        "truncation": 0.203125,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 96,
+        "accuracy": 0.59375,
+        "mean_tokens": 886.234375,
+        "median_tokens": 818.0,
+        "truncation": 0.140625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 112,
+        "accuracy": 0.484375,
+        "mean_tokens": 841.234375,
+        "median_tokens": 443.5,
+        "truncation": 0.21875,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 128,
+        "accuracy": 0.375,
+        "mean_tokens": 927.46875,
+        "median_tokens": 520.0,
+        "truncation": 0.265625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 144,
+        "accuracy": 0.53125,
+        "mean_tokens": 895.15625,
+        "median_tokens": 549.0,
+        "truncation": 0.265625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 160,
+        "accuracy": 0.640625,
+        "mean_tokens": 865.390625,
+        "median_tokens": 629.5,
+        "truncation": 0.21875,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 176,
+        "accuracy": 0.59375,
+        "mean_tokens": 904.34375,
+        "median_tokens": 835.0,
+        "truncation": 0.171875,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 192,
+        "accuracy": 0.65625,
+        "mean_tokens": 784.203125,
+        "median_tokens": 673.0,
+        "truncation": 0.140625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 208,
+        "accuracy": 0.6875,
+        "mean_tokens": 862.03125,
+        "median_tokens": 622.0,
+        "truncation": 0.15625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 224,
+        "accuracy": 0.625,
+        "mean_tokens": 817.0625,
+        "median_tokens": 643.5,
+        "truncation": 0.15625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 240,
+        "accuracy": 0.578125,
+        "mean_tokens": 785.9375,
+        "median_tokens": 561.0,
+        "truncation": 0.1875,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 256,
+        "accuracy": 0.46875,
+        "mean_tokens": 881.140625,
+        "median_tokens": 785.5,
+        "truncation": 0.1875,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 272,
+        "accuracy": 0.546875,
+        "mean_tokens": 907.84375,
+        "median_tokens": 594.5,
+        "truncation": 0.25,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 288,
+        "accuracy": 0.671875,
+        "mean_tokens": 835.453125,
+        "median_tokens": 625.5,
+        "truncation": 0.1875,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 304,
+        "accuracy": 0.65625,
+        "mean_tokens": 669.546875,
+        "median_tokens": 468.0,
+        "truncation": 0.109375,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 320,
+        "accuracy": 0.640625,
+        "mean_tokens": 785.546875,
+        "median_tokens": 507.0,
+        "truncation": 0.203125,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 336,
+        "accuracy": 0.5625,
+        "mean_tokens": 925.546875,
+        "median_tokens": 726.0,
+        "truncation": 0.203125,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 352,
+        "accuracy": 0.6875,
+        "mean_tokens": 694.375,
+        "median_tokens": 420.0,
+        "truncation": 0.140625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 368,
+        "accuracy": 0.46875,
+        "mean_tokens": 878.59375,
+        "median_tokens": 494.5,
+        "truncation": 0.234375,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 384,
+        "accuracy": 0.578125,
+        "mean_tokens": 804.046875,
+        "median_tokens": 583.5,
+        "truncation": 0.125,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 400,
+        "accuracy": 0.515625,
+        "mean_tokens": 931.578125,
+        "median_tokens": 732.5,
+        "truncation": 0.171875,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 416,
+        "accuracy": 0.78125,
+        "mean_tokens": 667.375,
+        "median_tokens": 462.5,
+        "truncation": 0.03125,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 432,
+        "accuracy": 0.625,
+        "mean_tokens": 793.796875,
+        "median_tokens": 618.0,
+        "truncation": 0.15625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 448,
+        "accuracy": 0.703125,
+        "mean_tokens": 787.765625,
+        "median_tokens": 460.0,
+        "truncation": 0.203125,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 464,
+        "accuracy": 0.5625,
+        "mean_tokens": 766,
+        "median_tokens": 506.5,
+        "truncation": 0.171875,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 480,
+        "accuracy": 0.59375,
+        "mean_tokens": 700.578125,
+        "median_tokens": 469.0,
+        "truncation": 0.140625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 496,
+        "accuracy": 0.65625,
+        "mean_tokens": 727.078125,
+        "median_tokens": 509.0,
+        "truncation": 0.140625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 512,
+        "accuracy": 0.5,
+        "mean_tokens": 838.609375,
+        "median_tokens": 752.5,
+        "truncation": 0.15625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 528,
+        "accuracy": 0.625,
+        "mean_tokens": 848.625,
+        "median_tokens": 617.0,
+        "truncation": 0.21875,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 544,
+        "accuracy": 0.71875,
+        "mean_tokens": 541.953125,
+        "median_tokens": 389.5,
+        "truncation": 0.078125,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 560,
+        "accuracy": 0.640625,
+        "mean_tokens": 942.890625,
+        "median_tokens": 460.5,
+        "truncation": 0.296875,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 576,
+        "accuracy": 0.484375,
+        "mean_tokens": 817.171875,
+        "median_tokens": 684.5,
+        "truncation": 0.203125,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 592,
+        "accuracy": 0.65625,
+        "mean_tokens": 727.515625,
+        "median_tokens": 576.0,
+        "truncation": 0.125,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 608,
+        "accuracy": 0.53125,
+        "mean_tokens": 866.703125,
+        "median_tokens": 609.5,
+        "truncation": 0.234375,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 624,
+        "accuracy": 0.734375,
+        "mean_tokens": 660.921875,
+        "median_tokens": 400.0,
+        "truncation": 0.15625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 640,
+        "accuracy": 0.59375,
+        "mean_tokens": 685.109375,
+        "median_tokens": 462.5,
+        "truncation": 0.125,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 656,
+        "accuracy": 0.78125,
+        "mean_tokens": 518.78125,
+        "median_tokens": 441.0,
+        "truncation": 0.046875,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 672,
+        "accuracy": 0.53125,
+        "mean_tokens": 900.5,
+        "median_tokens": 570.5,
+        "truncation": 0.21875,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 688,
+        "accuracy": 0.765625,
+        "mean_tokens": 567.46875,
+        "median_tokens": 420.5,
+        "truncation": 0.0625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 704,
+        "accuracy": 0.65625,
+        "mean_tokens": 710.359375,
+        "median_tokens": 433.0,
+        "truncation": 0.15625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 720,
+        "accuracy": 0.5625,
+        "mean_tokens": 682.484375,
+        "median_tokens": 381.0,
+        "truncation": 0.140625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 736,
+        "accuracy": 0.625,
+        "mean_tokens": 570.796875,
+        "median_tokens": 424.5,
+        "truncation": 0.0625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 752,
+        "accuracy": 0.5,
+        "mean_tokens": 752.015625,
+        "median_tokens": 404.5,
+        "truncation": 0.15625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 768,
+        "accuracy": 0.578125,
+        "mean_tokens": 917.109375,
+        "median_tokens": 684.0,
+        "truncation": 0.234375,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 784,
+        "accuracy": 0.765625,
+        "mean_tokens": 633.234375,
+        "median_tokens": 389.5,
+        "truncation": 0.125,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 800,
+        "accuracy": 0.6875,
+        "mean_tokens": 674.75,
+        "median_tokens": 490.0,
+        "truncation": 0.109375,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 816,
+        "accuracy": 0.625,
+        "mean_tokens": 742.3125,
+        "median_tokens": 517.0,
+        "truncation": 0.15625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 832,
+        "accuracy": 0.65625,
+        "mean_tokens": 736.96875,
+        "median_tokens": 539.0,
+        "truncation": 0.03125,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 848,
+        "accuracy": 0.625,
+        "mean_tokens": 763.265625,
+        "median_tokens": 508.0,
+        "truncation": 0.140625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 864,
+        "accuracy": 0.671875,
+        "mean_tokens": 631.515625,
+        "median_tokens": 439.0,
+        "truncation": 0.09375,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 880,
+        "accuracy": 0.625,
+        "mean_tokens": 725.046875,
+        "median_tokens": 549.5,
+        "truncation": 0.078125,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 896,
+        "accuracy": 0.46875,
+        "mean_tokens": 851.140625,
+        "median_tokens": 412.0,
+        "truncation": 0.265625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 912,
+        "accuracy": 0.734375,
+        "mean_tokens": 628.359375,
+        "median_tokens": 504.5,
+        "truncation": 0.078125,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 928,
+        "accuracy": 0.625,
+        "mean_tokens": 759.15625,
+        "median_tokens": 344.5,
+        "truncation": 0.15625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 944,
+        "accuracy": 0.59375,
+        "mean_tokens": 810.59375,
+        "median_tokens": 585.0,
+        "truncation": 0.21875,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 960,
+        "accuracy": 0.671875,
+        "mean_tokens": 751.890625,
+        "median_tokens": 572.5,
+        "truncation": 0.1875,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 976,
+        "accuracy": 0.5625,
+        "mean_tokens": 566.859375,
+        "median_tokens": 424.0,
+        "truncation": 0.0625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 992,
+        "accuracy": 0.609375,
+        "mean_tokens": 686.09375,
+        "median_tokens": 481.5,
+        "truncation": 0.140625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 1008,
+        "accuracy": 0.59375,
+        "mean_tokens": 784.484375,
+        "median_tokens": 440.0,
+        "truncation": 0.203125,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 1024,
+        "accuracy": 0.53125,
+        "mean_tokens": 722.875,
+        "median_tokens": 541.5,
+        "truncation": 0.140625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 1040,
+        "accuracy": 0.671875,
+        "mean_tokens": 737.59375,
+        "median_tokens": 390.5,
+        "truncation": 0.140625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 1056,
+        "accuracy": 0.578125,
+        "mean_tokens": 715.890625,
+        "median_tokens": 338.5,
+        "truncation": 0.171875,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 1072,
+        "accuracy": 0.59375,
+        "mean_tokens": 817.78125,
+        "median_tokens": 577.5,
+        "truncation": 0.234375,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 1088,
+        "accuracy": 0.546875,
+        "mean_tokens": 699.953125,
+        "median_tokens": 387.5,
+        "truncation": 0.1875,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 1104,
+        "accuracy": 0.640625,
+        "mean_tokens": 731.59375,
+        "median_tokens": 416.0,
+        "truncation": 0.171875,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 1120,
+        "accuracy": 0.5,
+        "mean_tokens": 835.84375,
+        "median_tokens": 395.0,
+        "truncation": 0.28125,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 1136,
+        "accuracy": 0.734375,
+        "mean_tokens": 602.53125,
+        "median_tokens": 346.5,
+        "truncation": 0.109375,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 1152,
+        "accuracy": 0.609375,
+        "mean_tokens": 641.09375,
+        "median_tokens": 364.0,
+        "truncation": 0.140625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 1168,
+        "accuracy": 0.515625,
+        "mean_tokens": 753.875,
+        "median_tokens": 405.0,
+        "truncation": 0.203125,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 1184,
+        "accuracy": 0.625,
+        "mean_tokens": 720.890625,
+        "median_tokens": 421.0,
+        "truncation": 0.125,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 1200,
+        "accuracy": 0.609375,
+        "mean_tokens": 688.6875,
+        "median_tokens": 436.0,
+        "truncation": 0.125,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 1216,
+        "accuracy": 0.578125,
+        "mean_tokens": 743.140625,
+        "median_tokens": 348.5,
+        "truncation": 0.234375,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 1232,
+        "accuracy": 0.5625,
+        "mean_tokens": 700.984375,
+        "median_tokens": 405.0,
+        "truncation": 0.171875,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 1248,
+        "accuracy": 0.546875,
+        "mean_tokens": 685.765625,
+        "median_tokens": 460.0,
+        "truncation": 0.15625,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 1264,
+        "accuracy": 0.5625,
+        "mean_tokens": 757.578125,
+        "median_tokens": 551.0,
+        "truncation": 0.1875,
+        "questions": 16,
+        "responses": 64
+      },
+      {
+        "iteration": 1280,
+        "accuracy": 0.71875,
+        "mean_tokens": 650.78125,
+        "median_tokens": 329.0,
+        "truncation": 0.125,
+        "questions": 16,
+        "responses": 64
+      }
+    ],
+    "math": [
+      {
+        "iteration": 16,
+        "accuracy": 0.8125,
+        "mean_tokens": 1103.375,
+        "median_tokens": 927.0,
+        "truncation": 0.1875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 32,
+        "accuracy": 0.5,
+        "mean_tokens": 1069.6875,
+        "median_tokens": 857.0,
+        "truncation": 0.1875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 48,
+        "accuracy": 0.5,
+        "mean_tokens": 1345.1875,
+        "median_tokens": 1236.0,
+        "truncation": 0.3125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 64,
+        "accuracy": 0.875,
+        "mean_tokens": 919.1875,
+        "median_tokens": 925.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 80,
+        "accuracy": 0.8125,
+        "mean_tokens": 918.125,
+        "median_tokens": 848.0,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 96,
+        "accuracy": 1,
+        "mean_tokens": 904.875,
+        "median_tokens": 928.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 112,
+        "accuracy": 0.8125,
+        "mean_tokens": 825.5,
+        "median_tokens": 735.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 128,
+        "accuracy": 0.4375,
+        "mean_tokens": 1305.3125,
+        "median_tokens": 1300.5,
+        "truncation": 0.1875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 144,
+        "accuracy": 0.8125,
+        "mean_tokens": 930.4375,
+        "median_tokens": 683.5,
+        "truncation": 0.125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 160,
+        "accuracy": 0.875,
+        "mean_tokens": 1068.5,
+        "median_tokens": 1013.0,
+        "truncation": 0.125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 176,
+        "accuracy": 0.875,
+        "mean_tokens": 1022.6875,
+        "median_tokens": 928.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 192,
+        "accuracy": 1,
+        "mean_tokens": 908.1875,
+        "median_tokens": 759.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 208,
+        "accuracy": 0.9375,
+        "mean_tokens": 791.625,
+        "median_tokens": 744.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 224,
+        "accuracy": 0.5,
+        "mean_tokens": 1223.3125,
+        "median_tokens": 948.5,
+        "truncation": 0.3125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 240,
+        "accuracy": 0.875,
+        "mean_tokens": 683.1875,
+        "median_tokens": 594.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 256,
+        "accuracy": 0.9375,
+        "mean_tokens": 1067,
+        "median_tokens": 1019.0,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 272,
+        "accuracy": 0.8125,
+        "mean_tokens": 836.875,
+        "median_tokens": 715.0,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 288,
+        "accuracy": 1,
+        "mean_tokens": 675.125,
+        "median_tokens": 677.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 304,
+        "accuracy": 0.875,
+        "mean_tokens": 792.1875,
+        "median_tokens": 610.5,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 320,
+        "accuracy": 0.75,
+        "mean_tokens": 759.4375,
+        "median_tokens": 622.5,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 336,
+        "accuracy": 0.75,
+        "mean_tokens": 1144.3125,
+        "median_tokens": 1018.0,
+        "truncation": 0.125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 352,
+        "accuracy": 0.875,
+        "mean_tokens": 616.9375,
+        "median_tokens": 631.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 368,
+        "accuracy": 0.875,
+        "mean_tokens": 1100.1875,
+        "median_tokens": 1059.0,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 384,
+        "accuracy": 0.625,
+        "mean_tokens": 853.75,
+        "median_tokens": 800.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 400,
+        "accuracy": 0.3125,
+        "mean_tokens": 1306.625,
+        "median_tokens": 1288.5,
+        "truncation": 0.1875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 416,
+        "accuracy": 0.625,
+        "mean_tokens": 857.3125,
+        "median_tokens": 776.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 432,
+        "accuracy": 1,
+        "mean_tokens": 1042,
+        "median_tokens": 977.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 448,
+        "accuracy": 0.625,
+        "mean_tokens": 999.5625,
+        "median_tokens": 614.0,
+        "truncation": 0.25,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 464,
+        "accuracy": 0.75,
+        "mean_tokens": 817.75,
+        "median_tokens": 728.0,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 480,
+        "accuracy": 0.875,
+        "mean_tokens": 934,
+        "median_tokens": 713.0,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 496,
+        "accuracy": 1,
+        "mean_tokens": 858.3125,
+        "median_tokens": 849.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 512,
+        "accuracy": 0.5,
+        "mean_tokens": 1092.6875,
+        "median_tokens": 1008.0,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 528,
+        "accuracy": 0.5,
+        "mean_tokens": 831.5,
+        "median_tokens": 645.0,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 544,
+        "accuracy": 0.9375,
+        "mean_tokens": 705.4375,
+        "median_tokens": 605.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 560,
+        "accuracy": 0.875,
+        "mean_tokens": 901.9375,
+        "median_tokens": 679.0,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 576,
+        "accuracy": 0.625,
+        "mean_tokens": 909.3125,
+        "median_tokens": 803.0,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 592,
+        "accuracy": 0.75,
+        "mean_tokens": 845.5,
+        "median_tokens": 700.0,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 608,
+        "accuracy": 0.6875,
+        "mean_tokens": 662.875,
+        "median_tokens": 669.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 624,
+        "accuracy": 0.875,
+        "mean_tokens": 555.375,
+        "median_tokens": 586.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 640,
+        "accuracy": 1,
+        "mean_tokens": 755.75,
+        "median_tokens": 634.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 656,
+        "accuracy": 1,
+        "mean_tokens": 619.125,
+        "median_tokens": 621.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 672,
+        "accuracy": 0.5,
+        "mean_tokens": 1193.4375,
+        "median_tokens": 977.0,
+        "truncation": 0.25,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 688,
+        "accuracy": 0.5625,
+        "mean_tokens": 786,
+        "median_tokens": 769.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 704,
+        "accuracy": 0.875,
+        "mean_tokens": 632.3125,
+        "median_tokens": 556.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 720,
+        "accuracy": 0.75,
+        "mean_tokens": 660,
+        "median_tokens": 613.0,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 736,
+        "accuracy": 0.8125,
+        "mean_tokens": 543.1875,
+        "median_tokens": 520.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 752,
+        "accuracy": 0.125,
+        "mean_tokens": 1170.375,
+        "median_tokens": 918.0,
+        "truncation": 0.1875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 768,
+        "accuracy": 0.75,
+        "mean_tokens": 1092.5625,
+        "median_tokens": 864.0,
+        "truncation": 0.125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 784,
+        "accuracy": 0.875,
+        "mean_tokens": 758.375,
+        "median_tokens": 601.5,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 800,
+        "accuracy": 0.9375,
+        "mean_tokens": 699.5,
+        "median_tokens": 666.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 816,
+        "accuracy": 0.5625,
+        "mean_tokens": 1178.375,
+        "median_tokens": 919.0,
+        "truncation": 0.25,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 832,
+        "accuracy": 0.75,
+        "mean_tokens": 828,
+        "median_tokens": 758.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 848,
+        "accuracy": 0.75,
+        "mean_tokens": 857,
+        "median_tokens": 597.0,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 864,
+        "accuracy": 0.5,
+        "mean_tokens": 999.25,
+        "median_tokens": 783.5,
+        "truncation": 0.125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 880,
+        "accuracy": 1,
+        "mean_tokens": 678.25,
+        "median_tokens": 647.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 896,
+        "accuracy": 0.375,
+        "mean_tokens": 1182.5,
+        "median_tokens": 979.5,
+        "truncation": 0.3125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 912,
+        "accuracy": 0.75,
+        "mean_tokens": 720.25,
+        "median_tokens": 667.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 928,
+        "accuracy": 0.6875,
+        "mean_tokens": 974.375,
+        "median_tokens": 581.5,
+        "truncation": 0.125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 944,
+        "accuracy": 0.625,
+        "mean_tokens": 649.5625,
+        "median_tokens": 654.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 960,
+        "accuracy": 0.875,
+        "mean_tokens": 633.0625,
+        "median_tokens": 657.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 976,
+        "accuracy": 0.75,
+        "mean_tokens": 631.625,
+        "median_tokens": 485.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 992,
+        "accuracy": 0.75,
+        "mean_tokens": 643.9375,
+        "median_tokens": 640.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1008,
+        "accuracy": 0.75,
+        "mean_tokens": 1031.8125,
+        "median_tokens": 854.0,
+        "truncation": 0.1875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1024,
+        "accuracy": 0.875,
+        "mean_tokens": 690.375,
+        "median_tokens": 625.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1040,
+        "accuracy": 0.9375,
+        "mean_tokens": 705.3125,
+        "median_tokens": 625.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1056,
+        "accuracy": 0.75,
+        "mean_tokens": 497.625,
+        "median_tokens": 492.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1072,
+        "accuracy": 0.625,
+        "mean_tokens": 769,
+        "median_tokens": 630.0,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1088,
+        "accuracy": 0.8125,
+        "mean_tokens": 587.3125,
+        "median_tokens": 448.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1104,
+        "accuracy": 0.625,
+        "mean_tokens": 768.0625,
+        "median_tokens": 770.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1120,
+        "accuracy": 0.5,
+        "mean_tokens": 858.375,
+        "median_tokens": 511.5,
+        "truncation": 0.1875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1136,
+        "accuracy": 1,
+        "mean_tokens": 577,
+        "median_tokens": 478.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1152,
+        "accuracy": 1,
+        "mean_tokens": 504.6875,
+        "median_tokens": 510.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1168,
+        "accuracy": 0.75,
+        "mean_tokens": 515.5625,
+        "median_tokens": 558.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1184,
+        "accuracy": 0.6875,
+        "mean_tokens": 739.25,
+        "median_tokens": 656.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1200,
+        "accuracy": 1,
+        "mean_tokens": 758.125,
+        "median_tokens": 644.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1216,
+        "accuracy": 1,
+        "mean_tokens": 478.5,
+        "median_tokens": 486.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1232,
+        "accuracy": 0.5625,
+        "mean_tokens": 619.75,
+        "median_tokens": 601.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1248,
+        "accuracy": 0.625,
+        "mean_tokens": 813.25,
+        "median_tokens": 687.0,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1264,
+        "accuracy": 0.75,
+        "mean_tokens": 802.125,
+        "median_tokens": 704.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1280,
+        "accuracy": 1,
+        "mean_tokens": 557.6875,
+        "median_tokens": 536.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      }
+    ],
+    "coding": [
+      {
+        "iteration": 16,
+        "accuracy": 0,
+        "mean_tokens": 1973.125,
+        "median_tokens": 2048.0,
+        "truncation": 0.8125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 32,
+        "accuracy": 0.1875,
+        "mean_tokens": 1996.75,
+        "median_tokens": 2048.0,
+        "truncation": 0.8125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 48,
+        "accuracy": 0.0625,
+        "mean_tokens": 1789.6875,
+        "median_tokens": 2048.0,
+        "truncation": 0.6875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 64,
+        "accuracy": 0,
+        "mean_tokens": 1904.625,
+        "median_tokens": 2048.0,
+        "truncation": 0.8125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 80,
+        "accuracy": 0.0625,
+        "mean_tokens": 1792.4375,
+        "median_tokens": 2048.0,
+        "truncation": 0.6875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 96,
+        "accuracy": 0.3125,
+        "mean_tokens": 1717.875,
+        "median_tokens": 2048.0,
+        "truncation": 0.5625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 112,
+        "accuracy": 0.0625,
+        "mean_tokens": 2013.8125,
+        "median_tokens": 2048.0,
+        "truncation": 0.875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 128,
+        "accuracy": 0,
+        "mean_tokens": 1929.4375,
+        "median_tokens": 2048.0,
+        "truncation": 0.875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 144,
+        "accuracy": 0,
+        "mean_tokens": 1971.75,
+        "median_tokens": 2048.0,
+        "truncation": 0.9375,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 160,
+        "accuracy": 0.25,
+        "mean_tokens": 1747.8125,
+        "median_tokens": 2048.0,
+        "truncation": 0.75,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 176,
+        "accuracy": 0,
+        "mean_tokens": 1935.5,
+        "median_tokens": 2048.0,
+        "truncation": 0.6875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 192,
+        "accuracy": 0.25,
+        "mean_tokens": 1578.3125,
+        "median_tokens": 2048.0,
+        "truncation": 0.5625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 208,
+        "accuracy": 0.1875,
+        "mean_tokens": 1802,
+        "median_tokens": 2048.0,
+        "truncation": 0.625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 224,
+        "accuracy": 0.25,
+        "mean_tokens": 1346.3125,
+        "median_tokens": 1223.5,
+        "truncation": 0.3125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 240,
+        "accuracy": 0,
+        "mean_tokens": 1743.5,
+        "median_tokens": 2048.0,
+        "truncation": 0.75,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 256,
+        "accuracy": 0,
+        "mean_tokens": 1772.5,
+        "median_tokens": 2048.0,
+        "truncation": 0.6875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 272,
+        "accuracy": 0,
+        "mean_tokens": 1981.6875,
+        "median_tokens": 2048.0,
+        "truncation": 0.9375,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 288,
+        "accuracy": 0.25,
+        "mean_tokens": 1652.9375,
+        "median_tokens": 2048.0,
+        "truncation": 0.5625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 304,
+        "accuracy": 0.125,
+        "mean_tokens": 1106,
+        "median_tokens": 769.0,
+        "truncation": 0.375,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 320,
+        "accuracy": 0,
+        "mean_tokens": 1803.375,
+        "median_tokens": 2048.0,
+        "truncation": 0.75,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 336,
+        "accuracy": 0.25,
+        "mean_tokens": 1726,
+        "median_tokens": 2048.0,
+        "truncation": 0.5625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 352,
+        "accuracy": 0.3125,
+        "mean_tokens": 1618.375,
+        "median_tokens": 2048.0,
+        "truncation": 0.5625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 368,
+        "accuracy": 0,
+        "mean_tokens": 1932.125,
+        "median_tokens": 2048.0,
+        "truncation": 0.875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 384,
+        "accuracy": 0,
+        "mean_tokens": 1676,
+        "median_tokens": 1822.5,
+        "truncation": 0.5,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 400,
+        "accuracy": 0,
+        "mean_tokens": 1658.6875,
+        "median_tokens": 1991.5,
+        "truncation": 0.5,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 416,
+        "accuracy": 0.75,
+        "mean_tokens": 1272.625,
+        "median_tokens": 1064.5,
+        "truncation": 0.125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 432,
+        "accuracy": 0.0625,
+        "mean_tokens": 1421.9375,
+        "median_tokens": 1597.0,
+        "truncation": 0.5,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 448,
+        "accuracy": 0.375,
+        "mean_tokens": 1670.0625,
+        "median_tokens": 2048.0,
+        "truncation": 0.5625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 464,
+        "accuracy": 0.125,
+        "mean_tokens": 1276.5625,
+        "median_tokens": 1142.5,
+        "truncation": 0.375,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 480,
+        "accuracy": 0.25,
+        "mean_tokens": 1293.5625,
+        "median_tokens": 1405.5,
+        "truncation": 0.5,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 496,
+        "accuracy": 0.25,
+        "mean_tokens": 1597.875,
+        "median_tokens": 2048.0,
+        "truncation": 0.5625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 512,
+        "accuracy": 0.3125,
+        "mean_tokens": 1598.4375,
+        "median_tokens": 1511.5,
+        "truncation": 0.4375,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 528,
+        "accuracy": 0.25,
+        "mean_tokens": 1820.75,
+        "median_tokens": 2048.0,
+        "truncation": 0.75,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 544,
+        "accuracy": 0.25,
+        "mean_tokens": 1064.5625,
+        "median_tokens": 736.0,
+        "truncation": 0.3125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 560,
+        "accuracy": 0,
+        "mean_tokens": 2020.25,
+        "median_tokens": 2048.0,
+        "truncation": 0.9375,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 576,
+        "accuracy": 0,
+        "mean_tokens": 1782.625,
+        "median_tokens": 2048.0,
+        "truncation": 0.75,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 592,
+        "accuracy": 0.25,
+        "mean_tokens": 1407.8125,
+        "median_tokens": 1278.0,
+        "truncation": 0.375,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 608,
+        "accuracy": 0,
+        "mean_tokens": 1960.0625,
+        "median_tokens": 2048.0,
+        "truncation": 0.9375,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 624,
+        "accuracy": 0.25,
+        "mean_tokens": 1566.9375,
+        "median_tokens": 2048.0,
+        "truncation": 0.625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 640,
+        "accuracy": 0.1875,
+        "mean_tokens": 1549.3125,
+        "median_tokens": 1915.0,
+        "truncation": 0.5,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 656,
+        "accuracy": 0.5,
+        "mean_tokens": 1036.8125,
+        "median_tokens": 802.5,
+        "truncation": 0.1875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 672,
+        "accuracy": 0.0625,
+        "mean_tokens": 1811.5,
+        "median_tokens": 2048.0,
+        "truncation": 0.625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 688,
+        "accuracy": 0.5,
+        "mean_tokens": 994.5625,
+        "median_tokens": 804.0,
+        "truncation": 0.25,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 704,
+        "accuracy": 0.25,
+        "mean_tokens": 1453.1875,
+        "median_tokens": 1801.0,
+        "truncation": 0.5,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 720,
+        "accuracy": 0,
+        "mean_tokens": 1543.375,
+        "median_tokens": 1843.5,
+        "truncation": 0.5,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 736,
+        "accuracy": 0.1875,
+        "mean_tokens": 1115.6875,
+        "median_tokens": 791.0,
+        "truncation": 0.1875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 752,
+        "accuracy": 0.5,
+        "mean_tokens": 1390.8125,
+        "median_tokens": 1547.0,
+        "truncation": 0.4375,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 768,
+        "accuracy": 0.125,
+        "mean_tokens": 1892.9375,
+        "median_tokens": 2048.0,
+        "truncation": 0.8125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 784,
+        "accuracy": 0.4375,
+        "mean_tokens": 1342.3125,
+        "median_tokens": 1359.5,
+        "truncation": 0.4375,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 800,
+        "accuracy": 0.125,
+        "mean_tokens": 1557.8125,
+        "median_tokens": 1599.0,
+        "truncation": 0.4375,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 816,
+        "accuracy": 0,
+        "mean_tokens": 1241,
+        "median_tokens": 969.5,
+        "truncation": 0.375,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 832,
+        "accuracy": 0.125,
+        "mean_tokens": 1302.875,
+        "median_tokens": 1237.5,
+        "truncation": 0.125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 848,
+        "accuracy": 0.1875,
+        "mean_tokens": 1546.375,
+        "median_tokens": 1646.5,
+        "truncation": 0.5,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 864,
+        "accuracy": 0.25,
+        "mean_tokens": 1117.9375,
+        "median_tokens": 962.5,
+        "truncation": 0.25,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 880,
+        "accuracy": 0.125,
+        "mean_tokens": 1551.625,
+        "median_tokens": 1601.0,
+        "truncation": 0.25,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 896,
+        "accuracy": 0.125,
+        "mean_tokens": 1818.375,
+        "median_tokens": 2048.0,
+        "truncation": 0.75,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 912,
+        "accuracy": 0.25,
+        "mean_tokens": 1166.5625,
+        "median_tokens": 914.0,
+        "truncation": 0.3125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 928,
+        "accuracy": 0.25,
+        "mean_tokens": 1701.75,
+        "median_tokens": 1930.0,
+        "truncation": 0.5,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 944,
+        "accuracy": 0,
+        "mean_tokens": 1976.125,
+        "median_tokens": 2048.0,
+        "truncation": 0.875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 960,
+        "accuracy": 0.0625,
+        "mean_tokens": 1892.3125,
+        "median_tokens": 2048.0,
+        "truncation": 0.75,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 976,
+        "accuracy": 0.0625,
+        "mean_tokens": 1174.1875,
+        "median_tokens": 1011.5,
+        "truncation": 0.25,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 992,
+        "accuracy": 0.3125,
+        "mean_tokens": 1616.375,
+        "median_tokens": 2048.0,
+        "truncation": 0.5625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1008,
+        "accuracy": 0.125,
+        "mean_tokens": 1516.6875,
+        "median_tokens": 2048.0,
+        "truncation": 0.5625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1024,
+        "accuracy": 0,
+        "mean_tokens": 1630.5625,
+        "median_tokens": 2048.0,
+        "truncation": 0.5625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1040,
+        "accuracy": 0.0625,
+        "mean_tokens": 1808.0625,
+        "median_tokens": 2048.0,
+        "truncation": 0.5625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1056,
+        "accuracy": 0,
+        "mean_tokens": 1865.6875,
+        "median_tokens": 2048.0,
+        "truncation": 0.6875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1072,
+        "accuracy": 0,
+        "mean_tokens": 1906.625,
+        "median_tokens": 2048.0,
+        "truncation": 0.875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1088,
+        "accuracy": 0,
+        "mean_tokens": 1792.9375,
+        "median_tokens": 2048.0,
+        "truncation": 0.75,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1104,
+        "accuracy": 0.25,
+        "mean_tokens": 1616.375,
+        "median_tokens": 2048.0,
+        "truncation": 0.6875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1120,
+        "accuracy": 0,
+        "mean_tokens": 2032,
+        "median_tokens": 2048.0,
+        "truncation": 0.9375,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1136,
+        "accuracy": 0.5625,
+        "mean_tokens": 1177.25,
+        "median_tokens": 748.5,
+        "truncation": 0.4375,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1152,
+        "accuracy": 0,
+        "mean_tokens": 1577.5625,
+        "median_tokens": 2048.0,
+        "truncation": 0.5625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1168,
+        "accuracy": 0.125,
+        "mean_tokens": 1957.5625,
+        "median_tokens": 2048.0,
+        "truncation": 0.8125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1184,
+        "accuracy": 0.0625,
+        "mean_tokens": 1639.875,
+        "median_tokens": 2017.0,
+        "truncation": 0.5,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1200,
+        "accuracy": 0,
+        "mean_tokens": 1464.9375,
+        "median_tokens": 1853.5,
+        "truncation": 0.5,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1216,
+        "accuracy": 0,
+        "mean_tokens": 2041.875,
+        "median_tokens": 2048.0,
+        "truncation": 0.9375,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1232,
+        "accuracy": 0.125,
+        "mean_tokens": 1828.6875,
+        "median_tokens": 2048.0,
+        "truncation": 0.6875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1248,
+        "accuracy": 0.125,
+        "mean_tokens": 1455.3125,
+        "median_tokens": 2048.0,
+        "truncation": 0.5625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1264,
+        "accuracy": 0,
+        "mean_tokens": 1767,
+        "median_tokens": 2048.0,
+        "truncation": 0.75,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1280,
+        "accuracy": 0.125,
+        "mean_tokens": 1661.6875,
+        "median_tokens": 1887.5,
+        "truncation": 0.5,
+        "questions": 4,
+        "responses": 16
+      }
+    ],
+    "tools": [
+      {
+        "iteration": 16,
+        "accuracy": 0.625,
+        "mean_tokens": 348.8125,
+        "median_tokens": 355.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 32,
+        "accuracy": 0.8125,
+        "mean_tokens": 314.1875,
+        "median_tokens": 288.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 48,
+        "accuracy": 0.625,
+        "mean_tokens": 259.375,
+        "median_tokens": 251.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 64,
+        "accuracy": 0.75,
+        "mean_tokens": 236.8125,
+        "median_tokens": 223.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 80,
+        "accuracy": 0.3125,
+        "mean_tokens": 404,
+        "median_tokens": 316.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 96,
+        "accuracy": 0.375,
+        "mean_tokens": 516.6875,
+        "median_tokens": 364.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 112,
+        "accuracy": 0.6875,
+        "mean_tokens": 246.75,
+        "median_tokens": 258.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 128,
+        "accuracy": 0.375,
+        "mean_tokens": 237.5625,
+        "median_tokens": 245.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 144,
+        "accuracy": 0.5,
+        "mean_tokens": 357.0625,
+        "median_tokens": 382.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 160,
+        "accuracy": 0.6875,
+        "mean_tokens": 229.9375,
+        "median_tokens": 222.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 176,
+        "accuracy": 0.5,
+        "mean_tokens": 214.4375,
+        "median_tokens": 200.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 192,
+        "accuracy": 0.6875,
+        "mean_tokens": 440.5625,
+        "median_tokens": 382.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 208,
+        "accuracy": 0.875,
+        "mean_tokens": 271,
+        "median_tokens": 211.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 224,
+        "accuracy": 0.75,
+        "mean_tokens": 278.75,
+        "median_tokens": 281.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 240,
+        "accuracy": 0.4375,
+        "mean_tokens": 259.8125,
+        "median_tokens": 279.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 256,
+        "accuracy": 0.3125,
+        "mean_tokens": 221.875,
+        "median_tokens": 180.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 272,
+        "accuracy": 0.6875,
+        "mean_tokens": 339.1875,
+        "median_tokens": 339.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 288,
+        "accuracy": 0.625,
+        "mean_tokens": 277.6875,
+        "median_tokens": 270.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 304,
+        "accuracy": 1,
+        "mean_tokens": 249,
+        "median_tokens": 233.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 320,
+        "accuracy": 1,
+        "mean_tokens": 302.75,
+        "median_tokens": 286.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 336,
+        "accuracy": 0.625,
+        "mean_tokens": 242.875,
+        "median_tokens": 239.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 352,
+        "accuracy": 0.75,
+        "mean_tokens": 307.25,
+        "median_tokens": 321.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 368,
+        "accuracy": 0.5625,
+        "mean_tokens": 194.75,
+        "median_tokens": 202.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 384,
+        "accuracy": 1,
+        "mean_tokens": 274.3125,
+        "median_tokens": 270.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 400,
+        "accuracy": 0.8125,
+        "mean_tokens": 334.375,
+        "median_tokens": 268.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 416,
+        "accuracy": 0.875,
+        "mean_tokens": 225.4375,
+        "median_tokens": 209.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 432,
+        "accuracy": 0.5625,
+        "mean_tokens": 208.125,
+        "median_tokens": 196.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 448,
+        "accuracy": 0.8125,
+        "mean_tokens": 172.125,
+        "median_tokens": 175.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 464,
+        "accuracy": 0.625,
+        "mean_tokens": 255.6875,
+        "median_tokens": 243.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 480,
+        "accuracy": 0.5,
+        "mean_tokens": 232.8125,
+        "median_tokens": 254.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 496,
+        "accuracy": 0.5625,
+        "mean_tokens": 231.4375,
+        "median_tokens": 232.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 512,
+        "accuracy": 0.5,
+        "mean_tokens": 257.5625,
+        "median_tokens": 276.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 528,
+        "accuracy": 1,
+        "mean_tokens": 171.3125,
+        "median_tokens": 181.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 544,
+        "accuracy": 0.8125,
+        "mean_tokens": 216.125,
+        "median_tokens": 209.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 560,
+        "accuracy": 0.875,
+        "mean_tokens": 272,
+        "median_tokens": 273.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 576,
+        "accuracy": 0.6875,
+        "mean_tokens": 229.875,
+        "median_tokens": 206.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 592,
+        "accuracy": 0.9375,
+        "mean_tokens": 183.875,
+        "median_tokens": 203.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 608,
+        "accuracy": 0.5,
+        "mean_tokens": 376.6875,
+        "median_tokens": 328.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 624,
+        "accuracy": 0.8125,
+        "mean_tokens": 180.5625,
+        "median_tokens": 176.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 640,
+        "accuracy": 0.5625,
+        "mean_tokens": 169.875,
+        "median_tokens": 191.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 656,
+        "accuracy": 0.75,
+        "mean_tokens": 167.5,
+        "median_tokens": 174.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 672,
+        "accuracy": 0.75,
+        "mean_tokens": 236.3125,
+        "median_tokens": 240.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 688,
+        "accuracy": 1,
+        "mean_tokens": 194.25,
+        "median_tokens": 192.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 704,
+        "accuracy": 0.625,
+        "mean_tokens": 254.5625,
+        "median_tokens": 272.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 720,
+        "accuracy": 0.5,
+        "mean_tokens": 244.3125,
+        "median_tokens": 231.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 736,
+        "accuracy": 0.75,
+        "mean_tokens": 299.75,
+        "median_tokens": 276.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 752,
+        "accuracy": 0.75,
+        "mean_tokens": 243.0625,
+        "median_tokens": 252.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 768,
+        "accuracy": 0.5,
+        "mean_tokens": 250.4375,
+        "median_tokens": 255.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 784,
+        "accuracy": 1,
+        "mean_tokens": 195.4375,
+        "median_tokens": 195.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 800,
+        "accuracy": 0.75,
+        "mean_tokens": 230.75,
+        "median_tokens": 212.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 816,
+        "accuracy": 0.9375,
+        "mean_tokens": 229.375,
+        "median_tokens": 224.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 832,
+        "accuracy": 0.75,
+        "mean_tokens": 188,
+        "median_tokens": 183.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 848,
+        "accuracy": 0.5625,
+        "mean_tokens": 219.25,
+        "median_tokens": 207.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 864,
+        "accuracy": 0.9375,
+        "mean_tokens": 219.75,
+        "median_tokens": 196.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 880,
+        "accuracy": 0.5,
+        "mean_tokens": 243.3125,
+        "median_tokens": 214.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 896,
+        "accuracy": 0.5,
+        "mean_tokens": 177.625,
+        "median_tokens": 159.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 912,
+        "accuracy": 0.9375,
+        "mean_tokens": 252.3125,
+        "median_tokens": 234.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 928,
+        "accuracy": 0.875,
+        "mean_tokens": 174.3125,
+        "median_tokens": 162.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 944,
+        "accuracy": 0.875,
+        "mean_tokens": 214.3125,
+        "median_tokens": 165.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 960,
+        "accuracy": 0.9375,
+        "mean_tokens": 148.3125,
+        "median_tokens": 138.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 976,
+        "accuracy": 0.5,
+        "mean_tokens": 239.125,
+        "median_tokens": 211.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 992,
+        "accuracy": 0.4375,
+        "mean_tokens": 186.125,
+        "median_tokens": 200.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1008,
+        "accuracy": 0.75,
+        "mean_tokens": 208.4375,
+        "median_tokens": 180.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1024,
+        "accuracy": 0.25,
+        "mean_tokens": 218.125,
+        "median_tokens": 178.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1040,
+        "accuracy": 0.75,
+        "mean_tokens": 226.875,
+        "median_tokens": 244.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1056,
+        "accuracy": 1,
+        "mean_tokens": 188.125,
+        "median_tokens": 207.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1072,
+        "accuracy": 0.75,
+        "mean_tokens": 210.8125,
+        "median_tokens": 188.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1088,
+        "accuracy": 0.75,
+        "mean_tokens": 229.6875,
+        "median_tokens": 229.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1104,
+        "accuracy": 0.75,
+        "mean_tokens": 209,
+        "median_tokens": 189.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1120,
+        "accuracy": 0.9375,
+        "mean_tokens": 273.0625,
+        "median_tokens": 293.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1136,
+        "accuracy": 0.5625,
+        "mean_tokens": 233.6875,
+        "median_tokens": 220.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1152,
+        "accuracy": 0.5,
+        "mean_tokens": 191.875,
+        "median_tokens": 180.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1168,
+        "accuracy": 0.4375,
+        "mean_tokens": 235.0625,
+        "median_tokens": 244.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1184,
+        "accuracy": 1,
+        "mean_tokens": 179.375,
+        "median_tokens": 184.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1200,
+        "accuracy": 0.5,
+        "mean_tokens": 267.0625,
+        "median_tokens": 250.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1216,
+        "accuracy": 0.3125,
+        "mean_tokens": 291.8125,
+        "median_tokens": 285.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1232,
+        "accuracy": 0.8125,
+        "mean_tokens": 193.125,
+        "median_tokens": 189.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1248,
+        "accuracy": 0.5,
+        "mean_tokens": 170.6875,
+        "median_tokens": 174.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1264,
+        "accuracy": 0.5,
+        "mean_tokens": 196.375,
+        "median_tokens": 193.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1280,
+        "accuracy": 0.75,
+        "mean_tokens": 208.6875,
+        "median_tokens": 194.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      }
+    ],
+    "instructions": [
+      {
+        "iteration": 16,
+        "accuracy": 0.5625,
+        "mean_tokens": 762.25,
+        "median_tokens": 730.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 32,
+        "accuracy": 1,
+        "mean_tokens": 525.75,
+        "median_tokens": 473.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 48,
+        "accuracy": 0.75,
+        "mean_tokens": 375.5625,
+        "median_tokens": 281.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 64,
+        "accuracy": 0.6875,
+        "mean_tokens": 248,
+        "median_tokens": 234.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 80,
+        "accuracy": 0.9375,
+        "mean_tokens": 498.9375,
+        "median_tokens": 354.0,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 96,
+        "accuracy": 0.6875,
+        "mean_tokens": 405.5,
+        "median_tokens": 306.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 112,
+        "accuracy": 0.375,
+        "mean_tokens": 278.875,
+        "median_tokens": 223.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 128,
+        "accuracy": 0.6875,
+        "mean_tokens": 237.5625,
+        "median_tokens": 226.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 144,
+        "accuracy": 0.8125,
+        "mean_tokens": 321.375,
+        "median_tokens": 302.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 160,
+        "accuracy": 0.75,
+        "mean_tokens": 415.3125,
+        "median_tokens": 328.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 176,
+        "accuracy": 1,
+        "mean_tokens": 444.75,
+        "median_tokens": 299.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 192,
+        "accuracy": 0.6875,
+        "mean_tokens": 209.75,
+        "median_tokens": 203.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 208,
+        "accuracy": 0.75,
+        "mean_tokens": 583.5,
+        "median_tokens": 360.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 224,
+        "accuracy": 1,
+        "mean_tokens": 419.875,
+        "median_tokens": 243.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 240,
+        "accuracy": 1,
+        "mean_tokens": 457.25,
+        "median_tokens": 396.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 256,
+        "accuracy": 0.625,
+        "mean_tokens": 463.1875,
+        "median_tokens": 330.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 272,
+        "accuracy": 0.6875,
+        "mean_tokens": 473.625,
+        "median_tokens": 300.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 288,
+        "accuracy": 0.8125,
+        "mean_tokens": 736.0625,
+        "median_tokens": 489.5,
+        "truncation": 0.1875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 304,
+        "accuracy": 0.625,
+        "mean_tokens": 531,
+        "median_tokens": 414.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 320,
+        "accuracy": 0.8125,
+        "mean_tokens": 276.625,
+        "median_tokens": 205.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 336,
+        "accuracy": 0.625,
+        "mean_tokens": 589,
+        "median_tokens": 328.0,
+        "truncation": 0.125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 352,
+        "accuracy": 0.8125,
+        "mean_tokens": 234.9375,
+        "median_tokens": 234.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 368,
+        "accuracy": 0.4375,
+        "mean_tokens": 287.3125,
+        "median_tokens": 299.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 384,
+        "accuracy": 0.6875,
+        "mean_tokens": 412.125,
+        "median_tokens": 449.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 400,
+        "accuracy": 0.9375,
+        "mean_tokens": 426.625,
+        "median_tokens": 412.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 416,
+        "accuracy": 0.875,
+        "mean_tokens": 314.125,
+        "median_tokens": 235.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 432,
+        "accuracy": 0.875,
+        "mean_tokens": 503.125,
+        "median_tokens": 238.5,
+        "truncation": 0.125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 448,
+        "accuracy": 1,
+        "mean_tokens": 309.3125,
+        "median_tokens": 315.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 464,
+        "accuracy": 0.75,
+        "mean_tokens": 714,
+        "median_tokens": 240.0,
+        "truncation": 0.25,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 480,
+        "accuracy": 0.75,
+        "mean_tokens": 341.9375,
+        "median_tokens": 367.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 496,
+        "accuracy": 0.8125,
+        "mean_tokens": 220.6875,
+        "median_tokens": 171.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 512,
+        "accuracy": 0.6875,
+        "mean_tokens": 405.75,
+        "median_tokens": 182.0,
+        "truncation": 0.125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 528,
+        "accuracy": 0.75,
+        "mean_tokens": 570.9375,
+        "median_tokens": 460.0,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 544,
+        "accuracy": 0.875,
+        "mean_tokens": 181.6875,
+        "median_tokens": 146.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 560,
+        "accuracy": 0.8125,
+        "mean_tokens": 577.375,
+        "median_tokens": 259.5,
+        "truncation": 0.1875,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 576,
+        "accuracy": 0.625,
+        "mean_tokens": 346.875,
+        "median_tokens": 290.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 592,
+        "accuracy": 0.6875,
+        "mean_tokens": 472.875,
+        "median_tokens": 285.5,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 608,
+        "accuracy": 0.9375,
+        "mean_tokens": 467.1875,
+        "median_tokens": 476.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 624,
+        "accuracy": 1,
+        "mean_tokens": 340.8125,
+        "median_tokens": 322.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 640,
+        "accuracy": 0.625,
+        "mean_tokens": 265.5,
+        "median_tokens": 242.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 656,
+        "accuracy": 0.875,
+        "mean_tokens": 251.6875,
+        "median_tokens": 221.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 672,
+        "accuracy": 0.8125,
+        "mean_tokens": 360.75,
+        "median_tokens": 416.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 688,
+        "accuracy": 1,
+        "mean_tokens": 295.0625,
+        "median_tokens": 202.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 704,
+        "accuracy": 0.875,
+        "mean_tokens": 501.375,
+        "median_tokens": 247.5,
+        "truncation": 0.125,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 720,
+        "accuracy": 1,
+        "mean_tokens": 282.25,
+        "median_tokens": 264.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 736,
+        "accuracy": 0.75,
+        "mean_tokens": 324.5625,
+        "median_tokens": 215.5,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 752,
+        "accuracy": 0.625,
+        "mean_tokens": 203.8125,
+        "median_tokens": 181.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 768,
+        "accuracy": 0.9375,
+        "mean_tokens": 432.5,
+        "median_tokens": 424.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 784,
+        "accuracy": 0.75,
+        "mean_tokens": 236.8125,
+        "median_tokens": 195.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 800,
+        "accuracy": 0.9375,
+        "mean_tokens": 210.9375,
+        "median_tokens": 176.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 816,
+        "accuracy": 1,
+        "mean_tokens": 320.5,
+        "median_tokens": 250.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 832,
+        "accuracy": 1,
+        "mean_tokens": 629,
+        "median_tokens": 359.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 848,
+        "accuracy": 1,
+        "mean_tokens": 430.4375,
+        "median_tokens": 247.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 864,
+        "accuracy": 1,
+        "mean_tokens": 189.125,
+        "median_tokens": 188.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 880,
+        "accuracy": 0.875,
+        "mean_tokens": 427,
+        "median_tokens": 333.0,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 896,
+        "accuracy": 0.875,
+        "mean_tokens": 226.0625,
+        "median_tokens": 186.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 912,
+        "accuracy": 1,
+        "mean_tokens": 374.3125,
+        "median_tokens": 325.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 928,
+        "accuracy": 0.6875,
+        "mean_tokens": 186.1875,
+        "median_tokens": 174.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 944,
+        "accuracy": 0.875,
+        "mean_tokens": 402.375,
+        "median_tokens": 279.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 960,
+        "accuracy": 0.8125,
+        "mean_tokens": 333.875,
+        "median_tokens": 252.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 976,
+        "accuracy": 0.9375,
+        "mean_tokens": 222.5,
+        "median_tokens": 187.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 992,
+        "accuracy": 0.9375,
+        "mean_tokens": 297.9375,
+        "median_tokens": 317.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1008,
+        "accuracy": 0.75,
+        "mean_tokens": 381,
+        "median_tokens": 325.0,
+        "truncation": 0.0625,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1024,
+        "accuracy": 1,
+        "mean_tokens": 352.4375,
+        "median_tokens": 262.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1040,
+        "accuracy": 0.9375,
+        "mean_tokens": 210.125,
+        "median_tokens": 185.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1056,
+        "accuracy": 0.5625,
+        "mean_tokens": 312.125,
+        "median_tokens": 258.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1072,
+        "accuracy": 1,
+        "mean_tokens": 384.6875,
+        "median_tokens": 329.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1088,
+        "accuracy": 0.625,
+        "mean_tokens": 189.875,
+        "median_tokens": 162.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1104,
+        "accuracy": 0.9375,
+        "mean_tokens": 332.9375,
+        "median_tokens": 288.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1120,
+        "accuracy": 0.5625,
+        "mean_tokens": 179.9375,
+        "median_tokens": 140.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1136,
+        "accuracy": 0.8125,
+        "mean_tokens": 422.1875,
+        "median_tokens": 226.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1152,
+        "accuracy": 0.9375,
+        "mean_tokens": 290.25,
+        "median_tokens": 316.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1168,
+        "accuracy": 0.75,
+        "mean_tokens": 307.3125,
+        "median_tokens": 213.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1184,
+        "accuracy": 0.75,
+        "mean_tokens": 325.0625,
+        "median_tokens": 226.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1200,
+        "accuracy": 0.9375,
+        "mean_tokens": 264.625,
+        "median_tokens": 225.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1216,
+        "accuracy": 1,
+        "mean_tokens": 160.375,
+        "median_tokens": 161.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1232,
+        "accuracy": 0.75,
+        "mean_tokens": 162.375,
+        "median_tokens": 150.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1248,
+        "accuracy": 0.9375,
+        "mean_tokens": 303.8125,
+        "median_tokens": 286.5,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1264,
+        "accuracy": 1,
+        "mean_tokens": 264.8125,
+        "median_tokens": 218.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      },
+      {
+        "iteration": 1280,
+        "accuracy": 1,
+        "mean_tokens": 175.0625,
+        "median_tokens": 138.0,
+        "truncation": 0,
+        "questions": 4,
+        "responses": 16
+      }
+    ]
+  }
+}

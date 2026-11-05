@@ -1,0 +1,1195 @@
+{
+  "study": "teacher-pilot",
+  "complete": true,
+  "updated_at": 1793025610.0798628,
+  "input_fingerprints": [
+    [
+      17,
+      "/srv/projects/llm-hub/lab/experiments/cloud/teacher-completion-v2-seed17-39211bca0f/output/validation/student.jsonl",
+      "d96b7277d3113530ffbb1c32867e292d287395a5d3de7421a9d4089826d16088",
+      "/srv/projects/llm-hub/lab/experiments/cloud/teacher-completion-v2-seed17-39211bca0f/output/validation/teacher.jsonl",
+      "ffd7a16c6deaaada5be7e88af8c715a7dadbab49017d4f8a612cbe87b0d5f273"
+    ],
+    [
+      29,
+      "/srv/projects/llm-hub/lab/experiments/cloud/teacher-completion-v2-seed29-39211bca0f/output/validation/student.jsonl",
+      "0964b8b14e51375ce4b29503153d6ec03d164b4d4de422dd8bda5e8786819eaa",
+      "/srv/projects/llm-hub/lab/experiments/cloud/teacher-completion-v2-seed29-39211bca0f/output/validation/teacher.jsonl",
+      "63b54f3d15432a19c596c90a25c24d1acdba3324c75e5f67c5fbab1a38bfccaf"
+    ],
+    [
+      43,
+      "/srv/projects/llm-hub/lab/experiments/cloud/teacher-completion-v2-seed43-39211bca0f/output/validation/student.jsonl",
+      "0c6f2bb3795ec2db1fdd45c6396d2f2c6f0a6190d48b4309dd6881281e6bde66",
+      "/srv/projects/llm-hub/lab/experiments/cloud/teacher-completion-v2-seed43-39211bca0f/output/validation/teacher.jsonl",
+      "02bd27c1943730a133cb1413e749bd6ad5dc9d9a6082f3ff8595b3bdefd6334e"
+    ]
+  ],
+  "report_version": 6,
+  "summary": {
+    "seed_count": 3,
+    "per_seed": [
+      {
+        "seed": 17,
+        "accuracy_delta": -0.12999999999999998,
+        "token_ratio": 0.4872249922533029,
+        "token_reduction": 0.512775007746697,
+        "domains": {
+          "arc_easy": {
+            "control_accuracy": 0.82,
+            "candidate_accuracy": 0.735,
+            "control_mean_tokens": 335.475,
+            "candidate_mean_tokens": 116.355,
+            "control_mean_thinking_tokens": 328.15,
+            "candidate_mean_thinking_tokens": 109.38,
+            "control_truncation_rate": 0.0,
+            "candidate_truncation_rate": 0.015,
+            "control_parse_failure_rate": 0.0,
+            "candidate_parse_failure_rate": 0.0
+          },
+          "commonsense_qa": {
+            "control_accuracy": 0.565,
+            "candidate_accuracy": 0.485,
+            "control_mean_tokens": 340.11,
+            "candidate_mean_tokens": 124.775,
+            "control_mean_thinking_tokens": 333.06,
+            "candidate_mean_thinking_tokens": 117.915,
+            "control_truncation_rate": 0.0,
+            "candidate_truncation_rate": 0.02,
+            "control_parse_failure_rate": 0.0,
+            "candidate_parse_failure_rate": 0.0
+          },
+          "gsm8k": {
+            "control_accuracy": 0.75,
+            "candidate_accuracy": 0.53,
+            "control_mean_tokens": 1335.14,
+            "candidate_mean_tokens": 399.67,
+            "control_mean_thinking_tokens": 1320.3,
+            "candidate_mean_thinking_tokens": 378.62,
+            "control_truncation_rate": 0.105,
+            "candidate_truncation_rate": 0.04,
+            "control_parse_failure_rate": 0.0,
+            "candidate_parse_failure_rate": 0.0
+          },
+          "skywork": {
+            "control_accuracy": 0.275,
+            "candidate_accuracy": 0.14,
+            "control_mean_tokens": 3136.63,
+            "candidate_mean_tokens": 1867.12,
+            "control_mean_thinking_tokens": 3025.765,
+            "candidate_mean_thinking_tokens": 1729.075,
+            "control_truncation_rate": 0.575,
+            "candidate_truncation_rate": 0.37,
+            "control_parse_failure_rate": 0.0,
+            "candidate_parse_failure_rate": 0.0
+          }
+        }
+      },
+      {
+        "seed": 29,
+        "accuracy_delta": -0.12749999999999997,
+        "token_ratio": 0.5771285170829387,
+        "token_reduction": 0.42287148291706134,
+        "domains": {
+          "arc_easy": {
+            "control_accuracy": 0.835,
+            "candidate_accuracy": 0.745,
+            "control_mean_tokens": 372.875,
+            "candidate_mean_tokens": 160.735,
+            "control_mean_thinking_tokens": 365.805,
+            "candidate_mean_thinking_tokens": 150.33,
+            "control_truncation_rate": 0.005,
+            "candidate_truncation_rate": 0.025,
+            "control_parse_failure_rate": 0.0,
+            "candidate_parse_failure_rate": 0.0
+          },
+          "commonsense_qa": {
+            "control_accuracy": 0.595,
+            "candidate_accuracy": 0.5,
+            "control_mean_tokens": 327.045,
+            "candidate_mean_tokens": 76.98,
+            "control_mean_thinking_tokens": 319.965,
+            "candidate_mean_thinking_tokens": 69.18,
+            "control_truncation_rate": 0.0,
+            "candidate_truncation_rate": 0.005,
+            "control_parse_failure_rate": 0.0,
+            "candidate_parse_failure_rate": 0.0
+          },
+          "gsm8k": {
+            "control_accuracy": 0.755,
+            "candidate_accuracy": 0.5,
+            "control_mean_tokens": 1151.585,
+            "candidate_mean_tokens": 475.95,
+            "control_mean_thinking_tokens": 1141.955,
+            "candidate_mean_thinking_tokens": 452.84,
+            "control_truncation_rate": 0.09,
+            "candidate_truncation_rate": 0.045,
+            "control_parse_failure_rate": 0.0,
+            "candidate_parse_failure_rate": 0.0
+          },
+          "skywork": {
+            "control_accuracy": 0.21,
+            "candidate_accuracy": 0.14,
+            "control_mean_tokens": 3157.44,
+            "candidate_mean_tokens": 2177.14,
+            "control_mean_thinking_tokens": 3041.275,
+            "candidate_mean_thinking_tokens": 2034.8,
+            "control_truncation_rate": 0.545,
+            "candidate_truncation_rate": 0.435,
+            "control_parse_failure_rate": 0.0,
+            "candidate_parse_failure_rate": 0.0
+          }
+        }
+      },
+      {
+        "seed": 43,
+        "accuracy_delta": -0.11499999999999999,
+        "token_ratio": 0.5013166205417214,
+        "token_reduction": 0.49868337945827856,
+        "domains": {
+          "arc_easy": {
+            "control_accuracy": 0.865,
+            "candidate_accuracy": 0.74,
+            "control_mean_tokens": 368.975,
+            "candidate_mean_tokens": 83.79,
+            "control_mean_thinking_tokens": 361.755,
+            "candidate_mean_thinking_tokens": 76.73,
+            "control_truncation_rate": 0.0,
+            "candidate_truncation_rate": 0.005,
+            "control_parse_failure_rate": 0.0,
+            "candidate_parse_failure_rate": 0.0
+          },
+          "commonsense_qa": {
+            "control_accuracy": 0.54,
+            "candidate_accuracy": 0.485,
+            "control_mean_tokens": 324.35,
+            "candidate_mean_tokens": 90.56,
+            "control_mean_thinking_tokens": 317.295,
+            "candidate_mean_thinking_tokens": 82.855,
+            "control_truncation_rate": 0.0,
+            "candidate_truncation_rate": 0.01,
+            "control_parse_failure_rate": 0.0,
+            "candidate_parse_failure_rate": 0.0
+          },
+          "gsm8k": {
+            "control_accuracy": 0.715,
+            "candidate_accuracy": 0.53,
+            "control_mean_tokens": 1196.065,
+            "candidate_mean_tokens": 321.885,
+            "control_mean_thinking_tokens": 1186.83,
+            "candidate_mean_thinking_tokens": 300.58,
+            "control_truncation_rate": 0.115,
+            "candidate_truncation_rate": 0.025,
+            "control_parse_failure_rate": 0.0,
+            "candidate_parse_failure_rate": 0.0
+          },
+          "skywork": {
+            "control_accuracy": 0.255,
+            "candidate_accuracy": 0.16,
+            "control_mean_tokens": 3026.605,
+            "candidate_mean_tokens": 1968.235,
+            "control_mean_thinking_tokens": 2919.72,
+            "candidate_mean_thinking_tokens": 1825.305,
+            "control_truncation_rate": 0.55,
+            "candidate_truncation_rate": 0.36,
+            "control_parse_failure_rate": 0.0,
+            "candidate_parse_failure_rate": 0.0
+          }
+        }
+      }
+    ],
+    "accuracy_delta": -0.12416666666666666,
+    "token_ratio": 0.5216985867115791,
+    "token_reduction": 0.4783014132884209,
+    "ci95": {
+      "accuracy_delta": [
+        -0.15291666666666665,
+        -0.09583333333333333
+      ],
+      "token_ratio": [
+        0.46322989252310565,
+        0.589397684306938
+      ]
+    },
+    "domains": {
+      "arc_easy": {
+        "control_accuracy": 0.8399999999999999,
+        "candidate_accuracy": 0.7399999999999999,
+        "control_mean_tokens": 359.10833333333335,
+        "candidate_mean_tokens": 120.29333333333335,
+        "control_mean_thinking_tokens": 351.90333333333336,
+        "candidate_mean_thinking_tokens": 112.14666666666669,
+        "control_truncation_rate": 0.0016666666666666668,
+        "candidate_truncation_rate": 0.015,
+        "control_parse_failure_rate": 0.0,
+        "candidate_parse_failure_rate": 0.0,
+        "accuracy_delta_ci95": [
+          -0.15337499999999998,
+          -0.050000000000000044
+        ]
+      },
+      "commonsense_qa": {
+        "control_accuracy": 0.5666666666666667,
+        "candidate_accuracy": 0.49,
+        "control_mean_tokens": 330.50166666666667,
+        "candidate_mean_tokens": 97.43833333333333,
+        "control_mean_thinking_tokens": 323.44,
+        "candidate_mean_thinking_tokens": 89.98333333333335,
+        "control_truncation_rate": 0.0,
+        "candidate_truncation_rate": 0.011666666666666667,
+        "control_parse_failure_rate": 0.0,
+        "candidate_parse_failure_rate": 0.0,
+        "accuracy_delta_ci95": [
+          -0.13833333333333334,
+          -0.016666666666666646
+        ]
+      },
+      "gsm8k": {
+        "control_accuracy": 0.7399999999999999,
+        "candidate_accuracy": 0.52,
+        "control_mean_tokens": 1227.5966666666668,
+        "candidate_mean_tokens": 399.16833333333335,
+        "control_mean_thinking_tokens": 1216.3616666666667,
+        "candidate_mean_thinking_tokens": 377.34666666666664,
+        "control_truncation_rate": 0.10333333333333333,
+        "candidate_truncation_rate": 0.03666666666666666,
+        "control_parse_failure_rate": 0.0,
+        "candidate_parse_failure_rate": 0.0,
+        "accuracy_delta_ci95": [
+          -0.2883333333333334,
+          -0.15000000000000002
+        ]
+      },
+      "skywork": {
+        "control_accuracy": 0.24666666666666667,
+        "candidate_accuracy": 0.1466666666666667,
+        "control_mean_tokens": 3106.8916666666664,
+        "candidate_mean_tokens": 2004.165,
+        "control_mean_thinking_tokens": 2995.5866666666666,
+        "candidate_mean_thinking_tokens": 1863.0600000000002,
+        "control_truncation_rate": 0.5566666666666668,
+        "candidate_truncation_rate": 0.38833333333333336,
+        "control_parse_failure_rate": 0.0,
+        "candidate_parse_failure_rate": 0.0,
+        "accuracy_delta_ci95": [
+          -0.16,
+          -0.04166666666666668
+        ]
+      }
+    },
+    "pooled_totals": {
+      "responses": 2400,
+      "control_generated_tokens": 3014459.0,
+      "candidate_generated_tokens": 1572639.0,
+      "control_thinking_tokens": 2932375.0,
+      "candidate_thinking_tokens": 1465522.0,
+      "token_ratio": 0.5216985867115791
+    },
+    "bootstrap": {
+      "replicates": 10000,
+      "seed": 20261025,
+      "method": "paired seed resampling and stratified prompt clusters; samples averaged inside prompt",
+      "limitation": "Only three training seeds at full completion; partial summaries are exploratory."
+    },
+    "token_aggregation": "ratio of means over four equal-sized sources"
+  },
+  "fresh_baseline_comparisons": {
+    "control": {
+      "seed_count": 3,
+      "per_seed": [
+        {
+          "seed": 17,
+          "accuracy_delta": 0.14875,
+          "token_ratio": 0.7404013023374902,
+          "token_reduction": 0.25959869766250976,
+          "domains": {
+            "arc_easy": {
+              "control_accuracy": 0.825,
+              "candidate_accuracy": 0.82,
+              "control_mean_tokens": 527.7,
+              "candidate_mean_tokens": 335.475,
+              "control_mean_thinking_tokens": 520.58,
+              "candidate_mean_thinking_tokens": 328.15,
+              "control_truncation_rate": 0.005,
+              "candidate_truncation_rate": 0.0,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "commonsense_qa": {
+              "control_accuracy": 0.585,
+              "candidate_accuracy": 0.565,
+              "control_mean_tokens": 471.195,
+              "candidate_mean_tokens": 340.11,
+              "control_mean_thinking_tokens": 464.18,
+              "candidate_mean_thinking_tokens": 333.06,
+              "control_truncation_rate": 0.0,
+              "candidate_truncation_rate": 0.0,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "gsm8k": {
+              "control_accuracy": 0.38,
+              "candidate_accuracy": 0.75,
+              "control_mean_tokens": 2289.285,
+              "candidate_mean_tokens": 1335.14,
+              "control_mean_thinking_tokens": 2181.47,
+              "candidate_mean_thinking_tokens": 1320.3,
+              "control_truncation_rate": 0.3,
+              "candidate_truncation_rate": 0.105,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "skywork": {
+              "control_accuracy": 0.025,
+              "candidate_accuracy": 0.275,
+              "control_mean_tokens": 3663.935,
+              "candidate_mean_tokens": 3136.63,
+              "control_mean_thinking_tokens": 3572.205,
+              "candidate_mean_thinking_tokens": 3025.765,
+              "control_truncation_rate": 0.76,
+              "candidate_truncation_rate": 0.575,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            }
+          }
+        },
+        {
+          "seed": 29,
+          "accuracy_delta": 0.12375,
+          "token_ratio": 0.7175064764659159,
+          "token_reduction": 0.2824935235340841,
+          "domains": {
+            "arc_easy": {
+              "control_accuracy": 0.825,
+              "candidate_accuracy": 0.835,
+              "control_mean_tokens": 525.02,
+              "candidate_mean_tokens": 372.875,
+              "control_mean_thinking_tokens": 517.945,
+              "candidate_mean_thinking_tokens": 365.805,
+              "control_truncation_rate": 0.015,
+              "candidate_truncation_rate": 0.005,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "commonsense_qa": {
+              "control_accuracy": 0.62,
+              "candidate_accuracy": 0.595,
+              "control_mean_tokens": 485.865,
+              "candidate_mean_tokens": 327.045,
+              "control_mean_thinking_tokens": 478.865,
+              "candidate_mean_thinking_tokens": 319.965,
+              "control_truncation_rate": 0.0,
+              "candidate_truncation_rate": 0.0,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "gsm8k": {
+              "control_accuracy": 0.42,
+              "candidate_accuracy": 0.755,
+              "control_mean_tokens": 2333.155,
+              "candidate_mean_tokens": 1151.585,
+              "control_mean_thinking_tokens": 2223.93,
+              "candidate_mean_thinking_tokens": 1141.955,
+              "control_truncation_rate": 0.31,
+              "candidate_truncation_rate": 0.09,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "skywork": {
+              "control_accuracy": 0.035,
+              "candidate_accuracy": 0.21,
+              "control_mean_tokens": 3637.005,
+              "candidate_mean_tokens": 3157.44,
+              "control_mean_thinking_tokens": 3555.23,
+              "candidate_mean_thinking_tokens": 3041.275,
+              "control_truncation_rate": 0.78,
+              "candidate_truncation_rate": 0.545,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "accuracy_delta": 0.12000000000000002,
+          "token_ratio": 0.7095292940926864,
+          "token_reduction": 0.2904707059073136,
+          "domains": {
+            "arc_easy": {
+              "control_accuracy": 0.85,
+              "candidate_accuracy": 0.865,
+              "control_mean_tokens": 495.38,
+              "candidate_mean_tokens": 368.975,
+              "control_mean_thinking_tokens": 488.335,
+              "candidate_mean_thinking_tokens": 361.755,
+              "control_truncation_rate": 0.01,
+              "candidate_truncation_rate": 0.0,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "commonsense_qa": {
+              "control_accuracy": 0.57,
+              "candidate_accuracy": 0.54,
+              "control_mean_tokens": 498.185,
+              "candidate_mean_tokens": 324.35,
+              "control_mean_thinking_tokens": 491.205,
+              "candidate_mean_thinking_tokens": 317.295,
+              "control_truncation_rate": 0.005,
+              "candidate_truncation_rate": 0.0,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "gsm8k": {
+              "control_accuracy": 0.45,
+              "candidate_accuracy": 0.715,
+              "control_mean_tokens": 2280.41,
+              "candidate_mean_tokens": 1196.065,
+              "control_mean_thinking_tokens": 2173.125,
+              "candidate_mean_thinking_tokens": 1186.83,
+              "control_truncation_rate": 0.295,
+              "candidate_truncation_rate": 0.115,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "skywork": {
+              "control_accuracy": 0.025,
+              "candidate_accuracy": 0.255,
+              "control_mean_tokens": 3654.555,
+              "candidate_mean_tokens": 3026.605,
+              "control_mean_thinking_tokens": 3549.26,
+              "candidate_mean_thinking_tokens": 2919.72,
+              "control_truncation_rate": 0.73,
+              "candidate_truncation_rate": 0.55,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            }
+          }
+        }
+      ],
+      "accuracy_delta": 0.13083333333333333,
+      "token_ratio": 0.7224867688092383,
+      "token_reduction": 0.27751323119076166,
+      "ci95": {
+        "accuracy_delta": [
+          0.10124999999999999,
+          0.16001041666666654
+        ],
+        "token_ratio": [
+          0.6916983737897826,
+          0.7537090118816308
+        ]
+      },
+      "domains": {
+        "arc_easy": {
+          "control_accuracy": 0.8333333333333334,
+          "candidate_accuracy": 0.8399999999999999,
+          "control_mean_tokens": 516.0333333333333,
+          "candidate_mean_tokens": 359.10833333333335,
+          "control_mean_thinking_tokens": 508.9533333333334,
+          "candidate_mean_thinking_tokens": 351.90333333333336,
+          "control_truncation_rate": 0.01,
+          "candidate_truncation_rate": 0.0016666666666666668,
+          "control_parse_failure_rate": 0.0,
+          "candidate_parse_failure_rate": 0.0,
+          "accuracy_delta_ci95": [
+            -0.034999999999999955,
+            0.04999999999999993
+          ]
+        },
+        "commonsense_qa": {
+          "control_accuracy": 0.5916666666666667,
+          "candidate_accuracy": 0.5666666666666667,
+          "control_mean_tokens": 485.08166666666665,
+          "candidate_mean_tokens": 330.50166666666667,
+          "control_mean_thinking_tokens": 478.0833333333333,
+          "candidate_mean_thinking_tokens": 323.44,
+          "control_truncation_rate": 0.0016666666666666668,
+          "candidate_truncation_rate": 0.0,
+          "control_parse_failure_rate": 0.0,
+          "candidate_parse_failure_rate": 0.0,
+          "accuracy_delta_ci95": [
+            -0.07499999999999996,
+            0.025000000000000022
+          ]
+        },
+        "gsm8k": {
+          "control_accuracy": 0.4166666666666667,
+          "candidate_accuracy": 0.7399999999999999,
+          "control_mean_tokens": 2300.9500000000003,
+          "candidate_mean_tokens": 1227.5966666666668,
+          "control_mean_thinking_tokens": 2192.8416666666667,
+          "candidate_mean_thinking_tokens": 1216.3616666666667,
+          "control_truncation_rate": 0.3016666666666667,
+          "candidate_truncation_rate": 0.10333333333333333,
+          "control_parse_failure_rate": 0.0,
+          "candidate_parse_failure_rate": 0.0,
+          "accuracy_delta_ci95": [
+            0.2416666666666666,
+            0.4033333333333333
+          ]
+        },
+        "skywork": {
+          "control_accuracy": 0.028333333333333335,
+          "candidate_accuracy": 0.24666666666666667,
+          "control_mean_tokens": 3651.831666666667,
+          "candidate_mean_tokens": 3106.8916666666664,
+          "control_mean_thinking_tokens": 3558.898333333333,
+          "candidate_mean_thinking_tokens": 2995.5866666666666,
+          "control_truncation_rate": 0.7566666666666667,
+          "candidate_truncation_rate": 0.5566666666666668,
+          "control_parse_failure_rate": 0.0,
+          "candidate_parse_failure_rate": 0.0,
+          "accuracy_delta_ci95": [
+            0.16,
+            0.2816666666666667
+          ]
+        }
+      },
+      "pooled_totals": {
+        "responses": 2400,
+        "control_generated_tokens": 4172338.0,
+        "candidate_generated_tokens": 3014459.0,
+        "control_thinking_tokens": 4043266.0,
+        "candidate_thinking_tokens": 2932375.0,
+        "token_ratio": 0.7224867688092383
+      },
+      "bootstrap": {
+        "replicates": 10000,
+        "seed": 20261025,
+        "method": "paired seed resampling and stratified prompt clusters; samples averaged inside prompt",
+        "limitation": "Only three training seeds at full completion; partial summaries are exploratory."
+      },
+      "token_aggregation": "ratio of means over four equal-sized sources"
+    },
+    "candidate": {
+      "seed_count": 3,
+      "per_seed": [
+        {
+          "seed": 17,
+          "accuracy_delta": 0.018750000000000024,
+          "token_ratio": 0.36074201879571904,
+          "token_reduction": 0.6392579812042809,
+          "domains": {
+            "arc_easy": {
+              "control_accuracy": 0.825,
+              "candidate_accuracy": 0.735,
+              "control_mean_tokens": 527.7,
+              "candidate_mean_tokens": 116.355,
+              "control_mean_thinking_tokens": 520.58,
+              "candidate_mean_thinking_tokens": 109.38,
+              "control_truncation_rate": 0.005,
+              "candidate_truncation_rate": 0.015,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "commonsense_qa": {
+              "control_accuracy": 0.585,
+              "candidate_accuracy": 0.485,
+              "control_mean_tokens": 471.195,
+              "candidate_mean_tokens": 124.775,
+              "control_mean_thinking_tokens": 464.18,
+              "candidate_mean_thinking_tokens": 117.915,
+              "control_truncation_rate": 0.0,
+              "candidate_truncation_rate": 0.02,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "gsm8k": {
+              "control_accuracy": 0.38,
+              "candidate_accuracy": 0.53,
+              "control_mean_tokens": 2289.285,
+              "candidate_mean_tokens": 399.67,
+              "control_mean_thinking_tokens": 2181.47,
+              "candidate_mean_thinking_tokens": 378.62,
+              "control_truncation_rate": 0.3,
+              "candidate_truncation_rate": 0.04,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "skywork": {
+              "control_accuracy": 0.025,
+              "candidate_accuracy": 0.14,
+              "control_mean_tokens": 3663.935,
+              "candidate_mean_tokens": 1867.12,
+              "control_mean_thinking_tokens": 3572.205,
+              "candidate_mean_thinking_tokens": 1729.075,
+              "control_truncation_rate": 0.76,
+              "candidate_truncation_rate": 0.37,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            }
+          }
+        },
+        {
+          "seed": 29,
+          "accuracy_delta": -0.0037499999999999825,
+          "token_ratio": 0.41409344876017845,
+          "token_reduction": 0.5859065512398216,
+          "domains": {
+            "arc_easy": {
+              "control_accuracy": 0.825,
+              "candidate_accuracy": 0.745,
+              "control_mean_tokens": 525.02,
+              "candidate_mean_tokens": 160.735,
+              "control_mean_thinking_tokens": 517.945,
+              "candidate_mean_thinking_tokens": 150.33,
+              "control_truncation_rate": 0.015,
+              "candidate_truncation_rate": 0.025,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "commonsense_qa": {
+              "control_accuracy": 0.62,
+              "candidate_accuracy": 0.5,
+              "control_mean_tokens": 485.865,
+              "candidate_mean_tokens": 76.98,
+              "control_mean_thinking_tokens": 478.865,
+              "candidate_mean_thinking_tokens": 69.18,
+              "control_truncation_rate": 0.0,
+              "candidate_truncation_rate": 0.005,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "gsm8k": {
+              "control_accuracy": 0.42,
+              "candidate_accuracy": 0.5,
+              "control_mean_tokens": 2333.155,
+              "candidate_mean_tokens": 475.95,
+              "control_mean_thinking_tokens": 2223.93,
+              "candidate_mean_thinking_tokens": 452.84,
+              "control_truncation_rate": 0.31,
+              "candidate_truncation_rate": 0.045,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "skywork": {
+              "control_accuracy": 0.035,
+              "candidate_accuracy": 0.14,
+              "control_mean_tokens": 3637.005,
+              "candidate_mean_tokens": 2177.14,
+              "control_mean_thinking_tokens": 3555.23,
+              "candidate_mean_thinking_tokens": 2034.8,
+              "control_truncation_rate": 0.78,
+              "candidate_truncation_rate": 0.435,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "accuracy_delta": 0.005000000000000018,
+          "token_ratio": 0.3556988278898987,
+          "token_reduction": 0.6443011721101013,
+          "domains": {
+            "arc_easy": {
+              "control_accuracy": 0.85,
+              "candidate_accuracy": 0.74,
+              "control_mean_tokens": 495.38,
+              "candidate_mean_tokens": 83.79,
+              "control_mean_thinking_tokens": 488.335,
+              "candidate_mean_thinking_tokens": 76.73,
+              "control_truncation_rate": 0.01,
+              "candidate_truncation_rate": 0.005,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "commonsense_qa": {
+              "control_accuracy": 0.57,
+              "candidate_accuracy": 0.485,
+              "control_mean_tokens": 498.185,
+              "candidate_mean_tokens": 90.56,
+              "control_mean_thinking_tokens": 491.205,
+              "candidate_mean_thinking_tokens": 82.855,
+              "control_truncation_rate": 0.005,
+              "candidate_truncation_rate": 0.01,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "gsm8k": {
+              "control_accuracy": 0.45,
+              "candidate_accuracy": 0.53,
+              "control_mean_tokens": 2280.41,
+              "candidate_mean_tokens": 321.885,
+              "control_mean_thinking_tokens": 2173.125,
+              "candidate_mean_thinking_tokens": 300.58,
+              "control_truncation_rate": 0.295,
+              "candidate_truncation_rate": 0.025,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "skywork": {
+              "control_accuracy": 0.025,
+              "candidate_accuracy": 0.16,
+              "control_mean_tokens": 3654.555,
+              "candidate_mean_tokens": 1968.235,
+              "control_mean_thinking_tokens": 3549.26,
+              "candidate_mean_thinking_tokens": 1825.305,
+              "control_truncation_rate": 0.73,
+              "candidate_truncation_rate": 0.36,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            }
+          }
+        }
+      ],
+      "accuracy_delta": 0.0066666666666666844,
+      "token_ratio": 0.37692032620559507,
+      "token_reduction": 0.6230796737944049,
+      "ci95": {
+        "accuracy_delta": [
+          -0.023750000000000007,
+          0.03750000000000001
+        ],
+        "token_ratio": [
+          0.334351389746896,
+          0.4236569204978239
+        ]
+      },
+      "domains": {
+        "arc_easy": {
+          "control_accuracy": 0.8333333333333334,
+          "candidate_accuracy": 0.7399999999999999,
+          "control_mean_tokens": 516.0333333333333,
+          "candidate_mean_tokens": 120.29333333333335,
+          "control_mean_thinking_tokens": 508.9533333333334,
+          "candidate_mean_thinking_tokens": 112.14666666666669,
+          "control_truncation_rate": 0.01,
+          "candidate_truncation_rate": 0.015,
+          "control_parse_failure_rate": 0.0,
+          "candidate_parse_failure_rate": 0.0,
+          "accuracy_delta_ci95": [
+            -0.14999999999999994,
+            -0.038333333333333254
+          ]
+        },
+        "commonsense_qa": {
+          "control_accuracy": 0.5916666666666667,
+          "candidate_accuracy": 0.49,
+          "control_mean_tokens": 485.08166666666665,
+          "candidate_mean_tokens": 97.43833333333333,
+          "control_mean_thinking_tokens": 478.0833333333333,
+          "candidate_mean_thinking_tokens": 89.98333333333335,
+          "control_truncation_rate": 0.0016666666666666668,
+          "candidate_truncation_rate": 0.011666666666666667,
+          "control_parse_failure_rate": 0.0,
+          "candidate_parse_failure_rate": 0.0,
+          "accuracy_delta_ci95": [
+            -0.16499999999999998,
+            -0.038333333333333365
+          ]
+        },
+        "gsm8k": {
+          "control_accuracy": 0.4166666666666667,
+          "candidate_accuracy": 0.52,
+          "control_mean_tokens": 2300.9500000000003,
+          "candidate_mean_tokens": 399.16833333333335,
+          "control_mean_thinking_tokens": 2192.8416666666667,
+          "candidate_mean_thinking_tokens": 377.34666666666664,
+          "control_truncation_rate": 0.3016666666666667,
+          "candidate_truncation_rate": 0.03666666666666666,
+          "control_parse_failure_rate": 0.0,
+          "candidate_parse_failure_rate": 0.0,
+          "accuracy_delta_ci95": [
+            0.025000000000000005,
+            0.18333333333333326
+          ]
+        },
+        "skywork": {
+          "control_accuracy": 0.028333333333333335,
+          "candidate_accuracy": 0.1466666666666667,
+          "control_mean_tokens": 3651.831666666667,
+          "candidate_mean_tokens": 2004.165,
+          "control_mean_thinking_tokens": 3558.898333333333,
+          "candidate_mean_thinking_tokens": 1863.0600000000002,
+          "control_truncation_rate": 0.7566666666666667,
+          "candidate_truncation_rate": 0.38833333333333336,
+          "control_parse_failure_rate": 0.0,
+          "candidate_parse_failure_rate": 0.0,
+          "accuracy_delta_ci95": [
+            0.07666666666666666,
+            0.165
+          ]
+        }
+      },
+      "pooled_totals": {
+        "responses": 2400,
+        "control_generated_tokens": 4172338.0,
+        "candidate_generated_tokens": 1572639.0,
+        "control_thinking_tokens": 4043266.0,
+        "candidate_thinking_tokens": 1465522.0,
+        "token_ratio": 0.376920326205595
+      },
+      "bootstrap": {
+        "replicates": 10000,
+        "seed": 20261025,
+        "method": "paired seed resampling and stratified prompt clusters; samples averaged inside prompt",
+        "limitation": "Only three training seeds at full completion; partial summaries are exploratory."
+      },
+      "token_aggregation": "ratio of means over four equal-sized sources"
+    }
+  },
+  "training_evidence": {
+    "training_jobs": {
+      "teacher-completion-v2-seed17-39211bca0f": {
+        "historical_worker_state": "complete",
+        "actual_gpu": "NVIDIA GeForce RTX 4090, GPU-049ed903-3ccb-5106-c2f7-9ff1a74182fa",
+        "released": true,
+        "ledger_estimated_usd": 2.6322,
+        "provenance": "/srv/projects/llm-hub/lab/experiments/cloud/teacher-completion-v2-seed17-39211bca0f/output/role-result.json",
+        "arms": {
+          "teacher-seed17": {
+            "metrics": "/srv/projects/llm-hub/lab/experiments/cloud/teacher-completion-v2-seed17-39211bca0f/output/training/teacher-seed17/metrics.jsonl",
+            "completed_groups": 128,
+            "optimizer_updates": 128,
+            "generated_tokens": 368954,
+            "rl_and_replay_training_tokens": 151034,
+            "main_training_tokens": 140853,
+            "replay_tokens": 10181,
+            "elapsed_seconds": 2501.1918692151085,
+            "peak_gpu_bytes": 2456763904,
+            "admission_events": {
+              "not_recorded": 128
+            },
+            "by_source": {
+              "arc_easy": {
+                "groups": 38,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 38
+                }
+              },
+              "skywork": {
+                "groups": 25,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 25
+                }
+              },
+              "gsm8k": {
+                "groups": 35,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 35
+                }
+              },
+              "commonsense_qa": {
+                "groups": 30,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 30
+                }
+              }
+            },
+            "group_success_count_histogram": {
+              "0": 41,
+              "4": 40,
+              "2": 22,
+              "3": 13,
+              "1": 12
+            },
+            "final_pool_size": 64
+          },
+          "student-seed17": {
+            "metrics": "/srv/projects/llm-hub/lab/experiments/cloud/teacher-completion-v2-seed17-39211bca0f/output/training/student-seed17/metrics.jsonl",
+            "completed_groups": 128,
+            "optimizer_updates": 128,
+            "generated_tokens": 407009,
+            "rl_and_replay_training_tokens": 238468,
+            "main_training_tokens": 176069,
+            "replay_tokens": 62399,
+            "elapsed_seconds": 2493.4031021769624,
+            "peak_gpu_bytes": 2460556288,
+            "admission_events": {
+              "not_recorded": 128
+            },
+            "by_source": {
+              "arc_easy": {
+                "groups": 38,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 38
+                }
+              },
+              "skywork": {
+                "groups": 25,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 25
+                }
+              },
+              "gsm8k": {
+                "groups": 35,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 35
+                }
+              },
+              "commonsense_qa": {
+                "groups": 30,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 30
+                }
+              }
+            },
+            "group_success_count_histogram": {
+              "0": 39,
+              "4": 58,
+              "1": 5,
+              "2": 12,
+              "3": 14
+            },
+            "final_pool_size": 64
+          }
+        }
+      },
+      "teacher-completion-v2-seed29-39211bca0f": {
+        "historical_worker_state": "complete",
+        "actual_gpu": "NVIDIA GeForce RTX 4090, GPU-5447a6b8-ccd6-9d49-4872-492ff5116ee3",
+        "released": true,
+        "ledger_estimated_usd": 3.0028,
+        "provenance": "/srv/projects/llm-hub/lab/experiments/cloud/teacher-completion-v2-seed29-39211bca0f/output/role-result.json",
+        "arms": {
+          "teacher-seed29": {
+            "metrics": "/srv/projects/llm-hub/lab/experiments/cloud/teacher-completion-v2-seed29-39211bca0f/output/training/teacher-seed29/metrics.jsonl",
+            "completed_groups": 128,
+            "optimizer_updates": 128,
+            "generated_tokens": 442928,
+            "rl_and_replay_training_tokens": 188544,
+            "main_training_tokens": 179011,
+            "replay_tokens": 9533,
+            "elapsed_seconds": 3088.233216036111,
+            "peak_gpu_bytes": 2462950400,
+            "admission_events": {
+              "not_recorded": 128
+            },
+            "by_source": {
+              "gsm8k": {
+                "groups": 27,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 27
+                }
+              },
+              "skywork": {
+                "groups": 36,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 36
+                }
+              },
+              "arc_easy": {
+                "groups": 32,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 32
+                }
+              },
+              "commonsense_qa": {
+                "groups": 33,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 33
+                }
+              }
+            },
+            "group_success_count_histogram": {
+              "1": 19,
+              "2": 19,
+              "0": 44,
+              "3": 19,
+              "4": 27
+            },
+            "final_pool_size": 64
+          },
+          "student-seed29": {
+            "metrics": "/srv/projects/llm-hub/lab/experiments/cloud/teacher-completion-v2-seed29-39211bca0f/output/training/student-seed29/metrics.jsonl",
+            "completed_groups": 128,
+            "optimizer_updates": 128,
+            "generated_tokens": 456582,
+            "rl_and_replay_training_tokens": 273280,
+            "main_training_tokens": 215482,
+            "replay_tokens": 57798,
+            "elapsed_seconds": 2851.2128997677937,
+            "peak_gpu_bytes": 2461404160,
+            "admission_events": {
+              "not_recorded": 128
+            },
+            "by_source": {
+              "gsm8k": {
+                "groups": 27,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 27
+                }
+              },
+              "skywork": {
+                "groups": 36,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 36
+                }
+              },
+              "arc_easy": {
+                "groups": 32,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 32
+                }
+              },
+              "commonsense_qa": {
+                "groups": 33,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 33
+                }
+              }
+            },
+            "group_success_count_histogram": {
+              "1": 13,
+              "4": 51,
+              "0": 36,
+              "3": 14,
+              "2": 14
+            },
+            "final_pool_size": 64
+          }
+        }
+      },
+      "teacher-completion-v2-seed43-39211bca0f": {
+        "historical_worker_state": "complete",
+        "actual_gpu": "NVIDIA GeForce RTX 4090, GPU-570e3a07-aca9-2cc8-85cd-0edcb48b9474",
+        "released": true,
+        "ledger_estimated_usd": 5.5624,
+        "provenance": "/srv/projects/llm-hub/lab/experiments/cloud/teacher-completion-v2-seed43-39211bca0f/output/role-result.json",
+        "arms": {
+          "teacher-seed43": {
+            "metrics": "/srv/projects/llm-hub/lab/experiments/cloud/teacher-completion-v2-seed43-39211bca0f/output/training/teacher-seed43/metrics.jsonl",
+            "completed_groups": 128,
+            "optimizer_updates": 128,
+            "generated_tokens": 349029,
+            "rl_and_replay_training_tokens": 137067,
+            "main_training_tokens": 126683,
+            "replay_tokens": 10384,
+            "elapsed_seconds": 6274.522927587968,
+            "peak_gpu_bytes": 2456385024,
+            "admission_events": {
+              "not_recorded": 128
+            },
+            "by_source": {
+              "commonsense_qa": {
+                "groups": 33,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 33
+                }
+              },
+              "gsm8k": {
+                "groups": 31,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 31
+                }
+              },
+              "skywork": {
+                "groups": 27,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 27
+                }
+              },
+              "arc_easy": {
+                "groups": 37,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 37
+                }
+              }
+            },
+            "group_success_count_histogram": {
+              "0": 46,
+              "3": 19,
+              "1": 16,
+              "4": 33,
+              "2": 14
+            },
+            "final_pool_size": 64
+          },
+          "student-seed43": {
+            "metrics": "/srv/projects/llm-hub/lab/experiments/cloud/teacher-completion-v2-seed43-39211bca0f/output/training/student-seed43/metrics.jsonl",
+            "completed_groups": 128,
+            "optimizer_updates": 128,
+            "generated_tokens": 412973,
+            "rl_and_replay_training_tokens": 249169,
+            "main_training_tokens": 185771,
+            "replay_tokens": 63398,
+            "elapsed_seconds": 6647.479357503005,
+            "peak_gpu_bytes": 2459984384,
+            "admission_events": {
+              "not_recorded": 128
+            },
+            "by_source": {
+              "commonsense_qa": {
+                "groups": 33,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 33
+                }
+              },
+              "gsm8k": {
+                "groups": 31,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 31
+                }
+              },
+              "skywork": {
+                "groups": 27,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 27
+                }
+              },
+              "arc_easy": {
+                "groups": 37,
+                "eligible": 0,
+                "admission_events": {
+                  "not_recorded": 37
+                }
+              }
+            },
+            "group_success_count_histogram": {
+              "0": 40,
+              "1": 8,
+              "4": 54,
+              "2": 12,
+              "3": 14
+            },
+            "final_pool_size": 64
+          }
+        }
+      }
+    },
+    "shared_recovery_attempts": null,
+    "shared_recovery_job": null,
+    "shared_recovery_ledger_estimated_usd": null,
+    "cost_note": "Ledger estimates, not a provider invoice. Recovery evaluation job is shared across three studies; do not count its cost three times. Teacher generation/review costs remain in the shared ledger."
+  },
+  "protocol_version": "2.1",
+  "interpretation": "V2.1 p\u0159id\u00e1v\u00e1 registrovan\u00e9 Skywork tr\u00e9ninkov\u00e9 ot\u00e1zky; u\u010ditelsk\u00fd replay proti ov\u011b\u0159en\u00e9mu studentovu replay po v\u00edce pokusech. P\u016fvodn\u00ed v1 nez\u00edskal dost p\u00e1r\u016f. 800 training-source validation ot\u00e1zek, greedy vLLM; stejn\u00e9 podm\u00ednky pro v\u0161echny v\u011btve.",
+  "criteria": {
+    "point_token_ratio_at_most_095": true,
+    "point_accuracy_delta_at_least_minus001": false,
+    "accuracy_noninferiority_ci": false,
+    "token_saving_ci": true,
+    "domain_guardrail": false,
+    "domain_accuracy_deltas": {
+      "arc_easy": -0.09999999999999998,
+      "commonsense_qa": -0.07666666666666666,
+      "gsm8k": -0.21999999999999997,
+      "skywork": -0.09999999999999999
+    }
+  },
+  "benefit_established": false
+}

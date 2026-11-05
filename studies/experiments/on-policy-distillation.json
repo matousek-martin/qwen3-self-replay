@@ -1,0 +1,873 @@
+{
+  "study": "on-policy-distillation",
+  "complete": true,
+  "updated_at": 1793009172.3054173,
+  "input_fingerprints": [
+    [
+      17,
+      "/srv/projects/llm-hub/lab/experiments/cloud/completion-evaluations-v2-0735c95b47/output/opd-seed17/study/runs/offline-soft-seed17/records.jsonl",
+      "0a70bd46f31aa102904477bb34b62d29e625770ce209ee69ff7f752484b99ea3",
+      "/srv/projects/llm-hub/lab/experiments/cloud/completion-evaluations-v2-0735c95b47/output/opd-seed17/study/runs/on-policy-soft-seed17/records.jsonl",
+      "8c63ac41b94ebdb6008bee15ea8c22bac68a7febd658c0b03d8f72ccc04a79f9"
+    ]
+  ],
+  "report_version": 6,
+  "summary": {
+    "seed_count": 1,
+    "per_seed": [
+      {
+        "seed": 17,
+        "accuracy_delta": 0.01953125,
+        "token_ratio": 1.0973789975811001,
+        "token_reduction": -0.09737899758110014,
+        "domains": {
+          "bfcl": {
+            "control_accuracy": 0.8125,
+            "candidate_accuracy": 0.8203125,
+            "control_mean_tokens": 206.58203125,
+            "candidate_mean_tokens": 220.29296875,
+            "control_mean_thinking_tokens": 182.1953125,
+            "candidate_mean_thinking_tokens": 196.5,
+            "control_truncation_rate": 0.0,
+            "candidate_truncation_rate": 0.0,
+            "control_parse_failure_rate": 0.046875,
+            "candidate_parse_failure_rate": 0.0390625
+          },
+          "ifeval": {
+            "control_accuracy": 0.5859375,
+            "candidate_accuracy": 0.62890625,
+            "control_mean_tokens": 767.15234375,
+            "candidate_mean_tokens": 824.37890625,
+            "control_mean_thinking_tokens": 487.03125,
+            "candidate_mean_thinking_tokens": 559.546875,
+            "control_truncation_rate": 0.046875,
+            "candidate_truncation_rate": 0.04296875,
+            "control_parse_failure_rate": 0.0,
+            "candidate_parse_failure_rate": 0.0
+          },
+          "mbpp": {
+            "control_accuracy": 0.53515625,
+            "candidate_accuracy": 0.58984375,
+            "control_mean_tokens": 1993.6796875,
+            "candidate_mean_tokens": 2139.96484375,
+            "control_mean_thinking_tokens": 1949.34765625,
+            "candidate_mean_thinking_tokens": 2096.19921875,
+            "control_truncation_rate": 0.0625,
+            "candidate_truncation_rate": 0.0703125,
+            "control_parse_failure_rate": 0.0625,
+            "candidate_parse_failure_rate": 0.0703125
+          },
+          "svamp": {
+            "control_accuracy": 0.921875,
+            "candidate_accuracy": 0.89453125,
+            "control_mean_tokens": 568.8671875,
+            "candidate_mean_tokens": 670.70703125,
+            "control_mean_thinking_tokens": 560.91015625,
+            "candidate_mean_thinking_tokens": 662.71484375,
+            "control_truncation_rate": 0.0,
+            "candidate_truncation_rate": 0.01953125,
+            "control_parse_failure_rate": 0.0,
+            "candidate_parse_failure_rate": 0.0
+          }
+        }
+      }
+    ],
+    "accuracy_delta": 0.01953125,
+    "token_ratio": 1.0973789975811001,
+    "token_reduction": -0.09737899758110014,
+    "ci95": {
+      "accuracy_delta": [
+        -0.0029296875,
+        0.04296875
+      ],
+      "token_ratio": [
+        1.0394346550213514,
+        1.1589751185619974
+      ]
+    },
+    "domains": {
+      "bfcl": {
+        "control_accuracy": 0.8125,
+        "candidate_accuracy": 0.8203125,
+        "control_mean_tokens": 206.58203125,
+        "candidate_mean_tokens": 220.29296875,
+        "control_mean_thinking_tokens": 182.1953125,
+        "candidate_mean_thinking_tokens": 196.5,
+        "control_truncation_rate": 0.0,
+        "candidate_truncation_rate": 0.0,
+        "control_parse_failure_rate": 0.046875,
+        "candidate_parse_failure_rate": 0.0390625,
+        "accuracy_delta_ci95": [
+          -0.02734375,
+          0.04296875
+        ]
+      },
+      "ifeval": {
+        "control_accuracy": 0.5859375,
+        "candidate_accuracy": 0.62890625,
+        "control_mean_tokens": 767.15234375,
+        "candidate_mean_tokens": 824.37890625,
+        "control_mean_thinking_tokens": 487.03125,
+        "candidate_mean_thinking_tokens": 559.546875,
+        "control_truncation_rate": 0.046875,
+        "candidate_truncation_rate": 0.04296875,
+        "control_parse_failure_rate": 0.0,
+        "candidate_parse_failure_rate": 0.0,
+        "accuracy_delta_ci95": [
+          -0.01171875,
+          0.09375
+        ]
+      },
+      "mbpp": {
+        "control_accuracy": 0.53515625,
+        "candidate_accuracy": 0.58984375,
+        "control_mean_tokens": 1993.6796875,
+        "candidate_mean_tokens": 2139.96484375,
+        "control_mean_thinking_tokens": 1949.34765625,
+        "candidate_mean_thinking_tokens": 2096.19921875,
+        "control_truncation_rate": 0.0625,
+        "candidate_truncation_rate": 0.0703125,
+        "control_parse_failure_rate": 0.0625,
+        "candidate_parse_failure_rate": 0.0703125,
+        "accuracy_delta_ci95": [
+          0.00390625,
+          0.109375
+        ]
+      },
+      "svamp": {
+        "control_accuracy": 0.921875,
+        "candidate_accuracy": 0.89453125,
+        "control_mean_tokens": 568.8671875,
+        "candidate_mean_tokens": 670.70703125,
+        "control_mean_thinking_tokens": 560.91015625,
+        "candidate_mean_thinking_tokens": 662.71484375,
+        "control_truncation_rate": 0.0,
+        "candidate_truncation_rate": 0.01953125,
+        "control_parse_failure_rate": 0.0,
+        "candidate_parse_failure_rate": 0.0,
+        "accuracy_delta_ci95": [
+          -0.06640625,
+          0.0078125
+        ]
+      }
+    },
+    "pooled_totals": {
+      "responses": 1024,
+      "control_generated_tokens": 905288.0,
+      "candidate_generated_tokens": 986968.0,
+      "control_thinking_tokens": 813948.0,
+      "candidate_thinking_tokens": 899830.0,
+      "token_ratio": 1.0902254310230557
+    },
+    "bootstrap": {
+      "replicates": 10000,
+      "seed": 20261025,
+      "method": "paired seed resampling and stratified prompt clusters; samples averaged inside prompt",
+      "limitation": "Only three training seeds at full completion; partial summaries are exploratory."
+    },
+    "token_aggregation": "domain_geometric"
+  },
+  "fresh_baseline_comparisons": {
+    "control": {
+      "seed_count": 1,
+      "per_seed": [
+        {
+          "seed": 17,
+          "accuracy_delta": -0.0009765625,
+          "token_ratio": 0.9874053076700416,
+          "token_reduction": 0.012594692329958357,
+          "domains": {
+            "bfcl": {
+              "control_accuracy": 0.8046875,
+              "candidate_accuracy": 0.8125,
+              "control_mean_tokens": 213.796875,
+              "candidate_mean_tokens": 206.58203125,
+              "control_mean_thinking_tokens": 189.47265625,
+              "candidate_mean_thinking_tokens": 182.1953125,
+              "control_truncation_rate": 0.0,
+              "candidate_truncation_rate": 0.0,
+              "control_parse_failure_rate": 0.046875,
+              "candidate_parse_failure_rate": 0.046875
+            },
+            "ifeval": {
+              "control_accuracy": 0.5859375,
+              "candidate_accuracy": 0.5859375,
+              "control_mean_tokens": 775.26171875,
+              "candidate_mean_tokens": 767.15234375,
+              "control_mean_thinking_tokens": 500.44921875,
+              "candidate_mean_thinking_tokens": 487.03125,
+              "control_truncation_rate": 0.04296875,
+              "candidate_truncation_rate": 0.046875,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "mbpp": {
+              "control_accuracy": 0.5546875,
+              "candidate_accuracy": 0.53515625,
+              "control_mean_tokens": 1955.89453125,
+              "candidate_mean_tokens": 1993.6796875,
+              "control_mean_thinking_tokens": 1905.55859375,
+              "candidate_mean_thinking_tokens": 1949.34765625,
+              "control_truncation_rate": 0.03125,
+              "candidate_truncation_rate": 0.0625,
+              "control_parse_failure_rate": 0.03125,
+              "candidate_parse_failure_rate": 0.0625
+            },
+            "svamp": {
+              "control_accuracy": 0.9140625,
+              "candidate_accuracy": 0.921875,
+              "control_mean_tokens": 583.26171875,
+              "candidate_mean_tokens": 568.8671875,
+              "control_mean_thinking_tokens": 574.828125,
+              "candidate_mean_thinking_tokens": 560.91015625,
+              "control_truncation_rate": 0.00390625,
+              "candidate_truncation_rate": 0.0,
+              "control_parse_failure_rate": 0.00390625,
+              "candidate_parse_failure_rate": 0.0
+            }
+          }
+        }
+      ],
+      "accuracy_delta": -0.0009765625,
+      "token_ratio": 0.9874053076700416,
+      "token_reduction": 0.012594692329958357,
+      "ci95": {
+        "accuracy_delta": [
+          -0.021484375,
+          0.021484375
+        ],
+        "token_ratio": [
+          0.9354842150049955,
+          1.0402261282127434
+        ]
+      },
+      "domains": {
+        "bfcl": {
+          "control_accuracy": 0.8046875,
+          "candidate_accuracy": 0.8125,
+          "control_mean_tokens": 213.796875,
+          "candidate_mean_tokens": 206.58203125,
+          "control_mean_thinking_tokens": 189.47265625,
+          "candidate_mean_thinking_tokens": 182.1953125,
+          "control_truncation_rate": 0.0,
+          "candidate_truncation_rate": 0.0,
+          "control_parse_failure_rate": 0.046875,
+          "candidate_parse_failure_rate": 0.046875,
+          "accuracy_delta_ci95": [
+            -0.02734375,
+            0.04296875
+          ]
+        },
+        "ifeval": {
+          "control_accuracy": 0.5859375,
+          "candidate_accuracy": 0.5859375,
+          "control_mean_tokens": 775.26171875,
+          "candidate_mean_tokens": 767.15234375,
+          "control_mean_thinking_tokens": 500.44921875,
+          "candidate_mean_thinking_tokens": 487.03125,
+          "control_truncation_rate": 0.04296875,
+          "candidate_truncation_rate": 0.046875,
+          "control_parse_failure_rate": 0.0,
+          "candidate_parse_failure_rate": 0.0,
+          "accuracy_delta_ci95": [
+            -0.05078125,
+            0.05078125
+          ]
+        },
+        "mbpp": {
+          "control_accuracy": 0.5546875,
+          "candidate_accuracy": 0.53515625,
+          "control_mean_tokens": 1955.89453125,
+          "candidate_mean_tokens": 1993.6796875,
+          "control_mean_thinking_tokens": 1905.55859375,
+          "candidate_mean_thinking_tokens": 1949.34765625,
+          "control_truncation_rate": 0.03125,
+          "candidate_truncation_rate": 0.0625,
+          "control_parse_failure_rate": 0.03125,
+          "candidate_parse_failure_rate": 0.0625,
+          "accuracy_delta_ci95": [
+            -0.0703125,
+            0.03125
+          ]
+        },
+        "svamp": {
+          "control_accuracy": 0.9140625,
+          "candidate_accuracy": 0.921875,
+          "control_mean_tokens": 583.26171875,
+          "candidate_mean_tokens": 568.8671875,
+          "control_mean_thinking_tokens": 574.828125,
+          "candidate_mean_thinking_tokens": 560.91015625,
+          "control_truncation_rate": 0.00390625,
+          "candidate_truncation_rate": 0.0,
+          "control_parse_failure_rate": 0.00390625,
+          "candidate_parse_failure_rate": 0.0,
+          "accuracy_delta_ci95": [
+            -0.01953125,
+            0.03515625
+          ]
+        }
+      },
+      "pooled_totals": {
+        "responses": 1024,
+        "control_generated_tokens": 903223.0,
+        "candidate_generated_tokens": 905288.0,
+        "control_thinking_tokens": 811599.0,
+        "candidate_thinking_tokens": 813948.0,
+        "token_ratio": 1.0022862571037274
+      },
+      "bootstrap": {
+        "replicates": 10000,
+        "seed": 20261025,
+        "method": "paired seed resampling and stratified prompt clusters; samples averaged inside prompt",
+        "limitation": "Only three training seeds at full completion; partial summaries are exploratory."
+      },
+      "token_aggregation": "domain_geometric"
+    },
+    "candidate": {
+      "seed_count": 1,
+      "per_seed": [
+        {
+          "seed": 17,
+          "accuracy_delta": 0.0185546875,
+          "token_ratio": 1.083557846737208,
+          "token_reduction": -0.08355784673720801,
+          "domains": {
+            "bfcl": {
+              "control_accuracy": 0.8046875,
+              "candidate_accuracy": 0.8203125,
+              "control_mean_tokens": 213.796875,
+              "candidate_mean_tokens": 220.29296875,
+              "control_mean_thinking_tokens": 189.47265625,
+              "candidate_mean_thinking_tokens": 196.5,
+              "control_truncation_rate": 0.0,
+              "candidate_truncation_rate": 0.0,
+              "control_parse_failure_rate": 0.046875,
+              "candidate_parse_failure_rate": 0.0390625
+            },
+            "ifeval": {
+              "control_accuracy": 0.5859375,
+              "candidate_accuracy": 0.62890625,
+              "control_mean_tokens": 775.26171875,
+              "candidate_mean_tokens": 824.37890625,
+              "control_mean_thinking_tokens": 500.44921875,
+              "candidate_mean_thinking_tokens": 559.546875,
+              "control_truncation_rate": 0.04296875,
+              "candidate_truncation_rate": 0.04296875,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "mbpp": {
+              "control_accuracy": 0.5546875,
+              "candidate_accuracy": 0.58984375,
+              "control_mean_tokens": 1955.89453125,
+              "candidate_mean_tokens": 2139.96484375,
+              "control_mean_thinking_tokens": 1905.55859375,
+              "candidate_mean_thinking_tokens": 2096.19921875,
+              "control_truncation_rate": 0.03125,
+              "candidate_truncation_rate": 0.0703125,
+              "control_parse_failure_rate": 0.03125,
+              "candidate_parse_failure_rate": 0.0703125
+            },
+            "svamp": {
+              "control_accuracy": 0.9140625,
+              "candidate_accuracy": 0.89453125,
+              "control_mean_tokens": 583.26171875,
+              "candidate_mean_tokens": 670.70703125,
+              "control_mean_thinking_tokens": 574.828125,
+              "candidate_mean_thinking_tokens": 662.71484375,
+              "control_truncation_rate": 0.00390625,
+              "candidate_truncation_rate": 0.01953125,
+              "control_parse_failure_rate": 0.00390625,
+              "candidate_parse_failure_rate": 0.0
+            }
+          }
+        }
+      ],
+      "accuracy_delta": 0.0185546875,
+      "token_ratio": 1.083557846737208,
+      "token_reduction": -0.08355784673720801,
+      "ci95": {
+        "accuracy_delta": [
+          -0.0048828125,
+          0.0419921875
+        ],
+        "token_ratio": [
+          1.028457736187478,
+          1.1402574690509713
+        ]
+      },
+      "domains": {
+        "bfcl": {
+          "control_accuracy": 0.8046875,
+          "candidate_accuracy": 0.8203125,
+          "control_mean_tokens": 213.796875,
+          "candidate_mean_tokens": 220.29296875,
+          "control_mean_thinking_tokens": 189.47265625,
+          "candidate_mean_thinking_tokens": 196.5,
+          "control_truncation_rate": 0.0,
+          "candidate_truncation_rate": 0.0,
+          "control_parse_failure_rate": 0.046875,
+          "candidate_parse_failure_rate": 0.0390625,
+          "accuracy_delta_ci95": [
+            -0.015625,
+            0.046875
+          ]
+        },
+        "ifeval": {
+          "control_accuracy": 0.5859375,
+          "candidate_accuracy": 0.62890625,
+          "control_mean_tokens": 775.26171875,
+          "candidate_mean_tokens": 824.37890625,
+          "control_mean_thinking_tokens": 500.44921875,
+          "candidate_mean_thinking_tokens": 559.546875,
+          "control_truncation_rate": 0.04296875,
+          "candidate_truncation_rate": 0.04296875,
+          "control_parse_failure_rate": 0.0,
+          "candidate_parse_failure_rate": 0.0,
+          "accuracy_delta_ci95": [
+            -0.0078125,
+            0.09765625
+          ]
+        },
+        "mbpp": {
+          "control_accuracy": 0.5546875,
+          "candidate_accuracy": 0.58984375,
+          "control_mean_tokens": 1955.89453125,
+          "candidate_mean_tokens": 2139.96484375,
+          "control_mean_thinking_tokens": 1905.55859375,
+          "candidate_mean_thinking_tokens": 2096.19921875,
+          "control_truncation_rate": 0.03125,
+          "candidate_truncation_rate": 0.0703125,
+          "control_parse_failure_rate": 0.03125,
+          "candidate_parse_failure_rate": 0.0703125,
+          "accuracy_delta_ci95": [
+            -0.015625,
+            0.0859375
+          ]
+        },
+        "svamp": {
+          "control_accuracy": 0.9140625,
+          "candidate_accuracy": 0.89453125,
+          "control_mean_tokens": 583.26171875,
+          "candidate_mean_tokens": 670.70703125,
+          "control_mean_thinking_tokens": 574.828125,
+          "candidate_mean_thinking_tokens": 662.71484375,
+          "control_truncation_rate": 0.00390625,
+          "candidate_truncation_rate": 0.01953125,
+          "control_parse_failure_rate": 0.00390625,
+          "candidate_parse_failure_rate": 0.0,
+          "accuracy_delta_ci95": [
+            -0.06640625,
+            0.0234375
+          ]
+        }
+      },
+      "pooled_totals": {
+        "responses": 1024,
+        "control_generated_tokens": 903223.0,
+        "candidate_generated_tokens": 986968.0,
+        "control_thinking_tokens": 811599.0,
+        "candidate_thinking_tokens": 899830.0,
+        "token_ratio": 1.0927179666593965
+      },
+      "bootstrap": {
+        "replicates": 10000,
+        "seed": 20261025,
+        "method": "paired seed resampling and stratified prompt clusters; samples averaged inside prompt",
+        "limitation": "Only three training seeds at full completion; partial summaries are exploratory."
+      },
+      "token_aggregation": "domain_geometric"
+    }
+  },
+  "training_evidence": {
+    "training_jobs": {
+      "opd-isolated-v2-seed17-12b6f7061c": {
+        "historical_worker_state": "failed",
+        "actual_gpu": "NVIDIA GeForce RTX 4090, GPU-25eb355a-128e-b0f1-9ca4-e2c5cfc78613, 595.91.07",
+        "released": true,
+        "ledger_estimated_usd": 3.2142,
+        "provenance": "/srv/projects/llm-hub/lab/experiments/cloud/opd-isolated-v2-seed17-12b6f7061c/output/isolation-provenance.json",
+        "arms": {
+          "offline-soft-seed17": {
+            "metrics": "/srv/projects/llm-hub/lab/experiments/cloud/opd-isolated-v2-seed17-12b6f7061c/output/training/offline-soft-seed17/metrics.jsonl",
+            "completed_groups": 32,
+            "optimizer_updates": 30,
+            "generated_tokens": 145115,
+            "rl_and_replay_training_tokens": 81017,
+            "main_training_tokens": 58852,
+            "replay_tokens": 10605,
+            "elapsed_seconds": 2039.3145529000321,
+            "peak_gpu_bytes": 10551874560,
+            "admission_events": {
+              "rejected": 24,
+              "inserted": 8
+            },
+            "by_source": {
+              "gsm8k": {
+                "groups": 8,
+                "eligible": 1,
+                "admission_events": {
+                  "rejected": 7,
+                  "inserted": 1
+                }
+              },
+              "commonsense_qa": {
+                "groups": 8,
+                "eligible": 3,
+                "admission_events": {
+                  "inserted": 3,
+                  "rejected": 5
+                }
+              },
+              "skywork": {
+                "groups": 8,
+                "eligible": 0,
+                "admission_events": {
+                  "rejected": 8
+                }
+              },
+              "arc_easy": {
+                "groups": 8,
+                "eligible": 4,
+                "admission_events": {
+                  "inserted": 4,
+                  "rejected": 4
+                }
+              }
+            },
+            "group_success_count_histogram": {
+              "0": 11,
+              "1": 6,
+              "4": 8,
+              "3": 6,
+              "2": 1
+            },
+            "final_pool_size": 8,
+            "distillation": {
+              "records": "/srv/projects/llm-hub/lab/experiments/cloud/opd-isolated-v2-seed17-12b6f7061c/output/training/offline-soft-seed17/distillation.jsonl",
+              "groups": 22,
+              "scored_tokens": 11560,
+              "sources": {
+                "frozen_teacher_cache": 22
+              }
+            }
+          },
+          "offline-hard-seed17": {
+            "metrics": "/srv/projects/llm-hub/lab/experiments/cloud/opd-isolated-v2-seed17-12b6f7061c/output/training/offline-hard-seed17/metrics.jsonl",
+            "completed_groups": 32,
+            "optimizer_updates": 29,
+            "generated_tokens": 137513,
+            "rl_and_replay_training_tokens": 71338,
+            "main_training_tokens": 52873,
+            "replay_tokens": 6905,
+            "elapsed_seconds": 1799.2499205259373,
+            "peak_gpu_bytes": 10516450304,
+            "admission_events": {
+              "rejected": 20,
+              "inserted": 12
+            },
+            "by_source": {
+              "gsm8k": {
+                "groups": 8,
+                "eligible": 3,
+                "admission_events": {
+                  "rejected": 5,
+                  "inserted": 3
+                }
+              },
+              "commonsense_qa": {
+                "groups": 8,
+                "eligible": 4,
+                "admission_events": {
+                  "rejected": 4,
+                  "inserted": 4
+                }
+              },
+              "skywork": {
+                "groups": 8,
+                "eligible": 0,
+                "admission_events": {
+                  "rejected": 8
+                }
+              },
+              "arc_easy": {
+                "groups": 8,
+                "eligible": 5,
+                "admission_events": {
+                  "inserted": 5,
+                  "rejected": 3
+                }
+              }
+            },
+            "group_success_count_histogram": {
+              "0": 12,
+              "1": 5,
+              "3": 2,
+              "4": 12,
+              "2": 1
+            },
+            "final_pool_size": 12,
+            "distillation": {
+              "records": "/srv/projects/llm-hub/lab/experiments/cloud/opd-isolated-v2-seed17-12b6f7061c/output/training/offline-hard-seed17/distillation.jsonl",
+              "groups": 22,
+              "scored_tokens": 11560,
+              "sources": {
+                "frozen_teacher_cache": 22
+              }
+            }
+          },
+          "on-policy-soft-seed17": {
+            "metrics": "/srv/projects/llm-hub/lab/experiments/cloud/opd-isolated-v2-seed17-12b6f7061c/output/training/on-policy-soft-seed17/metrics.jsonl",
+            "completed_groups": 32,
+            "optimizer_updates": 30,
+            "generated_tokens": 145980,
+            "rl_and_replay_training_tokens": 81910,
+            "main_training_tokens": 58258,
+            "replay_tokens": 10282,
+            "elapsed_seconds": 1954.9094048659317,
+            "peak_gpu_bytes": 10513008640,
+            "admission_events": {
+              "rejected": 23,
+              "inserted": 9
+            },
+            "by_source": {
+              "gsm8k": {
+                "groups": 8,
+                "eligible": 1,
+                "admission_events": {
+                  "rejected": 7,
+                  "inserted": 1
+                }
+              },
+              "commonsense_qa": {
+                "groups": 8,
+                "eligible": 3,
+                "admission_events": {
+                  "inserted": 3,
+                  "rejected": 5
+                }
+              },
+              "skywork": {
+                "groups": 8,
+                "eligible": 0,
+                "admission_events": {
+                  "rejected": 8
+                }
+              },
+              "arc_easy": {
+                "groups": 8,
+                "eligible": 5,
+                "admission_events": {
+                  "inserted": 5,
+                  "rejected": 3
+                }
+              }
+            },
+            "group_success_count_histogram": {
+              "0": 12,
+              "1": 4,
+              "4": 9,
+              "2": 4,
+              "3": 3
+            },
+            "final_pool_size": 9,
+            "distillation": {
+              "records": "/srv/projects/llm-hub/lab/experiments/cloud/opd-isolated-v2-seed17-12b6f7061c/output/training/on-policy-soft-seed17/distillation.jsonl",
+              "groups": 22,
+              "scored_tokens": 13370,
+              "sources": {
+                "current_sample0": 22
+              }
+            }
+          }
+        },
+        "teacher_cache": {
+          "teacher_revision": "1cfa9a7208912126459214e8b04321603b3df60c",
+          "student_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+          "tokenizer_sha256": "f1e264d1fff741970848e313688ec4090635abb93476dd27de8ebf3d6e75c459",
+          "data_sha256": "3c797f71351d68124ef0591ea492e4aa5ec5a0271e8248c85aa550740ec41c50",
+          "generated_tokens": 96414,
+          "elapsed_seconds": 2926.083888180903,
+          "gpu": "NVIDIA GeForce RTX 4090",
+          "peak_gpu_bytes": 8441198080,
+          "prompts": 32,
+          "verified_prompts": 22,
+          "source": "/srv/projects/llm-hub/lab/experiments/cloud/opd-isolated-v2-seed17-12b6f7061c/output/preparation/teacher-cache.json"
+        }
+      }
+    },
+    "shared_recovery_attempts": {
+      "completion-evaluations-v1-b4ab47052b": {
+        "state": "failed",
+        "ledger_estimated_usd": 0.2029,
+        "released": true
+      },
+      "completion-evaluations-v2-0735c95b47": {
+        "state": "complete",
+        "ledger_estimated_usd": 1.5408,
+        "released": true
+      }
+    },
+    "shared_recovery_job": "completion-evaluations-v2-0735c95b47",
+    "shared_recovery_ledger_estimated_usd": 1.5408,
+    "cost_note": "Ledger estimates, not a provider invoice. Recovery evaluation job is shared across three studies; do not count its cost three times. Teacher generation/review costs remain in the shared ledger."
+  },
+  "against_offline_hard": {
+    "seed_count": 1,
+    "per_seed": [
+      {
+        "seed": 17,
+        "accuracy_delta": 0.0048828125,
+        "token_ratio": 1.181628434432986,
+        "token_reduction": -0.18162843443298593,
+        "domains": {
+          "bfcl": {
+            "control_accuracy": 0.81640625,
+            "candidate_accuracy": 0.8203125,
+            "control_mean_tokens": 193.453125,
+            "candidate_mean_tokens": 220.29296875,
+            "control_mean_thinking_tokens": 168.5703125,
+            "candidate_mean_thinking_tokens": 196.5,
+            "control_truncation_rate": 0.0,
+            "candidate_truncation_rate": 0.0,
+            "control_parse_failure_rate": 0.0390625,
+            "candidate_parse_failure_rate": 0.0390625
+          },
+          "ifeval": {
+            "control_accuracy": 0.61328125,
+            "candidate_accuracy": 0.62890625,
+            "control_mean_tokens": 706.796875,
+            "candidate_mean_tokens": 824.37890625,
+            "control_mean_thinking_tokens": 424.6015625,
+            "candidate_mean_thinking_tokens": 559.546875,
+            "control_truncation_rate": 0.04296875,
+            "candidate_truncation_rate": 0.04296875,
+            "control_parse_failure_rate": 0.0,
+            "candidate_parse_failure_rate": 0.0
+          },
+          "mbpp": {
+            "control_accuracy": 0.56640625,
+            "candidate_accuracy": 0.58984375,
+            "control_mean_tokens": 1877.578125,
+            "candidate_mean_tokens": 2139.96484375,
+            "control_mean_thinking_tokens": 1833.6875,
+            "candidate_mean_thinking_tokens": 2096.19921875,
+            "control_truncation_rate": 0.04296875,
+            "candidate_truncation_rate": 0.0703125,
+            "control_parse_failure_rate": 0.04296875,
+            "candidate_parse_failure_rate": 0.0703125
+          },
+          "svamp": {
+            "control_accuracy": 0.91796875,
+            "candidate_accuracy": 0.89453125,
+            "control_mean_tokens": 520.8046875,
+            "candidate_mean_tokens": 670.70703125,
+            "control_mean_thinking_tokens": 512.41015625,
+            "candidate_mean_thinking_tokens": 662.71484375,
+            "control_truncation_rate": 0.0,
+            "candidate_truncation_rate": 0.01953125,
+            "control_parse_failure_rate": 0.0,
+            "candidate_parse_failure_rate": 0.0
+          }
+        }
+      }
+    ],
+    "accuracy_delta": 0.0048828125,
+    "token_ratio": 1.181628434432986,
+    "token_reduction": -0.18162843443298593,
+    "ci95": {
+      "accuracy_delta": [
+        -0.0185546875,
+        0.0283203125
+      ],
+      "token_ratio": [
+        1.1128576496935219,
+        1.2534936524785485
+      ]
+    },
+    "domains": {
+      "bfcl": {
+        "control_accuracy": 0.81640625,
+        "candidate_accuracy": 0.8203125,
+        "control_mean_tokens": 193.453125,
+        "candidate_mean_tokens": 220.29296875,
+        "control_mean_thinking_tokens": 168.5703125,
+        "candidate_mean_thinking_tokens": 196.5,
+        "control_truncation_rate": 0.0,
+        "candidate_truncation_rate": 0.0,
+        "control_parse_failure_rate": 0.0390625,
+        "candidate_parse_failure_rate": 0.0390625,
+        "accuracy_delta_ci95": [
+          -0.03125,
+          0.0390625
+        ]
+      },
+      "ifeval": {
+        "control_accuracy": 0.61328125,
+        "candidate_accuracy": 0.62890625,
+        "control_mean_tokens": 706.796875,
+        "candidate_mean_tokens": 824.37890625,
+        "control_mean_thinking_tokens": 424.6015625,
+        "candidate_mean_thinking_tokens": 559.546875,
+        "control_truncation_rate": 0.04296875,
+        "candidate_truncation_rate": 0.04296875,
+        "control_parse_failure_rate": 0.0,
+        "candidate_parse_failure_rate": 0.0,
+        "accuracy_delta_ci95": [
+          -0.0390625,
+          0.0703125
+        ]
+      },
+      "mbpp": {
+        "control_accuracy": 0.56640625,
+        "candidate_accuracy": 0.58984375,
+        "control_mean_tokens": 1877.578125,
+        "candidate_mean_tokens": 2139.96484375,
+        "control_mean_thinking_tokens": 1833.6875,
+        "candidate_mean_thinking_tokens": 2096.19921875,
+        "control_truncation_rate": 0.04296875,
+        "candidate_truncation_rate": 0.0703125,
+        "control_parse_failure_rate": 0.04296875,
+        "candidate_parse_failure_rate": 0.0703125,
+        "accuracy_delta_ci95": [
+          -0.02734375,
+          0.07421875
+        ]
+      },
+      "svamp": {
+        "control_accuracy": 0.91796875,
+        "candidate_accuracy": 0.89453125,
+        "control_mean_tokens": 520.8046875,
+        "candidate_mean_tokens": 670.70703125,
+        "control_mean_thinking_tokens": 512.41015625,
+        "candidate_mean_thinking_tokens": 662.71484375,
+        "control_truncation_rate": 0.0,
+        "candidate_truncation_rate": 0.01953125,
+        "control_parse_failure_rate": 0.0,
+        "candidate_parse_failure_rate": 0.0,
+        "accuracy_delta_ci95": [
+          -0.06640625,
+          0.01953125
+        ]
+      }
+    },
+    "pooled_totals": {
+      "responses": 1024,
+      "control_generated_tokens": 844450.0,
+      "candidate_generated_tokens": 986968.0,
+      "control_thinking_tokens": 752453.0,
+      "candidate_thinking_tokens": 899830.0,
+      "token_ratio": 1.1687702054591746
+    },
+    "bootstrap": {
+      "replicates": 10000,
+      "seed": 20261025,
+      "method": "paired seed resampling and stratified prompt clusters; samples averaged inside prompt",
+      "limitation": "Only three training seeds at full completion; partial summaries are exploratory."
+    },
+    "token_aggregation": "domain_geometric"
+  },
+  "interpretation": "Prim\u00e1rn\u00ed on-policy-soft versus offline-soft; dopl\u0148kov\u011b offline-hard. Dokon\u010den\u00ed znamen\u00e1 po\u010d\u00e1te\u010dn\u00ed seed17 pilot, nikoli t\u0159i replikace. Dal\u0161\u00ed seedy jsou podm\u00edn\u011bny p\u016fvodn\u00edm screeningem.",
+  "screening_passed": false,
+  "accuracy_noninferiority_established": false
+}

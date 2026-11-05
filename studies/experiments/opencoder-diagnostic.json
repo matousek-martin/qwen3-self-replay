@@ -1,0 +1,22 @@
+{
+  "completed": true,
+  "training_updates": 0,
+  "combined_conservative_cost_usd": 0.1986,
+  "gpus_released": true,
+  "decision": "Retain parent768; do not resume SFT or globally disable thinking based on this diagnostic.",
+  "registered_results_sha256": "7d8c4e3966d89d2c20af748270e3880ab35da6dd62d5e45239bfed7cb2837209",
+  "supplemental_format_audit_sha256": "bcc6dd47ee9b73f1b8c2a7fef7a504f65ecda326e6434e62d0c618470b4db6ec",
+  "main_findings": [
+    "Original-four-domain accuracy: parentON66.0156%,SFT16ON59.7656%,parentOFF56.6406%,SFT16OFF55.0781%.",
+    "OpenCoder prompts lack code-only restriction, but inherited strict grader rejects explanatory wrappers. This biases apparent gains toward code-only formatting.",
+    "Post-hoc first-block test execution with same completion/truncation gates: ON parent67/128 and SFT67/128, both52.34375%; observed25pp strict-score gain disappears.",
+    "OFF extracted-code OpenCoder: parent76/128=59.375%,SFT64/128=50%; paired delta-9.375pp,95%promptCI[-17.96875,-0.78125].",
+    "Original coding/instruction regression is not explained away by this OpenCoder scoring issue."
+  ],
+  "limitations": [
+    "Post-hoc development diagnostic, not official evaluation or fresh holdout.",
+    "Provided unit tests are incomplete evidence of correctness.",
+    "Single trained checkpoint/seed; prompt intervals do not establish generalization across training seeds."
+  ],
+  "next": "Before any new training, version a format-aware development coding grader aligned with prompt requirements; preserve historical scores/provenance. Further GPU work awaits user direction."
+}

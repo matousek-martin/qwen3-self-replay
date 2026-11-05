@@ -1,0 +1,33 @@
+{
+  "parent_source": "lab/experiments/cloud/replay-evaluation-768-20261102t121206z/output/full-evaluation/comparison.json",
+  "parent_official_token_saving_vs_original_base": 0.39539787546686733,
+  "results": {
+    "b": {
+      "source": "lab/experiments/cloud/coding-abc-b-expanded-20261104t192501z/output/full-evaluation/comparison.json",
+      "macro_accuracy_delta_vs_parent_pp": -0.3048991004801993,
+      "official_token_saving_vs_original_base": 0.3729343751381866,
+      "accuracy": {
+        "bfcl_irrelevance": 0.7786458333333334,
+        "bfcl_multiple": 0.788125,
+        "bfcl_simple_python": 0.8159375,
+        "ifeval": 0.5743992606284658,
+        "mbpp": 0.5029761904761905,
+        "svamp": 0.865625
+      }
+    },
+    "c": {
+      "source": "lab/experiments/cloud/coding-abc-c-expanded-20261104t192501z/output/full-evaluation/comparison.json",
+      "macro_accuracy_delta_vs_parent_pp": -0.22647449486058457,
+      "official_token_saving_vs_original_base": 0.39536893603780854,
+      "accuracy": {
+        "bfcl_irrelevance": 0.7682291666666666,
+        "bfcl_multiple": 0.790625,
+        "bfcl_simple_python": 0.80875,
+        "ifeval": 0.5797134935304991,
+        "mbpp": 0.5132275132275133,
+        "svamp": 0.859
+      }
+    }
+  },
+  "interpretation": "No demonstrated improvement over parent768; small point-estimate differences need direct paired intervals before significance claims. Token savings largely inherited. A intentionally cancelled before full eval."
+}

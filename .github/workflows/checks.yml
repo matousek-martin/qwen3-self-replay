@@ -1,0 +1,32 @@
+name: CPU checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  interface:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -e '.[dev]'
+      - run: ruff check src/self_replay scripts tests
+      - run: ruff format --check src/self_replay scripts tests
+      - run: pytest -q
+      - run: python scripts/verify_release.py --code-only
+  science:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: requirements/cpu-test.txt
+      - run: pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install -r requirements/cpu-test.txt -e .
+      - run: python scripts/check_science.py
+      - run: python scripts/check_numerics.py

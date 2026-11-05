@@ -1,0 +1,22 @@
+{
+  "revisions": {
+    "bfcl": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+    "evalplus": "26d6d00bb1fd0fa37f39c99d5290da67891d1c5e",
+    "svamp": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+    "ifeval": "4700efb9afa54286b0e04473ba80a13e8461e25f",
+    "mbpp": "v0.2.0"
+  },
+  "seed": 42,
+  "counts": {
+    "mbpp": 378,
+    "bfcl_simple_python": 400,
+    "bfcl_multiple": 200,
+    "bfcl_irrelevance": 240,
+    "svamp": 1000,
+    "ifeval": 541
+  },
+  "total": 2759,
+  "smoke_total": 30,
+  "smoke_sha256": "336937edf5263e9cf7e4a23b607731b6e31970f3e1df44fdda60c9e5c3354370",
+  "cohort_sha256": "16df64e67336b8a1cfa49298cd27e0e1f265927d12ad97f064f3968414d55a86"
+}

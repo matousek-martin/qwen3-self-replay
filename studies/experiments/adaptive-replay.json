@@ -1,0 +1,1224 @@
+{
+  "study": "adaptive-replay",
+  "complete": true,
+  "updated_at": 1793021080.9544196,
+  "input_fingerprints": [
+    [
+      17,
+      "/srv/projects/llm-hub/lab/experiments/cloud/adaptive-isolated-v2-seed17-079b11b144/output/study/runs/fixed-replay-seed17/records.jsonl",
+      "103647f1b7cdb5bc86bdb15f63d208219038af04bf275c31bbf0e9eb6117e153",
+      "/srv/projects/llm-hub/lab/experiments/cloud/adaptive-isolated-v2-seed17-079b11b144/output/study/runs/adaptive-replay-seed17/records.jsonl",
+      "099307120e812bf77dfbaefdc75111f0104a16806784c552727e74a7afade3d5"
+    ],
+    [
+      29,
+      "/srv/projects/llm-hub/lab/experiments/cloud/completion-evaluations-v2-0735c95b47/output/adaptive-seed29/study/runs/fixed-replay-seed29/records.jsonl",
+      "ff4f790bba1af2c493eeb088e9ba23737a3d09e56de0f40066caf56cb1a97f91",
+      "/srv/projects/llm-hub/lab/experiments/cloud/completion-evaluations-v2-0735c95b47/output/adaptive-seed29/study/runs/adaptive-replay-seed29/records.jsonl",
+      "30f882b758bee4c2ad6990fdbb6d05d94d6ccc6b0a8d0ce31233e492fcc2c0ad"
+    ],
+    [
+      43,
+      "/srv/projects/llm-hub/lab/experiments/cloud/adaptive-completion-v1-seed43-2c09b3417b/output/study/runs/fixed-replay-seed43/records.jsonl",
+      "2eb0526d470180443e7dc07e33d456bf3177c0fdd133cadd2169b3c5c12f5f99",
+      "/srv/projects/llm-hub/lab/experiments/cloud/adaptive-completion-v1-seed43-2c09b3417b/output/study/runs/adaptive-replay-seed43/records.jsonl",
+      "f38fb13618b2422d9e7a3e7a944a119653bf2eac0bad8f7600e24f5ce250f3ee"
+    ]
+  ],
+  "report_version": 6,
+  "summary": {
+    "seed_count": 3,
+    "per_seed": [
+      {
+        "seed": 17,
+        "accuracy_delta": 0.0185546875,
+        "token_ratio": 1.0592960524846866,
+        "token_reduction": -0.05929605248468661,
+        "domains": {
+          "bfcl": {
+            "control_accuracy": 0.8046875,
+            "candidate_accuracy": 0.81640625,
+            "control_mean_tokens": 164.83203125,
+            "candidate_mean_tokens": 173.234375,
+            "control_mean_thinking_tokens": 141.0546875,
+            "candidate_mean_thinking_tokens": 149.3046875,
+            "control_truncation_rate": 0.0,
+            "candidate_truncation_rate": 0.0,
+            "control_parse_failure_rate": 0.04296875,
+            "candidate_parse_failure_rate": 0.046875
+          },
+          "ifeval": {
+            "control_accuracy": 0.578125,
+            "candidate_accuracy": 0.61328125,
+            "control_mean_tokens": 572.08984375,
+            "candidate_mean_tokens": 661.1484375,
+            "control_mean_thinking_tokens": 326.484375,
+            "candidate_mean_thinking_tokens": 356.265625,
+            "control_truncation_rate": 0.02734375,
+            "candidate_truncation_rate": 0.046875,
+            "control_parse_failure_rate": 0.0,
+            "candidate_parse_failure_rate": 0.0
+          },
+          "mbpp": {
+            "control_accuracy": 0.546875,
+            "candidate_accuracy": 0.546875,
+            "control_mean_tokens": 1547.4609375,
+            "candidate_mean_tokens": 1700.75390625,
+            "control_mean_thinking_tokens": 1501.546875,
+            "candidate_mean_thinking_tokens": 1659.17578125,
+            "control_truncation_rate": 0.03515625,
+            "candidate_truncation_rate": 0.0546875,
+            "control_parse_failure_rate": 0.03515625,
+            "candidate_parse_failure_rate": 0.0546875
+          },
+          "svamp": {
+            "control_accuracy": 0.875,
+            "candidate_accuracy": 0.90234375,
+            "control_mean_tokens": 442.8984375,
+            "candidate_mean_tokens": 417.7578125,
+            "control_mean_thinking_tokens": 434.890625,
+            "candidate_mean_thinking_tokens": 409.76953125,
+            "control_truncation_rate": 0.0,
+            "candidate_truncation_rate": 0.0,
+            "control_parse_failure_rate": 0.0078125,
+            "candidate_parse_failure_rate": 0.0
+          }
+        }
+      },
+      {
+        "seed": 29,
+        "accuracy_delta": 0.0078125,
+        "token_ratio": 1.073167751123735,
+        "token_reduction": -0.07316775112373497,
+        "domains": {
+          "bfcl": {
+            "control_accuracy": 0.78515625,
+            "candidate_accuracy": 0.82421875,
+            "control_mean_tokens": 182.1953125,
+            "candidate_mean_tokens": 177.8359375,
+            "control_mean_thinking_tokens": 158.78515625,
+            "candidate_mean_thinking_tokens": 153.8984375,
+            "control_truncation_rate": 0.0,
+            "candidate_truncation_rate": 0.0,
+            "control_parse_failure_rate": 0.05859375,
+            "candidate_parse_failure_rate": 0.04296875
+          },
+          "ifeval": {
+            "control_accuracy": 0.5859375,
+            "candidate_accuracy": 0.61328125,
+            "control_mean_tokens": 609.42578125,
+            "candidate_mean_tokens": 712.70703125,
+            "control_mean_thinking_tokens": 365.00390625,
+            "candidate_mean_thinking_tokens": 465.13671875,
+            "control_truncation_rate": 0.02734375,
+            "candidate_truncation_rate": 0.046875,
+            "control_parse_failure_rate": 0.0,
+            "candidate_parse_failure_rate": 0.0
+          },
+          "mbpp": {
+            "control_accuracy": 0.55859375,
+            "candidate_accuracy": 0.5390625,
+            "control_mean_tokens": 1732.90234375,
+            "candidate_mean_tokens": 1606.51953125,
+            "control_mean_thinking_tokens": 1688.125,
+            "candidate_mean_thinking_tokens": 1559.40234375,
+            "control_truncation_rate": 0.0390625,
+            "candidate_truncation_rate": 0.05078125,
+            "control_parse_failure_rate": 0.04296875,
+            "candidate_parse_failure_rate": 0.05078125
+          },
+          "svamp": {
+            "control_accuracy": 0.9375,
+            "candidate_accuracy": 0.921875,
+            "control_mean_tokens": 413.1796875,
+            "candidate_mean_tokens": 517.875,
+            "control_mean_thinking_tokens": 405.0703125,
+            "candidate_mean_thinking_tokens": 509.29296875,
+            "control_truncation_rate": 0.0,
+            "candidate_truncation_rate": 0.0,
+            "control_parse_failure_rate": 0.0,
+            "candidate_parse_failure_rate": 0.00390625
+          }
+        }
+      },
+      {
+        "seed": 43,
+        "accuracy_delta": -0.0087890625,
+        "token_ratio": 0.990518823451425,
+        "token_reduction": 0.009481176548575054,
+        "domains": {
+          "bfcl": {
+            "control_accuracy": 0.82421875,
+            "candidate_accuracy": 0.796875,
+            "control_mean_tokens": 162.82421875,
+            "candidate_mean_tokens": 179.79296875,
+            "control_mean_thinking_tokens": 139.4921875,
+            "candidate_mean_thinking_tokens": 155.390625,
+            "control_truncation_rate": 0.0,
+            "candidate_truncation_rate": 0.0,
+            "control_parse_failure_rate": 0.04296875,
+            "candidate_parse_failure_rate": 0.04296875
+          },
+          "ifeval": {
+            "control_accuracy": 0.5859375,
+            "candidate_accuracy": 0.57421875,
+            "control_mean_tokens": 690.76953125,
+            "candidate_mean_tokens": 650.15625,
+            "control_mean_thinking_tokens": 426.3125,
+            "candidate_mean_thinking_tokens": 383.5078125,
+            "control_truncation_rate": 0.05859375,
+            "candidate_truncation_rate": 0.0390625,
+            "control_parse_failure_rate": 0.0,
+            "candidate_parse_failure_rate": 0.0
+          },
+          "mbpp": {
+            "control_accuracy": 0.56640625,
+            "candidate_accuracy": 0.5859375,
+            "control_mean_tokens": 1437.23828125,
+            "candidate_mean_tokens": 1534.68359375,
+            "control_mean_thinking_tokens": 1387.359375,
+            "candidate_mean_thinking_tokens": 1489.7421875,
+            "control_truncation_rate": 0.02734375,
+            "candidate_truncation_rate": 0.03515625,
+            "control_parse_failure_rate": 0.02734375,
+            "candidate_parse_failure_rate": 0.03515625
+          },
+          "svamp": {
+            "control_accuracy": 0.91796875,
+            "candidate_accuracy": 0.90234375,
+            "control_mean_tokens": 450.30078125,
+            "candidate_mean_tokens": 390.59375,
+            "control_mean_thinking_tokens": 442.37890625,
+            "candidate_mean_thinking_tokens": 382.66015625,
+            "control_truncation_rate": 0.00390625,
+            "candidate_truncation_rate": 0.00390625,
+            "control_parse_failure_rate": 0.0,
+            "candidate_parse_failure_rate": 0.0
+          }
+        }
+      }
+    ],
+    "accuracy_delta": 0.005859375,
+    "token_ratio": 1.0406556561454492,
+    "token_reduction": -0.04065565614544919,
+    "ci95": {
+      "accuracy_delta": [
+        -0.0146484375,
+        0.026041666666666668
+      ],
+      "token_ratio": [
+        0.9746274483954219,
+        1.0976535853923368
+      ]
+    },
+    "domains": {
+      "bfcl": {
+        "control_accuracy": 0.8046875,
+        "candidate_accuracy": 0.8125,
+        "control_mean_tokens": 169.95052083333334,
+        "candidate_mean_tokens": 176.95442708333334,
+        "control_mean_thinking_tokens": 146.44401041666666,
+        "candidate_mean_thinking_tokens": 152.86458333333334,
+        "control_truncation_rate": 0.0,
+        "candidate_truncation_rate": 0.0,
+        "control_parse_failure_rate": 0.048177083333333336,
+        "candidate_parse_failure_rate": 0.044270833333333336,
+        "accuracy_delta_ci95": [
+          -0.03515625,
+          0.049479166666666664
+        ]
+      },
+      "ifeval": {
+        "control_accuracy": 0.5833333333333334,
+        "candidate_accuracy": 0.6002604166666666,
+        "control_mean_tokens": 624.0950520833334,
+        "candidate_mean_tokens": 674.6705729166666,
+        "control_mean_thinking_tokens": 372.6002604166667,
+        "candidate_mean_thinking_tokens": 401.63671875,
+        "control_truncation_rate": 0.037760416666666664,
+        "candidate_truncation_rate": 0.044270833333333336,
+        "control_parse_failure_rate": 0.0,
+        "candidate_parse_failure_rate": 0.0,
+        "accuracy_delta_ci95": [
+          -0.02734375,
+          0.057291666666666664
+        ]
+      },
+      "mbpp": {
+        "control_accuracy": 0.5572916666666666,
+        "candidate_accuracy": 0.5572916666666666,
+        "control_mean_tokens": 1572.5338541666667,
+        "candidate_mean_tokens": 1613.9856770833333,
+        "control_mean_thinking_tokens": 1525.6770833333333,
+        "candidate_mean_thinking_tokens": 1569.4401041666667,
+        "control_truncation_rate": 0.033854166666666664,
+        "candidate_truncation_rate": 0.046875,
+        "control_parse_failure_rate": 0.03515625,
+        "candidate_parse_failure_rate": 0.046875,
+        "accuracy_delta_ci95": [
+          -0.04296875,
+          0.0390625
+        ]
+      },
+      "svamp": {
+        "control_accuracy": 0.91015625,
+        "candidate_accuracy": 0.9088541666666666,
+        "control_mean_tokens": 435.4596354166667,
+        "candidate_mean_tokens": 442.0755208333333,
+        "control_mean_thinking_tokens": 427.4466145833333,
+        "candidate_mean_thinking_tokens": 433.9075520833333,
+        "control_truncation_rate": 0.0013020833333333333,
+        "candidate_truncation_rate": 0.0013020833333333333,
+        "control_parse_failure_rate": 0.0026041666666666665,
+        "candidate_parse_failure_rate": 0.0013020833333333333,
+        "accuracy_delta_ci95": [
+          -0.03125,
+          0.03515625
+        ]
+      }
+    },
+    "pooled_totals": {
+      "responses": 3072,
+      "control_generated_tokens": 2151966.0,
+      "candidate_generated_tokens": 2233103.0,
+      "control_thinking_tokens": 1898625.0,
+      "candidate_thinking_tokens": 1964428.0,
+      "token_ratio": 1.0377036626043348
+    },
+    "bootstrap": {
+      "replicates": 10000,
+      "seed": 20261025,
+      "method": "paired seed resampling and stratified prompt clusters; samples averaged inside prompt",
+      "limitation": "Only three training seeds at full completion; partial summaries are exploratory."
+    },
+    "token_aggregation": "domain_geometric"
+  },
+  "fresh_baseline_comparisons": {
+    "control": {
+      "seed_count": 3,
+      "per_seed": [
+        {
+          "seed": 17,
+          "accuracy_delta": -0.025390625,
+          "token_ratio": 0.7657756179095163,
+          "token_reduction": 0.23422438209048368,
+          "domains": {
+            "bfcl": {
+              "control_accuracy": 0.8125,
+              "candidate_accuracy": 0.8046875,
+              "control_mean_tokens": 205.65234375,
+              "candidate_mean_tokens": 164.83203125,
+              "control_mean_thinking_tokens": 181.1875,
+              "candidate_mean_thinking_tokens": 141.0546875,
+              "control_truncation_rate": 0.0,
+              "candidate_truncation_rate": 0.0,
+              "control_parse_failure_rate": 0.0390625,
+              "candidate_parse_failure_rate": 0.04296875
+            },
+            "ifeval": {
+              "control_accuracy": 0.60546875,
+              "candidate_accuracy": 0.578125,
+              "control_mean_tokens": 800.6953125,
+              "candidate_mean_tokens": 572.08984375,
+              "control_mean_thinking_tokens": 497.29296875,
+              "candidate_mean_thinking_tokens": 326.484375,
+              "control_truncation_rate": 0.0546875,
+              "candidate_truncation_rate": 0.02734375,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "mbpp": {
+              "control_accuracy": 0.56640625,
+              "candidate_accuracy": 0.546875,
+              "control_mean_tokens": 1895.8359375,
+              "candidate_mean_tokens": 1547.4609375,
+              "control_mean_thinking_tokens": 1847.95703125,
+              "candidate_mean_thinking_tokens": 1501.546875,
+              "control_truncation_rate": 0.046875,
+              "candidate_truncation_rate": 0.03515625,
+              "control_parse_failure_rate": 0.046875,
+              "candidate_parse_failure_rate": 0.03515625
+            },
+            "svamp": {
+              "control_accuracy": 0.921875,
+              "candidate_accuracy": 0.875,
+              "control_mean_tokens": 602.03515625,
+              "candidate_mean_tokens": 442.8984375,
+              "control_mean_thinking_tokens": 593.984375,
+              "candidate_mean_thinking_tokens": 434.890625,
+              "control_truncation_rate": 0.0,
+              "candidate_truncation_rate": 0.0,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0078125
+            }
+          }
+        },
+        {
+          "seed": 29,
+          "accuracy_delta": -0.005859375,
+          "token_ratio": 0.8071735656921344,
+          "token_reduction": 0.1928264343078656,
+          "domains": {
+            "bfcl": {
+              "control_accuracy": 0.8046875,
+              "candidate_accuracy": 0.78515625,
+              "control_mean_tokens": 213.796875,
+              "candidate_mean_tokens": 182.1953125,
+              "control_mean_thinking_tokens": 189.47265625,
+              "candidate_mean_thinking_tokens": 158.78515625,
+              "control_truncation_rate": 0.0,
+              "candidate_truncation_rate": 0.0,
+              "control_parse_failure_rate": 0.046875,
+              "candidate_parse_failure_rate": 0.05859375
+            },
+            "ifeval": {
+              "control_accuracy": 0.61328125,
+              "candidate_accuracy": 0.5859375,
+              "control_mean_tokens": 753.75390625,
+              "candidate_mean_tokens": 609.42578125,
+              "control_mean_thinking_tokens": 474.203125,
+              "candidate_mean_thinking_tokens": 365.00390625,
+              "control_truncation_rate": 0.046875,
+              "candidate_truncation_rate": 0.02734375,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "mbpp": {
+              "control_accuracy": 0.5625,
+              "candidate_accuracy": 0.55859375,
+              "control_mean_tokens": 1809.8046875,
+              "candidate_mean_tokens": 1732.90234375,
+              "control_mean_thinking_tokens": 1763.46484375,
+              "candidate_mean_thinking_tokens": 1688.125,
+              "control_truncation_rate": 0.03125,
+              "candidate_truncation_rate": 0.0390625,
+              "control_parse_failure_rate": 0.03125,
+              "candidate_parse_failure_rate": 0.04296875
+            },
+            "svamp": {
+              "control_accuracy": 0.91015625,
+              "candidate_accuracy": 0.9375,
+              "control_mean_tokens": 642.15625,
+              "candidate_mean_tokens": 413.1796875,
+              "control_mean_thinking_tokens": 633.18359375,
+              "candidate_mean_thinking_tokens": 405.0703125,
+              "control_truncation_rate": 0.015625,
+              "candidate_truncation_rate": 0.0,
+              "control_parse_failure_rate": 0.0078125,
+              "candidate_parse_failure_rate": 0.0
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "accuracy_delta": 0.005859375,
+          "token_ratio": 0.7750072268134862,
+          "token_reduction": 0.22499277318651378,
+          "domains": {
+            "bfcl": {
+              "control_accuracy": 0.796875,
+              "candidate_accuracy": 0.82421875,
+              "control_mean_tokens": 212.33984375,
+              "candidate_mean_tokens": 162.82421875,
+              "control_mean_thinking_tokens": 187.91796875,
+              "candidate_mean_thinking_tokens": 139.4921875,
+              "control_truncation_rate": 0.0,
+              "candidate_truncation_rate": 0.0,
+              "control_parse_failure_rate": 0.0390625,
+              "candidate_parse_failure_rate": 0.04296875
+            },
+            "ifeval": {
+              "control_accuracy": 0.59765625,
+              "candidate_accuracy": 0.5859375,
+              "control_mean_tokens": 779.53125,
+              "candidate_mean_tokens": 690.76953125,
+              "control_mean_thinking_tokens": 484.79296875,
+              "candidate_mean_thinking_tokens": 426.3125,
+              "control_truncation_rate": 0.05859375,
+              "candidate_truncation_rate": 0.05859375,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "mbpp": {
+              "control_accuracy": 0.55078125,
+              "candidate_accuracy": 0.56640625,
+              "control_mean_tokens": 2074.234375,
+              "candidate_mean_tokens": 1437.23828125,
+              "control_mean_thinking_tokens": 2027.5078125,
+              "candidate_mean_thinking_tokens": 1387.359375,
+              "control_truncation_rate": 0.06640625,
+              "candidate_truncation_rate": 0.02734375,
+              "control_parse_failure_rate": 0.06640625,
+              "candidate_parse_failure_rate": 0.02734375
+            },
+            "svamp": {
+              "control_accuracy": 0.92578125,
+              "candidate_accuracy": 0.91796875,
+              "control_mean_tokens": 587.67578125,
+              "candidate_mean_tokens": 450.30078125,
+              "control_mean_thinking_tokens": 578.58203125,
+              "candidate_mean_thinking_tokens": 442.37890625,
+              "control_truncation_rate": 0.0,
+              "candidate_truncation_rate": 0.00390625,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            }
+          }
+        }
+      ],
+      "accuracy_delta": -0.008463541666666666,
+      "token_ratio": 0.7834857538561858,
+      "token_reduction": 0.2165142461438142,
+      "ci95": {
+        "accuracy_delta": [
+          -0.0322265625,
+          0.0146484375
+        ],
+        "token_ratio": [
+          0.7419347341434529,
+          0.8270904702757925
+        ]
+      },
+      "domains": {
+        "bfcl": {
+          "control_accuracy": 0.8046875,
+          "candidate_accuracy": 0.8046875,
+          "control_mean_tokens": 210.59635416666666,
+          "candidate_mean_tokens": 169.95052083333334,
+          "control_mean_thinking_tokens": 186.19270833333334,
+          "candidate_mean_thinking_tokens": 146.44401041666666,
+          "control_truncation_rate": 0.0,
+          "candidate_truncation_rate": 0.0,
+          "control_parse_failure_rate": 0.041666666666666664,
+          "candidate_parse_failure_rate": 0.048177083333333336,
+          "accuracy_delta_ci95": [
+            -0.037760416666666664,
+            0.04296875
+          ]
+        },
+        "ifeval": {
+          "control_accuracy": 0.60546875,
+          "candidate_accuracy": 0.5833333333333334,
+          "control_mean_tokens": 777.9934895833334,
+          "candidate_mean_tokens": 624.0950520833334,
+          "control_mean_thinking_tokens": 485.4296875,
+          "candidate_mean_thinking_tokens": 372.6002604166667,
+          "control_truncation_rate": 0.053385416666666664,
+          "candidate_truncation_rate": 0.037760416666666664,
+          "control_parse_failure_rate": 0.0,
+          "candidate_parse_failure_rate": 0.0,
+          "accuracy_delta_ci95": [
+            -0.06380208333333333,
+            0.01953125
+          ]
+        },
+        "mbpp": {
+          "control_accuracy": 0.5598958333333334,
+          "candidate_accuracy": 0.5572916666666666,
+          "control_mean_tokens": 1926.625,
+          "candidate_mean_tokens": 1572.5338541666667,
+          "control_mean_thinking_tokens": 1879.6432291666667,
+          "candidate_mean_thinking_tokens": 1525.6770833333333,
+          "control_truncation_rate": 0.048177083333333336,
+          "candidate_truncation_rate": 0.033854166666666664,
+          "control_parse_failure_rate": 0.048177083333333336,
+          "candidate_parse_failure_rate": 0.03515625,
+          "accuracy_delta_ci95": [
+            -0.046875,
+            0.040364583333333336
+          ]
+        },
+        "svamp": {
+          "control_accuracy": 0.9192708333333334,
+          "candidate_accuracy": 0.91015625,
+          "control_mean_tokens": 610.6223958333334,
+          "candidate_mean_tokens": 435.4596354166667,
+          "control_mean_thinking_tokens": 601.9166666666666,
+          "candidate_mean_thinking_tokens": 427.4466145833333,
+          "control_truncation_rate": 0.005208333333333333,
+          "candidate_truncation_rate": 0.0013020833333333333,
+          "control_parse_failure_rate": 0.0026041666666666665,
+          "candidate_parse_failure_rate": 0.0026041666666666665,
+          "accuracy_delta_ci95": [
+            -0.05859375,
+            0.03515625
+          ]
+        }
+      },
+      "pooled_totals": {
+        "responses": 3072,
+        "control_generated_tokens": 2707843.0,
+        "candidate_generated_tokens": 2151966.0,
+        "control_thinking_tokens": 2421644.0,
+        "candidate_thinking_tokens": 1898625.0,
+        "token_ratio": 0.7947159418031252
+      },
+      "bootstrap": {
+        "replicates": 10000,
+        "seed": 20261025,
+        "method": "paired seed resampling and stratified prompt clusters; samples averaged inside prompt",
+        "limitation": "Only three training seeds at full completion; partial summaries are exploratory."
+      },
+      "token_aggregation": "domain_geometric"
+    },
+    "candidate": {
+      "seed_count": 3,
+      "per_seed": [
+        {
+          "seed": 17,
+          "accuracy_delta": -0.0068359375,
+          "token_ratio": 0.8111830891405725,
+          "token_reduction": 0.18881691085942753,
+          "domains": {
+            "bfcl": {
+              "control_accuracy": 0.8125,
+              "candidate_accuracy": 0.81640625,
+              "control_mean_tokens": 205.65234375,
+              "candidate_mean_tokens": 173.234375,
+              "control_mean_thinking_tokens": 181.1875,
+              "candidate_mean_thinking_tokens": 149.3046875,
+              "control_truncation_rate": 0.0,
+              "candidate_truncation_rate": 0.0,
+              "control_parse_failure_rate": 0.0390625,
+              "candidate_parse_failure_rate": 0.046875
+            },
+            "ifeval": {
+              "control_accuracy": 0.60546875,
+              "candidate_accuracy": 0.61328125,
+              "control_mean_tokens": 800.6953125,
+              "candidate_mean_tokens": 661.1484375,
+              "control_mean_thinking_tokens": 497.29296875,
+              "candidate_mean_thinking_tokens": 356.265625,
+              "control_truncation_rate": 0.0546875,
+              "candidate_truncation_rate": 0.046875,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "mbpp": {
+              "control_accuracy": 0.56640625,
+              "candidate_accuracy": 0.546875,
+              "control_mean_tokens": 1895.8359375,
+              "candidate_mean_tokens": 1700.75390625,
+              "control_mean_thinking_tokens": 1847.95703125,
+              "candidate_mean_thinking_tokens": 1659.17578125,
+              "control_truncation_rate": 0.046875,
+              "candidate_truncation_rate": 0.0546875,
+              "control_parse_failure_rate": 0.046875,
+              "candidate_parse_failure_rate": 0.0546875
+            },
+            "svamp": {
+              "control_accuracy": 0.921875,
+              "candidate_accuracy": 0.90234375,
+              "control_mean_tokens": 602.03515625,
+              "candidate_mean_tokens": 417.7578125,
+              "control_mean_thinking_tokens": 593.984375,
+              "candidate_mean_thinking_tokens": 409.76953125,
+              "control_truncation_rate": 0.0,
+              "candidate_truncation_rate": 0.0,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            }
+          }
+        },
+        {
+          "seed": 29,
+          "accuracy_delta": 0.001953125,
+          "token_ratio": 0.8662326402603543,
+          "token_reduction": 0.1337673597396457,
+          "domains": {
+            "bfcl": {
+              "control_accuracy": 0.8046875,
+              "candidate_accuracy": 0.82421875,
+              "control_mean_tokens": 213.796875,
+              "candidate_mean_tokens": 177.8359375,
+              "control_mean_thinking_tokens": 189.47265625,
+              "candidate_mean_thinking_tokens": 153.8984375,
+              "control_truncation_rate": 0.0,
+              "candidate_truncation_rate": 0.0,
+              "control_parse_failure_rate": 0.046875,
+              "candidate_parse_failure_rate": 0.04296875
+            },
+            "ifeval": {
+              "control_accuracy": 0.61328125,
+              "candidate_accuracy": 0.61328125,
+              "control_mean_tokens": 753.75390625,
+              "candidate_mean_tokens": 712.70703125,
+              "control_mean_thinking_tokens": 474.203125,
+              "candidate_mean_thinking_tokens": 465.13671875,
+              "control_truncation_rate": 0.046875,
+              "candidate_truncation_rate": 0.046875,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "mbpp": {
+              "control_accuracy": 0.5625,
+              "candidate_accuracy": 0.5390625,
+              "control_mean_tokens": 1809.8046875,
+              "candidate_mean_tokens": 1606.51953125,
+              "control_mean_thinking_tokens": 1763.46484375,
+              "candidate_mean_thinking_tokens": 1559.40234375,
+              "control_truncation_rate": 0.03125,
+              "candidate_truncation_rate": 0.05078125,
+              "control_parse_failure_rate": 0.03125,
+              "candidate_parse_failure_rate": 0.05078125
+            },
+            "svamp": {
+              "control_accuracy": 0.91015625,
+              "candidate_accuracy": 0.921875,
+              "control_mean_tokens": 642.15625,
+              "candidate_mean_tokens": 517.875,
+              "control_mean_thinking_tokens": 633.18359375,
+              "candidate_mean_thinking_tokens": 509.29296875,
+              "control_truncation_rate": 0.015625,
+              "candidate_truncation_rate": 0.0,
+              "control_parse_failure_rate": 0.0078125,
+              "candidate_parse_failure_rate": 0.00390625
+            }
+          }
+        },
+        {
+          "seed": 43,
+          "accuracy_delta": -0.0029296875,
+          "token_ratio": 0.767659246469646,
+          "token_reduction": 0.232340753530354,
+          "domains": {
+            "bfcl": {
+              "control_accuracy": 0.796875,
+              "candidate_accuracy": 0.796875,
+              "control_mean_tokens": 212.33984375,
+              "candidate_mean_tokens": 179.79296875,
+              "control_mean_thinking_tokens": 187.91796875,
+              "candidate_mean_thinking_tokens": 155.390625,
+              "control_truncation_rate": 0.0,
+              "candidate_truncation_rate": 0.0,
+              "control_parse_failure_rate": 0.0390625,
+              "candidate_parse_failure_rate": 0.04296875
+            },
+            "ifeval": {
+              "control_accuracy": 0.59765625,
+              "candidate_accuracy": 0.57421875,
+              "control_mean_tokens": 779.53125,
+              "candidate_mean_tokens": 650.15625,
+              "control_mean_thinking_tokens": 484.79296875,
+              "candidate_mean_thinking_tokens": 383.5078125,
+              "control_truncation_rate": 0.05859375,
+              "candidate_truncation_rate": 0.0390625,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            },
+            "mbpp": {
+              "control_accuracy": 0.55078125,
+              "candidate_accuracy": 0.5859375,
+              "control_mean_tokens": 2074.234375,
+              "candidate_mean_tokens": 1534.68359375,
+              "control_mean_thinking_tokens": 2027.5078125,
+              "candidate_mean_thinking_tokens": 1489.7421875,
+              "control_truncation_rate": 0.06640625,
+              "candidate_truncation_rate": 0.03515625,
+              "control_parse_failure_rate": 0.06640625,
+              "candidate_parse_failure_rate": 0.03515625
+            },
+            "svamp": {
+              "control_accuracy": 0.92578125,
+              "candidate_accuracy": 0.90234375,
+              "control_mean_tokens": 587.67578125,
+              "candidate_mean_tokens": 390.59375,
+              "control_mean_thinking_tokens": 578.58203125,
+              "candidate_mean_thinking_tokens": 382.66015625,
+              "control_truncation_rate": 0.0,
+              "candidate_truncation_rate": 0.00390625,
+              "control_parse_failure_rate": 0.0,
+              "candidate_parse_failure_rate": 0.0
+            }
+          }
+        }
+      ],
+      "accuracy_delta": -0.0026041666666666665,
+      "token_ratio": 0.815338881259821,
+      "token_reduction": 0.184661118740179,
+      "ci95": {
+        "accuracy_delta": [
+          -0.021484375,
+          0.015950520833333332
+        ],
+        "token_ratio": [
+          0.7522384625768959,
+          0.878404923399659
+        ]
+      },
+      "domains": {
+        "bfcl": {
+          "control_accuracy": 0.8046875,
+          "candidate_accuracy": 0.8125,
+          "control_mean_tokens": 210.59635416666666,
+          "candidate_mean_tokens": 176.95442708333334,
+          "control_mean_thinking_tokens": 186.19270833333334,
+          "candidate_mean_thinking_tokens": 152.86458333333334,
+          "control_truncation_rate": 0.0,
+          "candidate_truncation_rate": 0.0,
+          "control_parse_failure_rate": 0.041666666666666664,
+          "candidate_parse_failure_rate": 0.044270833333333336,
+          "accuracy_delta_ci95": [
+            -0.02734375,
+            0.04296875
+          ]
+        },
+        "ifeval": {
+          "control_accuracy": 0.60546875,
+          "candidate_accuracy": 0.6002604166666666,
+          "control_mean_tokens": 777.9934895833334,
+          "candidate_mean_tokens": 674.6705729166666,
+          "control_mean_thinking_tokens": 485.4296875,
+          "candidate_mean_thinking_tokens": 401.63671875,
+          "control_truncation_rate": 0.053385416666666664,
+          "candidate_truncation_rate": 0.044270833333333336,
+          "control_parse_failure_rate": 0.0,
+          "candidate_parse_failure_rate": 0.0,
+          "accuracy_delta_ci95": [
+            -0.048177083333333336,
+            0.036458333333333336
+          ]
+        },
+        "mbpp": {
+          "control_accuracy": 0.5598958333333334,
+          "candidate_accuracy": 0.5572916666666666,
+          "control_mean_tokens": 1926.625,
+          "candidate_mean_tokens": 1613.9856770833333,
+          "control_mean_thinking_tokens": 1879.6432291666667,
+          "candidate_mean_thinking_tokens": 1569.4401041666667,
+          "control_truncation_rate": 0.048177083333333336,
+          "candidate_truncation_rate": 0.046875,
+          "control_parse_failure_rate": 0.048177083333333336,
+          "candidate_parse_failure_rate": 0.046875,
+          "accuracy_delta_ci95": [
+            -0.0546875,
+            0.05078125
+          ]
+        },
+        "svamp": {
+          "control_accuracy": 0.9192708333333334,
+          "candidate_accuracy": 0.9088541666666666,
+          "control_mean_tokens": 610.6223958333334,
+          "candidate_mean_tokens": 442.0755208333333,
+          "control_mean_thinking_tokens": 601.9166666666666,
+          "candidate_mean_thinking_tokens": 433.9075520833333,
+          "control_truncation_rate": 0.005208333333333333,
+          "candidate_truncation_rate": 0.0013020833333333333,
+          "control_parse_failure_rate": 0.0026041666666666665,
+          "candidate_parse_failure_rate": 0.0013020833333333333,
+          "accuracy_delta_ci95": [
+            -0.048177083333333336,
+            0.0234375
+          ]
+        }
+      },
+      "pooled_totals": {
+        "responses": 3072,
+        "control_generated_tokens": 2707843.0,
+        "candidate_generated_tokens": 2233103.0,
+        "control_thinking_tokens": 2421644.0,
+        "candidate_thinking_tokens": 1964428.0,
+        "token_ratio": 0.8246796435391565
+      },
+      "bootstrap": {
+        "replicates": 10000,
+        "seed": 20261025,
+        "method": "paired seed resampling and stratified prompt clusters; samples averaged inside prompt",
+        "limitation": "Only three training seeds at full completion; partial summaries are exploratory."
+      },
+      "token_aggregation": "domain_geometric"
+    }
+  },
+  "training_evidence": {
+    "training_jobs": {
+      "adaptive-isolated-v2-seed17-079b11b144": {
+        "historical_worker_state": "complete",
+        "actual_gpu": "NVIDIA GeForce RTX 4090, GPU-f3dfe9ec-b15b-95c7-24ea-f17330de8c4e, 595.91.07",
+        "released": true,
+        "ledger_estimated_usd": 5.8779,
+        "provenance": "/srv/projects/llm-hub/lab/experiments/cloud/adaptive-isolated-v2-seed17-079b11b144/output/role-result.json",
+        "arms": {
+          "adaptive-replay-seed17": {
+            "metrics": "/srv/projects/llm-hub/lab/experiments/cloud/adaptive-isolated-v2-seed17-079b11b144/output/training/adaptive-replay-seed17/metrics.jsonl",
+            "completed_groups": 128,
+            "optimizer_updates": 125,
+            "generated_tokens": 468046,
+            "rl_and_replay_training_tokens": 225859,
+            "main_training_tokens": 194351,
+            "replay_tokens": 31508,
+            "elapsed_seconds": 7617.103376934014,
+            "peak_gpu_bytes": 2457475584,
+            "admission_events": {
+              "rejected": 75,
+              "inserted": 53
+            },
+            "by_source": {
+              "arc_easy": {
+                "groups": 38,
+                "eligible": 30,
+                "admission_events": {
+                  "rejected": 8,
+                  "inserted": 30
+                }
+              },
+              "skywork": {
+                "groups": 25,
+                "eligible": 0,
+                "admission_events": {
+                  "rejected": 25
+                }
+              },
+              "gsm8k": {
+                "groups": 35,
+                "eligible": 12,
+                "admission_events": {
+                  "rejected": 23,
+                  "inserted": 12
+                }
+              },
+              "commonsense_qa": {
+                "groups": 30,
+                "eligible": 11,
+                "admission_events": {
+                  "rejected": 19,
+                  "inserted": 11
+                }
+              }
+            },
+            "group_success_count_histogram": {
+              "0": 41,
+              "4": 53,
+              "2": 11,
+              "3": 14,
+              "1": 9
+            },
+            "final_pool_size": 53
+          },
+          "fixed-replay-seed17": {
+            "metrics": "/srv/projects/llm-hub/lab/experiments/cloud/adaptive-isolated-v2-seed17-079b11b144/output/training/fixed-replay-seed17/metrics.jsonl",
+            "completed_groups": 128,
+            "optimizer_updates": 125,
+            "generated_tokens": 445193,
+            "rl_and_replay_training_tokens": 216957,
+            "main_training_tokens": 187937,
+            "replay_tokens": 29020,
+            "elapsed_seconds": 6914.559738301032,
+            "peak_gpu_bytes": 2460512768,
+            "admission_events": {
+              "rejected": 73,
+              "inserted": 55
+            },
+            "by_source": {
+              "arc_easy": {
+                "groups": 38,
+                "eligible": 30,
+                "admission_events": {
+                  "rejected": 8,
+                  "inserted": 30
+                }
+              },
+              "skywork": {
+                "groups": 25,
+                "eligible": 0,
+                "admission_events": {
+                  "rejected": 25
+                }
+              },
+              "gsm8k": {
+                "groups": 35,
+                "eligible": 14,
+                "admission_events": {
+                  "rejected": 21,
+                  "inserted": 14
+                }
+              },
+              "commonsense_qa": {
+                "groups": 30,
+                "eligible": 11,
+                "admission_events": {
+                  "rejected": 19,
+                  "inserted": 11
+                }
+              }
+            },
+            "group_success_count_histogram": {
+              "0": 38,
+              "4": 55,
+              "2": 13,
+              "3": 14,
+              "1": 8
+            },
+            "final_pool_size": 55
+          }
+        }
+      },
+      "adaptive-isolated-v2-seed29-079b11b144": {
+        "historical_worker_state": "failed",
+        "actual_gpu": "NVIDIA GeForce RTX 4090, GPU-c8cc4d6a-6b36-629f-2d7b-c3a2169ba2da, 595.91.07",
+        "released": true,
+        "ledger_estimated_usd": 5.1332,
+        "provenance": "/srv/projects/llm-hub/lab/experiments/cloud/adaptive-isolated-v2-seed29-079b11b144/output/isolation-provenance.json",
+        "arms": {
+          "fixed-replay-seed29": {
+            "metrics": "/srv/projects/llm-hub/lab/experiments/cloud/adaptive-isolated-v2-seed29-079b11b144/output/training/fixed-replay-seed29/metrics.jsonl",
+            "completed_groups": 128,
+            "optimizer_updates": 125,
+            "generated_tokens": 515869,
+            "rl_and_replay_training_tokens": 244869,
+            "main_training_tokens": 212628,
+            "replay_tokens": 32241,
+            "elapsed_seconds": 7020.598161979928,
+            "peak_gpu_bytes": 2463181824,
+            "admission_events": {
+              "rejected": 88,
+              "inserted": 40
+            },
+            "by_source": {
+              "gsm8k": {
+                "groups": 27,
+                "eligible": 3,
+                "admission_events": {
+                  "rejected": 24,
+                  "inserted": 3
+                }
+              },
+              "skywork": {
+                "groups": 36,
+                "eligible": 0,
+                "admission_events": {
+                  "rejected": 36
+                }
+              },
+              "arc_easy": {
+                "groups": 32,
+                "eligible": 22,
+                "admission_events": {
+                  "rejected": 10,
+                  "inserted": 22
+                }
+              },
+              "commonsense_qa": {
+                "groups": 33,
+                "eligible": 15,
+                "admission_events": {
+                  "rejected": 18,
+                  "inserted": 15
+                }
+              }
+            },
+            "group_success_count_histogram": {
+              "1": 16,
+              "0": 44,
+              "3": 17,
+              "2": 11,
+              "4": 40
+            },
+            "final_pool_size": 40
+          },
+          "adaptive-replay-seed29": {
+            "metrics": "/srv/projects/llm-hub/lab/experiments/cloud/adaptive-isolated-v2-seed29-079b11b144/output/training/adaptive-replay-seed29/metrics.jsonl",
+            "completed_groups": 128,
+            "optimizer_updates": 124,
+            "generated_tokens": 504623,
+            "rl_and_replay_training_tokens": 214691,
+            "main_training_tokens": 183106,
+            "replay_tokens": 31585,
+            "elapsed_seconds": 6676.471728991019,
+            "peak_gpu_bytes": 2460901376,
+            "admission_events": {
+              "rejected": 84,
+              "inserted": 44
+            },
+            "by_source": {
+              "gsm8k": {
+                "groups": 27,
+                "eligible": 6,
+                "admission_events": {
+                  "rejected": 21,
+                  "inserted": 6
+                }
+              },
+              "skywork": {
+                "groups": 36,
+                "eligible": 0,
+                "admission_events": {
+                  "rejected": 36
+                }
+              },
+              "arc_easy": {
+                "groups": 32,
+                "eligible": 23,
+                "admission_events": {
+                  "rejected": 9,
+                  "inserted": 23
+                }
+              },
+              "commonsense_qa": {
+                "groups": 33,
+                "eligible": 15,
+                "admission_events": {
+                  "rejected": 18,
+                  "inserted": 15
+                }
+              }
+            },
+            "group_success_count_histogram": {
+              "1": 10,
+              "0": 49,
+              "2": 8,
+              "4": 44,
+              "3": 17
+            },
+            "final_pool_size": 44
+          }
+        }
+      },
+      "adaptive-completion-v1-seed43-2c09b3417b": {
+        "historical_worker_state": "complete",
+        "actual_gpu": "NVIDIA GeForce RTX 4090, GPU-0fdeebcf-bd53-8087-4f65-3f7c782be1d9, 595.91.07",
+        "released": true,
+        "ledger_estimated_usd": 6.2366,
+        "provenance": "/srv/projects/llm-hub/lab/experiments/cloud/adaptive-completion-v1-seed43-2c09b3417b/output/role-result.json",
+        "arms": {
+          "fixed-replay-seed43": {
+            "metrics": "/srv/projects/llm-hub/lab/experiments/cloud/adaptive-completion-v1-seed43-2c09b3417b/output/training/fixed-replay-seed43/metrics.jsonl",
+            "completed_groups": 128,
+            "optimizer_updates": 127,
+            "generated_tokens": 431162,
+            "rl_and_replay_training_tokens": 247667,
+            "main_training_tokens": 207816,
+            "replay_tokens": 39851,
+            "elapsed_seconds": 7721.626054392196,
+            "peak_gpu_bytes": 2459208192,
+            "admission_events": {
+              "rejected": 76,
+              "inserted": 52
+            },
+            "by_source": {
+              "commonsense_qa": {
+                "groups": 33,
+                "eligible": 11,
+                "admission_events": {
+                  "rejected": 22,
+                  "inserted": 11
+                }
+              },
+              "gsm8k": {
+                "groups": 31,
+                "eligible": 12,
+                "admission_events": {
+                  "inserted": 12,
+                  "rejected": 19
+                }
+              },
+              "skywork": {
+                "groups": 27,
+                "eligible": 1,
+                "admission_events": {
+                  "rejected": 26,
+                  "inserted": 1
+                }
+              },
+              "arc_easy": {
+                "groups": 37,
+                "eligible": 28,
+                "admission_events": {
+                  "inserted": 28,
+                  "rejected": 9
+                }
+              }
+            },
+            "group_success_count_histogram": {
+              "0": 36,
+              "4": 52,
+              "1": 18,
+              "2": 9,
+              "3": 13
+            },
+            "final_pool_size": 52
+          },
+          "adaptive-replay-seed43": {
+            "metrics": "/srv/projects/llm-hub/lab/experiments/cloud/adaptive-completion-v1-seed43-2c09b3417b/output/training/adaptive-replay-seed43/metrics.jsonl",
+            "completed_groups": 128,
+            "optimizer_updates": 127,
+            "generated_tokens": 423697,
+            "rl_and_replay_training_tokens": 213784,
+            "main_training_tokens": 174143,
+            "replay_tokens": 39641,
+            "elapsed_seconds": 7561.836404319853,
+            "peak_gpu_bytes": 2459188736,
+            "admission_events": {
+              "rejected": 75,
+              "inserted": 53
+            },
+            "by_source": {
+              "commonsense_qa": {
+                "groups": 33,
+                "eligible": 10,
+                "admission_events": {
+                  "rejected": 23,
+                  "inserted": 10
+                }
+              },
+              "gsm8k": {
+                "groups": 31,
+                "eligible": 14,
+                "admission_events": {
+                  "inserted": 14,
+                  "rejected": 17
+                }
+              },
+              "skywork": {
+                "groups": 27,
+                "eligible": 1,
+                "admission_events": {
+                  "rejected": 26,
+                  "inserted": 1
+                }
+              },
+              "arc_easy": {
+                "groups": 37,
+                "eligible": 28,
+                "admission_events": {
+                  "inserted": 28,
+                  "rejected": 9
+                }
+              }
+            },
+            "group_success_count_histogram": {
+              "0": 42,
+              "4": 53,
+              "1": 10,
+              "2": 8,
+              "3": 15
+            },
+            "final_pool_size": 53
+          }
+        }
+      }
+    },
+    "shared_recovery_attempts": {
+      "completion-evaluations-v1-b4ab47052b": {
+        "state": "failed",
+        "ledger_estimated_usd": 0.2029,
+        "released": true
+      },
+      "completion-evaluations-v2-0735c95b47": {
+        "state": "complete",
+        "ledger_estimated_usd": 1.5408,
+        "released": true
+      }
+    },
+    "shared_recovery_job": "completion-evaluations-v2-0735c95b47",
+    "shared_recovery_ledger_estimated_usd": 1.5408,
+    "cost_note": "Ledger estimates, not a provider invoice. Recovery evaluation job is shared across three studies; do not count its cost three times. Teacher generation/review costs remain in the shared ledger."
+  },
+  "interpretation": "Adaptive versus fixed replay p\u0159i nezm\u011bn\u011bn\u00e9m all-correct admission.",
+  "criteria": {
+    "accuracy_noninferiority_macro_and_domains": false,
+    "candidate_baseline_accuracy_noninferiority_macro_and_domains": false,
+    "token_saving_ci": false,
+    "every_seed_token_saving": false
+  },
+  "benefit_established": false
+}

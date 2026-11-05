@@ -1,0 +1,207 @@
+{
+  "model": "Qwen/Qwen3-0.6B",
+  "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "adapter": "/workspace/project/data/replay-evaluation/adapters/replay-256",
+  "benchmarks": [
+    "mbpp",
+    "bfcl",
+    "svamp",
+    "ifeval"
+  ],
+  "samples": 8,
+  "seed": 9001,
+  "sampling": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20
+  },
+  "max_tokens": {
+    "bfcl_irrelevance": 4096,
+    "bfcl_multiple": 4096,
+    "bfcl_simple_python": 4096,
+    "ifeval": 4096,
+    "mbpp": 8192,
+    "svamp": 4096
+  },
+  "max_model_len": 12288,
+  "sandbox": {
+    "mode": "rlimit",
+    "why": "auto_downgrade"
+  },
+  "revisions": {
+    "bfcl": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+    "evalplus": "26d6d00bb1fd0fa37f39c99d5290da67891d1c5e",
+    "svamp": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+    "ifeval": "4700efb9afa54286b0e04473ba80a13e8461e25f",
+    "mbpp": "v0.2.0"
+  },
+  "cohort_sha256": "16df64e67336b8a1cfa49298cd27e0e1f265927d12ad97f064f3968414d55a86",
+  "cohort_total": 2759,
+  "smoke": false,
+  "selection": "full",
+  "results": {
+    "bfcl_irrelevance": {
+      "n": 1920,
+      "prompts": 240,
+      "ungraded": 0,
+      "accuracy": 0.7932291666666667,
+      "truncation_rate": 0.0,
+      "parse_failure_rate": 0.0,
+      "mean_output_tokens": 162.31197916666667,
+      "mean_reasoning_tokens": 135.184375,
+      "total_output_tokens": 311639,
+      "samples": 8,
+      "confidence": {
+        "method": "prompt_cluster_percentile",
+        "resamples": 2000,
+        "seed": 42,
+        "prompts": 240,
+        "accuracy": [
+          0.7463411458333333,
+          0.8359375
+        ],
+        "mean_output_tokens": [
+          154.73354166666667,
+          170.60372395833332
+        ]
+      },
+      "grading_errors": {}
+    },
+    "bfcl_multiple": {
+      "n": 1600,
+      "prompts": 200,
+      "ungraded": 0,
+      "accuracy": 0.79125,
+      "truncation_rate": 0.0,
+      "parse_failure_rate": 0.033125,
+      "mean_output_tokens": 161.259375,
+      "mean_reasoning_tokens": 137.56125,
+      "total_output_tokens": 258015,
+      "samples": 8,
+      "confidence": {
+        "method": "prompt_cluster_percentile",
+        "resamples": 2000,
+        "seed": 42,
+        "prompts": 200,
+        "accuracy": [
+          0.74125,
+          0.836265625
+        ],
+        "mean_output_tokens": [
+          154.430375,
+          168.69756249999998
+        ]
+      },
+      "grading_errors": {}
+    },
+    "bfcl_simple_python": {
+      "n": 3200,
+      "prompts": 400,
+      "ungraded": 0,
+      "accuracy": 0.823125,
+      "truncation_rate": 0.0,
+      "parse_failure_rate": 0.0325,
+      "mean_output_tokens": 148.47625,
+      "mean_reasoning_tokens": 124.2915625,
+      "total_output_tokens": 475124,
+      "samples": 8,
+      "confidence": {
+        "method": "prompt_cluster_percentile",
+        "resamples": 2000,
+        "seed": 42,
+        "prompts": 400,
+        "accuracy": [
+          0.7912421875,
+          0.8562578124999999
+        ],
+        "mean_output_tokens": [
+          143.736015625,
+          153.8841015625
+        ]
+      },
+      "grading_errors": {}
+    },
+    "ifeval": {
+      "n": 4328,
+      "prompts": 541,
+      "ungraded": 0,
+      "accuracy": 0.5912661737523105,
+      "truncation_rate": 0.031423290203327174,
+      "parse_failure_rate": 0.0,
+      "mean_output_tokens": 517.1023567467653,
+      "mean_reasoning_tokens": 273.8341035120148,
+      "total_output_tokens": 2238019,
+      "samples": 8,
+      "confidence": {
+        "method": "prompt_cluster_percentile",
+        "resamples": 2000,
+        "seed": 42,
+        "prompts": 541,
+        "accuracy": [
+          0.5568334103512015,
+          0.6266173752310537
+        ],
+        "mean_output_tokens": [
+          477.23037777264324,
+          562.6356862292052
+        ]
+      },
+      "grading_errors": {}
+    },
+    "mbpp": {
+      "n": 3024,
+      "prompts": 378,
+      "ungraded": 0,
+      "accuracy": 0.5307539682539683,
+      "truncation_rate": 0.03736772486772487,
+      "parse_failure_rate": 0.03802910052910053,
+      "mean_output_tokens": 1485.0575396825398,
+      "mean_reasoning_tokens": 1437.431216931217,
+      "total_output_tokens": 4490814,
+      "samples": 8,
+      "confidence": {
+        "method": "prompt_cluster_percentile",
+        "resamples": 2000,
+        "seed": 42,
+        "prompts": 378,
+        "accuracy": [
+          0.48841765873015874,
+          0.5724371693121691
+        ],
+        "mean_output_tokens": [
+          1315.1184110449735,
+          1653.7811590608467
+        ]
+      },
+      "grading_errors": {}
+    },
+    "svamp": {
+      "n": 8000,
+      "prompts": 1000,
+      "ungraded": 0,
+      "accuracy": 0.879625,
+      "truncation_rate": 0.002375,
+      "parse_failure_rate": 0.0085,
+      "mean_output_tokens": 406.293875,
+      "mean_reasoning_tokens": 397.720375,
+      "total_output_tokens": 3250351,
+      "samples": 8,
+      "confidence": {
+        "method": "prompt_cluster_percentile",
+        "resamples": 2000,
+        "seed": 42,
+        "prompts": 1000,
+        "accuracy": [
+          0.863621875,
+          0.894753125
+        ],
+        "mean_output_tokens": [
+          384.56541562499996,
+          430.1357875
+        ]
+      },
+      "grading_errors": {}
+    }
+  },
+  "failed_benchmarks": {}
+}

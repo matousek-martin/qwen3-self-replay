@@ -1,0 +1,249 @@
+{
+  "schema_version": 3,
+  "id": "shorterbetter-four-domains-full-v1",
+  "seed": 20261028,
+  "parent_directory": "/srv/projects/llm-hub/lab/experiments/shorterbetter-multidomain/data-v4-xlam",
+  "parent_manifest_sha256": "1fcd2b44a6db820e97ec3303cf3f35504311243d41a16146c995077c76bd7775",
+  "parent_audit_sha256": "6c42bf163cc9e4484274fe7685d53b6aef8d65f0e7d37b347bf37b7e29ecbbca",
+  "source_directory": "/srv/projects/llm-hub/lab/experiments/shorterbetter-multidomain/sources",
+  "sources": {
+    "gsm8k.parquet": {
+      "repo": "openai/gsm8k",
+      "revision": "740312add88f781978c0658806c59bc2815b9866",
+      "path": "main/train-00000-of-00001.parquet",
+      "sha256": "ea82612ea9582142387730c793eb67d3b12849002bc0b7fa6f8efafa7351419d",
+      "declared_license": [
+        "mit"
+      ]
+    },
+    "gsm8k-README.md": {
+      "repo": "openai/gsm8k",
+      "revision": "740312add88f781978c0658806c59bc2815b9866",
+      "path": "README.md",
+      "sha256": "a17e882503578c9e324560630e31017617714ee025c87cf4fea6fd916895f3c1",
+      "declared_license": [
+        "mit"
+      ]
+    },
+    "apps.jsonl": {
+      "repo": "codeparrot/apps",
+      "revision": "21e74ddf8de1a21436da12e3e653065c5213e9d1",
+      "path": "train.jsonl",
+      "sha256": "45e82ef22ed8e7c0c04d881a21b923e9dd233157896b0b8d5b3493e887499cae",
+      "declared_license": [
+        "mit"
+      ]
+    },
+    "apps-README.md": {
+      "repo": "codeparrot/apps",
+      "revision": "21e74ddf8de1a21436da12e3e653065c5213e9d1",
+      "path": "README.md",
+      "sha256": "bc954bda94e94e9ce92d80ec16d69607444fcdff240cae89df6ca84ff497e846",
+      "declared_license": [
+        "mit"
+      ]
+    },
+    "tulu.parquet": {
+      "repo": "allenai/tulu-3-sft-personas-instruction-following",
+      "revision": "fe0c7d350c9b4542b8d829a6f1daa1c259f0ba0e",
+      "path": "data/train-00000-of-00001.parquet",
+      "sha256": "19a16c5f1649d367f69899b3cfadbbeb5ffef91f24e20c6617588bdd87cd3e60",
+      "declared_license": "odc-by"
+    },
+    "tulu-README.md": {
+      "repo": "allenai/tulu-3-sft-personas-instruction-following",
+      "revision": "fe0c7d350c9b4542b8d829a6f1daa1c259f0ba0e",
+      "path": "README.md",
+      "sha256": "9ad7589ceb9231389f0ea6c5b3e1c3303aad9f3ba5f693e93c2622294b5b0a26",
+      "declared_license": "odc-by"
+    },
+    "glaive.json": {
+      "repo": "glaiveai/glaive-function-calling-v2",
+      "revision": "e7f4b6456019f5d8bcb991ef0dd67d8ff23221ac",
+      "path": "glaive-function-calling-v2.json",
+      "sha256": "e9b5d671812b5ca2fbd7b625a37d5c99a19576c37252cdc806defe256aea6dad",
+      "declared_license": "apache-2.0"
+    },
+    "glaive-README.md": {
+      "repo": "glaiveai/glaive-function-calling-v2",
+      "revision": "e7f4b6456019f5d8bcb991ef0dd67d8ff23221ac",
+      "path": "README.md",
+      "sha256": "39c78f1f56b86fcd159cadeb8feda8a9333db6ef5ca0ce6830731ac3c666838e",
+      "declared_license": "apache-2.0"
+    },
+    "xlam": {
+      "repo": "Salesforce/xlam-function-calling-60k",
+      "revision": "26d14ebfe18b1f7b524bd39b404b50af5dc97866",
+      "retrieved_at": 1793212219.718306,
+      "rows": 60000,
+      "basic_schema_rows_passed": 60000,
+      "answer_call_counts": {
+        "single_call": 28461,
+        "multiple_calls": 31539,
+        "no_call": 0
+      },
+      "files": {
+        "xlam_function_calling_60k.json": {
+          "sha256": "4ef5c6f0dc552f2231f93f5853a9ef431e9e806d7aa514d0f6b615606ce576c6",
+          "bytes": 96116570,
+          "upstream_lfs_sha256": "4ef5c6f0dc552f2231f93f5853a9ef431e9e806d7aa514d0f6b615606ce576c6"
+        },
+        "README.md": {
+          "sha256": "8564c08b4555289ef4bb488f876ea4d7505d18e9f09edd9ec7869e6d0bbe523f",
+          "bytes": 10702,
+          "upstream_lfs_sha256": null
+        }
+      },
+      "declared_license": "cc-by-4.0",
+      "state": "raw_source_only_not_screened_or_added_to_training",
+      "historical_training_data_unchanged": true
+    }
+  },
+  "raw_counts": {
+    "gsm8k": 7473,
+    "apps": 5000,
+    "tulu": 29980,
+    "xlam": 60000
+  },
+  "counts": {
+    "train.jsonl": 41857,
+    "development.jsonl": 2589,
+    "confirmation.jsonl": 2821,
+    "monitor.jsonl": 256,
+    "monitor-smoke.jsonl": 16,
+    "benchmark-prompts.jsonl": 2759,
+    "quarantine.jsonl": 55276,
+    "source-dispositions.jsonl": 42453,
+    "reference-checks.jsonl": 12123,
+    "historical-tool-prompts.jsonl": 1128
+  },
+  "domain_counts": {
+    "train": {
+      "tools": 30801,
+      "math": 6134,
+      "coding": 3396,
+      "instructions": 1526
+    },
+    "development": {
+      "tools": 1400,
+      "instructions": 135,
+      "math": 670,
+      "coding": 384
+    },
+    "confirmation": {
+      "math": 667,
+      "tools": 1654,
+      "coding": 369,
+      "instructions": 131
+    }
+  },
+  "rejections": {
+    "gsm8k": {
+      "lexical_near": 2
+    },
+    "apps": {
+      "prompt_over_1500": 20,
+      "missing_or_unaligned_tests_solutions": 355,
+      "invalid_tests_or_solutions": 196,
+      "test_payload_over_2mb": 1,
+      "lexical_near": 33,
+      "all_source_references_failed": 243,
+      "reference_check_time_budget": 3
+    },
+    "tulu": {
+      "unsupported_instruction_constraints": 26370,
+      "reference_failed_verifier": 1818
+    },
+    "xlam": {
+      "argument_type_mismatch": 1262,
+      "cross_partition_api_bundle": 19993,
+      "historical_api_split_conflict": 1458,
+      "unsupported_parameter_type": 593,
+      "invalid_or_duplicate_tool": 260,
+      "missing_or_unknown_argument": 254,
+      "lexical_near": 1903,
+      "exact": 505,
+      "prompt_over_1500": 7
+    }
+  },
+  "apps_difficulty": {
+    "train": {
+      "interview": 1224,
+      "introductory": 1925,
+      "competition": 247
+    },
+    "development": {
+      "introductory": 191,
+      "interview": 156,
+      "competition": 37
+    },
+    "confirmation": {
+      "interview": 152,
+      "introductory": 192,
+      "competition": 25
+    }
+  },
+  "instruction_checks_observed": {
+    "no_comma": 382,
+    "lowercase": 384,
+    "title": 277,
+    "quotation": 216,
+    "uppercase": 350,
+    "postscript": 3
+  },
+  "files": {
+    "train.jsonl": "b2637cf2f5d01f81eb071aad3040e99a75e53df55b43b29734124814c53f84be",
+    "development.jsonl": "a263fcb07b76362d6e6c29cf8778abb92805ee60b254149ce3d6ef5c40df22ff",
+    "confirmation.jsonl": "64bed5971972f2e5ee81d4fb1e21b2f5ca015583f2f1a72123a64de1ab0c56d3",
+    "monitor.jsonl": "30e3855fcb2abfb2d470d1cf604349ffdc418689760606eee88b1f2411e1aa0a",
+    "monitor-smoke.jsonl": "57683501d3ccfa45114af5ccd0fc7efd0700a952d00981e4c56c10372c1394a4",
+    "benchmark-prompts.jsonl": "2fee57de580847e7530edebbdc1315797954d7749ef6791777036f746cc0714b",
+    "quarantine.jsonl": "0e9f95a26a421fbc24d707aaf02429ee008449fc207f2d1874c148210817ad05",
+    "source-dispositions.jsonl": "192bfbd6015127b4e206bdc670188907661894e682162a04aea0db85bd794de4",
+    "reference-checks.jsonl": "f19c462c0a9573803127dd8fce56a21323e48929c18c2fd5b3658605fc5f672f",
+    "historical-tool-prompts.jsonl": "ef0bef96ad9b1e45195a068658aa7150c890b1ea1693c12edfff20943412b6e1"
+  },
+  "verifier_sha256": {
+    "rewards.py": "aa8ebbeffed10afe0758f42151e541556a4a1485f71f39ab7dc4f6c8e0c9c97a",
+    "code_worker.py": "8c139ace4042f431e88b9629f29098ea4ba0e44551bc53652aa2fc1ce2323940"
+  },
+  "preparation_code_sha256": "896e1fbeb0d00a464bdeb2812a0f87a02b3e1b8e910ec08bceca66cb562fc74c",
+  "tokenizer_model": "Qwen/Qwen3-0.6B",
+  "tokenizer_revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "screening": {
+    "method": "normalized exact and5token-shingle containment",
+    "threshold": 0.8,
+    "zero_semantic_overlap_guarantee": false,
+    "historical_partitions_preserved": true,
+    "numeric_template_and_apps_url_split_families": true
+  },
+  "reference_policy": {
+    "all_published_apps_tests": true,
+    "maximum_source_solution_search_seconds": 30,
+    "sandbox_wall_timeout_seconds_per_solution": 5,
+    "unsupported_instruction_constraints_quarantined": true
+  },
+  "sampling": {
+    "no_dataset_size_quota": true,
+    "historical_balanced_sampler_uses_shortest_domain": true,
+    "balanced_full_coverage_rollouts_at_64_prompts": 1926,
+    "unbalanced_full_pass_batches_at_64_prompts": 655,
+    "launch_registered": false
+  },
+  "limitations": [
+    "Lexical screening is heuristic; zero semantic overlap is not guaranteed.",
+    "API/namespace grouping cannot reconstruct all upstream synthetic template families.",
+    "Glaive no-call examples inherit exact parent rows/splits and schema-family separation; seven API names overlap between these historical splits. New xLAM APIs with historical split conflicts are quarantined.",
+    "Glaive no-call labels use upstream refusals; local semantic correctness is not independently established.",
+    "Development has only two inherited no-call examples; report this subgroup separately and do not claim reliable no-call generalization.",
+    "xLAM typing subset is conservative; unsupported schemas and mismatches quarantined, never repaired using benchmark answers.",
+    "Instruction domain retains six represented constraint types and no semantic content judge.",
+    "Historical development questions were already inspected; confirmation is separately held out.",
+    "Full source scan does not mean all raw rows are valid: unsupported labels, long prompts, failed source solutions and overlaps remain quarantined.",
+    "IF constraints without machine-readable parameters are not guessed from reference responses; current supported constraint subset is unchanged.",
+    "New numeric-template fingerprints and APPS URLs are heuristic grouping, not proven semantic/template isolation.",
+    "Reference search budget exhaustion is a technical exclusion, not evidence that the source problem has no correct solution.",
+    "All published APPS tests retained; source tests are not a proof of general algorithm correctness.",
+    "No full-coverage training or new GPU run launched. A fixed 100/300-rollout budget will not consume every example."
+  ]
+}

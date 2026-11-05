@@ -1,0 +1,269 @@
+[
+  {
+    "checkpoint": 128,
+    "job": "replay-evaluation-128-20261101t175736z",
+    "comparison": "studies/self-replay/results/checkpoint-128/comparison.json",
+    "records_sha256": "52ae6e81001f3a0a845e2649821ce39732d7abe41a8af13c939cc8efef93c0d0",
+    "cohort_sha256": "16df64e67336b8a1cfa49298cd27e0e1f265927d12ad97f064f3968414d55a86",
+    "baseline_cache_key": null,
+    "baseline_source": null,
+    "average": {
+      "benchmarks": [
+        "bfcl",
+        "ifeval",
+        "mbpp",
+        "svamp"
+      ],
+      "token_reduction": 0.27097174803503454,
+      "accuracy_delta": 0.0002765326555760894,
+      "intervals": {
+        "method": "macro_paired_prompt_cluster_percentile",
+        "resamples": 2000,
+        "seed": 42,
+        "groups": 4,
+        "accuracy_delta": [
+          -0.005883089901857231,
+          0.006898352230217403
+        ],
+        "token_reduction": [
+          0.2574573834477762,
+          0.28421971705303545
+        ]
+      }
+    }
+  },
+  {
+    "checkpoint": 256,
+    "job": "replay-evaluation-256-20261101t214844z",
+    "comparison": "studies/self-replay/results/checkpoint-256/comparison.json",
+    "records_sha256": "5586c5d09d7e6be736182bb577eb82ed20b74c48e1eb347da006211cb36b7db8",
+    "cohort_sha256": "16df64e67336b8a1cfa49298cd27e0e1f265927d12ad97f064f3968414d55a86",
+    "baseline_cache_key": "7d35fcc59ce97fcd001f268d640b45cbf187a2c40c1b59540ed9bfc8dcdd45d3",
+    "baseline_source": {
+      "job": "replay-evaluation-128-20261101t175736z",
+      "gpu_identity": "GPU-a5ce3b4f-6978-3b84-520b-6a7329f1bad3, NVIDIA GeForce RTX 4090",
+      "finished_at": "2026-11-01T19:33:52.521227+00:00",
+      "original_run": "lab/experiments/cloud/replay-evaluation-128-20261101t175736z/output/full-evaluation/runs/base",
+      "imported": true
+    },
+    "average": {
+      "benchmarks": [
+        "bfcl",
+        "ifeval",
+        "mbpp",
+        "svamp"
+      ],
+      "token_reduction": 0.31233139103094976,
+      "accuracy_delta": 0.0020868938816027416,
+      "intervals": {
+        "method": "macro_paired_prompt_cluster_percentile",
+        "resamples": 2000,
+        "seed": 42,
+        "groups": 4,
+        "accuracy_delta": [
+          -0.004809010288303553,
+          0.008779503642761788
+        ],
+        "token_reduction": [
+          0.2985961005406161,
+          0.3264516458752641
+        ]
+      }
+    }
+  },
+  {
+    "checkpoint": 576,
+    "job": "replay-evaluation-576-20261102t102548z",
+    "comparison": "studies/self-replay/results/checkpoint-576/comparison.json",
+    "records_sha256": "4715262715ff17b4d17dbcfb5b73c9394c8ebe770095c4688415dd59f40ab947",
+    "cohort_sha256": "16df64e67336b8a1cfa49298cd27e0e1f265927d12ad97f064f3968414d55a86",
+    "baseline_cache_key": "7d35fcc59ce97fcd001f268d640b45cbf187a2c40c1b59540ed9bfc8dcdd45d3",
+    "baseline_source": {
+      "job": "replay-evaluation-128-20261101t175736z",
+      "gpu_identity": "GPU-a5ce3b4f-6978-3b84-520b-6a7329f1bad3, NVIDIA GeForce RTX 4090",
+      "finished_at": "2026-11-01T19:33:52.521227+00:00",
+      "original_run": "lab/experiments/cloud/replay-evaluation-128-20261101t175736z/output/full-evaluation/runs/base",
+      "imported": true
+    },
+    "average": {
+      "benchmarks": [
+        "bfcl",
+        "ifeval",
+        "mbpp",
+        "svamp"
+      ],
+      "token_reduction": 0.368482491785737,
+      "accuracy_delta": -0.013543777934258538,
+      "intervals": {
+        "method": "macro_paired_prompt_cluster_percentile",
+        "resamples": 2000,
+        "seed": 42,
+        "groups": 4,
+        "accuracy_delta": [
+          -0.02089480489265176,
+          -0.005730471065120445
+        ],
+        "token_reduction": [
+          0.35441578329088935,
+          0.38259781283784117
+        ]
+      }
+    }
+  },
+  {
+    "checkpoint": 768,
+    "job": "replay-evaluation-768-20261102t121206z",
+    "comparison": "studies/self-replay/results/checkpoint-768/comparison.json",
+    "records_sha256": "a2fc7a9f17ee3aefa0675f1567e2f952182d80dc38ddb7b78085718945666d38",
+    "cohort_sha256": "16df64e67336b8a1cfa49298cd27e0e1f265927d12ad97f064f3968414d55a86",
+    "baseline_cache_key": "7d35fcc59ce97fcd001f268d640b45cbf187a2c40c1b59540ed9bfc8dcdd45d3",
+    "baseline_source": {
+      "job": "replay-evaluation-128-20261101t175736z",
+      "gpu_identity": "GPU-a5ce3b4f-6978-3b84-520b-6a7329f1bad3, NVIDIA GeForce RTX 4090",
+      "finished_at": "2026-11-01T19:33:52.521227+00:00",
+      "original_run": "lab/experiments/cloud/replay-evaluation-128-20261101t175736z/output/full-evaluation/runs/base",
+      "imported": true
+    },
+    "average": {
+      "benchmarks": [
+        "bfcl",
+        "ifeval",
+        "mbpp",
+        "svamp"
+      ],
+      "token_reduction": 0.39539787546686733,
+      "accuracy_delta": -0.011608621172334216,
+      "intervals": {
+        "method": "macro_paired_prompt_cluster_percentile",
+        "resamples": 2000,
+        "seed": 42,
+        "groups": 4,
+        "accuracy_delta": [
+          -0.01931805213253919,
+          -0.003620165165123873
+        ],
+        "token_reduction": [
+          0.38169784543258195,
+          0.4087177377115187
+        ]
+      }
+    }
+  },
+  {
+    "checkpoint": 850,
+    "job": "replay-evaluation-850-20261102t133228z",
+    "comparison": "studies/self-replay/results/checkpoint-850/comparison.json",
+    "records_sha256": "27e2655b8aa309da47fb103dc4660f46ef78438d97453137db467beb50721184",
+    "cohort_sha256": "16df64e67336b8a1cfa49298cd27e0e1f265927d12ad97f064f3968414d55a86",
+    "baseline_cache_key": "7d35fcc59ce97fcd001f268d640b45cbf187a2c40c1b59540ed9bfc8dcdd45d3",
+    "baseline_source": {
+      "job": "replay-evaluation-128-20261101t175736z",
+      "gpu_identity": "GPU-a5ce3b4f-6978-3b84-520b-6a7329f1bad3, NVIDIA GeForce RTX 4090",
+      "finished_at": "2026-11-01T19:33:52.521227+00:00",
+      "original_run": "lab/experiments/cloud/replay-evaluation-128-20261101t175736z/output/full-evaluation/runs/base",
+      "imported": true
+    },
+    "average": {
+      "benchmarks": [
+        "bfcl",
+        "ifeval",
+        "mbpp",
+        "svamp"
+      ],
+      "token_reduction": 0.4159969048865454,
+      "accuracy_delta": -0.011738950992185748,
+      "intervals": {
+        "method": "macro_paired_prompt_cluster_percentile",
+        "resamples": 2000,
+        "seed": 42,
+        "groups": 4,
+        "accuracy_delta": [
+          -0.01961461734955843,
+          -0.0035435412494865494
+        ],
+        "token_reduction": [
+          0.4010783289685086,
+          0.4306644837561452
+        ]
+      }
+    }
+  },
+  {
+    "checkpoint": 1024,
+    "job": "replay-evaluation-1024-20261103t070748z",
+    "comparison": "studies/self-replay/results/checkpoint-1024/comparison.json",
+    "records_sha256": "cefbec34041efeb5f43ee519cf1ae5ab4ae4441306820971a4af84f6ccf10a2b",
+    "cohort_sha256": "16df64e67336b8a1cfa49298cd27e0e1f265927d12ad97f064f3968414d55a86",
+    "baseline_cache_key": "7d35fcc59ce97fcd001f268d640b45cbf187a2c40c1b59540ed9bfc8dcdd45d3",
+    "baseline_source": {
+      "job": "replay-evaluation-128-20261101t175736z",
+      "gpu_identity": "GPU-a5ce3b4f-6978-3b84-520b-6a7329f1bad3, NVIDIA GeForce RTX 4090",
+      "finished_at": "2026-11-01T19:33:52.521227+00:00",
+      "original_run": "lab/experiments/cloud/replay-evaluation-128-20261101t175736z/output/full-evaluation/runs/base",
+      "imported": true
+    },
+    "average": {
+      "benchmarks": [
+        "bfcl",
+        "ifeval",
+        "mbpp",
+        "svamp"
+      ],
+      "token_reduction": 0.4386728907627201,
+      "accuracy_delta": -0.017652096842022874,
+      "intervals": {
+        "method": "macro_paired_prompt_cluster_percentile",
+        "resamples": 2000,
+        "seed": 42,
+        "groups": 4,
+        "accuracy_delta": [
+          -0.025697555439111876,
+          -0.009098480944801417
+        ],
+        "token_reduction": [
+          0.42407926738081164,
+          0.45204184499968403
+        ]
+      }
+    }
+  },
+  {
+    "checkpoint": 1280,
+    "job": "replay-evaluation-1280-20261105t130521z",
+    "comparison": "studies/self-replay/results/checkpoint-1280/comparison.json",
+    "records_sha256": "b08557fc2c80cee5e9129b50518af67bc020654e1e64e1a1c0392d8624bd45a1",
+    "cohort_sha256": "16df64e67336b8a1cfa49298cd27e0e1f265927d12ad97f064f3968414d55a86",
+    "baseline_cache_key": "7d35fcc59ce97fcd001f268d640b45cbf187a2c40c1b59540ed9bfc8dcdd45d3",
+    "baseline_source": {
+      "job": "replay-evaluation-128-20261101t175736z",
+      "gpu_identity": "GPU-a5ce3b4f-6978-3b84-520b-6a7329f1bad3, NVIDIA GeForce RTX 4090",
+      "finished_at": "2026-11-01T19:33:52.521227+00:00",
+      "original_run": "lab/experiments/cloud/replay-evaluation-128-20261101t175736z/output/full-evaluation/runs/base",
+      "imported": true
+    },
+    "average": {
+      "benchmarks": [
+        "bfcl",
+        "ifeval",
+        "mbpp",
+        "svamp"
+      ],
+      "token_reduction": 0.4657502158886988,
+      "accuracy_delta": -0.023499348404385348,
+      "intervals": {
+        "method": "macro_paired_prompt_cluster_percentile",
+        "resamples": 2000,
+        "seed": 42,
+        "groups": 4,
+        "accuracy_delta": [
+          -0.031872188343529034,
+          -0.014406777297332982
+        ],
+        "token_reduction": [
+          0.45220133504815213,
+          0.47977286204571573
+        ]
+      }
+    }
+  }
+]
