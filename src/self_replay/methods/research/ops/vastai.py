@@ -42,8 +42,17 @@ def api(path, method='GET', payload=None, params=None):
         with urllib.request.urlopen(request, timeout=30) as response:
             result = json.load(response)
     except urllib.error.HTTPError as exc:
-        # Error bodies can contain request material; never log them or credentials.
-        raise RuntimeError(f'Vast HTTP {exc.code}: request failed') from None
+        # Keep only the provider's named diagnostic fields, never the request/body.
+        # Redact the actual credential even if a provider echoes it in a message.
+        detail = ''
+        try:
+            body = json.loads(exc.read())
+            if isinstance(body, dict):
+                fields = [str(body[k]) for k in ('error', 'msg') if isinstance(body.get(k), str)]
+                detail = ': ' + ' / '.join(fields).replace(key, '[REDACTED]')[:400] if fields else ''
+        except (ValueError, OSError):
+            pass
+        raise RuntimeError(f'Vast HTTP {exc.code}: request failed{detail}') from None
     except (urllib.error.URLError, TimeoutError):
         raise RuntimeError('Vast transport failure; mutation outcome may be uncertain') from None
     if isinstance(result, dict) and result.get('success') is False:

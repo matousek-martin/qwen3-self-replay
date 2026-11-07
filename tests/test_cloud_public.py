@@ -1,9 +1,11 @@
 """Exercise the new cloud boundary without allocating a provider resource."""
 
 import importlib.util
+import io
 import json
 import subprocess
 import sys
+import urllib.error
 from dataclasses import asdict
 from types import SimpleNamespace
 from unittest.mock import Mock, patch
@@ -15,6 +17,31 @@ from self_replay.cloud import controller
 from self_replay.cloud.jobs import JobSpec
 from self_replay.methods.runtime import environment, initialize
 from self_replay.paths import research
+
+
+def test_provider_diagnostic_redacts_key_and_omits_request(tmp_path, monkeypatch):
+    spec = importlib.util.spec_from_file_location(
+        "smoke_vast_transport", research() / "ops/vastai.py"
+    )
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    module.ROOT = tmp_path
+    monkeypatch.setenv("VASTAI_API_KEY", "test-private-key")
+    body = {
+        "error": "invalid_args",
+        "msg": "Invalid rental label test-private-key",
+        "request": "Do not print request material",
+    }
+    error = urllib.error.HTTPError(
+        "https://example.invalid", 400, "Bad Request", {}, io.BytesIO(json.dumps(body).encode())
+    )
+    with patch.object(module.urllib.request, "urlopen", side_effect=error):
+        with pytest.raises(RuntimeError) as caught:
+            module.api("v0/asks/test/", "PUT", {})
+    assert "invalid_args" in str(caught.value)
+    assert "Invalid rental label" in str(caught.value)
+    assert "test-private-key" not in str(caught.value)
+    assert "request material" not in str(caught.value)
 
 
 @pytest.fixture
