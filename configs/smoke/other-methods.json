@@ -1,0 +1,379 @@
+{
+  "schema_version": 1,
+  "status": "review_proposal_not_launch_ready",
+  "paid_execution_authorized": false,
+  "source_user_instruction": "Prepare before pulling the trigger. No new rentals or GPU/API execution until review.",
+  "hardware_policy": "Exactly one RTX4090 visible per planned GPU test. Never silently substitute GPUs or remove worker checks.",
+  "execution": {
+    "max_concurrent_workers": 1,
+    "reuse_worker_for_sequential_cases": true,
+    "estimated_gpu_hours": [
+      3,
+      6
+    ],
+    "max_campaign_hours": 6,
+    "proposed_combined_cap_usd": 10,
+    "approval_required": true,
+    "automatic_topups": false,
+    "official_baseline_regeneration": false,
+    "teacher_api_calls": false,
+    "preserves_other_campaign_reservations": true,
+    "source_snapshot_required": true,
+    "verified_backup_and_release_required": true
+  },
+  "quote_snapshot": {
+    "date": "2026-11-07",
+    "source": "Read-only RunPod catalog and Vast offer API",
+    "runpod_secure_gpu_usd_per_hour": 0.89,
+    "runpod_availability": "LOW",
+    "vast_gpu_and80GB_disk_hourly_ceiling": 0.3925925925925926,
+    "warning": "Availability and rate must be rechecked after approval; prices are not reserved and elapsed-time estimates are unmeasured."
+  },
+  "shared_pass_conditions": [
+    "Correct actual GPU verified at startup",
+    "Finite nonzero update in the requested objective",
+    "Checkpoint saved and adapter reloaded",
+    "Relevant replay/cache/grading path exercised",
+    "Source/data/environment hashes and raw evidence saved",
+    "Output archive verified before confirmed release"
+  ],
+  "limitations": [
+    "No claim of fresh efficacy or full benchmark reproduction",
+    "Checkpoint roundtrip is not exact resume unless complete optimizer/RNG state is supported and compared",
+    "Historical/current other-campaign jobs remain untouched",
+    "Curriculum exact two-rank resume excluded from single4090 proposal"
+  ],
+  "cases": [
+    {
+      "recipe": "sft-short",
+      "family": "offline",
+      "kind": "training",
+      "status": "planned_not_executed",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_count": 1,
+      "coverage_target": "2 optimizer steps per recipe; checkpoint after each; adapter reload and finite inference.",
+      "preparation": "Native step limits exist. Preserve each selector output; DPO-matched SFT must share DPO prompts.",
+      "required_inputs": [],
+      "environment": "requirements/gpu.lock",
+      "launch_ready": false
+    },
+    {
+      "recipe": "sft-random",
+      "family": "offline",
+      "kind": "training",
+      "status": "planned_not_executed",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_count": 1,
+      "coverage_target": "2 optimizer steps per recipe; checkpoint after each; adapter reload and finite inference.",
+      "preparation": "Native step limits exist. Preserve each selector output; DPO-matched SFT must share DPO prompts.",
+      "required_inputs": [],
+      "environment": "requirements/gpu.lock",
+      "launch_ready": false
+    },
+    {
+      "recipe": "sft-compatible",
+      "family": "offline",
+      "kind": "training",
+      "status": "planned_not_executed",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_count": 1,
+      "coverage_target": "2 optimizer steps per recipe; checkpoint after each; adapter reload and finite inference.",
+      "preparation": "Native step limits exist. Preserve each selector output; DPO-matched SFT must share DPO prompts.",
+      "required_inputs": [],
+      "environment": "requirements/gpu.lock",
+      "launch_ready": false
+    },
+    {
+      "recipe": "sft-dpo-matched",
+      "family": "offline",
+      "kind": "training",
+      "status": "planned_not_executed",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_count": 1,
+      "coverage_target": "2 optimizer steps per recipe; checkpoint after each; adapter reload and finite inference.",
+      "preparation": "Native step limits exist. Preserve each selector output; DPO-matched SFT must share DPO prompts.",
+      "required_inputs": [],
+      "environment": "requirements/gpu.lock",
+      "launch_ready": false
+    },
+    {
+      "recipe": "dpo",
+      "family": "offline",
+      "kind": "training",
+      "status": "planned_not_executed",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_count": 1,
+      "coverage_target": "2 optimizer steps per recipe; checkpoint after each; adapter reload and finite inference.",
+      "preparation": "Native step limits exist. Preserve each selector output; DPO-matched SFT must share DPO prompts.",
+      "required_inputs": [],
+      "environment": "requirements/gpu.lock",
+      "launch_ready": false
+    },
+    {
+      "recipe": "grpo",
+      "family": "online-rl",
+      "kind": "training",
+      "status": "planned_not_executed",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_count": 1,
+      "coverage_target": "4 rollout groups \u00d7 4 responses per recipe; original token limits; at least one finite optimizer update; adapter reload.",
+      "preparation": "Native group limits exist. A no-update run is inconclusive, never a pass. Exercise replay admission and use for replay variants.",
+      "required_inputs": [],
+      "environment": "requirements/gpu.lock",
+      "launch_ready": false
+    },
+    {
+      "recipe": "dr-grpo",
+      "family": "online-rl",
+      "kind": "training",
+      "status": "planned_not_executed",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_count": 1,
+      "coverage_target": "4 rollout groups \u00d7 4 responses per recipe; original token limits; at least one finite optimizer update; adapter reload.",
+      "preparation": "Native group limits exist. A no-update run is inconclusive, never a pass. Exercise replay admission and use for replay variants.",
+      "required_inputs": [],
+      "environment": "requirements/gpu.lock",
+      "launch_ready": false
+    },
+    {
+      "recipe": "rl-fixed",
+      "family": "online-rl",
+      "kind": "training",
+      "status": "planned_not_executed",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_count": 1,
+      "coverage_target": "4 rollout groups \u00d7 4 responses per recipe; original token limits; at least one finite optimizer update; adapter reload.",
+      "preparation": "Native group limits exist. A no-update run is inconclusive, never a pass. Exercise replay admission and use for replay variants.",
+      "required_inputs": [],
+      "environment": "requirements/gpu.lock",
+      "launch_ready": false
+    },
+    {
+      "recipe": "rl-adaptive",
+      "family": "online-rl",
+      "kind": "training",
+      "status": "planned_not_executed",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_count": 1,
+      "coverage_target": "4 rollout groups \u00d7 4 responses per recipe; original token limits; at least one finite optimizer update; adapter reload.",
+      "preparation": "Native group limits exist. A no-update run is inconclusive, never a pass. Exercise replay admission and use for replay variants.",
+      "required_inputs": [],
+      "environment": "requirements/gpu.lock",
+      "launch_ready": false
+    },
+    {
+      "recipe": "rl-difficulty",
+      "family": "online-rl",
+      "kind": "training",
+      "status": "planned_not_executed",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_count": 1,
+      "coverage_target": "4 rollout groups \u00d7 4 responses per recipe; original token limits; at least one finite optimizer update; adapter reload.",
+      "preparation": "Native group limits exist. A no-update run is inconclusive, never a pass. Exercise replay admission and use for replay variants.",
+      "required_inputs": [],
+      "environment": "requirements/gpu.lock",
+      "launch_ready": false
+    },
+    {
+      "recipe": "rl-progressive",
+      "family": "online-rl",
+      "kind": "training",
+      "status": "planned_not_executed",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_count": 1,
+      "coverage_target": "4 rollout groups \u00d7 4 responses per recipe; original token limits; at least one finite optimizer update; adapter reload.",
+      "preparation": "Native group limits exist. A no-update run is inconclusive, never a pass. Exercise replay admission and use for replay variants.",
+      "required_inputs": [],
+      "environment": "requirements/gpu.lock",
+      "launch_ready": false
+    },
+    {
+      "recipe": "rl-replay",
+      "family": "online-rl",
+      "kind": "training",
+      "status": "planned_not_executed",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_count": 1,
+      "coverage_target": "4 rollout groups \u00d7 4 responses per recipe; original token limits; at least one finite optimizer update; adapter reload.",
+      "preparation": "Native group limits exist. A no-update run is inconclusive, never a pass. Exercise replay admission and use for replay variants.",
+      "required_inputs": [],
+      "environment": "requirements/gpu.lock",
+      "launch_ready": false
+    },
+    {
+      "recipe": "replay-selection",
+      "family": "online-rl",
+      "kind": "training",
+      "status": "planned_not_executed",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_count": 1,
+      "coverage_target": "4 rollout groups \u00d7 4 responses per recipe; original token limits; at least one finite optimizer update; adapter reload.",
+      "preparation": "Native group limits exist. A no-update run is inconclusive, never a pass. Exercise replay admission and use for replay variants.",
+      "required_inputs": [],
+      "environment": "requirements/gpu.lock",
+      "launch_ready": false
+    },
+    {
+      "recipe": "adaptive-replay",
+      "family": "adaptive-replay",
+      "kind": "training",
+      "status": "planned_not_executed",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_count": 1,
+      "coverage_target": "4 groups for each fixed/adaptive arm; verify adaptive reward path and replay activity.",
+      "preparation": "Prepare a separate technical config; bypass full paired evaluation only through an explicit smoke entrypoint, without changing historical config.",
+      "required_inputs": [
+        "data/isolated/config.json",
+        "data/isolated/inputs.json",
+        "data/isolated/sources.json"
+      ],
+      "environment": "requirements/gpu.lock",
+      "launch_ready": false
+    },
+    {
+      "recipe": "on-policy-distillation",
+      "family": "distillation",
+      "kind": "training",
+      "status": "planned_not_executed",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_count": 1,
+      "coverage_target": "2 actual updates for offline-hard, offline-soft and on-policy-soft arms; finite distillation loss; adapter reload.",
+      "preparation": "Verify frozen teacher/cache assets and original revision. Both teacher and student must fit one 24GB GPU; no quantization or model substitution to force a pass.",
+      "required_inputs": [
+        "data/isolated/config.json",
+        "data/isolated/inputs.json",
+        "data/isolated/sources.json"
+      ],
+      "environment": "requirements/gpu.lock",
+      "launch_ready": false
+    },
+    {
+      "recipe": "teacher-replay",
+      "family": "teacher-replay",
+      "kind": "training",
+      "status": "planned_not_executed",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_count": 1,
+      "coverage_target": "4 groups for frozen student/teacher replay arms; verify schedule consumption and replay update.",
+      "preparation": "Use archived cache only. Native paired wrapper hard-codes128groups; prepare a bounded smoke entrypoint using its actual trainer.",
+      "required_inputs": [
+        "data/isolated/config.json",
+        "data/isolated/inputs.json",
+        "data/isolated/sources.json",
+        "data/static/manifest.json"
+      ],
+      "environment": "requirements/gpu.lock",
+      "launch_ready": false
+    },
+    {
+      "recipe": "shorterbetter",
+      "family": "shorterbetter",
+      "kind": "training",
+      "status": "planned_not_executed",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_count": 1,
+      "coverage_target": "Native technical check:2rollout batches/8optimizer updates; verify checkpoint reload.",
+      "preparation": "Use separate pinned TRL0.24/vLLM0.10.2 environment, fresh readiness evidence and a single4090 technical protocol; do not reuse old grants.",
+      "required_inputs": [],
+      "environment": "requirements/shorterbetter.lock",
+      "launch_ready": false
+    },
+    {
+      "recipe": "opencoder-sft",
+      "family": "opencoder",
+      "kind": "training",
+      "status": "planned_not_executed",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_count": 1,
+      "coverage_target": "Native technical check plus2SFTupdates from verified parent768; adapter reload.",
+      "preparation": "Stage verified parent and original training-only examples. Preserve native context/memory preflight.",
+      "required_inputs": [
+        "data/opencoder-sft/plan.json",
+        "data/opencoder-sft/adapter",
+        "worker-lease.json"
+      ],
+      "environment": "requirements/gpu.lock",
+      "launch_ready": false
+    },
+    {
+      "recipe": "coding-a",
+      "family": "coding-abc",
+      "kind": "training",
+      "status": "planned_not_executed",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_count": 1,
+      "coverage_target": "2questions per arm; native-context backward and optimizer roundtrip; arm-specific RL/SFT/replay update.",
+      "preparation": "Original contracts require full cohort sizes and full-context preflight. Add a separate bounded technical contract without weakening historical validation or reducing the context to hide OOM.",
+      "required_inputs": [
+        "data/coding-abc/plan.json",
+        "data/coding-abc/adapter",
+        "worker-lease.json"
+      ],
+      "environment": "requirements/gpu.lock",
+      "launch_ready": false
+    },
+    {
+      "recipe": "coding-b",
+      "family": "coding-abc",
+      "kind": "training",
+      "status": "planned_not_executed",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_count": 1,
+      "coverage_target": "2questions per arm; native-context backward and optimizer roundtrip; arm-specific RL/SFT/replay update.",
+      "preparation": "Original contracts require full cohort sizes and full-context preflight. Add a separate bounded technical contract without weakening historical validation or reducing the context to hide OOM.",
+      "required_inputs": [
+        "data/coding-abc/plan.json",
+        "data/coding-abc/adapter",
+        "worker-lease.json"
+      ],
+      "environment": "requirements/gpu.lock",
+      "launch_ready": false
+    },
+    {
+      "recipe": "coding-c",
+      "family": "coding-abc",
+      "kind": "training",
+      "status": "planned_not_executed",
+      "gpu": "NVIDIA GeForce RTX 4090",
+      "gpu_count": 1,
+      "coverage_target": "2questions per arm; native-context backward and optimizer roundtrip; arm-specific RL/SFT/replay update.",
+      "preparation": "Original contracts require full cohort sizes and full-context preflight. Add a separate bounded technical contract without weakening historical validation or reducing the context to hide OOM.",
+      "required_inputs": [
+        "data/coding-abc/plan.json",
+        "data/coding-abc/adapter",
+        "worker-lease.json"
+      ],
+      "environment": "requirements/gpu.lock",
+      "launch_ready": false
+    },
+    {
+      "recipe": "coding-curriculum",
+      "family": "curriculum",
+      "kind": "training",
+      "status": "planned_not_executed",
+      "gpu": null,
+      "gpu_count": 0,
+      "coverage_target": "No end-to-end single4090 claim; inspect ordered-data preparation and parent hashes locally.",
+      "preparation": "Existing worker requires exactly2A100-SXM4-80GB and a two-rank checkpoint256. Full GPU smoke is deferred for a separate hardware decision; no fake single-rank resume.",
+      "required_inputs": [
+        "data/coding-curriculum/plan.json",
+        "worker-lease.json"
+      ],
+      "environment": "requirements/gpu.lock",
+      "launch_ready": false
+    },
+    {
+      "recipe": "teacher-generation",
+      "family": "teacher-api",
+      "kind": "generation",
+      "status": "planned_not_executed",
+      "gpu": null,
+      "gpu_count": 0,
+      "coverage_target": "CPU-only planning, cached-response parsing and request/provenance validation.",
+      "preparation": "API-based generation entrypoint: no GPU rental and no live teacher API calls.",
+      "required_inputs": [],
+      "environment": "requirements/gpu.lock",
+      "launch_ready": false
+    }
+  ]
+}
