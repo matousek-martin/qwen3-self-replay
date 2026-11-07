@@ -1,25 +1,25 @@
 {
   "schema_version": 1,
-  "status": "review_proposal_not_launch_ready",
-  "paid_execution_authorized": false,
-  "source_user_instruction": "Prepare before pulling the trigger. No new rentals or GPU/API execution until review.",
+  "status": "gpu_validation_in_progress",
+  "paid_execution_authorized": true,
+  "source_user_instruction": "2026-11-07: test in parallel on RTX4090s, up to five workers; fix failing smoke tests.",
   "hardware_policy": "Exactly one RTX4090 visible per planned GPU test. Never silently substitute GPUs or remove worker checks.",
   "execution": {
-    "max_concurrent_workers": 1,
+    "max_concurrent_workers": 5,
     "reuse_worker_for_sequential_cases": true,
     "estimated_gpu_hours": [
       3,
       6
     ],
     "max_campaign_hours": 6,
-    "proposed_combined_cap_usd": 10,
-    "approval_required": true,
+    "approval_required": false,
     "automatic_topups": false,
     "official_baseline_regeneration": false,
     "teacher_api_calls": false,
     "preserves_other_campaign_reservations": true,
     "source_snapshot_required": true,
-    "verified_backup_and_release_required": true
+    "verified_backup_and_release_required": true,
+    "combined_cap_usd": 10
   },
   "quote_snapshot": {
     "date": "2026-11-07",

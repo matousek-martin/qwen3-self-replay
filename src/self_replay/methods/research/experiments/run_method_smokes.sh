@@ -6,8 +6,8 @@ source /workspace/project/experiments/setup_gpu.sh
 export SELF_REPLAY_REPO=/workspace/project/data/public-checkout
 export PYTHONPATH="$SELF_REPLAY_REPO/src${PYTHONPATH:+:$PYTHONPATH}"
 if python -c 'import json; raise SystemExit(not json.load(open("/workspace/project/data/smoke/suite.json")).get("needs_shorterbetter", False))'; then
-  uv venv --python /opt/thinkingcap-venv/bin/python /opt/shorterbetter-venv
-  uv pip sync --python /opt/shorterbetter-venv/bin/python "$SELF_REPLAY_REPO/requirements/shorterbetter.lock"
+  ./uv venv --python /opt/thinkingcap-venv/bin/python /opt/shorterbetter-venv
+  ./uv pip sync --python /opt/shorterbetter-venv/bin/python "$SELF_REPLAY_REPO/requirements/shorterbetter.lock"
 fi
 python "$SELF_REPLAY_REPO/scripts/gpu_method_smoke.py" \
   --suite /workspace/project/data/smoke/suite.json \

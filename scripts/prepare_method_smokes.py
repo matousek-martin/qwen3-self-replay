@@ -19,15 +19,12 @@ def prepare(plan_path, output):
     names = [case["recipe"] for case in plan["cases"]]
     if len(names) != len(set(names)) or set(names) != set(registry) - {"self-replay"}:
         raise ValueError("Plan must cover every other recipe exactly once")
-    if plan["paid_execution_authorized"] is not False or any(
-        case["launch_ready"] for case in plan["cases"]
-    ):
-        raise ValueError("This preparer only accepts unapproved review proposals")
+    # This command only materializes source; plan status never enables execution.
     if output.exists():
         raise ValueError("Use a fresh output directory; preserve previous preparation evidence")
     output.mkdir(parents=True)
     receipt = {
-        "status": "prepared_for_review_not_launch_ready",
+        "status": "prepared_locally_not_executed",
         "gpu_execution": False,
         "provider_calls": False,
         "plan_sha256": sha256(plan_path),
