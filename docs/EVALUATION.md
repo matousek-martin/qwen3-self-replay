@@ -2,7 +2,7 @@
 
 The submission uses the official 2,759-question cohort, eight responses per question, seed 9001, temperature 0.6, top-p 0.95 and top-k 20. Per-domain token caps, prompts and graders are defined by the pinned evaluator. Full results retain failed/ungraded flags and original cohort/revision metadata.
 
-The imported evaluator commit is `6f68418`; at the submission preparation audit, upstream `bd52d8d` had identical evaluate.py, compare.py, requirements.txt and mbpp_worker.py in its committed tree. Its README had added rough guidance on desirable performance. We preserve the actual evaluation implementation rather than silently upgrading it.
+The imported evaluator commit is `6f68418`; at the submission preparation audit, upstream `bd52d8d` had identical evaluate.py, compare.py, requirements.txt and mbpp_worker.py in its committed tree. Its README had added rough guidance on desirable performance. I preserve the actual evaluation implementation rather than silently upgrading it.
 
 ## Disclosed changes
 

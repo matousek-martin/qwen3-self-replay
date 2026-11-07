@@ -1,8 +1,8 @@
 # AI-assisted research and engineering
 
-This project was developed with substantial AI assistance. Martin Matousek directed the research priorities, chose between experiment proposals, set budgets and made continuation/stopping decisions. AI agents contributed suggestions, literature search, implementation, cloud operations, debugging, tests, analysis and documentation.
+I (Martin Matousek) developed this project with substantial AI assistance. I set the research priorities, chose between experiment proposals, set budgets and made continuation/stopping decisions. AI agents contributed suggestions, literature search, implementation, cloud operations, debugging, tests, analysis and documentation.
 
-The author is responsible for this submission. We do not claim that all implementation was handwritten, that every line was manually reviewed, or that agent-generated conclusions are correct merely because an agent reported them.
+I am responsible for this submission. I do not claim that all implementation was handwritten, that every line was manually reviewed, or that agent-generated conclusions are correct merely because an agent reported them.
 
 ## How outputs were checked
 

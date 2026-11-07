@@ -2,7 +2,7 @@
 
 The primary submission is **self-replay checkpoint 256**. Checkpoint 850 is an explicit compression/accuracy tradeoff, not a second claim of unchanged accuracy. [Every official checkpoint](self-replay/history.json), [per-domain plots](self-replay/figures/domains.png) and [development monitoring](self-replay/figures/development.png) remain visible.
 
-## What we tried and learned
+## What I tried and learned
 
 The rows below deliberately distinguish development screens from full official evaluation. Different cohorts, baselines and objectives must not be ranked as one leaderboard. A negative result is evidence about that tested configuration, not a proof that a method cannot work.
 
@@ -35,7 +35,7 @@ Both branches use seed 17. Iteration is a rollout group; optimizer steps are fou
 
 ## Interpreting the main result
 
-Checkpoint numbers count processed training questions, not model size or independent seeds. The main run planned 3,840 questions; the reported trajectory reached 1,280. We publish all seven evaluated checkpoints to expose selection effects. The 256 interval includes zero and does not establish equivalence. The 850 aggregate regression is supported by its interval. Both checkpoints regress on the BFCL no-call subset.
+Checkpoint numbers count processed training questions, not model size or independent seeds. The main run planned 3,840 questions; the reported trajectory reached 1,280. I report all seven evaluated checkpoints to expose selection effects. The 256 interval includes zero and does not establish equivalence. The 850 aggregate regression is supported by its interval. Both checkpoints regress on the BFCL no-call subset.
 
 The repeatedly inspected official benchmarks are selection evidence, not an untouched holdout. Development validation used independent training-source data. Historical subset screens and main full evaluations have separate contracts; source JSON takes precedence over this rounded summary.
 

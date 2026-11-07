@@ -8,7 +8,7 @@ A correct long answer is not necessarily useful supervision for a small model. C
 
 The hypothesis is that two signals complement each other: a bounded correctness-gated length reward encourages efficient successful attempts, while supervised replay reinforces concise solutions the student can already produce. Requiring four correct attempts is a conservative admission heuristic; it may also exclude difficult questions.
 
-This combines established group-relative policy optimization and supervised replay. The contribution here is the tested combination, its reproducible implementation and the measured compression/accuracy trajectory on the contest model; we make no priority claim for the individual ingredients.
+This combines established group-relative policy optimization and supervised replay. The contribution here is the tested combination, its reproducible implementation and the measured compression/accuracy trajectory on the contest model; I make no priority claim for the individual ingredients.
 
 ## Method
 
@@ -58,7 +58,7 @@ Each point uses the full 2,759-question × 8-response official protocol. Accurac
 
 The full evaluations support a useful operating point for the **combined procedure** at checkpoint 256 and a worsening accuracy/compression tradeoff later. They do not isolate the effect of replay, establish that 4/4 admission is optimal, or prove a general improvement in reasoning efficiency.
 
-The earlier comparisons motivated the design but differ from the final run in data or protocol. A causal ablation would keep the four-domain data, rollout budget and seeds fixed, comparing length-reward RL alone against RL plus replay, then varying only the admission rule. We have not run that matched final-method ablation. The role of replay as a stabilizing signal remains an explanation to test, not a measured attribution.
+The earlier comparisons motivated the design but differ from the final run in data or protocol. A causal ablation would keep the four-domain data, rollout budget and seeds fixed, comparing length-reward RL alone against RL plus replay, then varying only the admission rule. I have not run that matched final-method ablation. The role of replay as a stabilizing signal remains an explanation to test, not a measured attribution.
 
 ## What did not work
 
@@ -83,4 +83,4 @@ Next work would test the method across seeds and independent tasks, improve trai
 
 Historical scientific snapshots and artifact hashes are retained; the public refactor is a later engineering step. The MBPP worker memory fix and the pinned vLLM adapter-routing compatibility patch are disclosed in [EVALUATION.md](docs/EVALUATION.md); prompts, sampling, caps and grading rules were not intentionally changed.
 
-Martin Matousek directed the project, priorities, budgets and experiment decisions. AI agents substantially assisted research suggestions, coding, operation, debugging, analysis and writing. [AI_USAGE.md](AI_USAGE.md) describes that division without claiming a manual review of every line.
+I directed the project, set its priorities and budgets, and made the experiment decisions. AI agents substantially assisted research suggestions, coding, operation, debugging, analysis and writing. [AI_USAGE.md](AI_USAGE.md) describes that division without claiming a manual review of every line.

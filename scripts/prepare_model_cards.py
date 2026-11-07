@@ -99,7 +99,7 @@ One main training seed; repeated benchmark inspection and checkpoint selection. 
 
 ## Attribution and AI assistance
 
-Martin Matousek directed the research and decisions. AI assistance contributed substantially to implementation, debugging, analysis and documentation; source/evidence hashes and local checks support the reported claims. This does not imply independent human review of every line. See the source release's AI_USAGE.md and IDEA.md.
+I (Martin Matousek) directed the research and made the decisions. AI assistance contributed substantially to implementation, debugging, analysis and documentation; source/evidence hashes and local checks support the reported claims. I do not claim to have manually reviewed every line. See the source release's AI_USAGE.md and IDEA.md.
 
 Base model: [Qwen/Qwen3-0.6B](https://huggingface.co/Qwen/Qwen3-0.6B), pinned above. Evaluation: [BottleCapAI/ThinkingCap-Test](https://github.com/BottleCapAI/ThinkingCap-Test). Original code and adapters are Apache-2.0; upstream dataset terms remain separate in THIRD_PARTY_NOTICES.md.
 """
