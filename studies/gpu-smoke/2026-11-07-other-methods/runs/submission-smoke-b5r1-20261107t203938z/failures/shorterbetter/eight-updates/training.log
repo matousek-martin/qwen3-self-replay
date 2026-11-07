@@ -1,0 +1,101 @@
+INFO 11-07 21:25:29 [__init__.py:216] Automatically detected platform cuda.
+INFO 11-07 21:25:33 [arg_utils.py:486] HF_HUB_OFFLINE is True, replace model_id [/root/.cache/thinkingcap/huggingface/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca] to model_path [/root/.cache/thinkingcap/huggingface/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca]
+INFO 11-07 21:25:33 [arg_utils.py:486] HF_HUB_OFFLINE is True, replace model_id [/root/.cache/thinkingcap/huggingface/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca] to model_path [/root/.cache/thinkingcap/huggingface/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca]
+INFO 11-07 21:25:33 [utils.py:328] non-default args: {'seed': 0, 'max_model_len': 384, 'distributed_executor_backend': 'external_launcher', 'gpu_memory_utilization': 0.25, 'max_num_batched_tokens': 4096, 'max_num_seqs': 64, 'logprobs_mode': 'processed_logprobs', 'disable_log_stats': True, 'enable_sleep_mode': True, 'model_impl': 'vllm', 'model': '/root/.cache/thinkingcap/huggingface/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca'}
+INFO 11-07 21:25:38 [__init__.py:742] Resolved architecture: Qwen3ForCausalLM
+`torch_dtype` is deprecated! Use `dtype` instead!
+INFO 11-07 21:25:38 [__init__.py:1815] Using max model len 384
+INFO 11-07 21:25:38 [parallel.py:348] Disabling V1 multiprocessing for external launcher.
+INFO 11-07 21:25:38 [scheduler.py:222] Chunked prefill is enabled with max_num_batched_tokens=4096.
+INFO 11-07 21:25:38 [core.py:76] Initializing a V1 LLM engine (v0.10.2) with config: model='/root/.cache/thinkingcap/huggingface/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca', speculative_config=None, tokenizer='/root/.cache/thinkingcap/huggingface/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=384, download_dir=None, load_format=auto, tensor_parallel_size=1, pipeline_parallel_size=1, data_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, device_config=cuda, decoding_config=DecodingConfig(backend='auto', disable_fallback=False, disable_any_whitespace=False, disable_additional_properties=False, reasoning_backend=''), observability_config=ObservabilityConfig(show_hidden_metrics_for_version=None, otlp_traces_endpoint=None, collect_detailed_traces=None), seed=0, served_model_name=/root/.cache/thinkingcap/huggingface/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca, enable_prefix_caching=True, chunked_prefill_enabled=True, use_async_output_proc=True, pooler_config=None, compilation_config={"level":3,"debug_dump_path":"","cache_dir":"","backend":"","custom_ops":[],"splitting_ops":["vllm.unified_attention","vllm.unified_attention_with_output","vllm.mamba_mixer2","vllm.mamba_mixer","vllm.short_conv","vllm.linear_attention","vllm.plamo2_mamba_mixer","vllm.gdn_attention"],"use_inductor":true,"compile_sizes":[],"inductor_compile_config":{"enable_auto_functionalized_v2":false},"inductor_passes":{},"cudagraph_mode":1,"use_cudagraph":true,"cudagraph_num_of_warmups":1,"cudagraph_capture_sizes":[128,120,112,104,96,88,80,72,64,56,48,40,32,24,16,8,4,2,1],"cudagraph_copy_inputs":false,"full_cuda_graph":false,"pass_config":{},"max_capture_size":128,"local_cache_dir":null}
+[W1107 21:25:40.245833448 ProcessGroupNCCL.cpp:981] Warning: TORCH_NCCL_AVOID_RECORD_STREAMS is the default now, this environment variable is thus deprecated. (function operator())
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+[Gloo] Rank 0 is connected to 0 peer ranks. Expected number of connected peer ranks is : 0
+INFO 11-07 21:25:40 [parallel_state.py:1165] rank 0 in world size 1 is assigned as DP rank 0, PP rank 0, TP rank 0, EP rank 0
+INFO 11-07 21:25:40 [gpu_model_runner.py:2338] Starting to load model /root/.cache/thinkingcap/huggingface/hub/models--Qwen--Qwen3-0.6B/snapshots/c1899de289a04d12100db370d81485cdf75e47ca...
+INFO 11-07 21:25:40 [gpu_model_runner.py:2370] Loading model from scratch...
+INFO 11-07 21:25:40 [cuda.py:362] Using Flash Attention backend on V1 engine.
+
+Loading safetensors checkpoint shards:   0% Completed | 0/1 [00:00<?, ?it/s]
+
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  7.15it/s]
+
+Loading safetensors checkpoint shards: 100% Completed | 1/1 [00:00<00:00,  7.14it/s]
+
+INFO 11-07 21:25:40 [default_loader.py:268] Loading weights took 0.15 seconds
+INFO 11-07 21:25:41 [gpu_model_runner.py:2392] Model loading took 1.1201 GiB and 0.267023 seconds
+INFO 11-07 21:25:44 [backends.py:539] Using cache directory: /root/.cache/vllm/torch_compile_cache/481bdf1b13/rank_0_0/backbone for vLLM's torch.compile
+INFO 11-07 21:25:44 [backends.py:550] Dynamo bytecode transform time: 3.46 s
+INFO 11-07 21:25:46 [backends.py:194] Cache the graph for dynamic shape for later use
+INFO 11-07 21:25:58 [backends.py:215] Compiling a graph for dynamic shape takes 13.56 s
+INFO 11-07 21:25:59 [monitor.py:34] torch.compile takes 17.02 s in total
+INFO 11-07 21:25:59 [gpu_worker.py:298] Available KV cache memory: 3.83 GiB
+INFO 11-07 21:25:59 [kv_cache_utils.py:864] GPU KV cache size: 35,872 tokens
+INFO 11-07 21:25:59 [kv_cache_utils.py:868] Maximum concurrency for 384 tokens per request: 93.42x
+
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):   0%|          | 0/19 [00:00<?, ?it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  21%|██        | 4/19 [00:00<00:00, 37.24it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  42%|████▏     | 8/19 [00:00<00:00, 37.78it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  63%|██████▎   | 12/19 [00:00<00:00, 37.94it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE):  84%|████████▍ | 16/19 [00:00<00:00, 36.94it/s]
+Capturing CUDA graphs (mixed prefill-decode, PIECEWISE): 100%|██████████| 19/19 [00:00<00:00, 36.87it/s]
+INFO 11-07 21:26:00 [gpu_model_runner.py:3118] Graph capturing finished in 1 secs, took 0.14 GiB
+INFO 11-07 21:26:00 [gpu_worker.py:391] Free memory on device (20.85/23.52 GiB) on startup. Desired GPU memory utilization is (0.25, 5.88 GiB). Actual usage is 1.12 GiB for weight, 0.92 GiB for peak activation, 0.01 GiB for non-torch memory, and 0.14 GiB for CUDAGraph memory. Replace gpu_memory_utilization config with `--kv-cache-memory=3807216128` to fit into requested memory, or `--kv-cache-memory=19878707712` to fully utilize gpu memory. Current kv cache memory in use is 4115497472 bytes.
+INFO 11-07 21:26:00 [core.py:218] init engine (profile, create kv cache, warmup model) took 19.63 seconds
+INFO 11-07 21:26:00 [llm.py:295] Supported_tasks: ('generate',)
+INFO 11-07 21:26:00 [__init__.py:36] No IOProcessor plugins requested by the model
+INFO 11-07 21:26:00 [block_pool.py:292] Successfully reset prefix cache
+INFO 11-07 21:26:01 [gpu_worker.py:116] Sleep mode freed 6.04 GiB memory, 2.84 GiB memory is still in use.
+INFO 11-07 21:26:01 [executor_base.py:188] It took 0.784479 seconds to fall asleep.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "<frozen runpy>", line 198, in _run_module_as_main
+[rank0]:   File "<frozen runpy>", line 88, in _run_code
+[rank0]:   File "/workspace/project/output/method-smoke/workspaces/shorterbetter/experiments/shorterbetter/train.py", line 515, in <module>
+[rank0]:     main()
+[rank0]:   File "/workspace/project/output/method-smoke/workspaces/shorterbetter/experiments/shorterbetter/train.py", line 470, in main
+[rank0]:     with torch.random.fork_rng(devices=[trainer.accelerator.device.index]):
+[rank0]:   File "/root/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 137, in __enter__
+[rank0]:     return next(self.gen)
+[rank0]:            ^^^^^^^^^^^^^^
+[rank0]:   File "/opt/shorterbetter-venv/lib/python3.11/site-packages/torch/random.py", line 196, in fork_rng
+[rank0]:     device_rng_states = [device_mod.get_rng_state(device) for device in devices]
+[rank0]:                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/shorterbetter-venv/lib/python3.11/site-packages/torch/random.py", line 196, in <listcomp>
+[rank0]:     device_rng_states = [device_mod.get_rng_state(device) for device in devices]
+[rank0]:                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[rank0]:   File "/opt/shorterbetter-venv/lib/python3.11/site-packages/torch/cuda/random.py", line 39, in get_rng_state
+[rank0]:     idx = device.index
+[rank0]:           ^^^^^^^^^^^^
+[rank0]: AttributeError: 'NoneType' object has no attribute 'index'
+[rank0]:[W1107 21:26:02.604481541 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+terminate called after throwing an instance of 'c10::Error'
+  what():  Trying to free a pointer not allocated here
+Exception raised from raw_delete at /pytorch/torch/csrc/cuda/CUDAPluggableAllocator.cpp:149 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >) + 0x80 (0x7f1f6337eeb0 in /opt/shorterbetter-venv/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #1: c10::detail::torchCheckFail(char const*, char const*, unsigned int, char const*) + 0x69 (0x7f1f6331bb5f in /opt/shorterbetter-venv/lib/python3.11/site-packages/torch/lib/libc10.so)
+frame #2: torch::cuda::CUDAPluggableAllocator::CUDAPluggableAllocator::raw_delete(void*) + 0x27f (0x7f1f09093d9f in /opt/shorterbetter-venv/lib/python3.11/site-packages/torch/lib/libtorch_cuda.so)
+frame #3: <unknown function> + 0x1e4c0 (0x7f1f6376b4c0 in /opt/shorterbetter-venv/lib/python3.11/site-packages/torch/lib/libc10_cuda.so)
+frame #4: <unknown function> + 0x34351 (0x7f1f63781351 in /opt/shorterbetter-venv/lib/python3.11/site-packages/torch/lib/libc10_cuda.so)
+frame #5: <unknown function> + 0x38e33 (0x7f1f63785e33 in /opt/shorterbetter-venv/lib/python3.11/site-packages/torch/lib/libc10_cuda.so)
+frame #6: c10::cuda::MemPool::~MemPool() + 0x1bc (0x7f1f6376c50c in /opt/shorterbetter-venv/lib/python3.11/site-packages/torch/lib/libc10_cuda.so)
+frame #7: <unknown function> + 0xbf30d2 (0x7f1f566f00d2 in /opt/shorterbetter-venv/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+frame #8: <unknown function> + 0x381f1d (0x7f1f55e7ef1d in /opt/shorterbetter-venv/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+frame #9: <unknown function> + 0x38258e (0x7f1f55e7f58e in /opt/shorterbetter-venv/lib/python3.11/site-packages/torch/lib/libtorch_python.so)
+frame #10: <unknown function> + 0x35d4e4 (0x55f0192f34e4 in /opt/shorterbetter-venv/bin/python)
+frame #11: <unknown function> + 0x352a8a (0x55f0192e8a8a in /opt/shorterbetter-venv/bin/python)
+frame #12: <unknown function> + 0x33c623 (0x55f0192d2623 in /opt/shorterbetter-venv/bin/python)
+frame #13: <unknown function> + 0x49aae2 (0x55f019430ae2 in /opt/shorterbetter-venv/bin/python)
+frame #14: <unknown function> + 0x40a026 (0x55f0193a0026 in /opt/shorterbetter-venv/bin/python)
+frame #15: <unknown function> + 0x4fe417 (0x55f019494417 in /opt/shorterbetter-venv/bin/python)
+frame #16: Py_FinalizeEx + 0x250 (0x55f019492600 in /opt/shorterbetter-venv/bin/python)
+frame #17: Py_RunMain + 0x1c5 (0x55f0194a10c5 in /opt/shorterbetter-venv/bin/python)
+frame #18: <unknown function> + 0x50bc0d (0x55f0194a1c0d in /opt/shorterbetter-venv/bin/python)
+frame #19: <unknown function> + 0x43742c (0x55f0193cd42c in /opt/shorterbetter-venv/bin/python)
+frame #20: <unknown function> + 0x29d90 (0x7f1f6425ed90 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #21: __libc_start_main + 0x80 (0x7f1f6425ee40 in /lib/x86_64-linux-gnu/libc.so.6)
+frame #22: <unknown function> + 0x43733d (0x55f0193cd33d in /opt/shorterbetter-venv/bin/python)
+

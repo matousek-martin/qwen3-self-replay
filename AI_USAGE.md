@@ -10,6 +10,7 @@ I am responsible for this submission. I do not claim that all implementation was
 - The release recomputes the 256 and 850 official comparisons from saved responses, without generating new answers.
 - Numerical tests compare objectives/gradients and checkpoint state; cloud tests simulate failure and reconciliation paths.
 - Local tests, historical GPU evidence and the [fresh 2026-11-07 GPU smoke checks](studies/gpu-smoke/2026-11-07/README.md) are identified separately; the latter exercised main training/resume and both released adapters, including verified backup/release.
+- The [other-method GPU campaign](studies/gpu-smoke/2026-11-07-other-methods/README.md) separately verifies all 21 single-4090 training recipes with native updates, saved-model checks and retained failed attempts.
 - Failed experiments, corrected analyses and statistical limitations remain visible.
 
 ## AI used to build the project versus AI used to train the model

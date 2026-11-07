@@ -1,0 +1,87 @@
+{
+  "technical_only": true,
+  "passed": true,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "started_at": 1794087140.0847924,
+  "cases": [
+    {
+      "recipe": "coding-a",
+      "arms": [
+        {
+          "name": "two-questions",
+          "command": [
+            "/opt/thinkingcap-venv/bin/python",
+            "-m",
+            "experiments.coding_abc.worker",
+            "--technical"
+          ],
+          "passed": true,
+          "started_at": 1794087140.2168202,
+          "seconds": 306.6253619194031,
+          "status": {
+            "complete": true,
+            "steps": 2,
+            "optimizer_updates": 2,
+            "reason": "finished"
+          }
+        }
+      ],
+      "passed": true,
+      "started_at": 1794087140.084925,
+      "seconds": 306.7577908039093
+    },
+    {
+      "recipe": "coding-b",
+      "arms": [
+        {
+          "name": "two-questions",
+          "command": [
+            "/opt/thinkingcap-venv/bin/python",
+            "-m",
+            "experiments.coding_abc.worker",
+            "--technical"
+          ],
+          "passed": true,
+          "started_at": 1794087446.9820147,
+          "seconds": 100.2923595905304,
+          "status": {
+            "complete": true,
+            "steps": 2,
+            "optimizer_updates": 2,
+            "reason": "finished"
+          }
+        }
+      ],
+      "passed": true,
+      "started_at": 1794087446.8454928,
+      "seconds": 100.42951321601868
+    },
+    {
+      "recipe": "coding-c",
+      "arms": [
+        {
+          "name": "two-questions",
+          "command": [
+            "/opt/thinkingcap-venv/bin/python",
+            "-m",
+            "experiments.coding_abc.worker",
+            "--technical"
+          ],
+          "passed": true,
+          "started_at": 1794087547.4119256,
+          "seconds": 304.803902387619,
+          "status": {
+            "complete": true,
+            "steps": 2,
+            "optimizer_updates": 2,
+            "reason": "finished"
+          }
+        }
+      ],
+      "passed": true,
+      "started_at": 1794087547.2777472,
+      "seconds": 304.9387192726135
+    }
+  ],
+  "seconds": 712.1346771717072
+}

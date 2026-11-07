@@ -1,0 +1,6 @@
+{
+  "action": "Expose existing verified bootstrap uv on PATH for alternate-runtime installation",
+  "binary_sha256": "c9f7ca00a5e1c4f2a6dd96db91097bec5b76a53a483818e8ee746e9c7440547a",
+  "source_changed": false,
+  "at": 1794084743.0149186
+}

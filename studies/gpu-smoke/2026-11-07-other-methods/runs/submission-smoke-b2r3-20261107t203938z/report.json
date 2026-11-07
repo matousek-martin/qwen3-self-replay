@@ -1,0 +1,281 @@
+{
+  "technical_only": true,
+  "passed": true,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "started_at": 1794085279.6037264,
+  "cases": [
+    {
+      "recipe": "rl-fixed",
+      "arms": [
+        {
+          "name": "rl-fixed",
+          "command": [
+            "/opt/thinkingcap-venv/bin/python",
+            "-m",
+            "experiments.rl_training.train",
+            "--data",
+            "/workspace/project/data/smoke/pilot.jsonl",
+            "--out",
+            "/workspace/project/output/method-smoke/rl-fixed/rl-fixed/training",
+            "--variant",
+            "fixed",
+            "--optimizer",
+            "dr_grpo",
+            "--max-steps",
+            "128",
+            "--max-seconds",
+            "0",
+            "--seed",
+            "17",
+            "--save-every",
+            "32",
+            "--max-steps",
+            "4",
+            "--save-every",
+            "2",
+            "--max-seconds",
+            "840",
+            "--references",
+            "/workspace/project/data/smoke/references.json"
+          ],
+          "passed": true,
+          "started_at": 1794085279.687643,
+          "seconds": 313.64344024658203,
+          "status": {
+            "status": "completed",
+            "stop_reason": "max_steps",
+            "error": null,
+            "completed_groups": 4,
+            "optimizer_updates": 4,
+            "generated_tokens": 9118,
+            "training_tokens_total": 9118,
+            "elapsed_seconds": 294.11984699126333,
+            "skipped_long_prompts": 0,
+            "adapter": "/workspace/project/output/method-smoke/rl-fixed/rl-fixed/training/adapter",
+            "checkpoint_sha256": {
+              "adapter_model.safetensors": "62c4b9eeb6c8fe19545570e0433567ff8e327da355122262afc12eda72eb9293"
+            },
+            "runtime_policy": {
+              "effective_max_seconds": 840.0,
+              "deadline_enabled": true,
+              "control_path": null,
+              "accepted_control_updates": 0,
+              "last_accepted_control_sha256": null,
+              "last_control_error": null,
+              "stop_requested": false,
+              "stop_reason": null
+            }
+          }
+        }
+      ],
+      "passed": true,
+      "started_at": 1794085279.6040955,
+      "seconds": 313.7277195453644
+    },
+    {
+      "recipe": "rl-adaptive",
+      "arms": [
+        {
+          "name": "rl-adaptive",
+          "command": [
+            "/opt/thinkingcap-venv/bin/python",
+            "-m",
+            "experiments.rl_training.train",
+            "--data",
+            "/workspace/project/data/smoke/pilot.jsonl",
+            "--out",
+            "/workspace/project/output/method-smoke/rl-adaptive/rl-adaptive/training",
+            "--variant",
+            "adaptive",
+            "--optimizer",
+            "dr_grpo",
+            "--max-steps",
+            "128",
+            "--max-seconds",
+            "0",
+            "--seed",
+            "17",
+            "--save-every",
+            "32",
+            "--max-steps",
+            "4",
+            "--save-every",
+            "2",
+            "--max-seconds",
+            "840",
+            "--references",
+            "/workspace/project/data/smoke/references.json"
+          ],
+          "passed": true,
+          "started_at": 1794085593.4521103,
+          "seconds": 220.59786224365234,
+          "status": {
+            "status": "completed",
+            "stop_reason": "max_steps",
+            "error": null,
+            "completed_groups": 4,
+            "optimizer_updates": 4,
+            "generated_tokens": 6739,
+            "training_tokens_total": 6739,
+            "elapsed_seconds": 205.75324099045247,
+            "skipped_long_prompts": 0,
+            "adapter": "/workspace/project/output/method-smoke/rl-adaptive/rl-adaptive/training/adapter",
+            "checkpoint_sha256": {
+              "adapter_model.safetensors": "cb12d660744930eea70279b4e47d9b159a4faa1855e4705cd727e1353c95f724"
+            },
+            "runtime_policy": {
+              "effective_max_seconds": 840.0,
+              "deadline_enabled": true,
+              "control_path": null,
+              "accepted_control_updates": 0,
+              "last_accepted_control_sha256": null,
+              "last_control_error": null,
+              "stop_requested": false,
+              "stop_reason": null
+            }
+          }
+        }
+      ],
+      "passed": true,
+      "started_at": 1794085593.3322852,
+      "seconds": 220.7185218334198
+    },
+    {
+      "recipe": "rl-difficulty",
+      "arms": [
+        {
+          "name": "rl-difficulty",
+          "command": [
+            "/opt/thinkingcap-venv/bin/python",
+            "-m",
+            "experiments.rl_training.train",
+            "--data",
+            "/workspace/project/data/smoke/pilot.jsonl",
+            "--out",
+            "/workspace/project/output/method-smoke/rl-difficulty/rl-difficulty/training",
+            "--variant",
+            "difficulty",
+            "--optimizer",
+            "dr_grpo",
+            "--max-steps",
+            "128",
+            "--max-seconds",
+            "0",
+            "--seed",
+            "17",
+            "--save-every",
+            "32",
+            "--max-steps",
+            "4",
+            "--save-every",
+            "2",
+            "--max-seconds",
+            "840",
+            "--references",
+            "/workspace/project/data/smoke/references.json"
+          ],
+          "passed": true,
+          "started_at": 1794085814.1727378,
+          "seconds": 223.4976041316986,
+          "status": {
+            "status": "completed",
+            "stop_reason": "max_steps",
+            "error": null,
+            "completed_groups": 4,
+            "optimizer_updates": 4,
+            "generated_tokens": 7107,
+            "training_tokens_total": 7107,
+            "elapsed_seconds": 208.6538349930197,
+            "skipped_long_prompts": 0,
+            "adapter": "/workspace/project/output/method-smoke/rl-difficulty/rl-difficulty/training/adapter",
+            "checkpoint_sha256": {
+              "adapter_model.safetensors": "cf53017284e77d5d4f63f50fa2bb082647e4edcd8f0716ac6ddf9a594d22d321"
+            },
+            "runtime_policy": {
+              "effective_max_seconds": 840.0,
+              "deadline_enabled": true,
+              "control_path": null,
+              "accepted_control_updates": 0,
+              "last_accepted_control_sha256": null,
+              "last_control_error": null,
+              "stop_requested": false,
+              "stop_reason": null
+            }
+          }
+        }
+      ],
+      "passed": true,
+      "started_at": 1794085814.0514452,
+      "seconds": 223.61991143226624
+    },
+    {
+      "recipe": "rl-progressive",
+      "arms": [
+        {
+          "name": "rl-progressive",
+          "command": [
+            "/opt/thinkingcap-venv/bin/python",
+            "-m",
+            "experiments.rl_training.train",
+            "--data",
+            "/workspace/project/data/smoke/pilot.jsonl",
+            "--out",
+            "/workspace/project/output/method-smoke/rl-progressive/rl-progressive/training",
+            "--variant",
+            "progressive",
+            "--optimizer",
+            "dr_grpo",
+            "--max-steps",
+            "128",
+            "--max-seconds",
+            "0",
+            "--seed",
+            "17",
+            "--save-every",
+            "32",
+            "--max-steps",
+            "4",
+            "--save-every",
+            "2",
+            "--max-seconds",
+            "840",
+            "--references",
+            "/workspace/project/data/smoke/references.json"
+          ],
+          "passed": true,
+          "started_at": 1794086037.7906396,
+          "seconds": 286.6953070163727,
+          "status": {
+            "status": "completed",
+            "stop_reason": "max_steps",
+            "error": null,
+            "completed_groups": 4,
+            "optimizer_updates": 2,
+            "generated_tokens": 8312,
+            "training_tokens_total": 1925,
+            "elapsed_seconds": 271.911635232158,
+            "skipped_long_prompts": 0,
+            "adapter": "/workspace/project/output/method-smoke/rl-progressive/rl-progressive/training/adapter",
+            "checkpoint_sha256": {
+              "adapter_model.safetensors": "801230d1ac6bf537f56bfca0c167567c46ff61b3057fd85233b742eb3dc9a16b"
+            },
+            "runtime_policy": {
+              "effective_max_seconds": 840.0,
+              "deadline_enabled": true,
+              "control_path": null,
+              "accepted_control_updates": 0,
+              "last_accepted_control_sha256": null,
+              "last_control_error": null,
+              "stop_requested": false,
+              "stop_reason": null
+            }
+          }
+        }
+      ],
+      "passed": true,
+      "started_at": 1794086037.6720672,
+      "seconds": 286.81500005722046
+    }
+  ],
+  "seconds": 1044.8841905593872
+}

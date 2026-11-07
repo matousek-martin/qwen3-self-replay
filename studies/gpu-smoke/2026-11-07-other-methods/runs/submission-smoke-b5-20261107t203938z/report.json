@@ -1,0 +1,50 @@
+{
+  "technical_only": true,
+  "passed": false,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "started_at": 1794084801.4310172,
+  "cases": [
+    {
+      "recipe": "opencoder-sft",
+      "arms": [
+        {
+          "name": "two-updates",
+          "command": [
+            "/opt/thinkingcap-venv/bin/python",
+            "-m",
+            "experiments.opencoder_sft.train",
+            "--technical",
+            "--until",
+            "2",
+            "--out",
+            "/workspace/project/output/method-smoke/opencoder-sft/two-updates/training"
+          ],
+          "passed": false,
+          "started_at": 1794084801.5839689
+        }
+      ],
+      "passed": false,
+      "started_at": 1794084801.4313436,
+      "error": "Command '['/opt/thinkingcap-venv/bin/python', '/workspace/project/data/public-checkout/scripts/gpu_method_smoke.py', '--reload', '/workspace/project/output/method-smoke/opencoder-sft/two-updates/training/checkpoints/step-000002/adapter', '--out', '/workspace/project/output/method-smoke/opencoder-sft/two-updates/reload.json']' timed out after 180 seconds",
+      "seconds": 774.9688766002655
+    },
+    {
+      "recipe": "coding-a",
+      "arms": [
+        {
+          "name": "two-questions",
+          "command": [
+            "/opt/thinkingcap-venv/bin/python",
+            "-m",
+            "experiments.coding_abc.worker",
+            "--technical"
+          ],
+          "passed": false,
+          "started_at": 1794085576.5913947
+        }
+      ],
+      "passed": false,
+      "started_at": 1794085576.400888
+    }
+  ]
+}

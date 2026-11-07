@@ -1,0 +1,445 @@
+{
+  "technical_only": true,
+  "passed": true,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "started_at": 1794084988.8111722,
+  "cases": [
+    {
+      "recipe": "sft-short",
+      "arms": [
+        {
+          "name": "sft-short",
+          "command": [
+            "/opt/thinkingcap-venv/bin/python",
+            "experiments/offline_training/train.py",
+            "--method",
+            "sft",
+            "--data",
+            "/workspace/project/data/smoke/sft-short.jsonl",
+            "--output",
+            "/workspace/project/output/method-smoke/sft-short/sft-short/training",
+            "--steps",
+            "64",
+            "--grad-accum",
+            "8",
+            "--seed",
+            "17",
+            "--max-seconds",
+            "0",
+            "--steps",
+            "2",
+            "--grad-accum",
+            "1",
+            "--checkpoint-every",
+            "1",
+            "--max-seconds",
+            "600"
+          ],
+          "passed": true,
+          "started_at": 1794084988.8918293,
+          "seconds": 35.69196391105652,
+          "status": {
+            "adapter": "/workspace/project/output/method-smoke/sft-short/sft-short/training/checkpoint-000002",
+            "adapter_sha256": "92534b6cad658e45bedf2d45bbaf88e288bc360daf38dee97bd6962378944405",
+            "complete": true,
+            "data_sha256": "915d77c4e9f9d6e3e9dedf1cd2a4d16c43f1f8c5754c0e733c251b920da98e00",
+            "elapsed_seconds": 19.06869463599287,
+            "peak_cuda_allocated_bytes": 1514066944,
+            "peak_cuda_reserved_bytes": 1684013056,
+            "prompt_tokens": 134,
+            "requested_steps": 2,
+            "step": 2,
+            "stop_reason": "completed",
+            "training_tokens": 310,
+            "validation": "Not evaluated by this command; use generate.py and score.py on held-out prompts",
+            "versions": {
+              "peft": "0.17.1",
+              "torch": "2.8.0",
+              "transformers": "4.57.1"
+            }
+          }
+        }
+      ],
+      "passed": true,
+      "started_at": 1794084988.8115168,
+      "seconds": 35.772937536239624
+    },
+    {
+      "recipe": "sft-random",
+      "arms": [
+        {
+          "name": "sft-random",
+          "command": [
+            "/opt/thinkingcap-venv/bin/python",
+            "experiments/offline_training/train.py",
+            "--method",
+            "sft",
+            "--data",
+            "/workspace/project/data/smoke/sft-random.jsonl",
+            "--output",
+            "/workspace/project/output/method-smoke/sft-random/sft-random/training",
+            "--steps",
+            "64",
+            "--grad-accum",
+            "8",
+            "--seed",
+            "17",
+            "--max-seconds",
+            "0",
+            "--steps",
+            "2",
+            "--grad-accum",
+            "1",
+            "--checkpoint-every",
+            "1",
+            "--max-seconds",
+            "600"
+          ],
+          "passed": true,
+          "started_at": 1794085024.671656,
+          "seconds": 17.27612590789795,
+          "status": {
+            "adapter": "/workspace/project/output/method-smoke/sft-random/sft-random/training/checkpoint-000002",
+            "adapter_sha256": "378c088809e37d47eafb03f0ef44f26a7a85e96936e02ed27ae406c4d46506cf",
+            "complete": true,
+            "data_sha256": "15754b428d09a9e47087779f44a44e1240c2612f84b06afd187df5eeac001269",
+            "elapsed_seconds": 4.26040643901797,
+            "peak_cuda_allocated_bytes": 1514873856,
+            "peak_cuda_reserved_bytes": 1690304512,
+            "prompt_tokens": 145,
+            "requested_steps": 2,
+            "step": 2,
+            "stop_reason": "completed",
+            "training_tokens": 337,
+            "validation": "Not evaluated by this command; use generate.py and score.py on held-out prompts",
+            "versions": {
+              "peft": "0.17.1",
+              "torch": "2.8.0",
+              "transformers": "4.57.1"
+            }
+          }
+        }
+      ],
+      "passed": true,
+      "started_at": 1794085024.5848827,
+      "seconds": 17.363595008850098
+    },
+    {
+      "recipe": "sft-compatible",
+      "arms": [
+        {
+          "name": "sft-compatible",
+          "command": [
+            "/opt/thinkingcap-venv/bin/python",
+            "experiments/offline_training/train.py",
+            "--method",
+            "sft",
+            "--data",
+            "/workspace/project/data/smoke/sft-compatible.jsonl",
+            "--output",
+            "/workspace/project/output/method-smoke/sft-compatible/sft-compatible/training",
+            "--steps",
+            "64",
+            "--grad-accum",
+            "8",
+            "--seed",
+            "17",
+            "--max-seconds",
+            "0",
+            "--steps",
+            "2",
+            "--grad-accum",
+            "1",
+            "--checkpoint-every",
+            "1",
+            "--max-seconds",
+            "600"
+          ],
+          "passed": true,
+          "started_at": 1794085042.026227,
+          "seconds": 16.921544313430786,
+          "status": {
+            "adapter": "/workspace/project/output/method-smoke/sft-compatible/sft-compatible/training/checkpoint-000002",
+            "adapter_sha256": "a84b0c6ee4026a8d0d07eb5854f83a97b348ca2dd7d34ff84bbd3e9a00394650",
+            "complete": true,
+            "data_sha256": "5af9dfe6b6e705878fbbfc86ac37046c8176fc9390a59f0253116cc28dddec71",
+            "elapsed_seconds": 4.161015803052578,
+            "peak_cuda_allocated_bytes": 1514743808,
+            "peak_cuda_reserved_bytes": 1686110208,
+            "prompt_tokens": 130,
+            "requested_steps": 2,
+            "step": 2,
+            "stop_reason": "completed",
+            "training_tokens": 332,
+            "validation": "Not evaluated by this command; use generate.py and score.py on held-out prompts",
+            "versions": {
+              "peft": "0.17.1",
+              "torch": "2.8.0",
+              "transformers": "4.57.1"
+            }
+          }
+        }
+      ],
+      "passed": true,
+      "started_at": 1794085041.9489808,
+      "seconds": 16.99958086013794
+    },
+    {
+      "recipe": "sft-dpo-matched",
+      "arms": [
+        {
+          "name": "sft-dpo-matched",
+          "command": [
+            "/opt/thinkingcap-venv/bin/python",
+            "experiments/offline_training/train.py",
+            "--method",
+            "sft",
+            "--data",
+            "/workspace/project/data/smoke/sft-dpo-matched.jsonl",
+            "--output",
+            "/workspace/project/output/method-smoke/sft-dpo-matched/sft-dpo-matched/training",
+            "--steps",
+            "64",
+            "--grad-accum",
+            "8",
+            "--seed",
+            "17",
+            "--max-seconds",
+            "0",
+            "--steps",
+            "2",
+            "--grad-accum",
+            "1",
+            "--checkpoint-every",
+            "1",
+            "--max-seconds",
+            "600"
+          ],
+          "passed": true,
+          "started_at": 1794085059.027197,
+          "seconds": 16.966220140457153,
+          "status": {
+            "adapter": "/workspace/project/output/method-smoke/sft-dpo-matched/sft-dpo-matched/training/checkpoint-000002",
+            "adapter_sha256": "97eee51482db14599d52c8a2ae3a1e6d513d09d0bfaddf20f87536fc68f5737b",
+            "complete": true,
+            "data_sha256": "8e94146c46a814f9e755ec848190a0b0a254a99d177b67aa0a1627b3340ec209",
+            "elapsed_seconds": 4.274785073008388,
+            "peak_cuda_allocated_bytes": 1515075584,
+            "peak_cuda_reserved_bytes": 1684013056,
+            "prompt_tokens": 120,
+            "requested_steps": 2,
+            "step": 2,
+            "stop_reason": "completed",
+            "training_tokens": 335,
+            "validation": "Not evaluated by this command; use generate.py and score.py on held-out prompts",
+            "versions": {
+              "peft": "0.17.1",
+              "torch": "2.8.0",
+              "transformers": "4.57.1"
+            }
+          }
+        }
+      ],
+      "passed": true,
+      "started_at": 1794085058.9515774,
+      "seconds": 17.04256534576416
+    },
+    {
+      "recipe": "dpo",
+      "arms": [
+        {
+          "name": "dpo",
+          "command": [
+            "/opt/thinkingcap-venv/bin/python",
+            "experiments/offline_training/train.py",
+            "--method",
+            "dpo",
+            "--data",
+            "/workspace/project/data/smoke/dpo.jsonl",
+            "--output",
+            "/workspace/project/output/method-smoke/dpo/dpo/training",
+            "--steps",
+            "64",
+            "--grad-accum",
+            "8",
+            "--seed",
+            "17",
+            "--max-seconds",
+            "0",
+            "--steps",
+            "2",
+            "--grad-accum",
+            "1",
+            "--checkpoint-every",
+            "1",
+            "--max-seconds",
+            "600"
+          ],
+          "passed": true,
+          "started_at": 1794085076.0706124,
+          "seconds": 18.784397840499878,
+          "status": {
+            "adapter": "/workspace/project/output/method-smoke/dpo/dpo/training/checkpoint-000002",
+            "adapter_sha256": "cdbe71e588472ff1d7d811ec85853b6b098e568383163c031397fea73d3471d0",
+            "complete": true,
+            "data_sha256": "0d6b85cb20a5333e2b6aadaa74eef4f8b351a443d4d6243ff7a9f660d6f417f3",
+            "elapsed_seconds": 5.465857759991195,
+            "peak_cuda_allocated_bytes": 1556635136,
+            "peak_cuda_reserved_bytes": 1713373184,
+            "prompt_tokens": 240,
+            "requested_steps": 2,
+            "step": 2,
+            "stop_reason": "completed",
+            "training_tokens": 817,
+            "validation": "Not evaluated by this command; use generate.py and score.py on held-out prompts",
+            "versions": {
+              "peft": "0.17.1",
+              "torch": "2.8.0",
+              "transformers": "4.57.1"
+            }
+          }
+        }
+      ],
+      "passed": true,
+      "started_at": 1794085075.9969351,
+      "seconds": 18.859387397766113
+    },
+    {
+      "recipe": "grpo",
+      "arms": [
+        {
+          "name": "grpo",
+          "command": [
+            "/opt/thinkingcap-venv/bin/python",
+            "-m",
+            "experiments.rl_training.train",
+            "--data",
+            "/workspace/project/data/smoke/pilot.jsonl",
+            "--out",
+            "/workspace/project/output/method-smoke/grpo/grpo/training",
+            "--variant",
+            "correctness",
+            "--optimizer",
+            "grpo",
+            "--max-steps",
+            "128",
+            "--max-seconds",
+            "0",
+            "--seed",
+            "17",
+            "--save-every",
+            "32",
+            "--max-steps",
+            "4",
+            "--save-every",
+            "2",
+            "--max-seconds",
+            "840",
+            "--references",
+            "/workspace/project/data/smoke/references.json"
+          ],
+          "passed": true,
+          "started_at": 1794085094.9521396,
+          "seconds": 276.4117066860199,
+          "status": {
+            "status": "completed",
+            "stop_reason": "max_steps",
+            "error": null,
+            "completed_groups": 4,
+            "optimizer_updates": 1,
+            "generated_tokens": 9129,
+            "training_tokens_total": 891,
+            "elapsed_seconds": 264.1783558569732,
+            "skipped_long_prompts": 0,
+            "adapter": "/workspace/project/output/method-smoke/grpo/grpo/training/adapter",
+            "checkpoint_sha256": {
+              "adapter_model.safetensors": "7f3589465c45fd464d5c12ccf30a152490ce79ef4b6cd2feadecd9fc176e601e"
+            },
+            "runtime_policy": {
+              "effective_max_seconds": 840.0,
+              "deadline_enabled": true,
+              "control_path": null,
+              "accepted_control_updates": 0,
+              "last_accepted_control_sha256": null,
+              "last_control_error": null,
+              "stop_requested": false,
+              "stop_reason": null
+            }
+          }
+        }
+      ],
+      "passed": true,
+      "started_at": 1794085094.8590815,
+      "seconds": 276.5058603286743
+    },
+    {
+      "recipe": "dr-grpo",
+      "arms": [
+        {
+          "name": "dr-grpo",
+          "command": [
+            "/opt/thinkingcap-venv/bin/python",
+            "-m",
+            "experiments.rl_training.train",
+            "--data",
+            "/workspace/project/data/smoke/pilot.jsonl",
+            "--out",
+            "/workspace/project/output/method-smoke/dr-grpo/dr-grpo/training",
+            "--variant",
+            "correctness",
+            "--optimizer",
+            "dr_grpo",
+            "--max-steps",
+            "128",
+            "--max-seconds",
+            "0",
+            "--seed",
+            "17",
+            "--save-every",
+            "32",
+            "--max-steps",
+            "4",
+            "--save-every",
+            "2",
+            "--max-seconds",
+            "840",
+            "--references",
+            "/workspace/project/data/smoke/references.json"
+          ],
+          "passed": true,
+          "started_at": 1794085371.441134,
+          "seconds": 219.64328145980835,
+          "status": {
+            "status": "completed",
+            "stop_reason": "max_steps",
+            "error": null,
+            "completed_groups": 4,
+            "optimizer_updates": 3,
+            "generated_tokens": 7009,
+            "training_tokens_total": 5435,
+            "elapsed_seconds": 207.4533863919787,
+            "skipped_long_prompts": 0,
+            "adapter": "/workspace/project/output/method-smoke/dr-grpo/dr-grpo/training/adapter",
+            "checkpoint_sha256": {
+              "adapter_model.safetensors": "f1df54d934112a09b7cf6b0f4bba22dece37330c799f090c998a6e1b40a23339"
+            },
+            "runtime_policy": {
+              "effective_max_seconds": 840.0,
+              "deadline_enabled": true,
+              "control_path": null,
+              "accepted_control_updates": 0,
+              "last_accepted_control_sha256": null,
+              "last_control_error": null,
+              "stop_requested": false,
+              "stop_reason": null
+            }
+          }
+        }
+      ],
+      "passed": true,
+      "started_at": 1794085371.367743,
+      "seconds": 219.71797156333923
+    }
+  ],
+  "seconds": 602.2773103713989
+}

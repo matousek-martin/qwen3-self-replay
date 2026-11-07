@@ -1,0 +1,51 @@
+{
+  "technical_only": true,
+  "passed": true,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "started_at": 1794087814.9710977,
+  "cases": [
+    {
+      "recipe": "shorterbetter",
+      "arms": [
+        {
+          "name": "eight-updates",
+          "command": [
+            "/opt/shorterbetter-venv/bin/python",
+            "-m",
+            "experiments.shorterbetter.train",
+            "--protocol",
+            "/workspace/project/output/method-smoke/workspaces/shorterbetter/data/smoke-shorterbetter/protocol.json",
+            "--arm",
+            "shorterbetter",
+            "--out",
+            "/workspace/project/output/method-smoke/shorterbetter/eight-updates/training",
+            "--seed",
+            "17",
+            "--execute",
+            "--technical-check",
+            "--readiness",
+            "/workspace/project/output/method-smoke/workspaces/shorterbetter/data/smoke-shorterbetter/readiness.json",
+            "--job-name",
+            "submission-smoke-shorterbetter-r1-20261107t203938z"
+          ],
+          "passed": true,
+          "started_at": 1794087815.0170362,
+          "seconds": 115.14528751373291,
+          "status": {
+            "optimizer_steps": 8,
+            "technical_check": true,
+            "startup_check": false,
+            "phase": "benchmark",
+            "training_completed": false,
+            "backup_verified": false,
+            "gpu_released": false
+          }
+        }
+      ],
+      "passed": true,
+      "started_at": 1794087814.971182,
+      "seconds": 115.19139194488525
+    }
+  ],
+  "seconds": 115.19161438941956
+}

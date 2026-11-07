@@ -1,0 +1,135 @@
+{
+  "technical_only": true,
+  "passed": false,
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "started_at": 1794086687.2990987,
+  "cases": [
+    {
+      "recipe": "opencoder-sft",
+      "arms": [
+        {
+          "name": "two-updates",
+          "command": [
+            "/opt/thinkingcap-venv/bin/python",
+            "-m",
+            "experiments.opencoder_sft.train",
+            "--technical",
+            "--until",
+            "2",
+            "--out",
+            "/workspace/project/output/method-smoke/opencoder-sft/two-updates/training"
+          ],
+          "passed": true,
+          "started_at": 1794086687.3691792,
+          "seconds": 22.859503269195557,
+          "status": {
+            "complete": true,
+            "step": 2,
+            "total": 2,
+            "seconds": 10.484896421432495,
+            "seconds_per_update": 4.945277690887451,
+            "peak_memory_bytes": 10167939584,
+            "technical": true
+          }
+        }
+      ],
+      "passed": true,
+      "started_at": 1794086687.2991822,
+      "seconds": 22.93041706085205
+    },
+    {
+      "recipe": "coding-a",
+      "arms": [
+        {
+          "name": "two-questions",
+          "command": [
+            "/opt/thinkingcap-venv/bin/python",
+            "-m",
+            "experiments.coding_abc.worker",
+            "--technical"
+          ],
+          "passed": false,
+          "started_at": 1794086710.2839367
+        }
+      ],
+      "passed": false,
+      "started_at": 1794086710.2303398,
+      "error": "Command exited 1; see /workspace/project/output/method-smoke/coding-a/two-questions/training.log",
+      "seconds": 3.775214433670044
+    },
+    {
+      "recipe": "coding-b",
+      "arms": [
+        {
+          "name": "two-questions",
+          "command": [
+            "/opt/thinkingcap-venv/bin/python",
+            "-m",
+            "experiments.coding_abc.worker",
+            "--technical"
+          ],
+          "passed": false,
+          "started_at": 1794086714.056293
+        }
+      ],
+      "passed": false,
+      "started_at": 1794086714.0057502,
+      "error": "Command exited 1; see /workspace/project/output/method-smoke/coding-b/two-questions/training.log",
+      "seconds": 3.872671604156494
+    },
+    {
+      "recipe": "coding-c",
+      "arms": [
+        {
+          "name": "two-questions",
+          "command": [
+            "/opt/thinkingcap-venv/bin/python",
+            "-m",
+            "experiments.coding_abc.worker",
+            "--technical"
+          ],
+          "passed": false,
+          "started_at": 1794086717.9282422
+        }
+      ],
+      "passed": false,
+      "started_at": 1794086717.878635,
+      "error": "Command exited 1; see /workspace/project/output/method-smoke/coding-c/two-questions/training.log",
+      "seconds": 3.821739912033081
+    },
+    {
+      "recipe": "shorterbetter",
+      "arms": [
+        {
+          "name": "eight-updates",
+          "command": [
+            "/opt/shorterbetter-venv/bin/python",
+            "-m",
+            "experiments.shorterbetter.train",
+            "--protocol",
+            "/workspace/project/output/method-smoke/workspaces/shorterbetter/data/smoke-shorterbetter/protocol.json",
+            "--arm",
+            "shorterbetter",
+            "--out",
+            "/workspace/project/output/method-smoke/shorterbetter/eight-updates/training",
+            "--seed",
+            "17",
+            "--execute",
+            "--technical-check",
+            "--readiness",
+            "/workspace/project/output/method-smoke/workspaces/shorterbetter/data/smoke-shorterbetter/readiness.json",
+            "--job-name",
+            "submission-smoke-b5r1-20261107t203938z"
+          ],
+          "passed": false,
+          "started_at": 1794086721.7483878
+        }
+      ],
+      "passed": false,
+      "started_at": 1794086721.7014334,
+      "error": "Command exited -6; see /workspace/project/output/method-smoke/shorterbetter/eight-updates/training.log",
+      "seconds": 41.844820976257324
+    }
+  ],
+  "seconds": 76.24741816520691
+}

@@ -1,5 +1,9 @@
 # GPU smoke checks
 
+The [other-method campaign](../studies/gpu-smoke/2026-11-07-other-methods/README.md)
+passed all 21 single-4090 training recipes, with separate bounded fixtures and retained
+failure/recovery evidence. Curriculum replay is excluded from that campaign.
+
 The [2026-11-07 run passed](../studies/gpu-smoke/2026-11-07/README.md) on RunPod
 2×A100, with verified backup/release and separate technical evidence.
 

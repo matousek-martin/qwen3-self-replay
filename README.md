@@ -78,6 +78,7 @@ The code retains **24 method entrypoints**, including unsuccessful experiments. 
 | [Reproduction](docs/REPRODUCING.md) / [method recipes](docs/METHODS.md) | Data, environments, training and required inputs |
 | [Evaluation contract](docs/EVALUATION.md) | Official settings, cached-baseline provenance and offline recomputation |
 | [GPU smoke evidence](studies/gpu-smoke/2026-11-07/README.md) | Fresh training/resume and both adapters tested on 2×A100; verified backup/release |
+| [Other-method GPU checks](studies/gpu-smoke/2026-11-07-other-methods/README.md) | All 21 single-4090 recipes passed bounded updates/checkpoint checks; failures retained |
 | [RunPod / Vast](docs/CLOUD.md) | Finite job planning, monitoring, backup and release |
 | [AI usage](AI_USAGE.md) | My research direction, substantial AI assistance and validation |
 
