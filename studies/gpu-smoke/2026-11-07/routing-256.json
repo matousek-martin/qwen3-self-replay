@@ -1,0 +1,7 @@
+{
+  "candidate": "checkpoint-256",
+  "metadata_verified": true,
+  "adapter_effect_observed": true,
+  "base_route_restored": true,
+  "scope": "Synthetic routing preflight only; not accuracy evaluation"
+}

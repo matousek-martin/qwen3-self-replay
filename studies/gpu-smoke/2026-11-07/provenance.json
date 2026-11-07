@@ -1,0 +1,116 @@
+{
+  "technical_only": true,
+  "source_commit": "ec6489b98295887c3488bd9c081372e4ab838330",
+  "source_archive_sha256": "90652dc337488353ff71fa949e90a69fb42fdc33aee55011bd6e4c4ce9e8d18a",
+  "provider": "runpod",
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "gpu_count": 2,
+  "backup_verified": true,
+  "archive_checksum_manifest_sha256": "2c2155e0b5c73dac6a64bdfad0ed3b1a14f0f3740836239ca13891b459a2e04f",
+  "archive_hashed_files": 539,
+  "combined_cap_usd": 6,
+  "charged_estimate_usd": 2.6271,
+  "attempts": [
+    {
+      "name": "replay-scaled-submission-smoke-20261107t144523z",
+      "provider": "vast",
+      "state": "create_absent_reconciled",
+      "created_at": 1794062739.5549166,
+      "released_at": 1794063115.8772397,
+      "rate": 2.0244444444444443,
+      "charged_estimate_usd": 0,
+      "backup_verified": null
+    },
+    {
+      "name": "replay-scaled-smoke-20261107t145306z",
+      "provider": "vast",
+      "state": "create_absent_reconciled",
+      "created_at": 1794063193.2652981,
+      "released_at": 1794063524.9060025,
+      "rate": 2.0244444444444443,
+      "charged_estimate_usd": 0,
+      "backup_verified": null
+    },
+    {
+      "name": "replay-scaled-smoke-20261107t145917z",
+      "provider": "runpod",
+      "state": "failed",
+      "created_at": 1794063562.3156838,
+      "released_at": 1794063622.447119,
+      "rate": 3.58,
+      "charged_estimate_usd": 0.0777,
+      "backup_verified": false
+    },
+    {
+      "name": "replay-scaled-smoke-20261107t150551z",
+      "provider": "runpod",
+      "state": "complete",
+      "created_at": 1794063956.0015724,
+      "released_at": 1794065929.7637773,
+      "rate": 3.58,
+      "charged_estimate_usd": 2.5494,
+      "backup_verified": true
+    }
+  ],
+  "files": {
+    "report.json": {
+      "sha256": "6776734bf8322beb33dd046f0550d4d0c10facec0215252860fec2f3c174c358",
+      "worker_output_path": "submission-smoke/report.json"
+    },
+    "resume-parity.json": {
+      "sha256": "3404bfdab8c47dcf6e9838300fe5fbbc9c3294e25ae325c0b7aabe5c7a5a0f46",
+      "worker_output_path": "submission-smoke/resume-parity.json"
+    },
+    "maximum-length-check.json": {
+      "sha256": "bfc8a455e0bca892f331ba2093ee51c582a674f69f7728b13a16e1026b94f3b5",
+      "worker_output_path": "submission-smoke/reference/maximum-length-check.json"
+    },
+    "full-cap-completion.json": {
+      "sha256": "ebbfa079c4f803e2ef28e09f80d82c2806ffe4b23aa198366e74b55f53be3313",
+      "worker_output_path": "submission-smoke/real-data-training/completion.json"
+    },
+    "full-cap-progress.json": {
+      "sha256": "34b0f07ea71a7117249c32050f2d3a19ae7cf6a7a30dd5d02a16faf9da7576cf",
+      "worker_output_path": "submission-smoke/real-data-training/progress.json"
+    },
+    "full-cap-plan.json": {
+      "sha256": "0a351034886394683a7bfdd6cea05521c89c8b476fb88a5fbd5f90311c60b923",
+      "worker_output_path": "submission-smoke/tiny-data/plan.json"
+    },
+    "gpu.txt": {
+      "sha256": "15be4777f89e8de4f631fd145a98de501756623c1eed76de056ca2cc1c9d6f02",
+      "worker_output_path": "gpu.txt"
+    },
+    "packages.txt": {
+      "sha256": "74ef34052a4e6c6c6cf2a5cbbed3a08b2396e82f22154268cb04b8b9d1515e1b",
+      "worker_output_path": "packages.txt"
+    },
+    "vllm-compatibility.json": {
+      "sha256": "00808b44f561e9488ec0b786c0358f438f539a4a76cf342bd3ebeb6396ae739d",
+      "worker_output_path": "submission-smoke/vllm-compatibility.json"
+    },
+    "routing-256.json": {
+      "sha256": "8280977add4225d7119e53593d9db766e895766bd643eff561c98f626ac1a859",
+      "worker_output_path": "submission-smoke/routing-checkpoint-256/result.json"
+    },
+    "evaluation-256.json": {
+      "sha256": "f4627361d524ec7e6cf1ba81cb12c06cffe46a725ef2ca5c4871acc63c205712",
+      "worker_output_path": "submission-smoke/evaluation-checkpoint-256/results.json"
+    },
+    "routing-850.json": {
+      "sha256": "31a90417528b56d1164975a5e82d5d4b89601be59b28cc2319988e42556a5989",
+      "worker_output_path": "submission-smoke/routing-checkpoint-850/result.json"
+    },
+    "evaluation-850.json": {
+      "sha256": "7c023cec59a3cda51d819d1d8db6929be7505a8628003c5bd8c4a2a6da72de76",
+      "worker_output_path": "submission-smoke/evaluation-checkpoint-850/results.json"
+    }
+  },
+  "limitations": [
+    "Technical execution checks, not efficacy validation or a full benchmark rerun.",
+    "Vast returned an unavailable offer; no successful Vast GPU execution in this smoke campaign.",
+    "Full-cap data/calibration cohort is a four-question technical subset, not the scientific training plan.",
+    "Only the main self-replay recipe and released adapters were exercised on GPU.",
+    "The official evaluator used its rlimit fallback; namespace isolation was not validated."
+  ]
+}

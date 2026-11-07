@@ -1,0 +1,207 @@
+{
+  "model": "Qwen/Qwen3-0.6B",
+  "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "adapter": "/workspace/project/data/released-adapters/checkpoint-256",
+  "benchmarks": [
+    "mbpp",
+    "bfcl",
+    "svamp",
+    "ifeval"
+  ],
+  "samples": 8,
+  "seed": 9001,
+  "sampling": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20
+  },
+  "max_tokens": {
+    "bfcl_irrelevance": 4096,
+    "bfcl_multiple": 4096,
+    "bfcl_simple_python": 4096,
+    "ifeval": 4096,
+    "mbpp": 8192,
+    "svamp": 4096
+  },
+  "max_model_len": 12288,
+  "sandbox": {
+    "mode": "rlimit",
+    "why": "auto_downgrade"
+  },
+  "revisions": {
+    "bfcl": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+    "evalplus": "26d6d00bb1fd0fa37f39c99d5290da67891d1c5e",
+    "svamp": "78e727689e1c1bebfc4be39c446898e8e10b0518",
+    "ifeval": "4700efb9afa54286b0e04473ba80a13e8461e25f",
+    "mbpp": "v0.2.0"
+  },
+  "cohort_sha256": "336937edf5263e9cf7e4a23b607731b6e31970f3e1df44fdda60c9e5c3354370",
+  "cohort_total": 30,
+  "smoke": true,
+  "selection": "smoke",
+  "results": {
+    "bfcl_irrelevance": {
+      "n": 40,
+      "prompts": 5,
+      "ungraded": 0,
+      "accuracy": 0.425,
+      "truncation_rate": 0.0,
+      "parse_failure_rate": 0.0,
+      "mean_output_tokens": 135.2,
+      "mean_reasoning_tokens": 111.55,
+      "total_output_tokens": 5408,
+      "samples": 8,
+      "confidence": {
+        "method": "prompt_cluster_percentile",
+        "resamples": 2000,
+        "seed": 42,
+        "prompts": 5,
+        "accuracy": [
+          0.025,
+          0.825
+        ],
+        "mean_output_tokens": [
+          123.00750000000001,
+          148.075
+        ]
+      },
+      "grading_errors": {}
+    },
+    "bfcl_multiple": {
+      "n": 40,
+      "prompts": 5,
+      "ungraded": 0,
+      "accuracy": 1.0,
+      "truncation_rate": 0.0,
+      "parse_failure_rate": 0.0,
+      "mean_output_tokens": 142.75,
+      "mean_reasoning_tokens": 122.15,
+      "total_output_tokens": 5710,
+      "samples": 8,
+      "confidence": {
+        "method": "prompt_cluster_percentile",
+        "resamples": 2000,
+        "seed": 42,
+        "prompts": 5,
+        "accuracy": [
+          1.0,
+          1.0
+        ],
+        "mean_output_tokens": [
+          130.05,
+          155.45
+        ]
+      },
+      "grading_errors": {}
+    },
+    "bfcl_simple_python": {
+      "n": 40,
+      "prompts": 5,
+      "ungraded": 0,
+      "accuracy": 0.8,
+      "truncation_rate": 0.0,
+      "parse_failure_rate": 0.0,
+      "mean_output_tokens": 143.1,
+      "mean_reasoning_tokens": 122.3,
+      "total_output_tokens": 5724,
+      "samples": 8,
+      "confidence": {
+        "method": "prompt_cluster_percentile",
+        "resamples": 2000,
+        "seed": 42,
+        "prompts": 5,
+        "accuracy": [
+          0.4,
+          1.0
+        ],
+        "mean_output_tokens": [
+          113.2,
+          179.075
+        ]
+      },
+      "grading_errors": {}
+    },
+    "ifeval": {
+      "n": 40,
+      "prompts": 5,
+      "ungraded": 0,
+      "accuracy": 0.625,
+      "truncation_rate": 0.05,
+      "parse_failure_rate": 0.0,
+      "mean_output_tokens": 573.55,
+      "mean_reasoning_tokens": 522.65,
+      "total_output_tokens": 22942,
+      "samples": 8,
+      "confidence": {
+        "method": "prompt_cluster_percentile",
+        "resamples": 2000,
+        "seed": 42,
+        "prompts": 5,
+        "accuracy": [
+          0.275,
+          0.95
+        ],
+        "mean_output_tokens": [
+          222.45,
+          1235.8
+        ]
+      },
+      "grading_errors": {}
+    },
+    "mbpp": {
+      "n": 40,
+      "prompts": 5,
+      "ungraded": 0,
+      "accuracy": 0.45,
+      "truncation_rate": 0.025,
+      "parse_failure_rate": 0.025,
+      "mean_output_tokens": 1251.75,
+      "mean_reasoning_tokens": 1219.6,
+      "total_output_tokens": 50070,
+      "samples": 8,
+      "confidence": {
+        "method": "prompt_cluster_percentile",
+        "resamples": 2000,
+        "seed": 42,
+        "prompts": 5,
+        "accuracy": [
+          0.15,
+          0.775
+        ],
+        "mean_output_tokens": [
+          431.15,
+          2585.35
+        ]
+      },
+      "grading_errors": {}
+    },
+    "svamp": {
+      "n": 40,
+      "prompts": 5,
+      "ungraded": 0,
+      "accuracy": 1.0,
+      "truncation_rate": 0.0,
+      "parse_failure_rate": 0.0,
+      "mean_output_tokens": 304.325,
+      "mean_reasoning_tokens": 296.325,
+      "total_output_tokens": 12173,
+      "samples": 8,
+      "confidence": {
+        "method": "prompt_cluster_percentile",
+        "resamples": 2000,
+        "seed": 42,
+        "prompts": 5,
+        "accuracy": [
+          1.0,
+          1.0
+        ],
+        "mean_output_tokens": [
+          275.325,
+          340.7
+        ]
+      },
+      "grading_errors": {}
+    }
+  },
+  "failed_benchmarks": {}
+}

@@ -77,6 +77,7 @@ The code retains **24 method entrypoints**, including unsuccessful experiments. 
 | [Experiment findings](studies/README.md) | Main trajectory, negative results and protocol distinctions |
 | [Reproduction](docs/REPRODUCING.md) / [method recipes](docs/METHODS.md) | Data, environments, training and required inputs |
 | [Evaluation contract](docs/EVALUATION.md) | Official settings, cached-baseline provenance and offline recomputation |
+| [GPU smoke evidence](studies/gpu-smoke/2026-11-07/README.md) | Fresh training/resume and both adapters tested on 2×A100; verified backup/release |
 | [RunPod / Vast](docs/CLOUD.md) | Finite job planning, monitoring, backup and release |
 | [AI usage](AI_USAGE.md) | My research direction, substantial AI assistance and validation |
 

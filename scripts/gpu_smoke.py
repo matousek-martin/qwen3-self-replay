@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Exercise the public training and evaluation interfaces on a leased GPU worker.
 
-Technical checks only: four synthetic training questions and the official smoke
-cohort. This script never allocates a GPU and never runs a full baseline.
+Technical checks only: synthetic training/resume, four frozen training examples,
+and the official evaluation smoke cohort. This script never allocates a GPU and never runs a full baseline.
 """
 
 import argparse

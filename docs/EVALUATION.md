@@ -7,7 +7,7 @@ The imported evaluator commit is `6f68418`; at the submission preparation audit,
 ## Disclosed changes
 
 1. **MBPP oracle memory:** the local worker frees cached reference outputs between tasks, reusing them across the current task's samples. This prevents the 4 GB process limit from accumulating huge previous-task outputs. The patch is in provenance/mbpp-memory.patch, with a regression test. It is not a new correctness criterion.
-2. **vLLM 0.11.0 LoRA routing metadata:** the scientific runtime uses the preserved hash-pinned compatibility patch, carrying actual request adapter identity into output metadata. The evaluator's routing assertion remains. Historical GPU preflights tested base/adapter/base routing; the public refactor has not received a new paid GPU preflight.
+2. **vLLM 0.11.0 LoRA routing metadata:** the scientific runtime uses the preserved hash-pinned compatibility patch, carrying actual request adapter identity into output metadata. The evaluator's routing assertion remains. Historical GPU preflights tested base/adapter/base routing. The [2026-11-07 public GPU smoke suite](../studies/gpu-smoke/2026-11-07/README.md) freshly verified this routing for both released adapters and ran 30×8 official smoke evaluations on A100; it is not a fresh full benchmark or RTX4090 validation.
 3. **Baseline cache:** complete SHA-verified baseline records are reused for matching base revision, cohort, decoding, grader and runtime contract on the same GPU model. Physical GPU identity is retained as provenance, not used to invalidate the cache. A required cache miss fails without silently buying new inference.
 
 ## Offline reproduction

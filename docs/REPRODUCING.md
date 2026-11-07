@@ -26,7 +26,7 @@ The default main recipe processes up to 256 questions with the original 2×A100 
 
 To reproduce the longer trajectory, use the same immutable inputs and complete state with an explicit later stop boundary, for example append `-- --resume /absolute/group-000256 --stop-after 850`. An adapter-only inference download cannot provide optimizer/replay/RNG resume. The complete states remain research archives; do not claim exact continuation from only a safetensors adapter.
 
-The source overlay preserves the main historical numerical code. New orchestration/source locks are labeled as refactor-time records, not rewritten historical evidence. Multi-GPU parity tests use tiny CPU tensors; historical A100 preflight evidence is separate from fresh GPU validation.
+The source overlay preserves the main historical numerical code. New orchestration/source locks are labeled as refactor-time records, not rewritten historical evidence. Local numerical tests use tiny CPU tensors. The [2026-11-07 GPU smoke suite](../studies/gpu-smoke/2026-11-07/README.md) additionally verified bitwise complete-state resume on two A100s and a four-question normal training path at the full token cap; this fresh evidence is separate from historical runs.
 
 ## Other methods
 

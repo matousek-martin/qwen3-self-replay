@@ -1,5 +1,8 @@
 # GPU smoke checks
 
+The [2026-11-07 run passed](../studies/gpu-smoke/2026-11-07/README.md) on RunPod
+2×A100, with verified backup/release and separate technical evidence.
+
 `scripts/gpu_smoke.py` tests the public submission interfaces on an already leased
 2×A100-SXM4-80GB worker. It does not allocate hardware or authorize spending.
 
@@ -39,8 +42,8 @@ PYTHONPATH=/path/to/checkout/src python /path/to/checkout/scripts/gpu_smoke.py \
 
 The adapter directory contains `checkpoint-256/` and `checkpoint-850/`. The cloud
 entrypoint `experiments/run_submission_smoke.sh` expects these inputs and the source
-checkout beneath the staged `data/` directory. It deliberately invokes only the
-technical pilot, never the 256-question scientific training job.
+checkout beneath the staged `data/` directory. It runs only the bounded technical
+checks above, never the 256-question scientific training job.
 
 `report.json` records each subprocess, duration and outcome; the original evaluator
 and resume checker write their own evidence. A successful worker run is only part

@@ -1,0 +1,8 @@
+{
+  "package": "vllm",
+  "version": "0.11.0",
+  "source": "/opt/thinkingcap-venv/lib/python3.11/site-packages/vllm/v1/engine/output_processor.py",
+  "original_sha256": "1999e687a183ce4b7b039b4c5357b73f0ad0afd8a5b52383ef1f7d1d5613263e",
+  "patched_sha256": "5fbb95d32f478465df340b867d5bd59f0bd3f3fc0a20603534e82618d8297e3a",
+  "scope": "Propagate accepted request LoRA metadata into RequestOutput; generation and evaluator checks unchanged"
+}

@@ -1,0 +1,229 @@
+{
+  "technical_only": true,
+  "passed": true,
+  "phases": [
+    {
+      "name": "training-command",
+      "command": [
+        "/opt/thinkingcap-venv/bin/python",
+        "-m",
+        "self_replay.cli",
+        "train",
+        "self-replay",
+        "--workspace",
+        "/workspace/project/output/submission-smoke/runtime",
+        "--dry-run"
+      ],
+      "started_at_unix": 1794064180.3833137,
+      "passed": true,
+      "seconds": 5.192497968673706
+    },
+    {
+      "name": "four-group-training",
+      "command": [
+        "/opt/thinkingcap-venv/bin/python",
+        "-m",
+        "self_replay.cli",
+        "train",
+        "self-replay",
+        "--workspace",
+        "/workspace/project/output/submission-smoke/runtime",
+        "--out",
+        "/workspace/project/output/submission-smoke/reference",
+        "--",
+        "--pilot"
+      ],
+      "started_at_unix": 1794064185.5954025,
+      "passed": true,
+      "seconds": 217.63317894935608
+    },
+    {
+      "name": "complete-state-resume",
+      "command": [
+        "/opt/thinkingcap-venv/bin/python",
+        "-m",
+        "self_replay.cli",
+        "train",
+        "self-replay",
+        "--workspace",
+        "/workspace/project/output/submission-smoke/runtime",
+        "--out",
+        "/workspace/project/output/submission-smoke/resumed",
+        "--",
+        "--pilot",
+        "--resume",
+        "/workspace/project/output/submission-smoke/reference/checkpoints/group-000002"
+      ],
+      "started_at_unix": 1794064403.2446105,
+      "passed": true,
+      "seconds": 98.29103469848633
+    },
+    {
+      "name": "bitwise-resume-parity",
+      "command": [
+        "/opt/thinkingcap-venv/bin/python",
+        "-m",
+        "experiments.replay_scaled.check",
+        "--reference",
+        "/workspace/project/output/submission-smoke/reference",
+        "--resumed",
+        "/workspace/project/output/submission-smoke/resumed",
+        "--world",
+        "2",
+        "--out",
+        "/workspace/project/output/submission-smoke/resume-parity.json"
+      ],
+      "started_at_unix": 1794064501.559938,
+      "passed": true,
+      "seconds": 2.865630865097046
+    },
+    {
+      "name": "full-cap-real-data-training",
+      "command": [
+        "/opt/thinkingcap-venv/bin/python",
+        "-m",
+        "self_replay.cli",
+        "train",
+        "self-replay",
+        "--workspace",
+        "/workspace/project/output/submission-smoke/runtime",
+        "--data",
+        "/workspace/project/output/submission-smoke/tiny-data",
+        "--out",
+        "/workspace/project/output/submission-smoke/real-data-training",
+        "--",
+        "--stop-after",
+        "4"
+      ],
+      "started_at_unix": 1794064504.6312273,
+      "passed": true,
+      "seconds": 1013.3582673072815
+    },
+    {
+      "name": "vllm-routing-compatibility",
+      "command": [
+        "/opt/thinkingcap-venv/bin/python",
+        "-m",
+        "experiments.vllm_compat",
+        "--out",
+        "/workspace/project/output/submission-smoke/vllm-compatibility.json"
+      ],
+      "started_at_unix": 1794065518.3694708,
+      "passed": true,
+      "seconds": 0.3473379611968994
+    },
+    {
+      "name": "routing-checkpoint-256",
+      "command": [
+        "/opt/thinkingcap-venv/bin/python",
+        "-m",
+        "experiments.vllm_lora_smoke",
+        "--config",
+        "/workspace/project/output/submission-smoke/routing-checkpoint-256/config.json",
+        "--out",
+        "/workspace/project/output/submission-smoke/routing-checkpoint-256/result.json"
+      ],
+      "started_at_unix": 1794065519.1600149,
+      "passed": true,
+      "seconds": 44.30481195449829
+    },
+    {
+      "name": "official-smoke-checkpoint-256",
+      "command": [
+        "/opt/thinkingcap-venv/bin/python",
+        "-m",
+        "self_replay.cli",
+        "evaluate",
+        "--",
+        "--smoke",
+        "--questions",
+        "/workspace/project/data/official-questions",
+        "--adapter",
+        "/workspace/project/data/released-adapters/checkpoint-256",
+        "--out",
+        "/workspace/project/output/submission-smoke/evaluation-checkpoint-256",
+        "--workers",
+        "2"
+      ],
+      "started_at_unix": 1794065563.4917815,
+      "passed": true,
+      "seconds": 180.92823219299316
+    },
+    {
+      "name": "routing-checkpoint-850",
+      "command": [
+        "/opt/thinkingcap-venv/bin/python",
+        "-m",
+        "experiments.vllm_lora_smoke",
+        "--config",
+        "/workspace/project/output/submission-smoke/routing-checkpoint-850/config.json",
+        "--out",
+        "/workspace/project/output/submission-smoke/routing-checkpoint-850/result.json"
+      ],
+      "started_at_unix": 1794065744.8854113,
+      "passed": true,
+      "seconds": 22.595857620239258
+    },
+    {
+      "name": "official-smoke-checkpoint-850",
+      "command": [
+        "/opt/thinkingcap-venv/bin/python",
+        "-m",
+        "self_replay.cli",
+        "evaluate",
+        "--",
+        "--smoke",
+        "--questions",
+        "/workspace/project/data/official-questions",
+        "--adapter",
+        "/workspace/project/data/released-adapters/checkpoint-850",
+        "--out",
+        "/workspace/project/output/submission-smoke/evaluation-checkpoint-850",
+        "--workers",
+        "2"
+      ],
+      "started_at_unix": 1794065767.5218477,
+      "passed": true,
+      "seconds": 109.87565422058105
+    }
+  ],
+  "full_baseline_generated": false,
+  "started_at_unix": 1794064165.7462585,
+  "current_phase": "complete",
+  "real_data_probe": {
+    "technical_only": true,
+    "training_questions": 4,
+    "development_questions": 4,
+    "generation_cap": 2048,
+    "calibration_questions_per_domain": 1,
+    "optimizer_updates": 3,
+    "plan_sha256": "0a351034886394683a7bfdd6cea05521c89c8b476fb88a5fbd5f90311c60b923"
+  },
+  "evaluations": {
+    "checkpoint-256": {
+      "passed": true,
+      "questions": 30,
+      "responses": 240,
+      "sandbox": {
+        "mode": "rlimit",
+        "why": "auto_downgrade"
+      },
+      "cohort_sha256": "336937edf5263e9cf7e4a23b607731b6e31970f3e1df44fdda60c9e5c3354370",
+      "results_sha256": "f4627361d524ec7e6cf1ba81cb12c06cffe46a725ef2ca5c4871acc63c205712",
+      "technical_only": true
+    },
+    "checkpoint-850": {
+      "passed": true,
+      "questions": 30,
+      "responses": 240,
+      "sandbox": {
+        "mode": "rlimit",
+        "why": "auto_downgrade"
+      },
+      "cohort_sha256": "336937edf5263e9cf7e4a23b607731b6e31970f3e1df44fdda60c9e5c3354370",
+      "results_sha256": "7c023cec59a3cda51d819d1d8db6929be7505a8628003c5bd8c4a2a6da72de76",
+      "technical_only": true
+    }
+  },
+  "seconds": 1711.9515945911407
+}
