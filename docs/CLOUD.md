@@ -17,6 +17,10 @@ Planning writes an **unapproved** contract and never contacts the provider. Afte
 
 The replay examples use `experiments/run_public_replay.sh`: fresh numerical/resume preflight followed by training to question 256. Stage the frozen data under `WORKSPACE/data/replay-scaled` before launch; the public controller uploads that workspace data directory. A 10 USD example cap is illustrative and may stop well before 256. Host requirements include `uv`, `rsync`, OpenSSH and systemd.
 
+The controller checks that `uv` is executable before allocation. It searches PATH
+and the current account's `.local/bin/uv`; set `SELF_REPLAY_UV` to an absolute path
+for another installation, especially in a systemd environment file.
+
 ## Independent guard
 
 Install the example systemd service/timer from configs/systemd with this checkout's Python executable and the exact workspace path. The timer must be active before launch. Controller and guard must use the same workspace/ledger. The examples are templates, not enabled services; this release preparation did not install or start them.

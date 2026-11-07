@@ -34,6 +34,20 @@ def api(path, method='GET', payload=None):
         return vastai.pod_api(path, method, payload)
     return runpod_api(path, method, payload)
 
+
+def resolve_uv():
+    """Resolve the controller binary before renting, including systemd's small PATH."""
+    explicit = os.environ.get('SELF_REPLAY_UV')
+    if explicit:
+        candidates = [Path(explicit)]
+    else:
+        found = shutil.which('uv')
+        candidates = ([Path(found)] if found else []) + [Path.home() / '.local/bin/uv']
+    for candidate in candidates:
+        if candidate.is_absolute() and candidate.is_file() and os.access(candidate, os.X_OK):
+            return candidate.resolve()
+    raise RuntimeError('Executable uv is required before allocation; set SELF_REPLAY_UV to its absolute path')
+
 STATE = ROOT / 'lab/experiments/cloud'
 CEILING = 0.0
 USABLE = CEILING  # Public reproductions require a fresh finite authorization.
@@ -1037,6 +1051,7 @@ def launch_command(entry, seconds, directory='/workspace/project', completion_dr
 def run(args):
     if not (ROOT / args.entry).is_file():
         raise RuntimeError('Entry script missing')
+    uv_binary = resolve_uv()
     pilot_input = ('lab/experiments/data/coding-curriculum/summary.json'
                    if getattr(args, 'hardware_scope', None) == 'coding-curriculum-256-v1'
                    else 'lab/experiments/data/coding-abc/plan.json'
@@ -1120,7 +1135,7 @@ def run(args):
         write(source / 'manifest.json', {str(p.relative_to(source)): hashlib.sha256(p.read_bytes()).hexdigest()
                                        for p in sorted(source.rglob('*')) if p.is_file()})
         sync(pod, source / 'requirements.lock', '/workspace/project/requirements.lock', upload=True)
-        sync(pod, Path(shutil.which('uv') or 'uv').resolve(), '/workspace/project/uv', upload=True, timeout=300)
+        sync(pod, uv_binary, '/workspace/project/uv', upload=True, timeout=300)
         if job.get('provider') == 'vast':
             # CUDA base images lack RunPod's Python installation. Populate uv's
             # interpreter cache before the worker enables offline dependencies.

@@ -37,9 +37,10 @@ def launch(workspace, spec_path, approval_path):
         raise ValueError("Job already registered; inspect/watch it instead of relaunching")
     if subprocess.run(["systemctl", "is-active", "--quiet", spec.guard_unit]).returncode:
         raise RuntimeError("Independent guard must be active before launch")
+    cloud = canonical(workspace)
+    cloud.resolve_uv()
     write_json(auth_path, approval)
     os.environ["SELF_REPLAY_GUARD_UNIT"] = spec.guard_unit
-    cloud = canonical(workspace)
     args = SimpleNamespace(
         name=spec.name,
         provider=spec.provider,

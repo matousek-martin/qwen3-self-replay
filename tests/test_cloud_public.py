@@ -142,6 +142,38 @@ def test_public_replay_entry_is_present_and_source_locked(prepared):
     )
 
 
+def test_uv_is_resolved_before_renting_even_with_systemd_path(tmp_path):
+    workspace = initialize(tmp_path / "workspace")
+    script = r"""
+import os
+from pathlib import Path
+from unittest.mock import patch
+from self_replay.cloud.controller import canonical
+cloud = canonical(Path.cwd())
+fake_home = Path.cwd() / 'test-account'
+binary = fake_home / '.local/bin/uv'
+binary.parent.mkdir(parents=True)
+binary.write_text('#!/bin/sh\nexit 0\n');binary.chmod(0o700)
+with patch.dict(os.environ, {'SELF_REPLAY_UV': ''}), patch.object(cloud.shutil, 'which', return_value=None), patch.object(cloud.Path, 'home', return_value=fake_home):
+    assert cloud.resolve_uv() == binary
+    binary.unlink()
+    try:
+        cloud.resolve_uv()
+    except RuntimeError as e:
+        assert 'before allocation' in str(e)
+    else:
+        raise AssertionError('A nonexistent uv must fail before rental')
+"""
+    result = subprocess.run(
+        [sys.executable, "-c", script],
+        cwd=workspace,
+        env=environment(workspace),
+        capture_output=True,
+        text=True,
+    )
+    assert result.returncode == 0, result.stderr
+
+
 @pytest.mark.parametrize("provider", ["runpod", "vast"])
 def test_real_controller_reserves_and_voids_without_capacity(tmp_path, provider):
     workspace = initialize(tmp_path / "workspace")
