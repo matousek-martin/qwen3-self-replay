@@ -26,13 +26,15 @@ def main():
     from transformers import AutoTokenizer,AutoModelForCausalLM
     from peft import PeftModel
     from experiments.rl_training.train import token_logprobs
-    parser=argparse.ArgumentParser();parser.add_argument('--resume',type=Path);args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--resume',type=Path);parser.add_argument('--technical',action='store_true');args=parser.parse_args()
     cfg=read(DATA/'plan.json');train=rows(DATA/'train.jsonl');dev=rows(DATA/'development.jsonl')
     check_contract(cfg,train,dev)
+    if args.technical != (cfg.get('technical_only') is True):raise ValueError('Technical mode and data plan differ')
     for file,h in cfg['files_sha256'].items():
         if sha(DATA/file)!=h:raise RuntimeError('Input hash changed: '+file)
     lease=read('worker-lease.json');verify_worker([torch.cuda.get_device_name(i) for i in range(torch.cuda.device_count())],lease)
     if cfg['scope']!=SCOPE:raise RuntimeError('Wrong scope')
+    if args.technical and lease.get('hardware_scope')!='submission-method-smoke-v1':raise RuntimeError('Technical run requires its own smoke lease')
     OUT.mkdir(parents=True,exist_ok=True)
     if (OUT/'progress.json').exists() and not args.resume:raise RuntimeError('Existing output requires explicit complete-state resume')
     torch.manual_seed(17);np.random.seed(17);random.seed(17)
@@ -104,12 +106,12 @@ def main():
         dest.write_text(''.join(json.dumps({k:v for k,v in r.items() if k!='ids'})+'\n' for r in records))
         write(dest.with_suffix('.json'),point)
     def validate():
-        live('validation',validation_completed=0,validation_total=128);records=[]
+        live('validation',validation_completed=0,validation_total=len(dev)*2);records=[]
         requests=[(q,s,int(hashlib.sha256(f"validation:{q['id']}:{s}:9127".encode()).hexdigest()[:8],16)) for q in dev for s in range(2)]
         for indices in batches([len(prompt(q)) for q,s,seed in requests],16,65536,2048):
             if not permitted():return False
             records+=generate([requests[i] for i in indices],2048)
-            live('validation',validation_completed=len(records),validation_total=128)
+            live('validation',validation_completed=len(records),validation_total=len(dev)*2)
         publish(records);return True
     try:
         live('technical_check')

@@ -21,6 +21,9 @@ def allocation_spec(args):
     return dict(scope=SCOPE,gpu=GPU,count=1,max_gpu_rate=.6)
 
 def verify_worker(names,lease):
+    if lease.get('hardware_scope')=='submission-method-smoke-v1':
+        from experiments.submission_smoke import verify_worker as smoke_worker
+        return smoke_worker(names,lease)
     if (names!=[GPU] or lease.get('gpu')!=GPU or lease.get('gpu_count')!=1
         or lease.get('hardware_scope')!=SCOPE or not lease.get('job_name','').startswith(PREFIX)):
         raise RuntimeError('OpenCoder requires exactly one RTX4090 under named lease')

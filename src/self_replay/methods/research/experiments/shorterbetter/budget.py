@@ -14,6 +14,8 @@ def evaluation_account_limit(state, name, job):
     fallback = job['max_cost_usd']
     try:
         auth = ticket(state, name, job)
+        if auth and name.startswith('submission-smoke-'):
+            return auth['account_spending_limit_usd']
         if auth and name.startswith('coding-curriculum-256-'):
             return auth['account_spending_limit_usd']
         if auth and name.startswith(('coding-frontier-','coding-abc-')):
@@ -55,6 +57,9 @@ def evaluation_account_limit(state, name, job):
 
 
 def ticket(state, name, job):
+    if name.startswith('submission-smoke-'):
+        from experiments.submission_smoke import ticket as smoke_ticket
+        return smoke_ticket(state, name, job)
     from experiments.public_policy import public_ticket
     public = public_ticket(state, name, job)
     if public is not None:

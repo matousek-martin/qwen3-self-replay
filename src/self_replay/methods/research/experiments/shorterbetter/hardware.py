@@ -22,6 +22,9 @@ def allocation_spec(args):
         a = args.public_authorization
         return dict(scope=args.hardware_scope, gpu=args.gpu, count=args.gpu_count, max_gpu_rate=a['max_gpu_rate'])
     scope = getattr(args, 'hardware_scope', None)
+    if scope == 'submission-method-smoke-v1':
+        from experiments.submission_smoke import allocation_spec as smoke_spec
+        return smoke_spec(args)
     if scope == 'coding-curriculum-256-v1':
         from experiments.coding_curriculum.budget import allocation_spec as curriculum_spec
         return curriculum_spec(args)
@@ -65,6 +68,9 @@ def allocation_spec(args):
 
 
 def verify_worker(names, lease):
+    if lease.get('hardware_scope') == 'submission-method-smoke-v1':
+        from experiments.submission_smoke import verify_worker as smoke_worker
+        return smoke_worker(names, lease)
     if lease.get('hardware_scope') == 'coding-curriculum-256-v1':
         from experiments.coding_curriculum.budget import verify_worker as curriculum_worker
         return curriculum_worker(names, lease)
