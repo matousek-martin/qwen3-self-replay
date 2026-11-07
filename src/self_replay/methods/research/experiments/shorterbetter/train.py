@@ -13,7 +13,7 @@ import signal
 from pathlib import Path
 import time
 
-from .config import training_arguments, assert_launch_ready, load_protocol
+from .config import training_arguments, assert_launch_ready, load_protocol, rng_devices
 from .objective import grouped_rewards
 from .prepare import sha
 from .upstream import load_verifier
@@ -417,7 +417,7 @@ def main():
                 self.current_gradient_accumulation_steps = self.args.gradient_accumulation_steps
             py_state, np_state = random.getstate(), np.random.get_state()
             try:
-                with torch.random.fork_rng(devices=[self.accelerator.device.index] if self.accelerator.device.type == 'cuda' else []):
+                with torch.random.fork_rng(devices=rng_devices(self.accelerator.device, torch.cuda.current_device)):
                     return super().evaluate(*args, **kwargs)
             finally:
                 random.setstate(py_state)
@@ -467,7 +467,7 @@ def main():
     if (not args.resume or protocol.get('execution', {}).get('resume_diagnostic')
             or protocol.get('execution', {}).get('full_run_continuation')):
         from .gpu_check import check, check_sampling
-        with torch.random.fork_rng(devices=[trainer.accelerator.device.index]):
+        with torch.random.fork_rng(devices=rng_devices(trainer.accelerator.device, torch.cuda.current_device)):
             check(trainer, rank_out)
             check_sampling(trainer, rank_out)
     if args.baseline_check:

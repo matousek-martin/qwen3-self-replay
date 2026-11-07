@@ -56,6 +56,22 @@ retaining the native 40,960-token backward check. OpenCoder tests its longest
 64 scheduled examples. ShorterBetter uses fresh data/reward checks and its separate
 pinned environment. These engineering fixtures do not reproduce historical scores.
 
+On a leased worker, the bounded runner accepts a SHA-verified input directory and
+suite file:
+
+```bash
+PYTHONPATH=src python scripts/gpu_method_smoke.py \
+  --suite /path/to/inputs/suite.json --data /path/to/inputs \
+  --lease /path/to/worker-lease.json --out /path/to/fresh-results
+```
+
+Each suite declares `files` (relative paths and SHA-256 hashes) and independent
+`cases`/`arms` with native commands, update limits and result checks. Optional
+`base_model_cache` stages the pinned Qwen3-0.6B snapshot from those verified inputs;
+`offline_models: true` on an arm disables Hub requests for training and reload.
+Teacher-dependent arms also need their original teacher files cached before using
+offline mode. A missing file is an error, never a reason to substitute a model.
+
 The pass criteria are actual finite updates, saved/reloaded adapters, method-specific
 replay/cache/grading activity and retained source/data/environment hashes. Exact
 resume is claimed only where complete optimizer/RNG state is saved and compared;

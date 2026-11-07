@@ -8,6 +8,7 @@ export PYTHONPATH="$SELF_REPLAY_REPO/src${PYTHONPATH:+:$PYTHONPATH}"
 if python -c 'import json; raise SystemExit(not json.load(open("/workspace/project/data/smoke/suite.json")).get("needs_shorterbetter", False))'; then
   ./uv venv --python /opt/thinkingcap-venv/bin/python /opt/shorterbetter-venv
   ./uv pip sync --python /opt/shorterbetter-venv/bin/python "$SELF_REPLAY_REPO/requirements/shorterbetter.lock"
+  ./uv pip freeze --python /opt/shorterbetter-venv/bin/python > output/shorterbetter-packages.txt
 fi
 python "$SELF_REPLAY_REPO/scripts/gpu_method_smoke.py" \
   --suite /workspace/project/data/smoke/suite.json \

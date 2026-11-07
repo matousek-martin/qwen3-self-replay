@@ -571,3 +571,9 @@ xxhash==4.0.2
     # via datasets
 yarl==1.25.1
     # via aiohttp
+
+# Coding sandbox runtime: match the verified historical coding workers.
+# Pytest is imported by the isolated grader, not only by repository tests.
+iniconfig==2.3.1
+pluggy==1.6.0
+pytest==8.3.5

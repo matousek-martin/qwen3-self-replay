@@ -136,3 +136,10 @@ def assert_launch_ready(protocol, evidence):
 
 def load_protocol(path):
     return json.loads(Path(path).read_text())
+
+
+def rng_devices(device, current_cuda_device):
+    """Accelerate may report plain cuda for a single process, without an index."""
+    if device.type != 'cuda':
+        return []
+    return [current_cuda_device() if device.index is None else device.index]

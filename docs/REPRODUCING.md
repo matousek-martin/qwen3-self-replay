@@ -2,7 +2,7 @@
 
 ## Install and inspect
 
-Use Python 3.11 from a source checkout, with `pip install -e '.[dev,analysis]'`. The lightweight interface has no model dependency. Scientific runs use the recorded requirements/gpu.lock and separate method-specific constraints; ShorterBetter uses requirements/shorterbetter.lock (TRL 0.24.0 and vLLM 0.10.2), a separate environment from the main replay stack. Do not upgrade the inference stack and then label the result the original contract.
+Use Python 3.11 from a source checkout, with `pip install -e '.[dev,analysis]'`. The lightweight interface has no model dependency. Scientific runs use the recorded requirements/gpu.lock and separate method-specific constraints; ShorterBetter uses requirements/shorterbetter.lock (TRL 0.24.0 and vLLM 0.10.2), a separate environment from the main replay stack. The main GPU lock also pins pytest and its dependencies because the isolated coding grader imports pytest at runtime. Do not upgrade the inference stack and then label the result the original contract.
 
 `self-replay init workspaces/replay --recipe self-replay` creates an independent workspace containing scientific source, the evaluator, configuration and empty data/output directories. It copies neither credentials nor historical cloud spending authorizations. The workspace source manifest detects later changes. A relative compatibility symlink maps the older preparers’ lab/experiments/data path to the same data directory used by workers.
 
