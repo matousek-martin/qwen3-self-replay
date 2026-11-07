@@ -128,6 +128,32 @@ def main():
     for relative, digest in suite["files"].items():
         if sha256(a.data / relative) != digest:
             raise ValueError("Staged input hash mismatch: " + relative)
+    if base_cache := suite.get("base_model_cache"):
+        if (
+            base_cache["model"] != "Qwen/Qwen3-0.6B"
+            or base_cache["revision"] != "c1899de289a04d12100db370d81485cdf75e47ca"
+        ):
+            raise ValueError("Unpinned base-model cache")
+        source = (a.data / base_cache["directory"]).resolve()
+        if not source.is_relative_to(a.data.resolve()):
+            raise ValueError("Base cache outside verified inputs")
+        cache = Path(os.environ.get("HF_HOME", Path.home() / ".cache/huggingface"))
+        target = cache / "hub/models--Qwen--Qwen3-0.6B/snapshots" / base_cache["revision"]
+        target.mkdir(parents=True, exist_ok=True)
+        for file in source.iterdir():
+            if not file.is_file() or str(file.relative_to(a.data.resolve())) not in suite["files"]:
+                raise ValueError("Unverified base-model file")
+            destination = target / file.name
+            if destination.exists():
+                if sha256(destination) != sha256(file):
+                    raise ValueError("Existing base-model cache differs")
+            else:
+                temporary = destination.with_suffix(destination.suffix + ".smoke-staging")
+                shutil.copyfile(file, temporary)
+                if sha256(temporary) != sha256(file):
+                    raise ValueError("Base cache copy differs")
+                temporary.replace(destination)
+        write_json(a.out / "base-model-cache.json", dict(base_cache, verified=True))
     receipt = dict(
         technical_only=True, passed=False, gpu=names[0], started_at=time.time(), cases=[]
     )
@@ -168,6 +194,9 @@ def main():
                     "workspace": str(workspace),
                     "python": arm.get("python", sys.executable),
                 }
+                arm_env = dict(env)
+                if arm.get("offline_models"):
+                    arm_env.update(HF_HUB_OFFLINE="1", TRANSFORMERS_OFFLINE="1")
                 cmd = [x.format(**values) for x in arm["command"]]
                 result = dict(name=arm["name"], command=cmd, passed=False, started_at=time.time())
                 item["arms"].append(result)
@@ -175,7 +204,7 @@ def main():
                 run(
                     cmd,
                     workspace,
-                    env,
+                    arm_env,
                     dest / "training.log",
                     min(arm.get("timeout", 900), remaining),
                 )
@@ -247,7 +276,7 @@ def main():
                     ]
                     + (["--full-model"] if arm["kind"] == "shorterbetter" else []),
                     workspace,
-                    env,
+                    arm_env,
                     dest / "reload.log",
                     min(180, remaining),
                 )
