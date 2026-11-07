@@ -14,10 +14,42 @@ import sys
 import time
 from pathlib import Path
 
-from self_replay.artifacts import sha256, write_json
+from self_replay.artifacts import sha256, verify_files, write_json
 from self_replay.data.prepare import stage_frozen
 from self_replay.methods.runtime import environment, initialize
 from self_replay.paths import repository
+
+
+def prepare_real_data_probe(source, destination):
+    """One existing training/development row per domain; never benchmark rows."""
+    source, destination = Path(source), Path(destination)
+    destination.mkdir()
+    domains = {"math", "coding", "tools", "instructions"}
+    for split in ("train", "development"):
+        selected = {}
+        for line in (source / (split + ".jsonl")).read_text().splitlines():
+            row = json.loads(line)
+            if row["task"] in domains and row["task"] not in selected:
+                selected[row["task"]] = row
+        if set(selected) != domains:
+            raise ValueError("Smoke data needs all four domains")
+        (destination / (split + ".jsonl")).write_text(
+            "".join(json.dumps(row) + "\n" for row in selected.values())
+        )
+    plan = json.loads((source / "plan.json").read_text())
+    plan.update(
+        id="technical-four-domain-smoke-v1",
+        technical_only=True,
+        groups=4,
+        monitor_questions=4,
+        reference_questions_per_domain=1,
+        parent_plan_sha256=sha256(source / "plan.json"),
+        files_sha256={
+            name: sha256(destination / name) for name in ("train.jsonl", "development.jsonl")
+        },
+    )
+    write_json(destination / "plan.json", plan)
+    return destination
 
 
 def check_evaluation(directory):
@@ -138,6 +170,40 @@ def main():
             out / "resume-parity.json",
         ],
     )
+    probe = prepare_real_data_probe(workspace / "data/replay-scaled", out / "tiny-data")
+    probe_out = out / "real-data-training"
+    run(
+        "full-cap-real-data-training",
+        [
+            *cli,
+            "train",
+            "self-replay",
+            "--workspace",
+            workspace,
+            "--data",
+            probe,
+            "--out",
+            probe_out,
+            "--",
+            "--stop-after",
+            "4",
+        ],
+    )
+    complete = probe_out / "checkpoints/group-000004"
+    manifest = json.loads((complete / "complete.json").read_text())
+    verify_files(complete, manifest["files"])
+    progress = json.loads((probe_out / "progress.json").read_text())
+    if progress["optimizer_updates"] < 1:
+        raise RuntimeError("The real-data smoke did not exercise an optimizer update")
+    receipt["real_data_probe"] = {
+        "technical_only": True,
+        "training_questions": 4,
+        "development_questions": 4,
+        "generation_cap": 2048,
+        "calibration_questions_per_domain": 1,
+        "optimizer_updates": progress["optimizer_updates"],
+        "plan_sha256": sha256(probe / "plan.json"),
+    }
     run(
         "vllm-routing-compatibility",
         [sys.executable, "-m", "experiments.vllm_compat", "--out", out / "vllm-compatibility.json"],
