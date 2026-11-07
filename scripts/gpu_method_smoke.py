@@ -46,7 +46,9 @@ def run(command, workspace, env, log, seconds):
 
 def reload_adapter(adapter, destination, full_model=False):
     import torch
-    from peft import PeftModel
+
+    if not full_model:
+        from peft import PeftModel
     from transformers import AutoModelForCausalLM, AutoTokenizer
 
     model_id, revision = "Qwen/Qwen3-0.6B", "c1899de289a04d12100db370d81485cdf75e47ca"
