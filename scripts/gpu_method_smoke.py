@@ -44,7 +44,7 @@ def run(command, workspace, env, log, seconds):
             raise RuntimeError(f"Command exited {code}; see {log}")
 
 
-def reload_adapter(adapter, destination):
+def reload_adapter(adapter, destination, full_model=False):
     import torch
     from peft import PeftModel
     from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -54,7 +54,16 @@ def reload_adapter(adapter, destination):
     base = AutoModelForCausalLM.from_pretrained(
         model_id, revision=revision, torch_dtype=torch.bfloat16, attn_implementation="sdpa"
     ).cuda()
-    model = PeftModel.from_pretrained(base, str(adapter)).eval()
+    model = (
+        AutoModelForCausalLM.from_pretrained(
+            str(adapter),
+            local_files_only=True,
+            torch_dtype=torch.bfloat16,
+            attn_implementation="sdpa",
+        ).cuda()
+        if full_model
+        else PeftModel.from_pretrained(base, str(adapter))
+    ).eval()
     ids = tokenizer.apply_chat_template(
         [{"role": "user", "content": "What is 3 + 4?"}],
         tokenize=True,
@@ -64,8 +73,11 @@ def reload_adapter(adapter, destination):
     ).cuda()
     with torch.inference_mode():
         active = model(ids).logits[:, -1].float()
-        with model.disable_adapter():
-            inactive = model(ids).logits[:, -1].float()
+        if full_model:
+            inactive = base(ids).logits[:, -1].float()
+        else:
+            with model.disable_adapter():
+                inactive = model(ids).logits[:, -1].float()
         difference = float((active - inactive).abs().max())
         generated = model.generate(
             ids, max_new_tokens=16, do_sample=False, pad_token_id=tokenizer.eos_token_id
@@ -78,7 +90,7 @@ def reload_adapter(adapter, destination):
             passed=True,
             max_logit_delta=difference,
             generated_tokens=int(generated.shape[1] - ids.shape[1]),
-            adapter_sha256=sha256(Path(adapter) / "adapter_model.safetensors"),
+            weight_sha256={p.name: sha256(p) for p in Path(adapter).glob("*.safetensors")},
         ),
     )
 
@@ -90,9 +102,10 @@ def main():
     p.add_argument("--lease", type=Path)
     p.add_argument("--out", type=Path, required=True)
     p.add_argument("--reload", type=Path)
+    p.add_argument("--full-model", action="store_true")
     a = p.parse_args()
     if a.reload:
-        reload_adapter(a.reload, a.out)
+        reload_adapter(a.reload, a.out, a.full_model)
         return
     names = subprocess.check_output(
         ["nvidia-smi", "--query-gpu=name", "--format=csv,noheader"], text=True
@@ -124,10 +137,24 @@ def main():
         print("SMOKE CASE", case["recipe"], flush=True)
         try:
             workspace = initialize(a.out / "workspaces" / case["recipe"], case["recipe"])
+            for source, target in case.get("staging", {}).items():
+                source = (a.data / source).resolve()
+                target = (workspace / target).resolve()
+                if not source.is_relative_to(a.data.resolve()) or not target.is_relative_to(
+                    workspace
+                ):
+                    raise ValueError("Staging path outside workspace")
+                if source.is_dir():
+                    shutil.copytree(source, target, dirs_exist_ok=True)
+                else:
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(source, target)
             shutil.copy2(a.lease, workspace / "worker-lease.json")
             env = environment(workspace)
             env["SELF_REPLAY_REPO"] = str(repository())
             for arm in case["arms"]:
+                lease = json.loads(a.lease.read_text())
+                shutil.copy2(a.lease, workspace / "worker-lease.json")
                 remaining = min(lease["deadline"], lease["hard_deadline"]) - time.time() - 180
                 if remaining < 180:
                     raise RuntimeError("Insufficient leased time for another test")
@@ -137,7 +164,7 @@ def main():
                     "data": str(a.data.resolve()),
                     "out": str(dest / "training"),
                     "workspace": str(workspace),
-                    "python": sys.executable,
+                    "python": arm.get("python", sys.executable),
                 }
                 cmd = [x.format(**values) for x in arm["command"]]
                 result = dict(name=arm["name"], command=cmd, passed=False, started_at=time.time())
@@ -150,7 +177,7 @@ def main():
                     dest / "training.log",
                     min(arm.get("timeout", 900), remaining),
                 )
-                output = dest / "training"
+                output = Path(arm.get("output", "{out}").format(**values))
                 if arm["kind"] == "offline":
                     status = json.loads((output / "result.json").read_text())
                     if not status["complete"] or status["step"] != 2:
@@ -174,22 +201,74 @@ def main():
                     ):
                         raise RuntimeError("Distillation loss was not exercised")
                     adapter = output / "adapter"
+                elif arm["kind"] in ("opencoder", "coding"):
+                    marker = (
+                        "segment-completion.json"
+                        if arm["kind"] == "opencoder"
+                        else "completion.json"
+                    )
+                    status = json.loads((output / marker).read_text())
+                    if not status["complete"] or status.get("step", status.get("steps")) != 2:
+                        raise RuntimeError("Technical updates incomplete")
+                    if arm["kind"] == "coding":
+                        preflight = json.loads((output / "preflight.json").read_text())
+                        if (
+                            not preflight["passed"]
+                            or not preflight["optimizer_resume_bitwise"]
+                            or status["optimizer_updates"] < 1
+                        ):
+                            raise RuntimeError("Coding optimizer/preflight not exercised")
+                    latest = json.loads((output / "latest-checkpoint.json").read_text())
+                    checkpoint = Path(latest["path"])
+                    if not checkpoint.is_absolute():
+                        checkpoint = workspace / checkpoint
+                    complete = json.loads((checkpoint / "complete.json").read_text())
+                    for relative, digest in complete["files"].items():
+                        if sha256(checkpoint / relative) != digest:
+                            raise RuntimeError("Checkpoint hash mismatch")
+                    adapter = checkpoint / "adapter"
+                elif arm["kind"] == "shorterbetter":
+                    status = json.loads((output / "training-finished.json").read_text())
+                    if status["optimizer_steps"] != 8 or not status["technical_check"]:
+                        raise RuntimeError("ShorterBetter technical update budget incomplete")
+                    adapter = output / "model"
                 else:
                     raise ValueError("Unknown result checker")
                 run(
                     [
-                        sys.executable,
+                        values["python"],
                         repository() / "scripts/gpu_method_smoke.py",
                         "--reload",
                         adapter,
                         "--out",
                         dest / "reload.json",
-                    ],
+                    ]
+                    + (["--full-model"] if arm["kind"] == "shorterbetter" else []),
                     workspace,
                     env,
                     dest / "reload.log",
                     min(180, remaining),
                 )
+                if arm["kind"] == "shorterbetter":
+                    # These are new disposable smoke weights, never research checkpoints.
+                    # Retain exact hashes after successful independent model reload.
+                    disposable = [output / "model", *output.glob("checkpoint-*")]
+                    retained = {
+                        str(p.relative_to(output)): sha256(p)
+                        for folder in disposable
+                        for p in folder.rglob("*")
+                        if p.is_file()
+                    }
+                    write_json(
+                        dest / "technical-retention.json",
+                        dict(
+                            reason="Disposable smoke weights removed after successful reload; logs and hashes retained",
+                            files=retained,
+                            reload=sha256(dest / "reload.json"),
+                        ),
+                    )
+                    for folder in disposable:
+                        shutil.rmtree(folder)
                 result.update(
                     passed=True, seconds=time.time() - result["started_at"], status=status
                 )
