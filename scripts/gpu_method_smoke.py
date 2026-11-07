@@ -98,6 +98,11 @@ def reload_adapter(adapter, destination, full_model=False):
 
 
 def main():
+    # run() reaps its separate subprocess group before propagating interruption.
+    def interrupted(signum, frame):
+        raise KeyboardInterrupt("Smoke worker interrupted")
+
+    signal.signal(signal.SIGTERM, interrupted)
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--suite", type=Path)
     p.add_argument("--data", type=Path)

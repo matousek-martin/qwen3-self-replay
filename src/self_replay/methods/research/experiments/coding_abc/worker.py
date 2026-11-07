@@ -100,7 +100,7 @@ def main():
     def publish(records):
         metrics=summarize(records,baseline)
         point=dict(iteration=done,completed_at=time.time(),metrics=metrics,official_evaluation=False,
-            protocol='ABC-development64x2-HF-2048-format-aware-v1',baseline_cached=True,baseline_provenance=cfg['baseline_provenance'])
+            protocol=f"ABC-{'technical-' if args.technical else ''}development{len(dev)}x2-HF-2048-format-aware-v1",baseline_cached=True,baseline_provenance=cfg['baseline_provenance'])
         curve.append(point);write(OUT/'validation-curve.json',dict(checkpoints=curve))
         dest=OUT/'validations'/f'{done:06d}.jsonl';dest.parent.mkdir(exist_ok=True)
         dest.write_text(''.join(json.dumps({k:v for k,v in r.items() if k!='ids'})+'\n' for r in records))
