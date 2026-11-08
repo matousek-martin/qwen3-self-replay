@@ -47,6 +47,18 @@ Each point uses **2,759 questions × 8 responses**, with equal domain weighting 
 
 I select **256** for its substantial compression and accuracy estimate near the baseline. **850** shows a useful second operating point, with an explicit accuracy cost. All seven evaluated checkpoints remain visible; later training shortened outputs further while worsening aggregate accuracy.
 
+## Component comparisons
+
+Each chart compares one component removal with the original combined method at the **same number of training iterations**, using the same official evaluation. Both branches start from the pinned base with seed 17 and the original question order; the combined controls come from the earlier trajectory.
+
+![Removing replay at 128 iterations: token savings and accuracy versus the original combined method](studies/self-replay/figures/ablation-no-replay.png)
+
+![Removing the explicit length reward at 256 iterations: token savings and accuracy versus the original combined method](studies/self-replay/figures/ablation-no-length.png)
+
+Removing replay reduces token savings from **27.10% to 1.85%** at 128 iterations. Removing the explicit length reward retains **27.52% savings**, versus **31.23%** for the combined method at 256. This suggests replay contributes much more to shortening in these runs, but the no-length-reward branch still replays the **shortest** answer from all-correct groups. It does not remove every preference for shorter answers.
+
+Neither ablation establishes an aggregate accuracy improvement; both accuracy intervals include zero. The no-length-reward branch still loses **3.39 pp on BFCL no-call accuracy**. These are one-seed comparisons with historical controls, not a factorial study or a test of the difference between methods. [Verified source manifests](studies/self-replay/ablations/) link each chart to its full-evaluation evidence.
+
 ## What the experiments taught me
 
 - Earlier replay-selection and adaptive-replay screens produced longer outputs on average; permissive admission and adaptive rewards did not automatically improve the tradeoff.
@@ -54,18 +66,18 @@ I select **256** for its substantial compression and accuracy estimate near the 
 - ShorterBetter's twelve evaluated snapshots showed growing compression alongside accuracy loss; inspecting earlier checkpoints mattered.
 - Coding follow-ups did not establish a superior replacement for the main checkpoint.
 
-These experiments used different cohorts and controls. They informed the research direction; they are **not a matched ablation of the final four-domain method**. The [experiment findings](studies/README.md) retain negative results, incomplete runs and development-only evidence separately.
+Those earlier experiments used different cohorts and controls. They informed the research direction; they are **not the component comparisons above**. The [experiment findings](studies/README.md) retain negative results, incomplete runs and development-only evidence separately.
 
 ## What the result does not establish
 
-**The strongest evidence is for the combined method at the reported checkpoints.** I have not isolated how much comes from the length reward, the replay loss or the 4/4 gate, and I do not claim to have invented group-relative optimization or supervised replay.
+**The strongest evidence is for the reported configurations and checkpoints.** The component comparisons provide initial evidence about removing replay or the explicit length reward, but do not isolate the 4/4 gate, shortest-answer selection or interactions between components. I do not claim to have invented group-relative optimization or supervised replay.
 
 - BFCL no-call accuracy falls **4.17 pp at 256** and **6.88 pp at 850**; aggregate accuracy hides this regression.
 - The main trajectory has one training seed, and repeatedly inspected benchmarks influenced checkpoint selection.
 - The confidence intervals do not capture training-seed variability or correct for that selection.
 - Verification is task-specific; lexical contamination screening does not prove zero semantic overlap.
 
-A useful next study would hold data, rollout budget and seeds fixed while comparing length-reward RL alone, RL plus all-correct replay, and RL plus any-correct replay. Those results are not available here.
+A useful next study would repeat the component comparisons across seeds and compare all-correct with any-correct replay under the final four-domain protocol. Those multi-seed and gate comparisons are not available here.
 
 ## Reproduce and inspect
 
