@@ -1,0 +1,17 @@
+{
+  "reused": true,
+  "key": "7d35fcc59ce97fcd001f268d640b45cbf187a2c40c1b59540ed9bfc8dcdd45d3",
+  "source": {
+    "job": "replay-evaluation-128-20261101t175736z",
+    "gpu_identity": "GPU-a5ce3b4f-6978-3b84-520b-6a7329f1bad3, NVIDIA GeForce RTX 4090",
+    "finished_at": "2026-11-01T19:33:52.521227+00:00",
+    "original_run": "lab/experiments/cloud/replay-evaluation-128-20261101t175736z/output/full-evaluation/runs/base",
+    "imported": true
+  },
+  "comparison_gpu_identity": "GPU-8d994df8-812f-2be6-3a73-8b0b0af415e4, NVIDIA GeForce RTX 4090",
+  "policy": "gpu-model-and-protocol-cache-v1",
+  "source_files_sha256": {
+    "records.jsonl": "272bf7cfd492e592b0f4cc650b648e2b3db4ee5640e1ea45960508326ff2e7f9",
+    "results.json": "e8f97c86488eb62163131d8a5dbf5f04bc1f6dd018a3512585138995318c8219"
+  }
+}

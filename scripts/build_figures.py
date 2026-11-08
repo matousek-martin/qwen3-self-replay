@@ -79,12 +79,59 @@ for row in rows:
         color=color,
         weight="bold",
     )
+# Optional matched component removals are imported only after full evaluation
+# and verified cloud backup. Historical checkpoints remain unchanged.
+ablation_files = sorted((root / "studies/self-replay/ablations").glob("*.json"))
+ablation_x = []
+for path in ablation_files:
+    row = json.loads(path.read_text())
+    if (
+        row.get("verified_full_evaluation") is not True
+        or row.get("questions") != 2759
+        or row.get("samples") != 8
+    ):
+        raise ValueError(f"Incomplete ablation figure source: {path}")
+    import hashlib
+
+    source = root / row["comparison"]
+    if hashlib.sha256(source.read_bytes()).hexdigest() != row["comparison_sha256"]:
+        raise ValueError(f"Changed ablation evidence: {path}")
+    result = json.loads(source.read_text())
+    if result["ungraded_benchmarks"] or any(result["full_evaluation"].values()):
+        raise ValueError(f"Partial official evaluation: {path}")
+    avg = result["average"]
+    x, y = 100 * avg["token_reduction"], 100 * avg["accuracy_delta"]
+    ci = avg["intervals"]
+    color, marker = ("#d97706", "s") if row["arm"] == "no-replay" else ("#2563eb", "D")
+    ax.errorbar(
+        x,
+        y,
+        xerr=[[x - 100 * ci["token_reduction"][0]], [100 * ci["token_reduction"][1] - x]],
+        yerr=[[y - 100 * ci["accuracy_delta"][0]], [100 * ci["accuracy_delta"][1] - y]],
+        fmt=marker,
+        color=color,
+        capsize=3,
+        ms=8,
+        lw=1.4,
+        label=row["label"] + f" ({row['checkpoint']} iterations)",
+    )
+    ax.annotate(
+        str(row["checkpoint"]),
+        (x, y),
+        xytext=(8, -16),
+        textcoords="offset points",
+        color=color,
+        weight="bold",
+    )
+    ablation_x.extend([100 * v for v in ci["token_reduction"]])
+if ablation_files:
+    ax.legend(loc="best", fontsize=9)
 ax.set(
     xlabel="Total output tokens saved (%) · official geometric aggregation",
     ylabel="Accuracy change vs. base (percentage points)",
     title="Self-replay: shorter answers, with a measurable tradeoff",
 )
-ax.set_xlim(23, 51)
+ax.set_xlim(min([23] + [x - 3 for x in ablation_x]), max([51] + [x + 3 for x in ablation_x]))
 ax.grid(alpha=0.15)
 fig.text(
     0.125,

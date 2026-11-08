@@ -1,0 +1,12 @@
+{
+  "arm": "no-replay",
+  "label": "No replay",
+  "checkpoint": 128,
+  "training_seed": 17,
+  "verified_full_evaluation": true,
+  "questions": 2759,
+  "samples": 8,
+  "comparison": "artifacts/ablation-results/no-replay/comparison.json",
+  "comparison_sha256": "9cfdb6e990064365f4fc3041f14de2c1d30317dcc57bd20b73414b317fa4f607",
+  "limitation": "One training seed; previously inspected benchmark; compare to original checkpoint at the same iteration."
+}

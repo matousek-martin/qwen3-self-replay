@@ -1,0 +1,12 @@
+{
+  "arm": "no-length",
+  "label": "No length reward",
+  "checkpoint": 256,
+  "training_seed": 17,
+  "verified_full_evaluation": true,
+  "questions": 2759,
+  "samples": 8,
+  "comparison": "artifacts/ablation-results/no-length/comparison.json",
+  "comparison_sha256": "85a152e9f41b63bed46513bc495d6410175680f0f128f1492bd65ff20fc5fac6",
+  "limitation": "One training seed; previously inspected benchmark; compare to original checkpoint at the same iteration."
+}
