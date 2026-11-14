@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "adapter_bitwise_equal": true,
+  "optimizer_bitwise_equal": true,
+  "replay_equal": true,
+  "rank_rng_equal": true,
+  "world_size": 2,
+  "groups": 4,
+  "checkpoint_group": 2,
+  "generation_token_cap": 256,
+  "generation_protocol": "hf-batched-row-seeded-v1",
+  "generation_settings": {
+    "protocol": "hf-batched-row-seeded-v1",
+    "evaluation_batch_size": 64,
+    "max_padded_tokens": 262144,
+    "training_batch": "rank_local_answers",
+    "sampling": "independent_per_answer_generator",
+    "padding_side": "left"
+  },
+  "communication_protocol": "gloo-records-nccl-gradients-v1",
+  "technical_only": true
+}

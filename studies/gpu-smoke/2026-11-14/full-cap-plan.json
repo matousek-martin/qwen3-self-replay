@@ -1,0 +1,107 @@
+{
+  "schema_version": 5,
+  "id": "technical-four-domain-smoke-v1",
+  "state": "prepared",
+  "model": "Qwen/Qwen3-0.6B",
+  "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "groups": 4,
+  "group_size": 4,
+  "seed": 17,
+  "gpu_count": 2,
+  "allowed_gpu_counts": [
+    2,
+    4
+  ],
+  "learning_rate": 1e-05,
+  "lora_rank": 16,
+  "replay_weight": 0.1,
+  "replay_capacity": 128,
+  "length_coefficient": 0.1,
+  "optimizer": "dr_grpo",
+  "scale_rewards": false,
+  "max_new_tokens": 2048,
+  "temperature": 0.6,
+  "top_p": 0.95,
+  "top_k": 20,
+  "gradient_clip": 1.0,
+  "generation": {
+    "protocol": "hf-batched-row-seeded-v1",
+    "evaluation_batch_size": 64,
+    "max_padded_tokens": 262144,
+    "training_batch": "rank_local_answers",
+    "sampling": "independent_per_answer_generator",
+    "padding_side": "left"
+  },
+  "generation_benchmark": {
+    "questions": 32,
+    "stages": [
+      [
+        256,
+        16
+      ],
+      [
+        256,
+        32
+      ],
+      [
+        256,
+        64
+      ],
+      [
+        2048,
+        32
+      ],
+      [
+        2048,
+        64
+      ]
+    ],
+    "optimizer_updates": 0,
+    "scientific_result": false
+  },
+  "milestones": [
+    128,
+    512,
+    1024,
+    1920,
+    3840
+  ],
+  "save_every": 32,
+  "validate_every": 256,
+  "monitor_questions": 4,
+  "monitor_samples": 4,
+  "reference_questions_per_domain": 1,
+  "reference_policy": "Pinned base calibration on training prompts; frozen per-domain means",
+  "quality_stopping": false,
+  "teacher": false,
+  "full_evaluation_automatic": false,
+  "pilot": {
+    "groups": 4,
+    "checkpoint": 2,
+    "generation_token_cap": 256,
+    "evaluation_samples": 1,
+    "fixtures": "experiments.replay_scaled.pilot",
+    "scientific_result": false,
+    "maximum_length_backward_check": 2048
+  },
+  "no_call_counts": {
+    "train": 79,
+    "development": 2
+  },
+  "no_call_policy": "Include all existing split-local negatives; keep confirmation untouched; no new generated labels.",
+  "source_manifest_sha256": "742c762403998cc3a550a89f55786f214a38a4aff5ae51aad562e91324d276b2",
+  "files_sha256": {
+    "train.jsonl": "e4a8c7ba8768d23a014b21fe7838b13478308fb5e1bfb6963850b552a7c39975",
+    "development.jsonl": "3eba0fd577d4e8e9df03b1c21704883e9e967ff6a571fe22a8dec5d8b2184045"
+  },
+  "limitations": [
+    "Four-domain data and verifiers differ from historical replay.",
+    "Validation is a development monitor, not official benchmark accuracy.",
+    "Instruction checks cover format, not broad semantic correctness.",
+    "Development no-call coverage is too small to certify that ability.",
+    "Original 2048 training token cap may limit coding success.",
+    "A100 timing and multi-GPU/resume checks are pending."
+  ],
+  "technical_only": true,
+  "parent_plan_sha256": "dd8a52e612461d40f7c447e2688cec87fa80d8bc266a68a86235b8c61fcb3376"
+}

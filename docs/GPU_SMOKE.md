@@ -2,7 +2,8 @@
 
 Completed checks and their limits are recorded in the dated reports:
 
-- [Main recipe and released adapters](../studies/gpu-smoke/2026-11-07/README.md): training, complete-state resume and adapter/evaluator smoke checks on 2×A100.
+- [Latest submission check](../studies/gpu-smoke/2026-11-14/README.md): fresh training, exact resume and both adapters/evaluator on 2×A100.
+- [Earlier main recipe and released adapters](../studies/gpu-smoke/2026-11-07/README.md): training, complete-state resume and adapter/evaluator smoke checks on 2×A100.
 - [Other methods](../studies/gpu-smoke/2026-11-07-other-methods/README.md): 21 single-4090 training recipes, including failed attempts and repairs.
 
 These are bounded technical checks, not new full training runs or benchmark results. The runners do not allocate GPUs themselves. Use an already authorized worker, pinned requirements, prepared inputs and a finite lease.

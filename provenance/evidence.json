@@ -329,5 +329,61 @@
   "studies/experiments/domain-training/mixed-128.json": {
     "source": "lab/experiments/cloud/replay-domains-mixed-eval-20261112t194949z/output/full-evaluation/comparison.json",
     "sha256": "20a386cfe52a7fc5aa7e992dfde2f0f23065db7b218503bfd4090956833a85c2"
+  },
+  "studies/gpu-smoke/2026-11-14/report.json": {
+    "source": "workspaces/replay-scaled-submission-smoke-20261114t194629z/lab/experiments/cloud/replay-scaled-submission-smoke-20261114t194629z/output/submission-smoke/report.json",
+    "sha256": "3c704e29a72c721917d6adb9d870a477c7386628feb3b44118276d13a4df43b5"
+  },
+  "studies/gpu-smoke/2026-11-14/resume-parity.json": {
+    "source": "workspaces/replay-scaled-submission-smoke-20261114t194629z/lab/experiments/cloud/replay-scaled-submission-smoke-20261114t194629z/output/submission-smoke/resume-parity.json",
+    "sha256": "3404bfdab8c47dcf6e9838300fe5fbbc9c3294e25ae325c0b7aabe5c7a5a0f46"
+  },
+  "studies/gpu-smoke/2026-11-14/maximum-length-check.json": {
+    "source": "workspaces/replay-scaled-submission-smoke-20261114t194629z/lab/experiments/cloud/replay-scaled-submission-smoke-20261114t194629z/output/submission-smoke/reference/maximum-length-check.json",
+    "sha256": "bfc8a455e0bca892f331ba2093ee51c582a674f69f7728b13a16e1026b94f3b5"
+  },
+  "studies/gpu-smoke/2026-11-14/full-cap-completion.json": {
+    "source": "workspaces/replay-scaled-submission-smoke-20261114t194629z/lab/experiments/cloud/replay-scaled-submission-smoke-20261114t194629z/output/submission-smoke/real-data-training/completion.json",
+    "sha256": "96d76c224b390980a74be09f00105e7a638a3cf5ddc2fd14f38105de28c6c069"
+  },
+  "studies/gpu-smoke/2026-11-14/full-cap-progress.json": {
+    "source": "workspaces/replay-scaled-submission-smoke-20261114t194629z/lab/experiments/cloud/replay-scaled-submission-smoke-20261114t194629z/output/submission-smoke/real-data-training/progress.json",
+    "sha256": "6bbfbd302a4f3ab82e1445a4a6d45143d21ae29908d270216da1231a8536d086"
+  },
+  "studies/gpu-smoke/2026-11-14/full-cap-plan.json": {
+    "source": "workspaces/replay-scaled-submission-smoke-20261114t194629z/lab/experiments/cloud/replay-scaled-submission-smoke-20261114t194629z/output/submission-smoke/tiny-data/plan.json",
+    "sha256": "0a351034886394683a7bfdd6cea05521c89c8b476fb88a5fbd5f90311c60b923"
+  },
+  "studies/gpu-smoke/2026-11-14/gpu.txt": {
+    "source": "workspaces/replay-scaled-submission-smoke-20261114t194629z/lab/experiments/cloud/replay-scaled-submission-smoke-20261114t194629z/output/gpu.txt",
+    "sha256": "2c212c6a336ce1bfdf6232f34d0c5c4b84cd00f37988509fef081ed64909c293"
+  },
+  "studies/gpu-smoke/2026-11-14/packages.txt": {
+    "source": "workspaces/replay-scaled-submission-smoke-20261114t194629z/lab/experiments/cloud/replay-scaled-submission-smoke-20261114t194629z/output/packages.txt",
+    "sha256": "3f4bb72a5bafc6b944f5a19bda7cb4f3fca14e32c9a9338d97f6e5dae4e46520"
+  },
+  "studies/gpu-smoke/2026-11-14/vllm-compatibility.json": {
+    "source": "workspaces/replay-scaled-submission-smoke-20261114t194629z/lab/experiments/cloud/replay-scaled-submission-smoke-20261114t194629z/output/submission-smoke/vllm-compatibility.json",
+    "sha256": "00808b44f561e9488ec0b786c0358f438f539a4a76cf342bd3ebeb6396ae739d"
+  },
+  "studies/gpu-smoke/2026-11-14/routing-256.json": {
+    "source": "workspaces/replay-scaled-submission-smoke-20261114t194629z/lab/experiments/cloud/replay-scaled-submission-smoke-20261114t194629z/output/submission-smoke/routing-checkpoint-256/result.json",
+    "sha256": "8280977add4225d7119e53593d9db766e895766bd643eff561c98f626ac1a859"
+  },
+  "studies/gpu-smoke/2026-11-14/evaluation-256.json": {
+    "source": "workspaces/replay-scaled-submission-smoke-20261114t194629z/lab/experiments/cloud/replay-scaled-submission-smoke-20261114t194629z/output/submission-smoke/evaluation-checkpoint-256/results.json",
+    "sha256": "2568d358da784749d43ff37f0cbb3dc8c048a99117850403ad85983a938fbb38"
+  },
+  "studies/gpu-smoke/2026-11-14/routing-850.json": {
+    "source": "workspaces/replay-scaled-submission-smoke-20261114t194629z/lab/experiments/cloud/replay-scaled-submission-smoke-20261114t194629z/output/submission-smoke/routing-checkpoint-850/result.json",
+    "sha256": "31a90417528b56d1164975a5e82d5d4b89601be59b28cc2319988e42556a5989"
+  },
+  "studies/gpu-smoke/2026-11-14/evaluation-850.json": {
+    "source": "workspaces/replay-scaled-submission-smoke-20261114t194629z/lab/experiments/cloud/replay-scaled-submission-smoke-20261114t194629z/output/submission-smoke/evaluation-checkpoint-850/results.json",
+    "sha256": "568904257f7b2dc64914cb81d07ba5c04834931989722ff33a898a168b4b2912"
+  },
+  "studies/gpu-smoke/2026-11-14/provenance.json": {
+    "source": "Fresh smoke lifecycle and hash catalog derived from verified worker backup",
+    "sha256": "c72f2d328dde4e9cfd9e412ad2ab2c4d33ab57f7bdf48d43d708dfa8cacc7d0d"
   }
 }

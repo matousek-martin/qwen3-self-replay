@@ -1,0 +1,85 @@
+{
+  "technical_only": true,
+  "source_commit": "f99f4952ca0eacaa49a5c05ad713548ec858b677",
+  "source_archive_sha256": "6fa53989eaa37012e7b590abed4981c9659b72bf3a4988ad5a9d9515f50f9e25",
+  "provider": "runpod",
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "gpu_count": 2,
+  "backup_verified": true,
+  "archive_checksum_manifest_sha256": "0171e2195ead1a2cedca2f3ca4cbbf438e92cbf3edbbe36a95204aefc9a16868",
+  "archive_hashed_files": 541,
+  "combined_cap_usd": 6,
+  "charged_estimate_usd": 2.729,
+  "attempts": [
+    {
+      "name": "replay-scaled-submission-smoke-20261114t194629z",
+      "provider": "runpod",
+      "state": "complete",
+      "created_at": 1794685602.3316083,
+      "released_at": 1794687341.183253,
+      "rate": 4.38,
+      "charged_estimate_usd": 2.729,
+      "backup_verified": true
+    }
+  ],
+  "files": {
+    "report.json": {
+      "sha256": "3c704e29a72c721917d6adb9d870a477c7386628feb3b44118276d13a4df43b5",
+      "worker_output_path": "submission-smoke/report.json"
+    },
+    "resume-parity.json": {
+      "sha256": "3404bfdab8c47dcf6e9838300fe5fbbc9c3294e25ae325c0b7aabe5c7a5a0f46",
+      "worker_output_path": "submission-smoke/resume-parity.json"
+    },
+    "maximum-length-check.json": {
+      "sha256": "bfc8a455e0bca892f331ba2093ee51c582a674f69f7728b13a16e1026b94f3b5",
+      "worker_output_path": "submission-smoke/reference/maximum-length-check.json"
+    },
+    "full-cap-completion.json": {
+      "sha256": "96d76c224b390980a74be09f00105e7a638a3cf5ddc2fd14f38105de28c6c069",
+      "worker_output_path": "submission-smoke/real-data-training/completion.json"
+    },
+    "full-cap-progress.json": {
+      "sha256": "6bbfbd302a4f3ab82e1445a4a6d45143d21ae29908d270216da1231a8536d086",
+      "worker_output_path": "submission-smoke/real-data-training/progress.json"
+    },
+    "full-cap-plan.json": {
+      "sha256": "0a351034886394683a7bfdd6cea05521c89c8b476fb88a5fbd5f90311c60b923",
+      "worker_output_path": "submission-smoke/tiny-data/plan.json"
+    },
+    "gpu.txt": {
+      "sha256": "2c212c6a336ce1bfdf6232f34d0c5c4b84cd00f37988509fef081ed64909c293",
+      "worker_output_path": "gpu.txt"
+    },
+    "packages.txt": {
+      "sha256": "3f4bb72a5bafc6b944f5a19bda7cb4f3fca14e32c9a9338d97f6e5dae4e46520",
+      "worker_output_path": "packages.txt"
+    },
+    "vllm-compatibility.json": {
+      "sha256": "00808b44f561e9488ec0b786c0358f438f539a4a76cf342bd3ebeb6396ae739d",
+      "worker_output_path": "submission-smoke/vllm-compatibility.json"
+    },
+    "routing-256.json": {
+      "sha256": "8280977add4225d7119e53593d9db766e895766bd643eff561c98f626ac1a859",
+      "worker_output_path": "submission-smoke/routing-checkpoint-256/result.json"
+    },
+    "evaluation-256.json": {
+      "sha256": "2568d358da784749d43ff37f0cbb3dc8c048a99117850403ad85983a938fbb38",
+      "worker_output_path": "submission-smoke/evaluation-checkpoint-256/results.json"
+    },
+    "routing-850.json": {
+      "sha256": "31a90417528b56d1164975a5e82d5d4b89601be59b28cc2319988e42556a5989",
+      "worker_output_path": "submission-smoke/routing-checkpoint-850/result.json"
+    },
+    "evaluation-850.json": {
+      "sha256": "568904257f7b2dc64914cb81d07ba5c04834931989722ff33a898a168b4b2912",
+      "worker_output_path": "submission-smoke/evaluation-checkpoint-850/results.json"
+    }
+  },
+  "limitations": [
+    "Technical execution checks, not efficacy validation or a full benchmark rerun.",
+    "Full-cap data/calibration cohort is a four-question technical subset, not the scientific training plan.",
+    "Only the main self-replay recipe and released adapters were exercised on GPU.",
+    "The evaluator used its rlimit fallback; namespace isolation was not validated."
+  ]
+}
