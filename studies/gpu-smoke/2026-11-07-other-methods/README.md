@@ -104,6 +104,6 @@ two A100s and two-rank state. Teacher generation is an API tool, excluded from
 this GPU count. No full competition evaluation or official baseline was generated
 by this campaign, and no smoke example is added to a submitted checkpoint.
 
-See the [coverage and worker instructions](../../../docs/OTHER_METHOD_SMOKE_PLAN.md)
+See the [coverage and worker instructions](../../../docs/GPU_SMOKE.md)
 and the [GPU runner](../../../scripts/gpu_method_smoke.py). Every runtime/data/source snapshot is recorded
 independently; earlier failures are not relabeled as successful runs.

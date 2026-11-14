@@ -1,38 +1,25 @@
-# Release and submission
+# Submission package
 
-## Public release assets
+The [contest requirements](https://github.com/BottleCapAI/ThinkingCap-Test#submission), checked on 2026-11-14, ask for:
 
-- `Qwen3-0.6B-Self-Replay-256.zip`: primary adapter, model card, original evaluator results and comparison.
-- `Qwen3-0.6B-Self-Replay-850.zip`: alternative adapter with the explicit accuracy tradeoff.
-- `qwen3-self-replay-responses.zip`: SHA-bound baseline, 256 and 850 records for offline recomputation.
-- `self-replay-frozen-data.zip`: prepared train/development questions, plan and dataset provenance; upstream data licenses apply.
-- `martin-matousek.zip`: contest upload, under 500 MB, with primary files at root, alternative under `other-checkpoints/checkpoint-850/`, IDEA.md and a self-contained Git bundle.
-- `release-manifest.json`: sizes, SHA-256 hashes, source commit and restored-bundle check.
+- Source code as a Git bundle.
+- The evaluator's `results.json`.
+- Model or LoRA weights in `.safetensors` format.
+- A short `IDEA.md`: motivation, method, results, failures and hardware.
+- Coding-agent traces and conversations as a text document, when agents were used.
 
-Weights and responses are release assets, not ordinary Git objects. The HF-ready folders are generated under artifacts/huggingface; they keep adapter bytes unchanged and add a model card and evidence. Publishing to a Hub account requires that account's authenticated access. Do not put tokens in a repository, commit message or model card.
+Put the primary checkpoint at the archive root and alternatives under `other-checkpoints/`. Name the ZIP `<first>-<last>.zip`; the upload limit is 500 MB. Submit using the [contest form](https://bottlecapai.com/careers/thinkingcap-test-submission/).
 
 ## Build
 
-After installing the development/scientific dependencies and staging the released evidence assets:
+From a clean, committed checkout with released model/response assets staged:
 
 ```bash
-pytest -q
-python scripts/check_science.py
-python scripts/check_numerics.py
 python scripts/reproduce_results.py
 python scripts/verify_release.py
-# Commit source changes before packaging.
 python scripts/package_submission.py
 ```
 
-The exporter `scripts/import_evidence.py --lab PATH` is an optional original-lab migration tool, not a prerequisite for users of the released assets. It reads only its explicit artifact allowlist. Submission packaging requires a clean source tree, verifies evidence, scans reachable text history for known secret patterns, verifies ZIP members, and restores the Git bundle into an empty directory. It never rents compute or sends the form.
+The packager requires `artifacts/submission-traces/AGENT_TRACES.txt`. Generate it from explicitly selected local logs with `scripts/export_agent_traces.py --session PATH --out PATH`. Our export is selected and redacted, with tool metadata rather than full tool payloads; it is not the complete project history.
 
-## Contest contract
-
-Audited on 2026-11-05 against the [official repository](https://github.com/BottleCapAI/ThinkingCap-Test) and [submission form](https://bottlecapai.com/careers/thinkingcap-test-submission/). Submit the unmodified evaluator's results.json, safetensors adapter, IDEA.md and `<first>-<last>.bundle`; the best checkpoint belongs at the archive root and additional checkpoints under other-checkpoints. The form's ZIP limit is 500 MB. It asks for the applicant's name and the email used in the original application.
-
-Suggested optional note:
-
-> Self-replay for Qwen3-0.6B: checkpoint 256 saves 31.23% of total output tokens, with a +0.21 pp accuracy estimate (95% interval −0.48 to +0.88 pp) on the full official 2,759×8 evaluation. Checkpoint 850 is included as a stronger-compression alternative with a measured accuracy regression. The bundle includes runnable methods, negative experiments, provenance, reusable RunPod/Vast orchestration and an explicit AI-use statement.
-
-The confidence interval does not establish equivalence. No result from a development-only screen is presented as a full official result. Before sending the form, verify the applicant email; a Git commit author address alone does not establish the email used in the application.
+Output: `dist/martin-matousek.zip`, plus separate adapter, response and frozen-data archives. The packager verifies hashes, ZIP integrity and restoration of the Git bundle. It neither publishes a release nor submits the form.

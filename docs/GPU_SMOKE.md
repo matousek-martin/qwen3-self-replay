@@ -1,56 +1,15 @@
 # GPU smoke checks
 
-The [other-method campaign](../studies/gpu-smoke/2026-11-07-other-methods/README.md)
-passed all 21 single-4090 training recipes, with separate bounded fixtures and retained
-failure/recovery evidence. Curriculum replay is excluded from that campaign.
+Completed checks and their limits are recorded in the dated reports:
 
-The [2026-11-07 run passed](../studies/gpu-smoke/2026-11-07/README.md) on RunPod
-2×A100, with verified backup/release and separate technical evidence.
+- [Main recipe and released adapters](../studies/gpu-smoke/2026-11-07/README.md): training, complete-state resume and adapter/evaluator smoke checks on 2×A100.
+- [Other methods](../studies/gpu-smoke/2026-11-07-other-methods/README.md): 21 single-4090 training recipes, including failed attempts and repairs.
 
-`scripts/gpu_smoke.py` tests the public submission interfaces on an already leased
-2×A100-SXM4-80GB worker. It does not allocate hardware or authorize spending.
-
-The suite materializes the `self-replay` recipe, verifies and stages the frozen
-training inputs, then calls the public CLI to run the four-question synthetic
-pilot and resume it from checkpoint 2. The archived checker requires bitwise-equal
-final adapter and Adam state, replay state and per-rank RNG; it also requires a
-2,048-token backward check and actual replay/optimizer activity. Pilot generations
-use the original 256-token technical cap, not the scientific training cap.
-
-A separate four-question probe exercises the non-pilot training path at the full
-2,048-token cap, with one frozen training row and one development row per domain.
-It uses a separately hashed technical plan and one calibration question per domain,
-so its calibration and cohort differ from the scientific run. The original source
-dataset, reward, replay rule and released checkpoints remain intact. At least one
-optimizer update and a complete SHA-verified final checkpoint are required.
-
-For both released adapters (256 and 850), the suite verifies model-file hashes,
-tests base→adapter→base vLLM routing and measurable adapter effect, and invokes
-`self-replay evaluate -- --smoke` with the original eight responses and token caps.
-All four official domains must generate and grade without a failed benchmark.
-The base routing check is a tiny synthetic inference check, not regeneration of
-the full official baseline. The official smoke cohort remains evaluation-only.
-
-Stage a clean source checkout, the released adapters, frozen training data and
-the pinned official question/grader directory. On the worker, install the pinned
-GPU requirements and provide the active finite worker lease:
+These are bounded technical checks, not new full training runs or benchmark results. The runners do not allocate GPUs themselves. Use an already authorized worker, pinned requirements, prepared inputs and a finite lease.
 
 ```bash
-PYTHONPATH=/path/to/checkout/src python /path/to/checkout/scripts/gpu_smoke.py \
-  --data /path/to/frozen-data \
-  --adapters /path/to/released-adapters \
-  --questions /path/to/official-questions \
-  --lease /path/to/worker-lease.json \
-  --out /path/to/fresh-output
+python scripts/gpu_smoke.py --help
+python scripts/gpu_method_smoke.py --help
 ```
 
-The adapter directory contains `checkpoint-256/` and `checkpoint-850/`. The cloud
-entrypoint `experiments/run_submission_smoke.sh` expects these inputs and the source
-checkout beneath the staged `data/` directory. It runs only the bounded technical
-checks above, never the 256-question scientific training job.
-
-`report.json` records each subprocess, duration and outcome; the original evaluator
-and resume checker write their own evidence. A successful worker run is only part
-of the lifecycle: the controller must separately verify backup and provider release.
-These checks establish execution and recovery behavior, not model quality, a full
-benchmark rerun, or fresh validation of both cloud providers.
+The main runner requires frozen data, released adapters, official question/grader files and a lease. Other recipes additionally need their own prepared inputs and parent checkpoints; see [METHODS.md](METHODS.md). New paid execution requires a separate budget decision.
