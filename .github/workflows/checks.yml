@@ -12,10 +12,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install -e '.[dev]'
+      - run: pip install -e '.[dev,analysis]'
       - run: ruff check src/self_replay scripts tests
       - run: ruff format --check src/self_replay scripts tests
       - run: pytest -q
+      - run: python scripts/build_figures.py
       - run: python scripts/verify_release.py --code-only
   science:
     runs-on: ubuntu-latest

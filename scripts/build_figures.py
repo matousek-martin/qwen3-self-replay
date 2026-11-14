@@ -12,6 +12,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from readme_figures import build as build_readme_figures
 
 from self_replay.evaluation.report import history
 from self_replay.paths import repository
@@ -249,4 +250,5 @@ with (root / "studies/self-replay/summary.csv").open("w") as f:
                 *[100 * v for v in a["intervals"]["accuracy_delta"]],
             ]
         )
-print(f"Built {3 + ablation_count} figures in SVG/PNG/PDF and summary.csv")
+build_readme_figures(root, out)
+print(f"Built {3 + ablation_count} historical figures, 3 README PNGs and summary.csv")

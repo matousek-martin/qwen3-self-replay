@@ -20,19 +20,6 @@ The rows below deliberately distinguish development screens from full official e
 | Coding curriculum from 256 | [Development-only analysis](experiments/coding-curriculum.json): both branches +3.13 pp, intervals include zero; coding cohort is small | Interesting but inconclusive; no full official result claimed |
 | Main continuation to 1280 | [Direct comparison to 850](experiments/1280-vs-850.json): −1.18 pp, 95% interval [−1.84, −0.53] pp | More compression did not justify replacing 256/850 |
 
-## ShorterBetter checkpoints
-
-Both branches use seed 17. Iteration is a rollout group; optimizer steps are four times that count. These are the original full-evaluation aggregates, rounded for display.
-
-| Iteration | α2 tokens saved | α2 accuracy Δ | α5 tokens saved | α5 accuracy Δ |
-|---:|---:|---:|---:|---:|
-| 5 | 10.25% | −0.36 pp | 10.86% | −0.66 pp |
-| 10 | 24.12% | −0.89 pp | 23.47% | −1.09 pp |
-| 15 | 35.88% | −1.58 pp | 36.51% | −1.76 pp |
-| 20 | 46.16% | −2.64 pp | 48.66% | −2.89 pp |
-| 25 | 56.23% | −3.84 pp | 56.86% | −4.20 pp |
-| 30 | 63.69% | −4.70 pp | 62.39% | −5.22 pp |
-
 ## Interpreting the main result
 
 Checkpoint numbers count processed training questions, not model size or independent seeds. The main run planned 3,840 questions; the reported trajectory reached 1,280. I report all seven evaluated checkpoints to expose selection effects. The 256 interval includes zero and does not establish equivalence. The 850 aggregate regression is supported by its interval. Both checkpoints regress on the BFCL no-call subset.
@@ -41,6 +28,6 @@ The repeatedly inspected official benchmarks are selection evidence, not an unto
 
 ## Reproduce or extend
 
-[Method recipes](../docs/METHODS.md) expose all method implementations, including negative experiments. [Reproduction](../docs/REPRODUCING.md) documents required data, teacher caches, parent checkpoints and scientific environments. The public packaging checks do not certify a new end-to-end GPU rerun of every method.
+[Method recipes](../docs/METHODS.md) expose 24 historical entrypoints, including negative experiments; newer balanced/fresh/domain wrappers remain in the research archive. [Reproduction](../docs/REPRODUCING.md) documents required data, teacher caches, parent checkpoints and scientific environments. The public packaging checks do not certify a new end-to-end GPU rerun of every method.
 
 Source SHA manifests, immutable evaluator JSON and [export provenance](../provenance/evidence.json) connect the presentation to the original archives. Complete optimizer/RNG states remain in the research archive; the public checkpoint release contains inference adapters.

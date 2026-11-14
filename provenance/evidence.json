@@ -317,5 +317,17 @@
   "artifacts/data/self-replay-frozen-data.zip": {
     "source": "lab/experiments/replay-scaled/20261101-checkpoints-v5",
     "sha256": "744092c2f34e0fd243e1cc80ebf1a5944575995de9e64de46e2c42f78e88f93f"
+  },
+  "studies/experiments/domain-training/math-128.json": {
+    "source": "lab/experiments/cloud/replay-domains-math-eval-20261112t225219z/output/full-evaluation/comparison.json",
+    "sha256": "182c05300066148876ab77779796d6f7f726e3ece40387e7343316408811e328"
+  },
+  "studies/experiments/domain-training/instructions-128.json": {
+    "source": "lab/experiments/cloud/replay-domains-instructions-eval-20261112t193948z/output/full-evaluation/comparison.json",
+    "sha256": "3937d23f2e330a22f5cc902e8388037ccd92013e906f5cf8dd3abd20b9faec36"
+  },
+  "studies/experiments/domain-training/mixed-128.json": {
+    "source": "lab/experiments/cloud/replay-domains-mixed-eval-20261112t194949z/output/full-evaluation/comparison.json",
+    "sha256": "20a386cfe52a7fc5aa7e992dfde2f0f23065db7b218503bfd4090956833a85c2"
   }
 }

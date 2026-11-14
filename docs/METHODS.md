@@ -36,3 +36,5 @@ SFT variants consume the verified selector outputs; compatible SFT requires stud
 The self-replay default is a 256-question stop. Its 3,840-question data plan is retained for lineage, not a claim that all questions were trained. A recipe is a runnable implementation, not automatic authorization to generate teacher data or rent hardware.
 
 Teacher generation has explicit `plan`, `models`, and `run` subcommands: for example `self-replay train teacher-generation --workspace WORKSPACE -- plan --out /absolute/teacher-plan.json`. Running API generation requires its separately approved request budget and credentials; inspecting its plan does not generate answers.
+
+Later balanced/fresh/domain branches and component-ablation wrappers remain in the research archive; they are not supported public CLI recipes.

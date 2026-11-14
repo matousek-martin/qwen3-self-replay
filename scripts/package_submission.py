@@ -14,6 +14,20 @@ from self_replay.artifacts import sha256, write_json
 from self_replay.paths import repository
 
 
+def stage_verification(root, destination):
+    """Ship named current checks, never receipts referring to an older ZIP/release."""
+    destination.mkdir()
+    for name in (
+        "release-check.json",
+        "science-tests.json",
+        "science-tests.log",
+        "numerics-tests.json",
+        "numerics-tests.log",
+        "recomputed-results.json",
+    ):
+        shutil.copy2(root / "artifacts/verification" / name, destination / name)
+
+
 def archive(source, destination):
     with zipfile.ZipFile(
         destination, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=6
@@ -51,12 +65,18 @@ def main():
                 destination,
                 dirs_exist_ok=True,
             )
-        for name in ("IDEA.md", "AI_USAGE.md"):
-            shutil.copy2(root / name, stage / name)
+        shutil.copy2(root / "IDEA.md", stage / "IDEA.md")
+        traces = root / "artifacts/submission-traces/AGENT_TRACES.txt"
+        if not traces.is_file() or traces.stat().st_size < 1000:
+            raise ValueError("Missing selected, redacted agent conversation/trace export")
+        from verify_release import scan
+
+        scan(traces.read_text(), "submission agent traces")
+        shutil.copy2(traces, stage / "AGENT_TRACES.txt")
         shutil.copy2(
             root / "studies/self-replay/results/base/results.json", stage / "baseline-results.json"
         )
-        shutil.copytree(root / "artifacts/verification", stage / "verification")
+        stage_verification(root, stage / "verification")
         bundle = stage / "martin-matousek.bundle"
         subprocess.run(["git", "bundle", "create", str(bundle), "--all"], cwd=root, check=True)
         subprocess.run(["git", "bundle", "verify", str(bundle)], cwd=root, check=True)
@@ -86,8 +106,16 @@ def main():
             root / f"artifacts/huggingface/Qwen3-0.6B-Self-Replay-{n}",
             out / f"Qwen3-0.6B-Self-Replay-{n}.zip",
         )
+    expected_assets = [
+        "martin-matousek.zip",
+        "qwen3-self-replay-responses.zip",
+        "self-replay-frozen-data.zip",
+        "Qwen3-0.6B-Self-Replay-256.zip",
+        "Qwen3-0.6B-Self-Replay-850.zip",
+    ]
     assets = {
-        p.name: {"sha256": sha256(p), "bytes": p.stat().st_size} for p in sorted(out.glob("*.zip"))
+        name: {"sha256": sha256(out / name), "bytes": (out / name).stat().st_size}
+        for name in expected_assets
     }
     write_json(
         out / "release-manifest.json",
